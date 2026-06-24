@@ -64,13 +64,6 @@ function Sitemap() {
         </SitemapLinks>
       </div>
       <div>
-        <SitemapHeading>Learn</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="/blog">Blog</SitemapLink>
-          <SitemapLink href="/newsletter">Newsletter</SitemapLink>
-        </SitemapLinks>
-      </div>
-      <div>
         <SitemapHeading>Questions</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/testimonials">Testimonials</SitemapLink>

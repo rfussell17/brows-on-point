@@ -15,7 +15,6 @@ import { Link } from './link'
 const links = [
   { href: '/services', label: 'Services' },
   { href: '/about', label: 'About' },
-  { href: '/blog', label: 'Blog' },
   {
     href: 'https://app.acuityscheduling.com/schedule.php?owner=15235407',
     label: 'Reserve Appointment',

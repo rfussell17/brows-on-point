@@ -80,10 +80,6 @@ export default function Home() {
           text: 'Reserve Appointment',
           href: 'https://app.acuityscheduling.com/schedule.php?owner=15235407',
         }}
-        secondaryButton={{
-          text: 'View Our Blog',
-          href: '/blog',
-        }}
       />
       <FAQSection faqs={generalFAQs} title="Common Questions" className="" />
     </div>

@@ -35,12 +35,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${hurricane.variable} ${roboto.variable}`}>
       <head>
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="The Radiant Blog"
-          href="/blog/feed.xml"
-        />
         <meta name="robots" content="noindex, nofollow, noarchive" />
       </head>
       <body className="text-gray-600 antialiased">
