@@ -1,0 +1,41 @@
+{
+  "name": "brows",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.1.1",
+    "@heroicons/react": "^2.1.4",
+    "@tailwindcss/typography": "^0.5.15",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.12",
+    "feed": "^4.2.2",
+    "html-react-parser": "^5.1.19",
+    "next": "14.2.11",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-use-measure": "^2.1.1",
+    "sanitize-html": "^2.13.1",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/sanitize-html": "^2.13.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.11",
+    "postcss": "^8.4.49",
+    "prettier": "^3.3.2",
+    "prettier-plugin-organize-imports": "^4.0.0",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5"
+  }
+}
