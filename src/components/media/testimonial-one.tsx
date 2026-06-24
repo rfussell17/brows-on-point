@@ -14,12 +14,12 @@ const TestimonialOne: React.FC = () => {
           <div className="relative col-span-2 lg:col-start-1 lg:row-start-2">
             <blockquote className="leading-8 text-light sm:text-xl">
               <p>
-                "Jamie takes pride in her work and is an absolute perfectionist.
+                &ldquo;Jamie takes pride in her work and is an absolute perfectionist.
                 If you are thinking of getting any services done by Jamie, think
-                no more! This is the place to go!! She’s done my Keratin Lash
-                Lift & Tint many times and I would not let anyone else touch my
+                no more! This is the place to go!! She&apos;s done my Keratin Lash
+                Lift &amp; Tint many times and I would not let anyone else touch my
                 lashes - Jamie is AMAZING and I wish I could give more than a 5
-                star review!"
+                star review!&rdquo;
               </p>
             </blockquote>
           </div>

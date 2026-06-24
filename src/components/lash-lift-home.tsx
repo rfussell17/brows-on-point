@@ -14,7 +14,7 @@ export default function LashLiftHome() {
               <p className="text-md mt-6 text-dark">
                 A lash lift is a low-maintenance treatment that curls and lifts
                 your natural lashes from base to tip, giving them a fuller
-                appearance. It's essentially a "perm" for your lashes and can
+                appearance. It&apos;s essentially a &ldquo;perm&rdquo; for your lashes and can
                 last
                 <strong> 6-12 weeks</strong> depending on the type of lift.
               </p>
@@ -47,7 +47,7 @@ export default function LashLiftHome() {
                     “Recently had my Keratin Lash Lift and Tint done by Jamie
                     and I am in love! This is definitely a service I will
                     continue receiving. She walked me through the process and
-                    explained everything she's doing as she's doing it, which
+                    explained everything she&apos;s doing as she&apos;s doing it, which
                     made me feel very comfortable. Her studio was very clean,
                     organized and welcoming.”
                   </p>

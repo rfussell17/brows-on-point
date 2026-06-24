@@ -14,10 +14,10 @@ const TestimonialTwo: React.FC = () => {
           <div className="relative col-span-2 lg:col-start-1 lg:row-start-2">
             <blockquote className="text-lg text-light sm:text-xl">
               <p>
-                “Just got my keratin lash lift & tint from Jamie for the 3rd
+                &ldquo;Just got my keratin lash lift &amp; tint from Jamie for the 3rd
                 time, she is AMAZING! I have also got teeth gems thru her, and
-                i’m looking forward to getting microblading this fall! Thanks
-                girl, HAPPY!"
+                i&apos;m looking forward to getting microblading this fall! Thanks
+                girl, HAPPY!&rdquo;
               </p>
             </blockquote>
           </div>

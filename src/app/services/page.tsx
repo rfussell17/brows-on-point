@@ -39,7 +39,7 @@ const ServicesPage = () => {
           <h1 className="text-5xl text-white sm:text-7xl">Our Services</h1>
           <p className="mt-8 text-pretty text-lg font-medium text-gray-100 sm:text-xl/8">
             Welcome to Brows on Point, where beauty meets affordability and
-            expertise. Since 2016, we've been helping clients discover their
+            expertise. Since 2016, we&apos;ve been helping clients discover their
             most confident selves through personalized aesthetic services.
           </p>
         </div>

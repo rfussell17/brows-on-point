@@ -110,7 +110,7 @@ const TestimonialGroup: React.FC = () => {
         <div className="mx-auto max-w-xl text-center">
           <h2 className="text-6xl leading-8 text-primary">Testimonials</h2>
           <p className="text-md mt-6 leading-8 text-gray-600">
-            I've had the privilege of taking care of hundreds of clients in the
+            I&apos;ve had the privilege of taking care of hundreds of clients in the
             Okanagan since 2016.
           </p>
         </div>

@@ -122,7 +122,7 @@ export default function AboutPage() {
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-100 sm:text-xl/8">
               Welcome to Brows on Point, where beauty meets affordability and
-              expertise. Since 2016, we've been helping clients discover their
+              expertise. Since 2016, we&apos;ve been helping clients discover their
               most confident selves through personalized aesthetic services.
             </p>
           </div>
@@ -148,7 +148,7 @@ export default function AboutPage() {
                 <p className="mt-8">
                   My approach to permanent makeup artistry emphasizes
                   natural-looking results that enhance <em>your</em> unique
-                  features. Whether it's creating soft, feathered brows through
+                  features. Whether it&apos;s creating soft, feathered brows through
                   microblading or designing subtle permanent eyeliner,{' '}
                   <strong>
                     every treatment is tailored to complement your natural
