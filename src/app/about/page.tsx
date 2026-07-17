@@ -1,43 +1,23 @@
-import type { Metadata } from 'next'
-
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
   description:
-    'Radiant helps you sell more by revealing sensitive information about your customers.',
+    'Learn about Brows on Point — a West Kelowna beauty studio specializing in lash lifts, brow enhancements, and permanent makeup since 2016.',
   robots: {
     index: false,
     follow: false,
   },
 }
 
-// Type definitions for our data structures
-type StatItem = {
-  label: string
-  value: string
-}
-
-type ValueItem = {
-  name: string
-  description: string
-}
-
-type TeamMember = {
-  name: string
-  role: string
-  imageUrl: string
-  location: string
-}
-
-// Our content data
-const stats: StatItem[] = [
+const stats = [
   { label: 'Serving West Kelowna', value: '8 Years' },
   { label: 'Certified', value: '9x' },
   { label: 'Happy Clients', value: '1200+' },
 ]
 
-const values: ValueItem[] = [
+const values = [
   {
     name: 'Bomb Lift and Tint',
     description:
@@ -85,17 +65,7 @@ const values: ValueItem[] = [
   },
 ]
 
-const team: TeamMember[] = [
-  {
-    name: 'Leslie Alexander',
-    role: 'Co-Founder / CEO',
-    imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
-    location: 'Toronto, Canada',
-  },
-  // Add more team members as needed
-]
-
-const benefits: string[] = [
+const certifications = [
   'Permanent Makeup',
   'Advanced Microblade',
   'Teeth whitening',
@@ -107,75 +77,75 @@ const benefits: string[] = [
   'Permanent makeup removal',
 ]
 
-// The main component
 export default function AboutPage() {
   return (
-    <div className="bg-gray-100">
-      <main className="relative isolate">
-        {/* Background gradient */}
-
-        {/* Hero section */}
-        <div className="bg-primary px-6 pb-20 lg:px-8">
-          <div className="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
+    <div>
+      <main>
+        {/* Hero */}
+        <div className="bg-primary px-6 pb-12 sm:pb-16 lg:px-8">
+          <div className="mx-auto max-w-2xl pt-14 text-center sm:pt-20">
             <h1 className="text-5xl text-white sm:text-7xl">
               About Brows on Point
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-100 sm:text-xl/8">
               Welcome to Brows on Point, where beauty meets affordability and
-              expertise. Since 2016, we&apos;ve been helping clients discover their
-              most confident selves through personalized aesthetic services.
+              expertise. Since 2016, we&apos;ve been helping clients discover
+              their most confident selves through personalized aesthetic
+              services.
             </p>
           </div>
         </div>
 
-        {/* Content section */}
-        <div className="mx-auto mt-36 max-w-6xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-            <div className="m-auto grid max-w-4xl grid-cols-1 gap-8 text-base/7 text-gray-600 lg:grid-cols-1">
-              <div>
-                <p>
-                  <strong>
-                    {' '}
-                    My journey began with a simple vision: to make premium
-                    aesthetic treatments accessible to everyone.
-                  </strong>{' '}
-                  <br></br>
-                  As a mother of two young children and an entrepreneur who
-                  built this business from the ground up, I understand the
-                  transformative power of self-care and its ability to make you
-                  feel extraordinary both inside and out.
-                </p>
-                <p className="mt-8">
-                  My approach to permanent makeup artistry emphasizes
-                  natural-looking results that enhance <em>your</em> unique
-                  features. Whether it&apos;s creating soft, feathered brows through
-                  microblading or designing subtle permanent eyeliner,{' '}
-                  <strong>
-                    every treatment is tailored to complement your natural
-                    beauty while ensuring lasting results.
-                  </strong>
-                </p>
+        {/* Story + stats */}
+        <div className="bg-gradient-dusk py-24 sm:py-32">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-16">
+              <div className="lg:col-span-2">
+                <h2 className="text-4xl text-primary sm:text-5xl">Our Story</h2>
+                <div className="mt-6 space-y-6 text-base leading-7 text-gray-600">
+                  <p>
+                    <strong>
+                      My journey began with a simple vision: to make premium
+                      aesthetic treatments accessible to everyone.
+                    </strong>{' '}
+                    As a mother of two young children and an entrepreneur who
+                    built this business from the ground up, I understand the
+                    transformative power of self-care and its ability to make
+                    you feel extraordinary both inside and out.
+                  </p>
+                  <p>
+                    My approach to permanent makeup artistry emphasizes
+                    natural-looking results that enhance <em>your</em> unique
+                    features. Whether it&apos;s creating soft, feathered brows
+                    through microblading or designing subtle permanent eyeliner,{' '}
+                    <strong>
+                      every treatment is tailored to complement your natural
+                      beauty while ensuring lasting results.
+                    </strong>
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col gap-6">
+                {stats.map((stat, index) => (
+                  <div
+                    key={index}
+                    className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200"
+                  >
+                    <dd className="text-4xl font-semibold text-primary">
+                      {stat.value}
+                    </dd>
+                    <dt className="mt-1 text-sm text-gray-600">{stat.label}</dt>
+                  </div>
+                ))}
               </div>
             </div>
-            {/*
-
-            <dl className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 text-center sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mt-28 lg:grid-cols-3">
-              {stats.map((stat, index) => (
-                <div key={index} className="flex flex-col-reverse gap-y-3 pl-6">
-                  <dt className="text-base/7 text-gray-700">{stat.label}</dt>
-                  <dd className="text-3xl font-semibold tracking-tight text-white">
-                    {stat.value}
-                  </dd>
-                </div>
-              ))}
-            </dl> */}
           </div>
         </div>
 
-        {/* Image section */}
-        <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
+        {/* Image */}
+        <div className="xl:mx-auto xl:max-w-7xl xl:px-8">
           <Image
-            alt=""
+            alt="Jamie at Brows on Point"
             src="/jamie_brows_on_point.png"
             width={1000}
             height={1000}
@@ -183,8 +153,8 @@ export default function AboutPage() {
           />
         </div>
 
-        {/* Values section */}
-        <div className="mx-auto px-6 pt-32 lg:px-8">
+        {/* Popular services */}
+        <div className="bg-white px-6 py-24 lg:px-8">
           <div className="mx-auto max-w-5xl">
             <h2 className="text-3xl text-primary sm:text-5xl">
               Popular Services
@@ -196,7 +166,7 @@ export default function AboutPage() {
               services at accessible prices.
             </p>
           </div>
-          <dl className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 rounded-xl bg-primary-light p-6 text-base/7 text-gray-900 ring-2 ring-primary sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-10">
+          <dl className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 rounded-xl bg-gray-50 p-6 text-base/7 text-gray-900 ring-1 ring-gray-200 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-10">
             {values.map((value) => (
               <div key={value.name} className="relative pl-9">
                 <dt className="inline font-semibold text-primary">
@@ -208,12 +178,12 @@ export default function AboutPage() {
           </dl>
         </div>
 
-        {/* CTA section */}
-        <div className="relative isolate -z-10 pb-32 pt-10">
-          <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
+        {/* Certifications */}
+        <div className="bg-gradient-dusk py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8">
+            <div className="mx-auto flex max-w-2xl flex-col gap-12 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:gap-20">
               <Image
-                alt="Jamie - Brows on Point"
+                alt="Jamie — Brows on Point"
                 width={500}
                 height={500}
                 src="/jamie_brows_on_point_thumb.png"
@@ -223,7 +193,7 @@ export default function AboutPage() {
                 <h2 className="text-4xl text-primary sm:text-5xl">
                   Certifications
                 </h2>
-                <p className="mt-6 text-lg text-gray-700">
+                <p className="mt-6 text-lg text-gray-600">
                   Your beauty is in expert hands. With comprehensive training in
                   advanced aesthetic techniques, we ensure safe, professional,
                   and beautiful results for every client.
@@ -232,13 +202,13 @@ export default function AboutPage() {
                   role="list"
                   className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base/7 text-primary sm:grid-cols-2"
                 >
-                  {benefits.map((benefit) => (
-                    <li key={benefit} className="flex gap-x-3">
+                  {certifications.map((cert) => (
+                    <li key={cert} className="flex gap-x-3">
                       <CheckCircleIcon
                         aria-hidden="true"
                         className="h-7 w-5 flex-none"
                       />
-                      {benefit}
+                      {cert}
                     </li>
                   ))}
                 </ul>

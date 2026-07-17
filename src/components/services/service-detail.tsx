@@ -9,8 +9,8 @@ interface ServiceDetailProps {
 const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
   const renderSection = (title: string, content: ReactNode) => (
     <div>
-      <h2 className="text-4xl text-primary">{title}</h2>
-      <div className="prose mt-2 text-base/7 text-gray-700">{content}</div>
+      <h3 className="text-xl font-semibold text-primary">{title}</h3>
+      <div className="prose mt-2 text-base leading-7 text-gray-600">{content}</div>
     </div>
   )
 

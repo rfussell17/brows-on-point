@@ -29,7 +29,7 @@ const TestimonialTwo: React.FC = () => {
               src="/testimonials/stephanie.png"
               width={576}
               height={576}
-              className="rounded-xl bg-primary-light"
+              className="rounded-xl bg-gray-100"
             />
           </div>
 

@@ -23,13 +23,13 @@ const services = [
 
 const DetailRow: React.FC = () => {
   return (
-    <div className="bg-light py-24 sm:py-32">
+    <div className="bg-gradient-dusk py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="xs:text-4xl text-6xl text-primary">
+          <h2 className="text-4xl text-primary sm:text-6xl">
             Feel Wonderful Inside and Out
           </h2>
-          <p className="text-md mt-6 leading-8 text-dark">
+          <p className="mt-6 text-base leading-8 text-gray-600">
             We offer a variety of beauty and self-care services at Brows on
             Point to help you look and feel your best. From enhancing your
             lashes and brows to expert permanent makeup techniques, there’s
@@ -41,7 +41,7 @@ const DetailRow: React.FC = () => {
           <dl className="grid max-w-xl grid-cols-1 gap-x-12 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {services.map((service) => (
               <div key={service.name} className="flex flex-col">
-                <dt className="rounded-xl bg-primary-light px-2 py-2 text-center text-base font-semibold leading-7 text-dark">
+                <dt className="rounded-xl bg-gray-100 px-2 py-2 text-center text-base font-semibold leading-7 text-dark">
                   {service.name}
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-dark">

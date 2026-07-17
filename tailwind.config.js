@@ -15,23 +15,25 @@ module.exports = {
         '4xl': '2rem',
       },
       colors: {
-        primary: '#62466B', //purple
-        'primary-light': '#C9B5CF', //light purple
-        'primary-mid': '#73667F',
-        'primary-dark': '#45364B', //dark purple
+        primary: '#2D2E2E',
+        'primary-light': '#fefefe',
+        'primary-mid': '#2D2E2E',
+
+        'primary-dark': '#322A30',
         secondary: '#48639C', //gray-blue
         'secondary-light': '#95d9da', //light gray-blue
         'secondary-dark': '#464C5D', //dark gray-blue
-        tertiary: '#B5C2B7', //light green
-        'tertiary-dark': '#6E8772', //dark green
+        'tertiary-light': '#AA767C',
+        tertiary: '#322A30',
+        'tertiary-dark': 'oklch(21.2% 0.019 322.12)',
         dark: '#2D2327',
-        light: '#F6F3F7',
+        light: '#fefefe',
         light2: '#F3F4F6',
       },
-      backgroundImage: {
-        'gradient-primary':
-          'linear-gradient(to right, #875E6F, #73667F, #404A63)',
-      },
+      // backgroundImage: {
+      //   'gradient-dusk':
+      //     'linear-gradient(to right, #FFFFFF, #E2E5E5, #C9CBCC, #BDBEC0)',
+      // },
     },
   },
   plugins: [

@@ -49,7 +49,11 @@ export default function Home() {
     <div className="overflow-hidden">
       <Hero />
       <main>
-        <TestimonialOne />
+        <LogoGrid
+          title="We only use the best products"
+          logos={logos}
+          theme="dark"
+        />
 
         <DetailRow />
         <CallToAction
@@ -65,12 +69,7 @@ export default function Home() {
         />
         <LashLiftHome />
         {/* <TestimonialTwo /> */}
-
-        <LogoGrid
-          title="We only use the best products"
-          logos={logos}
-          theme="dark"
-        />
+        <TestimonialOne />
       </main>
       <TestimonialGroup />
 

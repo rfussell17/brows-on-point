@@ -1,7 +1,17 @@
 import FAQSection from '@/components/faq-section'
 import TestimonialTwo from '@/components/media/testimonial-two'
 import { allServices } from '@/components/services/service-data'
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  description:
+    'Explore all beauty services at Brows on Point — lash lifts, brow enhancements, permanent makeup, and teeth whitening in West Kelowna.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 const faqs = [
   {
@@ -34,50 +44,56 @@ const faqs = [
 const ServicesPage = () => {
   return (
     <div>
-      <div className="bg-primary px-6 pb-20 lg:px-8">
-        <div className="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
+      {/* Hero */}
+      <div className="bg-primary px-6 pb-12 sm:pb-16 lg:px-8">
+        <div className="mx-auto max-w-2xl pt-14 text-center sm:pt-20">
           <h1 className="text-5xl text-white sm:text-7xl">Our Services</h1>
           <p className="mt-8 text-pretty text-lg font-medium text-gray-100 sm:text-xl/8">
             Welcome to Brows on Point, where beauty meets affordability and
-            expertise. Since 2016, we&apos;ve been helping clients discover their
-            most confident selves through personalized aesthetic services.
+            expertise. Since 2016, we&apos;ve been helping clients discover
+            their most confident selves through personalized aesthetic services.
           </p>
         </div>
       </div>
 
-      <div className="flex min-h-[calc(80vh-theme(space.40))] items-center justify-center bg-light px-6">
-        <div className="grid w-full max-w-4xl grid-cols-1 gap-12 py-16 sm:py-24">
-          {allServices.map((service) => (
-            <Link
-              href={`/${service.slug}`}
-              key={service.slug}
-              className="group block"
-            >
-              <div className="flex overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-lg">
-                <div className="w-32 flex-shrink-0">
-                  <img
-                    src={service.thumbnail || '/api/placeholder/128/128'}
-                    alt={service.title}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="flex-grow p-6">
-                  <h2 className="mb-2 text-2xl font-bold text-primary group-hover:text-primary-mid">
-                    {service.title}
-                  </h2>
-                  <p className="mb-4 text-gray-600">
-                    {service.shortDescription}
-                  </p>
-                  <div className="flex justify-between text-sm">
-                    <span>
-                      <strong>Duration:</strong> {service.duration}
-                    </span>
-                    <span>{service.price}</span>
+      {/* Service cards */}
+      <div className="bg-gradient-dusk py-24 sm:py-32">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
+            {allServices.map((service) => (
+              <Link
+                href={`/${service.slug}`}
+                key={service.slug}
+                className="group"
+              >
+                <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md">
+                  <div className="h-56 w-full overflow-hidden">
+                    <img
+                      src={service.thumbnail || '/api/placeholder/600/224'}
+                      alt={service.title}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h2 className="text-2xl font-semibold text-primary group-hover:text-primary-mid">
+                      {service.title}
+                    </h2>
+                    <p className="mt-2 text-base leading-7 text-gray-600">
+                      {service.shortDescription}
+                    </p>
+                    <div className="mt-4 flex items-center justify-between border-t border-primary-light pt-4 text-sm text-dark">
+                      <span>
+                        <strong>Duration:</strong> {service.duration}
+                      </span>
+                      <span className="font-semibold text-primary">
+                        {service.price}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 

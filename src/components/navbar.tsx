@@ -88,11 +88,11 @@ function MobileNav() {
 
 export function Navbar({ banner }: { banner?: React.ReactNode }) {
   return (
-    <Disclosure as="header">
-      <div className="relative flex justify-around bg-primary">
+    <Disclosure as="header" className="sticky top-0 z-50">
+      <div className="relative flex justify-around bg-primary-dark">
         <div className="relative flex gap-6 py-3">
           <Link href="/" title="Home">
-            <Image src="/logo_white.png" alt="Logo" width={100} height={50} />
+            <Image src="/favicon_icon_white.png" alt="Brows on Point" width={38} height={38} />
           </Link>
           {banner && (
             <div className="relative hidden items-center p-3 lg:flex">

@@ -30,7 +30,7 @@ const TestimonialMakeup: React.FC = () => {
               src="/testimonials/carly.png"
               width={1000}
               height={1000}
-              className="rounded-xl bg-primary-light"
+              className="rounded-xl bg-gray-100"
             />
           </div>
 

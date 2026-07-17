@@ -105,11 +105,11 @@ const testimonials: Testimonial[] = [
 
 const TestimonialGroup: React.FC = () => {
   return (
-    <div className="bg-light py-24 sm:py-32">
+    <div className="bg-gradient-dusk py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-xl text-center">
-          <h2 className="text-6xl leading-8 text-primary">Testimonials</h2>
-          <p className="text-md mt-6 leading-8 text-gray-600">
+          <h2 className="text-3xl text-primary sm:text-5xl">Testimonials</h2>
+          <p className="mt-6 text-base leading-8 text-gray-600">
             I&apos;ve had the privilege of taking care of hundreds of clients in the
             Okanagan since 2016.
           </p>

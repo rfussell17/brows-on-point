@@ -19,7 +19,7 @@ const variants = {
   outline: clsx(
     'inline-flex items-center justify-center px-2 py-[calc(theme(spacing.[1.5])-1px)]',
     'border-transparent',
-    'text-md whitespace-nowrap font-medium text-gray-100',
+    'whitespace-nowrap text-base font-medium text-gray-100',
     'data-[disabled]:bg-transparent data-[hover]:text-gray-400 data-[disabled]:opacity-40',
   ),
 }
