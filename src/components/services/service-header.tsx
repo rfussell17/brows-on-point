@@ -63,7 +63,7 @@ export default function ServiceHome({
               <div className="mt-8">
                 <Link
                   href={bookingUrl}
-                  className="inline-flex rounded-md bg-tertiary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-tertiary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary-dark"
+                  className="inline-flex rounded-md bg-primary-dark px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-dark"
                 >
                   Reserve Appointment
                 </Link>

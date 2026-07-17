@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
               <div className="mt-10 flex items-center gap-x-6">
                 <Link
                   href="https://app.acuityscheduling.com/schedule.php?owner=15235407"
-                  className="rounded-md bg-tertiary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-tertiary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary-dark"
+                  className="rounded-md bg-primary-dark px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-dark"
                 >
                   Book Now
                 </Link>

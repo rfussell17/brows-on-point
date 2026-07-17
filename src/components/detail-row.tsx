@@ -41,7 +41,7 @@ const DetailRow: React.FC = () => {
           <dl className="grid max-w-xl grid-cols-1 gap-x-12 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {services.map((service) => (
               <div key={service.name} className="flex flex-col">
-                <dt className="rounded-xl bg-gray-100 px-2 py-2 text-center text-base font-semibold leading-7 text-dark">
+                <dt className="rounded-xl bg-primary-dark px-2 py-2 text-center text-base font-semibold leading-7 text-light">
                   {service.name}
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-dark">

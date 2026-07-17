@@ -110,8 +110,8 @@ const TestimonialGroup: React.FC = () => {
         <div className="mx-auto max-w-xl text-center">
           <h2 className="text-3xl text-primary sm:text-5xl">Testimonials</h2>
           <p className="mt-6 text-base leading-8 text-gray-600">
-            I&apos;ve had the privilege of taking care of hundreds of clients in the
-            Okanagan since 2016.
+            I&apos;ve had the privilege of taking care of hundreds of clients in
+            the Okanagan since 2016.
           </p>
         </div>
         <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
@@ -121,7 +121,7 @@ const TestimonialGroup: React.FC = () => {
                 key={testimonial.author.name}
                 className="pt-8 sm:inline-block sm:w-full sm:px-4"
               >
-                <figure className="rounded-2xl bg-gray-100 p-8 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+                <figure className="rounded-2xl bg-light p-8 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                   <blockquote className="text-gray-900">
                     <p>{`“${testimonial.body}”`}</p>
                   </blockquote>

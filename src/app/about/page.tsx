@@ -82,7 +82,7 @@ export default function AboutPage() {
     <div>
       <main>
         {/* Hero */}
-        <div className="bg-primary px-6 pb-12 sm:pb-16 lg:px-8">
+        <div className="bg-primary-dark px-6 pb-12 sm:pb-16 lg:px-8">
           <div className="mx-auto max-w-2xl pt-14 text-center sm:pt-20">
             <h1 className="text-5xl text-white sm:text-7xl">
               About Brows on Point

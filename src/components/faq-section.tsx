@@ -36,12 +36,12 @@ const FAQSection: React.FC<FAQSectionProps> = ({
   className = '',
 }) => {
   return (
-    <section className={`p-8 sm:p-24 ${className} bg-gradient-dusk`}>
+    <section className={`p-8 sm:p-24 ${className} bg-light`}>
       <h2 className="py-16 text-3xl text-primary sm:text-5xl">{title}</h2>
       <div className="grid gap-4">
         {faqs.map((faq, index) => (
           <Card key={index}>
-            <CardHeader className="bg-gray-50 font-bold">
+            <CardHeader className="bg-primary-dark font-bold text-light">
               {faq.question}
             </CardHeader>
             <CardContent>{faq.answer}</CardContent>

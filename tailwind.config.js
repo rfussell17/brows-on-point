@@ -18,17 +18,12 @@ module.exports = {
         primary: '#2D2E2E',
         'primary-light': '#fefefe',
         'primary-mid': '#2D2E2E',
-
         'primary-dark': '#322A30',
-        secondary: '#48639C', //gray-blue
-        'secondary-light': '#95d9da', //light gray-blue
         'secondary-dark': '#464C5D', //dark gray-blue
-        'tertiary-light': '#AA767C',
         tertiary: '#322A30',
         'tertiary-dark': 'oklch(21.2% 0.019 322.12)',
         dark: '#2D2327',
         light: '#fefefe',
-        light2: '#F3F4F6',
       },
       // backgroundImage: {
       //   'gradient-dusk':

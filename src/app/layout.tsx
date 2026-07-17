@@ -3,9 +3,9 @@
 import { Footer } from '@/components/footer'
 import { Navbar } from '@/components/navbar'
 
-import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 import { Hurricane, Roboto } from 'next/font/google'
+import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
