@@ -45,9 +45,9 @@ const ServicesPage = () => {
   return (
     <div>
       {/* Hero */}
-      <div className="bg-primary-dark px-6 pb-12 sm:pb-16 lg:px-8">
+      <div className="bg-primary px-6 pb-12 sm:pb-16 lg:px-8">
         <div className="mx-auto max-w-2xl pt-14 text-center sm:pt-20">
-          <h1 className="text-5xl text-white sm:text-7xl">Our Services</h1>
+          <h1 className="text-5xl text-light sm:text-7xl">Our Services</h1>
           <p className="mt-8 text-pretty text-lg font-medium text-gray-100 sm:text-xl/8">
             Welcome to Brows on Point, where beauty meets affordability and
             expertise. Since 2016, we&apos;ve been helping clients discover
@@ -57,7 +57,7 @@ const ServicesPage = () => {
       </div>
 
       {/* Service cards */}
-      <div className="bg-gradient-dusk py-24 sm:py-32">
+      <div className="bg-primary-light py-24 sm:py-32">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
             {allServices.map((service) => (
@@ -66,7 +66,7 @@ const ServicesPage = () => {
                 key={service.slug}
                 className="group"
               >
-                <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md">
+                <div className="overflow-hidden rounded-2xl bg-light shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md">
                   <div className="h-56 w-full overflow-hidden">
                     <img
                       src={service.thumbnail || '/api/placeholder/600/224'}
@@ -75,13 +75,13 @@ const ServicesPage = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h2 className="text-2xl font-semibold text-primary group-hover:text-primary-mid">
+                    <h2 className="text-2xl font-semibold text-primary group-hover:text-secondary">
                       {service.title}
                     </h2>
                     <p className="mt-2 text-base leading-7 text-gray-600">
                       {service.shortDescription}
                     </p>
-                    <div className="mt-4 flex items-center justify-between border-t border-primary-light pt-4 text-sm text-dark">
+                    <div className="mt-4 flex items-center justify-between border-t border-light pt-4 text-sm text-primary">
                       <span>
                         <strong>Duration:</strong> {service.duration}
                       </span>

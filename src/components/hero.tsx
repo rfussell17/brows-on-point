@@ -6,13 +6,13 @@ import React from 'react'
 
 const Hero: React.FC = () => {
   return (
-    <div className="bg-gradient-dusk relative min-h-[90vh]">
+    <div className="relative min-h-[90vh] bg-light">
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 flex min-h-[80vh] flex-col justify-center lg:w-full lg:max-w-2xl">
           <div className="relative px-6 py-16 sm:py-20 lg:px-8 lg:py-0 lg:pr-0">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
               <div className="hidden sm:mb-10 sm:flex">
-                <div className="relative rounded-full border border-gray-200 bg-white px-3 py-1 text-sm leading-6 text-gray-600">
+                <div className="relative rounded-full border border-gray-200 bg-light px-3 py-1 text-sm leading-6 text-gray-600">
                   High-Quality Esthetic Treatments in West Kelowna
                 </div>
               </div>
@@ -35,13 +35,13 @@ const Hero: React.FC = () => {
               <div className="mt-10 flex items-center gap-x-6">
                 <Link
                   href="https://app.acuityscheduling.com/schedule.php?owner=15235407"
-                  className="rounded-md bg-primary-dark px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-dark"
+                  className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-light shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   Book Now
                 </Link>
                 <Link
                   href="/services"
-                  className="text-sm font-semibold leading-6 text-dark"
+                  className="text-sm font-semibold leading-6 text-primary"
                 >
                   All Services <span aria-hidden="true">→</span>
                 </Link>

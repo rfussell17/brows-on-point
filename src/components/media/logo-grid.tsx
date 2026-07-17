@@ -40,8 +40,8 @@ const LogoGrid: React.FC<LogoGridProps> = ({
   logos,
   theme = 'light',
 }) => {
-  const bgClass = theme === 'dark' ? 'bg-primary-dark' : 'bg-white'
-  const titleColor = theme === 'dark' ? 'text-white' : 'text-primary-light'
+  const bgClass = theme === 'dark' ? 'bg-primary' : 'bg-light'
+  const titleColor = 'text-light'
 
   return (
     <div className={`${bgClass} py-8 md:py-12 lg:py-20`}>

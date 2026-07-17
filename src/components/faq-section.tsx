@@ -11,7 +11,7 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ children, className = '' }) => (
-  <div className={`overflow-hidden rounded-lg bg-white shadow-md ${className}`}>
+  <div className={`overflow-hidden rounded-lg bg-light shadow-md ${className}`}>
     {children}
   </div>
 )
@@ -41,7 +41,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
       <div className="grid gap-4">
         {faqs.map((faq, index) => (
           <Card key={index}>
-            <CardHeader className="bg-primary-dark font-bold text-light">
+            <CardHeader className="bg-primary font-bold text-light">
               {faq.question}
             </CardHeader>
             <CardContent>{faq.answer}</CardContent>

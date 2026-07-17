@@ -3,7 +3,7 @@ import { Link } from '@/components/link'
 import Image from 'next/image'
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-sm font-semibold uppercase tracking-wider text-white/70">{children}</h3>
+  return <h3 className="text-sm font-semibold uppercase tracking-wider text-light/70">{children}</h3>
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
@@ -15,7 +15,7 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
     <li>
       <Link
         {...props}
-        className="text-white/80 transition-colors hover:text-white"
+        className="text-light/80 transition-colors hover:text-light"
       />
     </li>
   )
@@ -74,21 +74,21 @@ function SocialIconInstagram(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export function Footer() {
   return (
-    <footer className="bg-primary-dark">
+    <footer className="bg-primary">
       {/* CTA strip */}
-      <div className="border-b border-white/10 py-16 text-center">
+      <div className="border-b border-light/10 py-16 text-center">
         <Container>
-          <h2 className="text-3xl text-white sm:text-5xl">
+          <h2 className="text-3xl text-light sm:text-5xl">
             Book your appointment today
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-base text-white/70">
+          <p className="mx-auto mt-4 max-w-md text-base text-light/70">
             West Kelowna&apos;s trusted studio for lash lifts, brow enhancements,
             and permanent makeup.
           </p>
           <div className="mt-8">
             <Link
               href="https://app.acuityscheduling.com/schedule.php?owner=15235407"
-              className="inline-block rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-gray-100"
+              className="inline-block rounded-md bg-light px-5 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-gray-100"
             >
               Reserve Appointment
             </Link>
@@ -115,7 +115,7 @@ export function Footer() {
                   href="https://facebook.com"
                   target="_blank"
                   aria-label="Visit us on Facebook"
-                  className="text-white/70 transition-colors hover:text-white"
+                  className="text-light/70 transition-colors hover:text-light"
                 >
                   <SocialIconFacebook className="size-5" />
                 </Link>
@@ -123,7 +123,7 @@ export function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   aria-label="Visit us on Instagram"
-                  className="text-white/70 transition-colors hover:text-white"
+                  className="text-light/70 transition-colors hover:text-light"
                 >
                   <SocialIconInstagram className="size-5" />
                 </Link>
@@ -137,8 +137,8 @@ export function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="mt-10 border-t border-white/10 pt-8 text-center">
-            <p className="text-sm text-white/50">
+          <div className="mt-10 border-t border-light/10 pt-8 text-center">
+            <p className="text-sm text-light/50">
               &copy; {new Date().getFullYear()} Brows on Point. All rights reserved.
             </p>
           </div>

@@ -15,7 +15,7 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
   )
 
   return (
-    <div className={`relative bg-white ${className} mb-24`}>
+    <div className={`relative bg-light ${className} mb-24`}>
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="mx-auto flex max-w-2xl flex-col gap-x-12 lg:mx-0 lg:max-w-none lg:flex-row">
           <div className="flex flex-col space-y-10">

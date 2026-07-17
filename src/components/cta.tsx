@@ -21,14 +21,14 @@ const CallToAction: FC<CallToActionProps> = ({
   className = '',
 }) => {
   return (
-    <div className={`bg-primary-dark ${className}`}>
+    <div className={`bg-primary ${className}`}>
       <div className="mx-auto max-w-5xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
-        <h2 className="text-4xl text-white sm:text-6xl">{title}</h2>
+        <h2 className="text-4xl text-light sm:text-6xl">{title}</h2>
         <div className="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
           {primaryButton && (
             <Link
               href={primaryButton.href}
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="rounded-md bg-light px-3.5 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light"
             >
               {primaryButton.text}
             </Link>

@@ -23,7 +23,7 @@ const links = [
 
 function DesktopNav() {
   return (
-    <nav className="relative hidden text-white lg:flex">
+    <nav className="relative hidden text-light lg:flex">
       {links.map(({ href, label }) => {
         if (label === 'Why Us?') {
           return (
@@ -41,7 +41,7 @@ function DesktopNav() {
           <div key={href} className="relative flex">
             <Link
               href={href}
-              className="flex items-center px-4 py-3 text-base font-medium text-white data-[hover]:bg-black/[2.5%]"
+              className="flex items-center px-4 py-3 text-base font-medium text-light data-[hover]:bg-black/[2.5%]"
             >
               {label}
             </Link>
@@ -89,7 +89,7 @@ function MobileNav() {
 export function Navbar({ banner }: { banner?: React.ReactNode }) {
   return (
     <Disclosure as="header" className="sticky top-0 z-50">
-      <div className="relative flex justify-around bg-primary-dark">
+      <div className="relative flex justify-around bg-primary">
         <div className="relative flex gap-6 py-3">
           <Link href="/" title="Home">
             <Image src="/favicon_icon_white.png" alt="Brows on Point" width={38} height={38} />

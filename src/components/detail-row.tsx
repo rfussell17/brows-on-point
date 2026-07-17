@@ -23,7 +23,7 @@ const services = [
 
 const DetailRow: React.FC = () => {
   return (
-    <div className="bg-gradient-dusk py-24 sm:py-32">
+    <div className="bg-primary-light py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl text-primary sm:text-6xl">
@@ -41,7 +41,7 @@ const DetailRow: React.FC = () => {
           <dl className="grid max-w-xl grid-cols-1 gap-x-12 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {services.map((service) => (
               <div key={service.name} className="flex flex-col">
-                <dt className="rounded-xl bg-primary-dark px-2 py-2 text-center text-base font-semibold leading-7 text-light">
+                <dt className="rounded-xl bg-primary px-2 py-2 text-center text-base font-semibold leading-7 text-light">
                   {service.name}
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-dark">

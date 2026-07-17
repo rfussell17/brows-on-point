@@ -82,9 +82,9 @@ export default function AboutPage() {
     <div>
       <main>
         {/* Hero */}
-        <div className="bg-primary-dark px-6 pb-12 sm:pb-16 lg:px-8">
+        <div className="bg-primary px-6 pb-12 sm:pb-16 lg:px-8">
           <div className="mx-auto max-w-2xl pt-14 text-center sm:pt-20">
-            <h1 className="text-5xl text-white sm:text-7xl">
+            <h1 className="text-5xl text-light sm:text-7xl">
               About Brows on Point
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-100 sm:text-xl/8">
@@ -97,7 +97,7 @@ export default function AboutPage() {
         </div>
 
         {/* Story + stats */}
-        <div className="bg-gradient-dusk py-24 sm:py-32">
+        <div className="bg-primary-light py-24 sm:py-32">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-16">
               <div className="lg:col-span-2">
@@ -129,7 +129,7 @@ export default function AboutPage() {
                 {stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200"
+                    className="rounded-2xl bg-light p-6 shadow-sm ring-1 ring-gray-200"
                   >
                     <dd className="text-4xl font-semibold text-primary">
                       {stat.value}
@@ -154,7 +154,7 @@ export default function AboutPage() {
         </div>
 
         {/* Popular services */}
-        <div className="bg-white px-6 py-24 lg:px-8">
+        <div className="bg-light px-6 py-24 lg:px-8">
           <div className="mx-auto max-w-5xl">
             <h2 className="text-3xl text-primary sm:text-5xl">
               Popular Services
@@ -179,7 +179,7 @@ export default function AboutPage() {
         </div>
 
         {/* Certifications */}
-        <div className="bg-gradient-dusk py-24 sm:py-32">
+        <div className="bg-primary-light py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 sm:px-8">
             <div className="mx-auto flex max-w-2xl flex-col gap-12 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:gap-20">
               <Image

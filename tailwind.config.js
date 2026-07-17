@@ -15,20 +15,17 @@ module.exports = {
         '4xl': '2rem',
       },
       colors: {
-        primary: '#2D2E2E',
-        'primary-light': '#fefefe',
-        'primary-mid': '#2D2E2E',
-        'primary-dark': '#322A30',
-        'secondary-dark': '#464C5D', //dark gray-blue
-        tertiary: '#322A30',
-        'tertiary-dark': 'oklch(21.2% 0.019 322.12)',
-        dark: '#2D2327',
-        light: '#fefefe',
+        primary: '#322A30',
+        secondary: '#634C5A',
+        light: '#FBFBF2',
       },
-      // backgroundImage: {
-      //   'gradient-dusk':
-      //     'linear-gradient(to right, #FFFFFF, #E2E5E5, #C9CBCC, #BDBEC0)',
-      // },
+      backgroundImage: {
+        'gradient-browns': 'linear-gradient(to right, #322A30, #634C5A)',
+        'gradient-browns-soft':
+          'linear-gradient(135deg, #322A30, #634C5A, #FBFBF2)',
+        'gradient-browns-glow':
+          'radial-gradient(circle at top, #634C5A, #322A30)',
+      },
     },
   },
   plugins: [
