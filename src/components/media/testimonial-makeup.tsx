@@ -5,7 +5,7 @@ const TestimonialMakeup: React.FC = () => {
     <section className="relative isolate overflow-hidden bg-primary px-6 lg:px-8">
       <div className="relative mx-auto max-w-2xl py-20 sm:py-28 lg:max-w-4xl">
         {/* Background Elements */}
-        <div className="absolute left-1/2 top-0 -z-10 h-[50rem] w-[90rem] -translate-x-1/2 bg-[radial-gradient(50%_100%_at_top,theme(colors.primary),white)] opacity-20 lg:left-36" />
+        <div className="absolute left-1/2 top-0 -z-10 h-[50rem] w-[90rem] -translate-x-1/2 bg-[radial-gradient(50%_100%_at_top,theme(colors.primary),theme(colors.light))] opacity-20 lg:left-36" />
         <div className="shadow-primary-600/10 absolute inset-y-0 right-1/2 -z-10 mr-12 w-[150vw] origin-bottom-left skew-x-[-30deg] bg-primary shadow-xl ring-1 ring-secondary sm:mr-20 md:mr-0 lg:right-full lg:-mr-36 lg:origin-center" />
 
         {/* Testimonial Content */}

@@ -17,12 +17,12 @@ module.exports = {
       colors: {
         primary: '#322A30',
         secondary: '#634C5A',
-        light: '#FBFBF2',
+        light: '#FEFEFC',
       },
       backgroundImage: {
         'gradient-browns': 'linear-gradient(to right, #322A30, #634C5A)',
         'gradient-browns-soft':
-          'linear-gradient(135deg, #322A30, #634C5A, #FBFBF2)',
+          'linear-gradient(135deg, #322A30, #634C5A, #FEFEFC)',
         'gradient-browns-glow':
           'radial-gradient(circle at top, #634C5A, #322A30)',
       },

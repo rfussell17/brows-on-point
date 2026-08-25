@@ -19,6 +19,12 @@ const services = [
       'Enhance your features with permanent makeup, including lash enhancements, eyeliner, and more. Achieve a natural, subtle look that saves you time and effort every day.',
     href: '/permanent-makeup',
   },
+  {
+    name: 'RF Skin Tightening',
+    description:
+      'Firm and rejuvenate your skin with our RF Skin Tightening facial, powered by advanced 40k ultrasonic radiofrequency technology. Deeply cleanse, tighten, and refresh for a radiant, lifted glow.',
+    href: '/rf-skin-tightening',
+  },
 ]
 
 const DetailRow: React.FC = () => {
@@ -38,7 +44,7 @@ const DetailRow: React.FC = () => {
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-12 gap-y-16 lg:max-w-none lg:grid-cols-3">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-12 gap-y-16 lg:max-w-none lg:grid-cols-2">
             {services.map((service) => (
               <div key={service.name} className="flex flex-col">
                 <dt className="rounded-xl bg-primary px-2 py-2 text-center text-base font-semibold leading-7 text-light">

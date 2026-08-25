@@ -45,22 +45,27 @@ export const lashServiceData: ServiceData = {
   detailImage: lashImage,
   duration: '45-60 minutes',
   results: '6-12 weeks',
-  price: '$70 - $80',
+  // TODO: confirm real pricing before launch
+  price:
+    'BOMB Lift / Keratin Lift: $70-$80 | Korean Lash Lift: $85 | Korean Lash Lift & Tint: $95',
   testimonial: {
     component: TestimonialOne,
   },
   thumbnail: '/services/thumbnail_lash_lift_brows_on_point.png',
   about:
-    'At Brows on Point, we offer two exceptional lash lift treatments: our exclusive BOMB Lift and our premium Keratin Lash Lift. Both treatments enhance your natural lashes from root to tip, creating a beautiful, uplifted appearance without the need for extensions or daily curling.',
+    'At Brows on Point, we offer several exceptional lash lift treatments: our exclusive BOMB Lift, our premium Keratin Lash Lift, and the Korean Lash Lift (available with or without tint). Each treatment enhances your natural lashes from root to tip, creating a beautiful, uplifted appearance without the need for extensions or daily curling.',
   benefits: (
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
         <li>Dramatically enhanced natural lashes without extensions</li>
-        <li>Choice between our exclusive BOMB Lift or Keratin Treatment</li>
-        <li>Optional tinting process</li>
+        <li>
+          Choice between our exclusive BOMB Lift, Keratin Treatment, or Korean
+          Lash Lift
+        </li>
+        <li>Korean Lash Lift offers a softer, more natural curl pattern</li>
+        <li>Optional tinting process, including with the Korean Lash Lift</li>
         <li>Biotin-infused formula promotes natural lash growth</li>
         <li>Reduces daily makeup routine time</li>
-        <li>Optional tinting for added definition</li>
         <li>Low maintenance, natural-looking results</li>
       </ul>
     </div>
@@ -435,10 +440,103 @@ export const teethServiceData: ServiceData = {
   ],
 }
 
+export const rfSkinTighteningData: ServiceData = {
+  slug: 'rf-skin-tightening',
+  shortDescription:
+    'Firm and rejuvenate your skin with RF skin tightening, using our 40k ultrasonic machine',
+  title: 'RF Skin Tightening',
+  description:
+    'Tighten, lift, and rejuvenate your skin with our RF Skin Tightening facial treatment.',
+  headerImage: '/services/thumbail_main_brows_on_point.png',
+  thumbnail: '/services/thumbail_main_brows_on_point.png',
+  detailImage: '/services/thumbail_main_brows_on_point.png',
+  // TODO: confirm real pricing, duration, and results before launch
+  duration: '45-60 minutes',
+  results: '4-6 weeks, cumulative with a course of treatments',
+  price: 'Starting at $80',
+  about:
+    'Our RF Skin Tightening facial uses a 40k ultrasonic radiofrequency machine to gently heat the deeper layers of the skin, stimulating collagen production and tightening the skin from within. Combined with ultrasonic exfoliation and product infusion, it leaves your skin feeling firmer, smoother, and refreshed.',
+  benefits: (
+    <div className="mx-auto max-w-2xl px-6">
+      <ul className="list-disc space-y-2 pl-6">
+        <li>Visibly firmer, tighter-looking skin</li>
+        <li>Stimulates natural collagen production</li>
+        <li>Deep ultrasonic exfoliation and cleansing</li>
+        <li>Improves overall skin tone and texture</li>
+        <li>Non-invasive, no downtime</li>
+        <li>Relaxing treatment suitable for most skin types</li>
+      </ul>
+    </div>
+  ),
+  process: (
+    <div className="mx-auto max-w-2xl px-6">
+      <ul className="list-disc space-y-2 pl-6">
+        <li>Initial consultation and skin assessment</li>
+        <li>Thorough cleansing of the treatment area</li>
+        <li>Ultrasonic exfoliation to remove dead skin cells</li>
+        <li>RF skin tightening passes with the 40k ultrasonic machine</li>
+        <li>Application of soothing, hydrating serum</li>
+      </ul>
+    </div>
+  ),
+  preparation: (
+    <div className="mx-auto max-w-2xl px-6">
+      <ul className="list-disc space-y-2 pl-6">
+        <li>Arrive with clean, makeup-free skin</li>
+        <li>Avoid sun exposure or sunburn in the days before</li>
+        <li>Discontinue Retinol products 48 hours before treatment</li>
+        <li>Inform us of any metal implants, pacemakers, or skin conditions</li>
+      </ul>
+    </div>
+  ),
+  aftercare: (
+    <div className="mx-auto max-w-2xl px-6">
+      <ul className="list-disc space-y-2 pl-6">
+        <li>Apply SPF daily following treatment</li>
+        <li>Stay well hydrated</li>
+        <li>Avoid harsh exfoliants for 48 hours</li>
+        <li>Schedule follow-up sessions as recommended for best results</li>
+      </ul>
+    </div>
+  ),
+  contraindications: (
+    <ul className="list-disc pl-6 [&>li]:py-1.5">
+      <li>Pregnancy or nursing</li>
+      <li>Pacemakers or other implanted electronic devices</li>
+      <li>Active skin infections or open wounds</li>
+      <li>Certain metal implants in the treatment area</li>
+      <li>Recent chemical peels or facial procedures</li>
+    </ul>
+  ),
+  faqs: [
+    {
+      question: 'What is a 40k ultrasonic machine?',
+      answer:
+        'It’s a facial device that combines radiofrequency (RF) energy with 40kHz ultrasonic vibration to tighten skin, boost collagen, and deeply exfoliate in a single treatment.',
+    },
+    {
+      question: 'Is RF skin tightening painful?',
+      answer:
+        'No, most clients describe a warm, relaxing sensation during treatment with no discomfort.',
+    },
+    {
+      question: 'How many sessions will I need?',
+      answer:
+        'Results build over a course of treatments. We’ll recommend a personalized plan during your consultation based on your skin goals.',
+    },
+    {
+      question: 'Is there any downtime?',
+      answer:
+        'None. You can return to your normal routine immediately after treatment.',
+    },
+  ],
+}
+
 // Add a services array for easy mapping
 export const allServices = [
   lashServiceData,
   browServiceData,
   permanentMakeupData,
   teethServiceData,
+  rfSkinTighteningData,
 ]
