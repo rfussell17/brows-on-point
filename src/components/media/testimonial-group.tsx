@@ -121,7 +121,7 @@ const TestimonialGroup: React.FC<TestimonialGroupProps> = ({
     <div className={`${bgClass} py-24 sm:py-32`}>
       <Container>
         <div className="mx-auto max-w-xl text-center">
-          <h2 className="text-3xl text-light sm:text-5xl">Testimonials</h2>
+          <h2 className="text-3xl text-light sm:text-7xl">Testimonials</h2>
           <p className="mt-6 text-base leading-8 text-gray-100">
             I&apos;ve had the privilege of taking care of hundreds of clients in
             the Okanagan since 2016.

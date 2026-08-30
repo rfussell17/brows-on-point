@@ -25,9 +25,19 @@ export const logos = [
     src: '/logo-cloud/kwadron_white.png',
   },
   {
-    name: 'Li Pigments',
-    alt: 'Li Pigments logo',
-    src: '/logo-cloud/li_pigments.png',
+    name: 'Brow Daddy',
+    alt: 'Brow Daddy logo',
+    src: '/logo-cloud/brow_daddy.png',
+  },
+  {
+    name: 'Vertix',
+    alt: 'Vertix logo',
+    src: '/logo-cloud/vertix.png',
+  },
+  {
+    name: 'Inlei',
+    alt: 'Inlei logo',
+    src: '/logo-cloud/inlei.png',
   },
 ]
 
@@ -51,7 +61,7 @@ const LogoGrid: React.FC<LogoGridProps> = ({
         <h2 className={`text-center text-3xl sm:text-5xl ${headingColor}`}>
           {title}
         </h2>
-        <div className="mt-8 grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-5">
           {logos.map((logo, index) => (
             <div
               key={index}

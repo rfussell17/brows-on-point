@@ -40,16 +40,15 @@ const DetailRow: React.FC<DetailRowProps> = ({ bgVariant = 'primary' }) => {
   return (
     <div className={`${bgClass} py-24 sm:py-32`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="mx-auto max-w-4xl lg:mx-0">
           <h2 className="text-4xl text-light sm:text-6xl">
             Feel Wonderful Inside and Out
           </h2>
           <p className="mt-6 text-base leading-8 text-gray-100">
-            I offer a variety of beauty and self-care services at Brows on
-            Point to help you look and feel your best. From enhancing your
-            lashes and brows to expert permanent makeup techniques, there’s
-            something for everyone. Here’s a closer look at some of my popular
-            services:
+            I offer a variety of beauty and self-care services at Brows on Point
+            to help you look and feel your best. From enhancing your lashes and
+            brows to expert permanent makeup techniques, there’s something for
+            everyone. Here’s a closer look at some of my popular services:
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-xl sm:mt-20 lg:mt-24 lg:max-w-none">
