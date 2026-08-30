@@ -1,17 +1,28 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function LashLiftHome() {
+interface LashLiftHomeProps {
+  bgVariant?: 'primary' | 'primary-950'
+}
+
+export default function LashLiftHome({
+  bgVariant = 'primary',
+}: LashLiftHomeProps) {
+  const bgClass =
+    bgVariant === 'primary-950'
+      ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
+      : 'bg-primary'
+
   return (
-    <div className="bg-primary-light overflow-hidden py-24 sm:py-32">
+    <div className={`${bgClass} overflow-hidden py-24 sm:py-32`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pr-4 lg:pt-4">
             <div className="lg:max-w-lg">
-              <h2 className="mt-2 text-3xl text-primary sm:text-5xl">
+              <h2 className="mt-2 text-3xl text-light sm:text-5xl">
                 What is a Lash Lift?
               </h2>
-              <p className="mt-6 text-base leading-7 text-gray-600">
+              <p className="mt-6 text-base leading-7 text-gray-100">
                 A lash lift is a low-maintenance treatment that curls and lifts
                 your natural lashes from base to tip, giving them a fuller
                 appearance. It&apos;s essentially a &ldquo;perm&rdquo; for your
@@ -19,7 +30,7 @@ export default function LashLiftHome() {
                 <strong> 6-12 weeks</strong> depending on the type of lift.
               </p>
 
-              <p className="mt-6 text-base leading-7 text-gray-600">
+              <p className="mt-6 text-base leading-7 text-gray-100">
                 I offer two options: my exlusive{' '}
                 <strong> BOMB </strong>Lift for
                 a dramatic effect or the <strong>Keratin Lift</strong> for a
@@ -29,19 +40,19 @@ export default function LashLiftHome() {
               <div className="mt-8">
                 <Link
                   href="https://app.acuityscheduling.com/schedule.php?owner=15235407"
-                  className="inline-flex rounded-md bg-primary px-3.5 py-2.5 text-base font-semibold text-light shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="inline-flex rounded-md bg-light px-3.5 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light"
                 >
                   Reserve Appointment
                 </Link>
 
                 <Link
                   href="/lash-lift"
-                  className="px-3.5 text-base font-semibold text-primary"
+                  className="px-3.5 text-base font-semibold text-light"
                 >
                   Explore Lash Lifts <span aria-hidden="true">→</span>
                 </Link>
               </div>
-              <figure className="mt-16 border-l border-secondary pl-8 text-gray-600">
+              <figure className="mt-16 rounded-r-lg border-l border-secondary-700 bg-primary-800 py-6 pl-8 pr-6 text-gray-100">
                 <blockquote className="text-lg leading-7">
                   <p>
                     “Recently had my Keratin Lash Lift and Tint done by Jamie
@@ -54,7 +65,7 @@ export default function LashLiftHome() {
                 </blockquote>
                 <figcaption className="mt-6 flex gap-x-4 text-base">
                   <div>
-                    <span className="font-fancy text-gray-900">Kyla S.</span>{' '}
+                    <span className="font-fancy text-light">Kyla S.</span>{' '}
                   </div>
                 </figcaption>
               </figure>

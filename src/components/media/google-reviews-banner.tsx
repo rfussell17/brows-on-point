@@ -9,7 +9,7 @@ interface GoogleReviewsBannerProps {
   reviewsUrl: string
   /** Defaults to the studio's own address — no API key or Place ID needed. */
   mapAddress?: string
-  theme?: 'light' | 'dark'
+  bgVariant?: 'light' | 'primary' | 'primary-950'
 }
 
 const GoogleLogo = () => (
@@ -38,13 +38,19 @@ const GoogleReviewsBanner: React.FC<GoogleReviewsBannerProps> = ({
   reviewCount,
   reviewsUrl,
   mapAddress = BUSINESS_ADDRESS,
-  theme = 'dark',
+  bgVariant = 'primary',
 }) => {
-  const bgClass = theme === 'dark' ? 'bg-primary' : 'bg-light'
-  const headingColor = theme === 'dark' ? 'text-light' : 'text-primary'
-  const subColor = theme === 'dark' ? 'text-light/70' : 'text-gray-600'
-  const starOffColor = theme === 'dark' ? 'text-primary-700' : 'text-gray-300'
-  const ringClass = theme === 'dark' ? 'ring-secondary-700' : 'ring-primary-100'
+  const isDark = bgVariant !== 'light'
+  const bgClass =
+    bgVariant === 'primary-950'
+      ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
+      : bgVariant === 'primary'
+        ? 'bg-primary'
+        : 'bg-light'
+  const headingColor = isDark ? 'text-light' : 'text-primary'
+  const subColor = isDark ? 'text-light/70' : 'text-gray-600'
+  const starOffColor = isDark ? 'text-primary-700' : 'text-gray-300'
+  const ringClass = isDark ? 'ring-secondary-700' : 'ring-primary-100'
   const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(
     mapAddress,
   )}&t=&z=16&ie=UTF8&iwloc=&output=embed`

@@ -27,15 +27,24 @@ const services = [
   },
 ]
 
-const DetailRow: React.FC = () => {
+interface DetailRowProps {
+  bgVariant?: 'primary' | 'primary-950'
+}
+
+const DetailRow: React.FC<DetailRowProps> = ({ bgVariant = 'primary' }) => {
+  const bgClass =
+    bgVariant === 'primary-950'
+      ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
+      : 'bg-primary'
+
   return (
-    <div className="bg-primary-light py-24 sm:py-32">
+    <div className={`${bgClass} py-24 sm:py-32`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl text-primary sm:text-6xl">
+          <h2 className="text-4xl text-light sm:text-6xl">
             Feel Wonderful Inside and Out
           </h2>
-          <p className="mt-6 text-base leading-8 text-gray-600">
+          <p className="mt-6 text-base leading-8 text-gray-100">
             I offer a variety of beauty and self-care services at Brows on
             Point to help you look and feel your best. From enhancing your
             lashes and brows to expert permanent makeup techniques, there’s
@@ -47,15 +56,15 @@ const DetailRow: React.FC = () => {
           <dl className="grid max-w-xl grid-cols-1 gap-x-12 gap-y-16 lg:max-w-none lg:grid-cols-2">
             {services.map((service) => (
               <div key={service.name} className="flex flex-col">
-                <dt className="rounded-xl bg-primary px-2 py-2 text-center text-base font-semibold leading-7 text-light">
+                <dt className="rounded-xl bg-primary-800 px-2 py-2 text-center text-base font-semibold leading-7 text-light ring-1 ring-secondary-700">
                   {service.name}
                 </dt>
-                <dd className="text-dark mt-4 flex flex-auto flex-col text-base leading-7">
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-100">
                   <p className="flex-auto">{service.description}</p>
                   <p className="mt-4">
                     <Link
                       href={service.href}
-                      className="text-dark text-base leading-6"
+                      className="text-base leading-6 text-light"
                     >
                       <strong>View {service.name}</strong>
                       <span aria-hidden="true"> →</span>

@@ -10,7 +10,7 @@ interface Logo {
 interface LogoGridProps {
   title: string
   logos: Logo[]
-  theme?: 'light' | 'dark'
+  bgVariant?: 'light' | 'primary' | 'primary-950'
 }
 
 export const logos = [
@@ -31,9 +31,19 @@ export const logos = [
   },
 ]
 
-const LogoGrid: React.FC<LogoGridProps> = ({ title, logos, theme = 'dark' }) => {
-  const bgClass = theme === 'dark' ? 'bg-primary' : 'bg-light'
-  const headingColor = theme === 'dark' ? 'text-light' : 'text-primary'
+const LogoGrid: React.FC<LogoGridProps> = ({
+  title,
+  logos,
+  bgVariant = 'primary',
+}) => {
+  const isDark = bgVariant !== 'light'
+  const bgClass =
+    bgVariant === 'primary-950'
+      ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
+      : bgVariant === 'primary'
+        ? 'bg-primary'
+        : 'bg-light'
+  const headingColor = isDark ? 'text-light' : 'text-primary'
 
   return (
     <div className={`${bgClass} py-8 md:py-12 lg:py-20`}>

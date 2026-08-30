@@ -105,9 +105,20 @@ const testimonials: Testimonial[] = [
   // Add more testimonials here...
 ]
 
-const TestimonialGroup: React.FC = () => {
+interface TestimonialGroupProps {
+  bgVariant?: 'primary' | 'primary-950'
+}
+
+const TestimonialGroup: React.FC<TestimonialGroupProps> = ({
+  bgVariant = 'primary-950',
+}) => {
+  const bgClass =
+    bgVariant === 'primary-950'
+      ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
+      : 'bg-primary'
+
   return (
-    <div className="bg-primary-950 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
+    <div className={`${bgClass} py-24 sm:py-32`}>
       <Container>
         <div className="mx-auto max-w-xl text-center">
           <h2 className="text-3xl text-light sm:text-5xl">Testimonials</h2>

@@ -2,9 +2,21 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  bgVariant?: 'light' | 'primary' | 'primary-950'
+}
+
+const Hero: React.FC<HeroProps> = ({ bgVariant = 'light' }) => {
+  const isDark = bgVariant !== 'light'
+  const bgClass =
+    bgVariant === 'primary-950'
+      ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
+      : bgVariant === 'primary'
+        ? 'bg-primary'
+        : 'bg-light'
+
   return (
-    <div className="relative min-h-[90vh] bg-light">
+    <div className={`relative min-h-[90vh] ${bgClass}`}>
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 flex min-h-[80vh] flex-col justify-center lg:w-full lg:max-w-2xl">
           <div className="relative px-6 py-16 sm:py-20 lg:px-8 lg:py-0 lg:pr-0">
@@ -15,15 +27,27 @@ const Hero: React.FC = () => {
                 </div>
               </div>
               <h1 className="sr-only">Brows on Point</h1>
-              <Image
-                src="/logo_white_bg.png"
-                alt="Brows on Point"
-                width={420}
-                height={180}
-                className="mix-blend-multiply"
-                priority
-              />
-              <p className="mt-6 text-base leading-8 text-gray-600">
+              {isDark ? (
+                <Image
+                  src="/logo_white.png"
+                  alt="Brows on Point"
+                  width={420}
+                  height={180}
+                  priority
+                />
+              ) : (
+                <Image
+                  src="/logo_white_bg.png"
+                  alt="Brows on Point"
+                  width={420}
+                  height={180}
+                  className="mix-blend-multiply"
+                  priority
+                />
+              )}
+              <p
+                className={`mt-6 text-base leading-8 ${isDark ? 'text-gray-100' : 'text-gray-600'}`}
+              >
                 Whether you need precision brow shaping, lash lifts, or teeth
                 treatments, Brows on Point ensures a comfortable experience.
                 Enhance your natural beauty with treatments tailored to{' '}
@@ -33,13 +57,17 @@ const Hero: React.FC = () => {
               <div className="mt-10 flex items-center gap-x-6">
                 <Link
                   href="https://app.acuityscheduling.com/schedule.php?owner=15235407"
-                  className="rounded-md bg-primary px-3.5 py-2.5 text-base font-semibold text-light shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className={
+                    isDark
+                      ? 'rounded-md bg-light px-3.5 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light'
+                      : 'rounded-md bg-primary px-3.5 py-2.5 text-base font-semibold text-light shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary'
+                  }
                 >
                   Book Now
                 </Link>
                 <Link
                   href="/services"
-                  className="text-base font-semibold leading-6 text-primary"
+                  className={`text-base font-semibold leading-6 ${isDark ? 'text-light' : 'text-primary'}`}
                 >
                   All Services <span aria-hidden="true">→</span>
                 </Link>

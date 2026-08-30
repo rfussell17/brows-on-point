@@ -13,6 +13,7 @@ interface CallToActionProps {
     href: string
   }
   className?: string
+  bgVariant?: 'primary' | 'primary-950'
 }
 
 const CallToAction: FC<CallToActionProps> = ({
@@ -20,9 +21,15 @@ const CallToAction: FC<CallToActionProps> = ({
   primaryButton,
   secondaryButton,
   className = '',
+  bgVariant = 'primary',
 }) => {
+  const bgClass =
+    bgVariant === 'primary-950'
+      ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
+      : 'bg-primary'
+
   return (
-    <div className={`bg-primary py-24 sm:py-32 ${className}`}>
+    <div className={`${bgClass} py-24 sm:py-32 ${className}`}>
       <Container>
         <div className="lg:flex lg:items-center lg:justify-between">
           <h2 className="text-4xl text-light sm:text-6xl">{title}</h2>

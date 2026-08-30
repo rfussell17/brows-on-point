@@ -46,18 +46,31 @@ const generalFAQs = [
   },
 ]
 
+type BgVariant = 'primary' | 'primary-950'
+const opposite = (variant: BgVariant): BgVariant =>
+  variant === 'primary' ? 'primary-950' : 'primary'
+
 export default function Home() {
+  // Every section from LogoGrid down alternates against whatever landed
+  // right before it, so no two identically-coloured sections ever touch —
+  // same pattern used on the service pages. The Hero is white and sits
+  // outside that chain, so LogoGrid's tone is just the chain's starting seed.
+  const logoGridVariant: BgVariant = 'primary-950'
+  const detailRowVariant = opposite(logoGridVariant)
+  const cta1Variant = opposite(detailRowVariant)
+  const lashLiftVariant = opposite(cta1Variant)
+  const testimonialTwoVariant = opposite(lashLiftVariant)
+  const testimonialGroupVariant = opposite(testimonialTwoVariant)
+  const cta2Variant = opposite(testimonialGroupVariant)
+  const faqVariant = opposite(cta2Variant)
+  const reviewsVariant = opposite(faqVariant)
+  const footerVariant = opposite(reviewsVariant)
+
   return (
     <div className="overflow-hidden">
-      <Hero />
+      <Hero bgVariant="light" />
       <main>
-        <LogoGrid
-          title="I only use the best products"
-          logos={logos}
-          theme="dark"
-        />
-
-        <DetailRow />
+        <DetailRow bgVariant={detailRowVariant} />
         <CallToAction
           title="See All Beauty Services"
           primaryButton={{
@@ -68,33 +81,32 @@ export default function Home() {
             text: 'Book Now',
             href: 'https://app.acuityscheduling.com/schedule.php?owner=15235407',
           }}
+          bgVariant={cta1Variant}
         />
-        <LashLiftHome />
-        <TestimonialTwo />
+        <LashLiftHome bgVariant={lashLiftVariant} />
+        <TestimonialTwo bgVariant={testimonialTwoVariant} />
       </main>
-      <TestimonialGroup />
+      <TestimonialGroup bgVariant={testimonialGroupVariant} />
 
-      <CallToAction
-        title="It's time to put yourself first"
-        primaryButton={{
-          text: 'Reserve Appointment',
-          href: 'https://app.acuityscheduling.com/schedule.php?owner=15235407',
-        }}
+      <LogoGrid
+        title="I only use the best products"
+        logos={logos}
+        bgVariant={logoGridVariant}
       />
       <FAQSection
         faqs={generalFAQs}
         title="Common Questions"
-        bgVariant="primary-950"
+        bgVariant={faqVariant}
       />
 
       <GoogleReviewsBanner
         rating={4.9}
         reviewCount={138}
         reviewsUrl="https://share.google/I3DmUVnWFhe0tZRgt"
-        theme="dark"
+        bgVariant={reviewsVariant}
       />
 
-      <Footer ctaBgVariant="primary-950" />
+      <Footer ctaBgVariant={footerVariant} />
     </div>
   )
 }
