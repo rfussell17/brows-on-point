@@ -1,7 +1,14 @@
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
-import { ACUITY_URL } from '@/lib/site'
+import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
+import {
+  ACUITY_URL,
+  BOOKING_CTA,
+  GOOGLE_RATING,
+  GOOGLE_REVIEW_COUNT,
+  GOOGLE_REVIEWS_URL,
+} from '@/lib/site'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -49,15 +56,15 @@ export default function TrainingPage() {
             {courses.map((course) => (
               <div
                 key={course.name}
-                className="rounded-2xl bg-primary-50 p-8 shadow-sm ring-1 ring-primary-100"
+                className="rounded-2xl bg-primary-800 p-8 ring-1 ring-secondary-700"
               >
-                <h2 className="text-xl font-semibold text-primary">
+                <h2 className="text-xl font-semibold text-light">
                   {course.name}
                 </h2>
-                <div className="mt-2 text-2xl font-semibold text-primary">
+                <div className="mt-2 text-2xl font-semibold text-light">
                   {course.price}
                 </div>
-                <p className="mt-4 text-base leading-6 text-gray-600">
+                <p className="mt-4 text-base leading-6 text-light/70">
                   {course.description}
                 </p>
               </div>
@@ -93,7 +100,15 @@ export default function TrainingPage() {
         </Container>
       </div>
 
-      <Footer ctaBgVariant="primary" />
+      <GoogleReviewsBanner
+        rating={GOOGLE_RATING}
+        reviewCount={GOOGLE_REVIEW_COUNT}
+        reviewsUrl={GOOGLE_REVIEWS_URL}
+        bgVariant="primary"
+        cta={BOOKING_CTA}
+      />
+
+      <Footer />
     </div>
   )
 }

@@ -1,5 +1,12 @@
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
+import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
+import {
+  BOOKING_CTA,
+  GOOGLE_RATING,
+  GOOGLE_REVIEW_COUNT,
+  GOOGLE_REVIEWS_URL,
+} from '@/lib/site'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
@@ -150,7 +157,15 @@ export default function AboutPage() {
         </div>
       </main>
 
-      <Footer ctaBgVariant="primary-950" />
+      <GoogleReviewsBanner
+        rating={GOOGLE_RATING}
+        reviewCount={GOOGLE_REVIEW_COUNT}
+        reviewsUrl={GOOGLE_REVIEWS_URL}
+        bgVariant="primary-950"
+        cta={BOOKING_CTA}
+      />
+
+      <Footer />
     </div>
   )
 }

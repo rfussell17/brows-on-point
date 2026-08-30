@@ -10,6 +10,13 @@ interface GoogleReviewsBannerProps {
   /** Defaults to the studio's own address — no API key or Place ID needed. */
   mapAddress?: string
   bgVariant?: 'light' | 'primary' | 'primary-950'
+  /** Optional middle "book now" column — e.g. when this banner is standing in for the closing CTA the footer would otherwise render. */
+  cta?: {
+    title: string
+    subtitle: string
+    buttonText: string
+    buttonHref: string
+  }
 }
 
 const GoogleLogo = () => (
@@ -39,6 +46,7 @@ const GoogleReviewsBanner: React.FC<GoogleReviewsBannerProps> = ({
   reviewsUrl,
   mapAddress = BUSINESS_ADDRESS,
   bgVariant = 'primary',
+  cta,
 }) => {
   const isDark = bgVariant !== 'light'
   const bgClass =
@@ -58,43 +66,64 @@ const GoogleReviewsBanner: React.FC<GoogleReviewsBannerProps> = ({
   return (
     <div className={`${bgClass} py-8 md:py-12 lg:py-20`}>
       <Container>
-        <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-stretch lg:justify-around lg:gap-16">
-          <div className="flex flex-col items-center justify-center text-center">
+        <div
+          className={`grid grid-cols-1 items-center gap-12 ${cta ? 'lg:grid-cols-7' : 'lg:grid-cols-2'} lg:gap-8`}
+        >
+          <div
+            className={`flex flex-col items-center text-center lg:items-start lg:text-left ${cta ? 'lg:col-span-2' : ''}`}
+          >
             <div className="flex items-center gap-3">
               <GoogleLogo />
               <h2 className={`text-3xl sm:text-5xl ${headingColor}`}>
                 {rating.toFixed(1)} out of 5
               </h2>
             </div>
-            <div className="mt-8 flex flex-col items-center gap-4">
-              <div className="flex items-center gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <StarIcon
-                    key={i}
-                    className={`h-6 w-6 ${
-                      i < Math.round(rating) ? 'text-secondary-300' : starOffColor
-                    }`}
-                    aria-hidden="true"
-                  />
-                ))}
-              </div>
-              <p className={`text-base ${subColor}`}>
-                Based on {reviewCount} Google reviews
-              </p>
-              <Link
-                href={reviewsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex rounded-md bg-light px-3.5 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50"
-              >
-                Read Our Google Reviews
-              </Link>
+            <div className="mt-4 flex items-center gap-1">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <StarIcon
+                  key={i}
+                  className={`h-6 w-6 ${
+                    i < Math.round(rating) ? 'text-secondary-300' : starOffColor
+                  }`}
+                  aria-hidden="true"
+                />
+              ))}
             </div>
+            <p className={`mt-4 text-base ${subColor}`}>
+              Based on {reviewCount} Google reviews
+            </p>
+            <Link
+              href={reviewsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex rounded-md bg-light px-3.5 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50"
+            >
+              Read Our Google Reviews
+            </Link>
           </div>
 
-          <div className="flex w-full flex-col items-center lg:w-[480px]">
+          {cta && (
+            <div className="flex flex-col items-center text-center lg:col-span-3">
+              <h2 className={`text-3xl sm:text-5xl ${headingColor}`}>
+                {cta.title}
+              </h2>
+              <p className={`mx-auto mt-4 max-w-md text-base ${subColor}`}>
+                {cta.subtitle}
+              </p>
+              <Link
+                href={cta.buttonHref}
+                className="mt-6 inline-block rounded-md bg-light px-5 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50"
+              >
+                {cta.buttonText}
+              </Link>
+            </div>
+          )}
+
+          <div
+            className={`flex w-full flex-col items-center ${cta ? 'lg:col-span-2 lg:items-end' : ''}`}
+          >
             <div
-              className={`h-64 w-full overflow-hidden rounded-lg ring-1 ${ringClass} sm:h-80 lg:h-auto lg:flex-1`}
+              className={`aspect-[3/2] w-full max-w-xs overflow-hidden rounded-lg ring-1 ${ringClass}`}
             >
               <iframe
                 src={mapSrc}
@@ -105,9 +134,6 @@ const GoogleReviewsBanner: React.FC<GoogleReviewsBannerProps> = ({
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-            <p className={`mt-4 text-center text-base ${subColor}`}>
-              {mapAddress}
-            </p>
           </div>
         </div>
       </Container>

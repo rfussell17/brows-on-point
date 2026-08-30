@@ -1,9 +1,16 @@
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
-import { ACUITY_URL } from '@/lib/site'
+import {
+  ACUITY_URL,
+  BOOKING_CTA,
+  GOOGLE_RATING,
+  GOOGLE_REVIEW_COUNT,
+  GOOGLE_REVIEWS_URL,
+} from '@/lib/site'
 import type { StaticImageData } from 'next/image'
 import type { ReactNode } from 'react'
+import GoogleReviewsBanner from '../media/google-reviews-banner'
 import { ServiceCard } from './service-card'
 
 export interface HubSpoke {
@@ -26,9 +33,9 @@ export default function HubPage({
   spokes,
   secondaryCta,
 }: HubPageProps) {
-  // The footer's CTA strip needs to differ from the spoke grid (always
+  // The reviews/CTA/map banner needs to differ from the spoke grid (always
   // bg-primary-950) directly above it.
-  const footerCtaVariant = 'primary'
+  const reviewsBgVariant = 'primary'
 
   return (
     <div>
@@ -72,7 +79,15 @@ export default function HubPage({
         </Container>
       </div>
 
-      <Footer ctaBgVariant={footerCtaVariant} />
+      <GoogleReviewsBanner
+        rating={GOOGLE_RATING}
+        reviewCount={GOOGLE_REVIEW_COUNT}
+        reviewsUrl={GOOGLE_REVIEWS_URL}
+        bgVariant={reviewsBgVariant}
+        cta={BOOKING_CTA}
+      />
+
+      <Footer />
     </div>
   )
 }

@@ -79,44 +79,11 @@ function SocialIconInstagram(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-interface FooterProps {
-  /** Colour of the section immediately above the footer varies per page — this lets the CTA strip pick the opposite tone instead of always clashing as bg-primary. The links area below it stays bg-primary-950 regardless; that transition always reads fine. */
-  ctaBgVariant?: 'primary' | 'primary-950'
-}
-
-export function Footer({ ctaBgVariant = 'primary' }: FooterProps) {
-  const ctaBgClass =
-    ctaBgVariant === 'primary-950'
-      ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
-      : 'bg-primary'
-
+export function Footer() {
   return (
     <footer className="bg-primary">
-      {/* CTA strip */}
-      <div
-        className={`${ctaBgClass} border-b border-light/10 py-16 text-center`}
-      >
-        <Container>
-          <h2 className="text-3xl text-light sm:text-5xl">
-            Book your appointment today
-          </h2>
-          <p className="mx-auto mt-4 max-w-md text-sm text-light/70">
-            West Kelowna&apos;s trusted studio for lash lifts, brow
-            enhancements, and permanent makeup.
-          </p>
-          <div className="mt-8">
-            <Link
-              href="https://app.acuityscheduling.com/schedule.php?owner=15235407"
-              className="inline-block rounded-md bg-light px-5 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-primary-50"
-            >
-              Reserve Appointment
-            </Link>
-          </div>
-        </Container>
-      </div>
-
-      {/* Links area */}
-      <div className="bg-primary-950">
+      {/* Links area — the border-t gives a safe seam against whatever the page put directly above the footer (the combined reviews/CTA/map banner on every page now), regardless of its colour. */}
+      <div className="border-t border-light/10 bg-primary-950">
         <Container>
           <div className="py-12">
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">

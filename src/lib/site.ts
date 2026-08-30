@@ -14,3 +14,17 @@ export const BUSINESS_ADDRESS = '3344 Sundance Drive, West Kelowna, BC'
 // either — nothing else claims a different number.
 export const BUSINESS_PHONE = '(250) 801-6864'
 export const BUSINESS_EMAIL = 'Browsonpointkelowna@gmail.com'
+
+export const GOOGLE_RATING = 4.9
+export const GOOGLE_REVIEW_COUNT = 138
+export const GOOGLE_REVIEWS_URL = 'https://share.google/I3DmUVnWFhe0tZRgt'
+
+// Shared copy for the "book now" CTA that appears standalone (in the combined
+// reviews/CTA/map banner) on every page that isn't the homepage.
+export const BOOKING_CTA = {
+  title: 'Book your appointment today',
+  subtitle:
+    "West Kelowna's trusted studio for lash lifts, brow enhancements, and permanent makeup.",
+  buttonText: 'Reserve Appointment',
+  buttonHref: ACUITY_URL,
+}

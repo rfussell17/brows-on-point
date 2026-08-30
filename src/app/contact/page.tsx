@@ -1,11 +1,16 @@
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
+import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
 import {
   ACUITY_URL,
+  BOOKING_CTA,
   BUSINESS_ADDRESS,
   BUSINESS_EMAIL,
   BUSINESS_PHONE,
+  GOOGLE_RATING,
+  GOOGLE_REVIEW_COUNT,
+  GOOGLE_REVIEWS_URL,
 } from '@/lib/site'
 import type { Metadata } from 'next'
 
@@ -94,7 +99,15 @@ export default function ContactPage() {
         </Container>
       </div>
 
-      <Footer ctaBgVariant="primary" />
+      <GoogleReviewsBanner
+        rating={GOOGLE_RATING}
+        reviewCount={GOOGLE_REVIEW_COUNT}
+        reviewsUrl={GOOGLE_REVIEWS_URL}
+        bgVariant="primary"
+        cta={BOOKING_CTA}
+      />
+
+      <Footer />
     </div>
   )
 }

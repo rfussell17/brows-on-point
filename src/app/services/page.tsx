@@ -2,8 +2,15 @@ import { Container } from '@/components/container'
 import FAQSection from '@/components/faq-section'
 import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
+import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
 import TestimonialMakeup from '@/components/media/testimonial-makeup'
 import { ImagePlaceholder } from '@/components/services/image-placeholder'
+import {
+  BOOKING_CTA,
+  GOOGLE_RATING,
+  GOOGLE_REVIEW_COUNT,
+  GOOGLE_REVIEWS_URL,
+} from '@/lib/site'
 import { CheckIcon } from '@heroicons/react/24/outline'
 import type { Metadata } from 'next'
 
@@ -171,7 +178,15 @@ const ServicesPage = () => {
 
       <FAQSection faqs={faqs} bgVariant="primary-950" />
 
-      <Footer ctaBgVariant="primary" />
+      <GoogleReviewsBanner
+        rating={GOOGLE_RATING}
+        reviewCount={GOOGLE_REVIEW_COUNT}
+        reviewsUrl={GOOGLE_REVIEWS_URL}
+        bgVariant="primary"
+        cta={BOOKING_CTA}
+      />
+
+      <Footer />
     </div>
   )
 }

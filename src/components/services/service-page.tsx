@@ -1,8 +1,15 @@
-import { ACUITY_URL } from '@/lib/site'
+import {
+  ACUITY_URL,
+  BOOKING_CTA,
+  GOOGLE_RATING,
+  GOOGLE_REVIEW_COUNT,
+  GOOGLE_REVIEWS_URL,
+} from '@/lib/site'
 import React from 'react'
 import FAQSection from '../faq-section'
 import { Footer } from '../footer'
 import { ServiceJsonLd } from '../json-ld/service'
+import GoogleReviewsBanner from '../media/google-reviews-banner'
 import type { ServiceData } from './service-data'
 import ServiceDetail, { getServiceDetailBgVariant } from './service-detail'
 import ServiceHeader from './service-header'
@@ -28,9 +35,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ data }) => {
   if (data.testimonial) lastVariant = testimonialBgVariant
 
   const faqBgVariant = opposite(lastVariant)
-  lastVariant = faqBgVariant
-
-  const footerCtaVariant = opposite(lastVariant)
+  const reviewsBgVariant = opposite(faqBgVariant)
 
   return (
     <div>
@@ -64,7 +69,15 @@ const ServicePage: React.FC<ServicePageProps> = ({ data }) => {
 
       <FAQSection faqs={data.faqs} bgVariant={faqBgVariant} />
 
-      <Footer ctaBgVariant={footerCtaVariant} />
+      <GoogleReviewsBanner
+        rating={GOOGLE_RATING}
+        reviewCount={GOOGLE_REVIEW_COUNT}
+        reviewsUrl={GOOGLE_REVIEWS_URL}
+        bgVariant={reviewsBgVariant}
+        cta={BOOKING_CTA}
+      />
+
+      <Footer />
     </div>
   )
 }

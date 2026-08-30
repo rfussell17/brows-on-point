@@ -85,25 +85,25 @@ function DesktopNav() {
           <PopoverPanel
             transition
             anchor="bottom start"
-            className="z-50 mt-2 w-72 rounded-xl bg-light p-2 shadow-lg ring-1 ring-gray-200 transition duration-150 ease-out data-[closed]:translate-y-1 data-[closed]:opacity-0"
+            className="z-50 mt-2 w-72 rounded-xl bg-primary-800 p-2 shadow-lg ring-1 ring-secondary-700 transition duration-150 ease-out data-[closed]:translate-y-1 data-[closed]:opacity-0"
           >
             {serviceCategories.map((category) => (
               <NavLink
                 key={category.href}
                 href={category.href}
-                className="block rounded-lg px-3 py-2 hover:bg-secondary-50"
+                className="block rounded-lg px-3 py-2 hover:bg-primary-700"
               >
-                <div className="text-base font-semibold text-primary">
+                <div className="text-base font-semibold text-light">
                   {category.label}
                 </div>
-                <div className="text-xs text-gray-500">
+                <div className="text-xs text-light/60">
                   {category.description}
                 </div>
               </NavLink>
             ))}
             <NavLink
               href="/services"
-              className="mt-1 block rounded-lg border-t border-gray-100 px-3 pt-3 text-base font-semibold text-secondary hover:bg-secondary-50"
+              className="mt-1 block rounded-lg border-t border-secondary-700 px-3 pt-3 text-base font-semibold text-secondary-300 hover:bg-primary-700"
             >
               All Services
             </NavLink>
@@ -151,10 +151,10 @@ function MobileNavButton() {
 
 function MobileNav() {
   return (
-    <DisclosurePanel className="lg:hidden">
+    <DisclosurePanel className="bg-primary-950 lg:hidden">
       <div className="flex flex-col gap-6 py-4">
         <div className="px-6">
-          <div className="text-base font-semibold uppercase tracking-wider text-gray-500">
+          <div className="text-base font-semibold uppercase tracking-wider text-light/60">
             Services
           </div>
           <div className="mt-2 flex flex-col gap-3">
@@ -162,14 +162,14 @@ function MobileNav() {
               <NavLink
                 key={category.href}
                 href={category.href}
-                className="text-base font-medium text-gray-950"
+                className="text-base font-medium text-light"
               >
                 {category.label}
               </NavLink>
             ))}
             <NavLink
               href="/services"
-              className="text-base font-medium text-secondary"
+              className="text-base font-medium text-secondary-300"
             >
               All Services
             </NavLink>
@@ -178,7 +178,7 @@ function MobileNav() {
         <div className="transition-opacity duration-200">
           <NavLink
             href="/about"
-            className="px-6 text-base font-medium text-gray-950"
+            className="px-6 text-base font-medium text-light"
           >
             About
           </NavLink>
@@ -187,7 +187,7 @@ function MobileNav() {
           <div key={href} className="transition-opacity duration-200">
             <NavLink
               href={href}
-              className="px-6 text-base font-medium text-gray-950"
+              className="px-6 text-base font-medium text-light"
             >
               {label}
             </NavLink>
@@ -195,8 +195,8 @@ function MobileNav() {
         ))}
       </div>
       <div className="absolute left-1/2 w-screen -translate-x-1/2">
-        <div className="absolute inset-x-0 top-0 border-t border-black/5" />
-        <div className="absolute inset-x-0 top-2 border-t border-black/5" />
+        <div className="absolute inset-x-0 top-0 border-t border-light/10" />
+        <div className="absolute inset-x-0 top-2 border-t border-light/10" />
       </div>
     </DisclosurePanel>
   )
