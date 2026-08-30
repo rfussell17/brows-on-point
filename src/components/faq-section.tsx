@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaqPageJsonLd } from './json-ld/faq-page'
 
 interface FAQ {
   question: string
@@ -11,7 +12,9 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ children, className = '' }) => (
-  <div className={`overflow-hidden rounded-lg bg-light shadow-md ${className}`}>
+  <div
+    className={`overflow-hidden rounded-lg bg-light shadow-md ring-1 ring-primary-100 ${className}`}
+  >
     {children}
   </div>
 )
@@ -37,11 +40,12 @@ const FAQSection: React.FC<FAQSectionProps> = ({
 }) => {
   return (
     <section className={`p-8 sm:p-24 ${className} bg-light`}>
+      <FaqPageJsonLd faqs={faqs} />
       <h2 className="py-16 text-3xl text-primary sm:text-5xl">{title}</h2>
       <div className="grid gap-4">
         {faqs.map((faq, index) => (
           <Card key={index}>
-            <CardHeader className="bg-primary font-bold text-light">
+            <CardHeader className="bg-primary font-bold text-light transition-colors hover:bg-primary-800">
               {faq.question}
             </CardHeader>
             <CardContent>{faq.answer}</CardContent>

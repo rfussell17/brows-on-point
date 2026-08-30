@@ -3,7 +3,11 @@ import { Link } from '@/components/link'
 import Image from 'next/image'
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-sm font-semibold uppercase tracking-wider text-light/70">{children}</h3>
+  return (
+    <h3 className="text-sm font-semibold uppercase tracking-wider text-light/70">
+      {children}
+    </h3>
+  )
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
@@ -27,16 +31,19 @@ function Sitemap() {
       <div>
         <SitemapHeading>Services</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/lash-lift">Lash Lifts</SitemapLink>
-          <SitemapLink href="/brow-services">Brow Enhancement</SitemapLink>
+          <SitemapLink href="/lashes">Lashes</SitemapLink>
+          <SitemapLink href="/brows">Brows</SitemapLink>
           <SitemapLink href="/permanent-makeup">Permanent Makeup</SitemapLink>
-          <SitemapLink href="/teeth-services">Teeth Services</SitemapLink>
+          <SitemapLink href="/smile">Smile</SitemapLink>
+          <SitemapLink href="/skin-tightening">Skin Tightening</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>Company</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/about">About</SitemapLink>
+          <SitemapLink href="/training">Training</SitemapLink>
+          <SitemapLink href="/contact">Contact</SitemapLink>
           <SitemapLink href="/services">All Services</SitemapLink>
         </SitemapLinks>
       </div>
@@ -82,13 +89,13 @@ export function Footer() {
             Book your appointment today
           </h2>
           <p className="mx-auto mt-4 max-w-md text-base text-light/70">
-            West Kelowna&apos;s trusted studio for lash lifts, brow enhancements,
-            and permanent makeup.
+            West Kelowna&apos;s trusted studio for lash lifts, brow
+            enhancements, and permanent makeup.
           </p>
           <div className="mt-8">
             <Link
               href="https://app.acuityscheduling.com/schedule.php?owner=15235407"
-              className="inline-block rounded-md bg-light px-5 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-gray-100"
+              className="inline-block rounded-md bg-light px-5 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-primary-50"
             >
               Reserve Appointment
             </Link>
@@ -97,53 +104,56 @@ export function Footer() {
       </div>
 
       {/* Links area */}
-      <Container>
-        <div className="py-12">
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
-            {/* Logo + social */}
-            <div className="lg:col-span-2">
-              <Link href="/" title="Home">
-                <Image
-                  src="/logo_white.png"
-                  alt="Brows on Point"
-                  width={160}
-                  height={64}
-                />
-              </Link>
-              <div className="mt-6 flex gap-5">
-                <Link
-                  href="https://facebook.com"
-                  target="_blank"
-                  aria-label="Visit us on Facebook"
-                  className="text-light/70 transition-colors hover:text-light"
-                >
-                  <SocialIconFacebook className="size-5" />
+      <div className="bg-primary-950">
+        <Container>
+          <div className="py-12">
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
+              {/* Logo + social */}
+              <div className="lg:col-span-2">
+                <Link href="/" title="Home">
+                  <Image
+                    src="/logo_white.png"
+                    alt="Brows on Point"
+                    width={160}
+                    height={64}
+                  />
                 </Link>
-                <Link
-                  href="https://instagram.com"
-                  target="_blank"
-                  aria-label="Visit us on Instagram"
-                  className="text-light/70 transition-colors hover:text-light"
-                >
-                  <SocialIconInstagram className="size-5" />
-                </Link>
+                <div className="mt-6 flex gap-5">
+                  <Link
+                    href="https://facebook.com"
+                    target="_blank"
+                    aria-label="Visit my Facebook"
+                    className="text-light/70 transition-colors hover:text-secondary-300"
+                  >
+                    <SocialIconFacebook className="size-5" />
+                  </Link>
+                  <Link
+                    href="https://instagram.com"
+                    target="_blank"
+                    aria-label="Visit my Instagram"
+                    className="text-light/70 transition-colors hover:text-secondary-300"
+                  >
+                    <SocialIconInstagram className="size-5" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Sitemap columns */}
+              <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-3">
+                <Sitemap />
               </div>
             </div>
 
-            {/* Sitemap columns */}
-            <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-3">
-              <Sitemap />
+            {/* Copyright */}
+            <div className="mt-10 border-t border-light/10 pt-8 text-center">
+              <p className="text-sm text-light/50">
+                &copy; {new Date().getFullYear()} Brows on Point. All rights
+                reserved.
+              </p>
             </div>
           </div>
-
-          {/* Copyright */}
-          <div className="mt-10 border-t border-light/10 pt-8 text-center">
-            <p className="text-sm text-light/50">
-              &copy; {new Date().getFullYear()} Brows on Point. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </footer>
   )
 }

@@ -131,7 +131,7 @@ const TestimonialGroup: React.FC = () => {
                       src={testimonial.author.imageUrl}
                       width={40}
                       height={40}
-                      className="h-10 w-10 rounded-full bg-gray-50"
+                      className="h-10 w-10 rounded-full bg-primary-50"
                     /> */}
                     <div>
                       <div className="font-semibold text-gray-900">

@@ -1,17 +1,23 @@
 // app/layout.tsx
 
 import { Footer } from '@/components/footer'
+import { LocalBusinessJsonLd } from '@/components/json-ld/local-business'
 import { Navbar } from '@/components/navbar'
+import { SITE_URL } from '@/lib/site'
 
+import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 import { Hurricane, Roboto } from 'next/font/google'
-import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    template: '%s - Radiant',
-    default: 'Radiant - Close every deal',
+    template: '%s | Brows on Point',
+    default:
+      'Brows on Point | Lash, Brow & Permanent Makeup Studio in West Kelowna',
   },
+  description:
+    "West Kelowna's lash and brow bar for lash lifts, brow tinting, permanent makeup, teeth whitening, and tooth gems. Book online today.",
 }
 
 const hurricane = Hurricane({
@@ -35,11 +41,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${hurricane.variable} ${roboto.variable}`}>
       <head>
+        {/* LAUNCH GATE: remove this line only when told the site is going live. See BLOCKERS.md. */}
         <meta name="robots" content="noindex, nofollow, noarchive" />
+        <LocalBusinessJsonLd />
       </head>
       <body className="text-gray-600 antialiased">
         <Navbar />
-        <div className="min-h-screen">
+        <div className="min-h-dvh">
           <main>{children}</main>
         </div>
 
