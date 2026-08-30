@@ -1,5 +1,6 @@
 import { Container } from '@/components/container'
 import FAQSection from '@/components/faq-section'
+import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
 import TestimonialTwo from '@/components/media/testimonial-two'
 import { ImagePlaceholder } from '@/components/services/image-placeholder'
@@ -103,19 +104,22 @@ const ServicesPage = () => {
   return (
     <div>
       {/* Hero */}
-      <div className="bg-primary px-6 pb-12 sm:pb-16 lg:px-8">
-        <div className="mx-auto max-w-2xl pt-14 text-center sm:pt-20">
-          <h1 className="text-5xl text-light sm:text-7xl">My Services</h1>
-          <p className="mt-8 text-pretty text-lg font-medium text-gray-100 sm:text-xl/8">
-            Welcome to Brows on Point, where beauty meets affordability and
-            expertise. Since 2016, I&apos;ve been helping clients discover
-            their most confident selves through personalized aesthetic services.
-          </p>
-        </div>
+      <div className="bg-primary py-24 sm:py-32">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <h1 className="text-5xl text-light sm:text-7xl">My Services</h1>
+            <p className="mt-8 text-pretty text-lg font-medium text-gray-100 sm:text-xl/8">
+              Welcome to Brows on Point, where beauty meets affordability and
+              expertise. Since 2016, I&apos;ve been helping clients discover
+              their most confident selves through personalized aesthetic
+              services.
+            </p>
+          </div>
+        </Container>
       </div>
 
       {/* Category rows */}
-      <div className="bg-primary-light py-24 sm:py-32">
+      <div className="bg-primary-950 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
         <Container>
           <div className="flex flex-col gap-20">
             {categories.map((category, index) => (
@@ -130,20 +134,20 @@ const ServicesPage = () => {
                   </div>
                 </div>
                 <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <h2 className="text-3xl font-semibold text-primary sm:text-4xl">
+                  <h2 className="text-3xl font-semibold text-light sm:text-4xl">
                     {category.title}
                   </h2>
-                  <p className="mt-4 text-base leading-7 text-gray-600">
+                  <p className="mt-4 text-base leading-7 text-gray-100">
                     {category.description}
                   </p>
                   <ul className="mt-6 space-y-2">
                     {category.highlights.map((highlight) => (
                       <li
                         key={highlight}
-                        className="flex items-center gap-2 text-sm text-gray-700"
+                        className="flex items-center gap-2 text-sm text-gray-100"
                       >
                         <CheckIcon
-                          className="h-4 w-4 flex-none text-secondary"
+                          className="h-4 w-4 flex-none text-secondary-300"
                           aria-hidden="true"
                         />
                         {highlight}
@@ -163,9 +167,11 @@ const ServicesPage = () => {
         </Container>
       </div>
 
-      <TestimonialTwo />
+      <TestimonialTwo bgVariant="primary" />
 
-      <FAQSection faqs={faqs} />
+      <FAQSection faqs={faqs} bgVariant="primary-950" />
+
+      <Footer ctaBgVariant="primary" />
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { Container } from '@/components/container'
+import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
 import { ACUITY_URL } from '@/lib/site'
 import type { Metadata } from 'next'
@@ -42,7 +43,7 @@ export default function TrainingPage() {
         </Container>
       </div>
 
-      <div className="bg-light px-6 py-24 sm:py-32 lg:px-8">
+      <div className="bg-primary-950 px-6 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32 lg:px-8">
         <Container>
           <div className="mx-auto grid max-w-3xl grid-cols-1 gap-8 sm:grid-cols-2">
             {courses.map((course) => (
@@ -64,10 +65,8 @@ export default function TrainingPage() {
           </div>
 
           <div className="mx-auto mt-16 max-w-2xl">
-            <h2 className="text-2xl font-semibold text-primary">
-              Your Trainer
-            </h2>
-            <div className="mt-4 text-base leading-7 text-gray-600">
+            <h2 className="text-2xl font-semibold text-light">Your Trainer</h2>
+            <div className="mt-4 text-base leading-7 text-gray-100">
               <ul className="list-disc space-y-2 pl-6">
                 <li>Microblading Training Program</li>
                 <li>Advanced Microblading Training Program</li>
@@ -86,13 +85,15 @@ export default function TrainingPage() {
           <div className="mx-auto mt-12 max-w-2xl text-center">
             <Link
               href={ACUITY_URL}
-              className="inline-flex rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-light shadow-sm hover:opacity-90"
+              className="inline-flex rounded-md bg-light px-4 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-primary-50"
             >
               Book a Training Course
             </Link>
           </div>
         </Container>
       </div>
+
+      <Footer ctaBgVariant="primary" />
     </div>
   )
 }

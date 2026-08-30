@@ -1,3 +1,5 @@
+import { Container } from '../container'
+
 interface Testimonial {
   body: string
   author: {
@@ -105,11 +107,11 @@ const testimonials: Testimonial[] = [
 
 const TestimonialGroup: React.FC = () => {
   return (
-    <div className="bg-light py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="bg-primary-50 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
+      <Container>
         <div className="mx-auto max-w-xl text-center">
-          <h2 className="text-3xl text-primary sm:text-5xl">Testimonials</h2>
-          <p className="mt-6 text-base leading-8 text-gray-600">
+          <h2 className="text-3xl text-light sm:text-5xl">Testimonials</h2>
+          <p className="mt-6 text-base leading-8 text-gray-100">
             I&apos;ve had the privilege of taking care of hundreds of clients in
             the Okanagan since 2016.
           </p>
@@ -121,8 +123,8 @@ const TestimonialGroup: React.FC = () => {
                 key={testimonial.author.name}
                 className="pt-8 sm:inline-block sm:w-full sm:px-4"
               >
-                <figure className="rounded-2xl bg-light p-8 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-                  <blockquote className="text-gray-900">
+                <figure className="rounded-2xl bg-primary-800 p-8 text-sm leading-6 ring-1 ring-secondary-700">
+                  <blockquote className="text-light/90">
                     <p>{`“${testimonial.body}”`}</p>
                   </blockquote>
                   <figcaption className="mt-6 flex items-center gap-x-4">
@@ -134,7 +136,7 @@ const TestimonialGroup: React.FC = () => {
                       className="h-10 w-10 rounded-full bg-primary-50"
                     /> */}
                     <div>
-                      <div className="font-semibold text-gray-900">
+                      <div className="font-semibold text-light">
                         {testimonial.author.name}
                       </div>
                     </div>
@@ -144,7 +146,7 @@ const TestimonialGroup: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   )
 }

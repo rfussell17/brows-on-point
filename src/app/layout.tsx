@@ -1,6 +1,5 @@
 // app/layout.tsx
 
-import { Footer } from '@/components/footer'
 import { LocalBusinessJsonLd } from '@/components/json-ld/local-business'
 import { Navbar } from '@/components/navbar'
 import { SITE_URL } from '@/lib/site'
@@ -50,8 +49,6 @@ export default function RootLayout({
         <div className="min-h-dvh">
           <main>{children}</main>
         </div>
-
-        <Footer />
       </body>
     </html>
   )

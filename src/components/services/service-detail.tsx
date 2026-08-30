@@ -2,10 +2,12 @@ import {
   ArrowPathIcon,
   CheckBadgeIcon,
   ClipboardDocumentCheckIcon,
+  CurrencyDollarIcon,
   HeartIcon,
   ShieldExclamationIcon,
 } from '@heroicons/react/24/outline'
 import { type ComponentType, type FC, type ReactNode } from 'react'
+import { Container } from '../container'
 import type { ServiceData } from './service-data'
 
 interface ServiceDetailProps {
@@ -13,28 +15,58 @@ interface ServiceDetailProps {
   className?: string
 }
 
+/**
+ * The main prep/process/aftercare block sits directly beneath either the
+ * (always bg-primary) header or the (always bg-primary-950) "Choose Your
+ * Service" module, and is directly followed by the testimonial section. To
+ * avoid two identically-coloured sections landing back to back, it takes the
+ * opposite of whatever immediately precedes it — see ServicePage, which uses
+ * this same function to pick the testimonial's colour, one step further.
+ */
+export const getServiceDetailBgVariant = (
+  data: ServiceData,
+): 'primary' | 'primary-950' =>
+  data.serviceOptions ? 'primary' : 'primary-950'
+
 const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
+  const detailBgVariant = getServiceDetailBgVariant(data)
+  const detailBgClass =
+    detailBgVariant === 'primary-950'
+      ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
+      : 'bg-primary'
   const renderSection = (
     title: string,
     Icon: ComponentType<{ className?: string }>,
     content: ReactNode,
-  ) => (
-    <div className="rounded-2xl bg-primary-50 p-6 ring-1 ring-primary-100">
-      <h3 className="flex items-center gap-2 text-lg font-semibold text-primary">
-        <Icon className="h-5 w-5 text-secondary" aria-hidden="true" />
-        {title}
-      </h3>
-      <div className="prose prose-sm mt-3 max-w-none leading-7 text-gray-600">
-        {content}
+    variant: 'light' | 'dark' = 'light',
+  ) =>
+    variant === 'dark' ? (
+      <div className="rounded-lg bg-primary-800 p-6 ring-1 ring-secondary-700">
+        <h3 className="flex items-center gap-2 text-lg font-semibold text-light">
+          <Icon className="h-5 w-5 text-secondary-300" aria-hidden="true" />
+          {title}
+        </h3>
+        <div className="prose prose-sm prose-invert mt-3 max-w-none leading-7 text-light/80">
+          {content}
+        </div>
       </div>
-    </div>
-  )
+    ) : (
+      <div className="rounded-2xl bg-gray-200 p-6 ring-1 ring-primary-100">
+        <h3 className="flex items-center gap-2 text-lg font-semibold text-primary">
+          <Icon className="h-5 w-5 text-secondary" aria-hidden="true" />
+          {title}
+        </h3>
+        <div className="prose prose-sm mt-3 max-w-none leading-7 text-gray-600">
+          {content}
+        </div>
+      </div>
+    )
 
   return (
-    <div className={`${className} mb-24`}>
+    <div className={className}>
       {data.extraSections && (
-        <div className="relative bg-light">
-          <div className="mx-auto max-w-6xl px-6 pb-16 lg:px-8">
+        <div className="relative bg-light py-24 sm:py-32">
+          <Container>
             <div className="flex flex-col space-y-10">
               {data.extraSections.map((section) => (
                 <div key={section.heading}>
@@ -47,13 +79,13 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
                 </div>
               ))}
             </div>
-          </div>
+          </Container>
         </div>
       )}
 
       {data.serviceOptions && (
-        <div className="bg-primary-950 py-16 sm:py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="bg-primary-950 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
+          <Container>
             <h3 className="text-xl font-semibold text-light">
               {data.serviceOptionsHeading ?? 'Choose Your Service'}
             </h3>
@@ -73,16 +105,12 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
                 </div>
               ))}
             </div>
-          </div>
+          </Container>
         </div>
       )}
 
-      <div className="relative bg-light">
-        <div
-          className={`mx-auto max-w-6xl px-6 lg:px-8 ${
-            data.extraSections || data.serviceOptions ? 'pt-16' : ''
-          }`}
-        >
+      <div className={`relative ${detailBgClass} py-24 sm:py-32`}>
+        <Container>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {renderSection(
               'How to Prepare',
@@ -94,19 +122,34 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
             {renderSection('Results', CheckBadgeIcon, data.benefits)}
           </div>
 
-          {data.contraindications && (
-            <div className="mt-6">
-              {renderSection(
-                'Who Should Avoid This',
-                ShieldExclamationIcon,
-                data.contraindications,
-              )}
+          {(data.contraindications || data.policyNotice) && (
+            <div
+              className={
+                data.contraindications && data.policyNotice
+                  ? 'mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2'
+                  : 'mt-6'
+              }
+            >
+              {data.contraindications &&
+                renderSection(
+                  'Who Should Avoid This',
+                  ShieldExclamationIcon,
+                  data.contraindications,
+                  'dark',
+                )}
+              {data.policyNotice &&
+                renderSection(
+                  'Booking Policy',
+                  CurrencyDollarIcon,
+                  data.policyNotice,
+                  'dark',
+                )}
             </div>
           )}
 
           {data.touchUpPricing && (
             <div className="mt-10">
-              <h3 className="text-xl font-semibold text-primary">
+              <h3 className="text-xl font-semibold text-light">
                 Touch-Up Pricing
               </h3>
               <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-3">
@@ -131,7 +174,7 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
               </div>
             </div>
           )}
-        </div>
+        </Container>
       </div>
     </div>
   )

@@ -1,4 +1,5 @@
 import { Container } from '@/components/container'
+import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
 import {
   ACUITY_URL,
@@ -31,52 +32,52 @@ export default function ContactPage() {
         </Container>
       </div>
 
-      <div className="bg-light px-6 py-24 sm:py-32 lg:px-8">
+      <div className="bg-primary-950 px-6 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32 lg:px-8">
         <Container>
           <div className="mx-auto grid max-w-3xl grid-cols-1 gap-10 sm:grid-cols-2">
             <div>
-              <h2 className="text-lg font-semibold text-primary">Hours</h2>
-              <div className="mt-2 text-base leading-7 text-gray-600">
+              <h2 className="text-lg font-semibold text-light">Hours</h2>
+              <div className="mt-2 text-base leading-7 text-gray-100">
                 <p>Monday–Saturday: 9am–9pm</p>
                 <p>Sunday: Closed</p>
               </div>
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-primary">
+              <h2 className="text-lg font-semibold text-light">
                 Parking & Directions
               </h2>
-              <div className="mt-2 text-base leading-7 text-gray-600">
+              <div className="mt-2 text-base leading-7 text-gray-100">
                 <p>Street parking is available nearby.</p>
               </div>
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-primary">Address</h2>
-              <p className="mt-2 text-base leading-7 text-gray-600">
+              <h2 className="text-lg font-semibold text-light">Address</h2>
+              <p className="mt-2 text-base leading-7 text-gray-100">
                 {BUSINESS_ADDRESS}
               </p>
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-primary">Phone</h2>
-              <p className="mt-2 text-base leading-7 text-gray-600">
+              <h2 className="text-lg font-semibold text-light">Phone</h2>
+              <p className="mt-2 text-base leading-7 text-gray-100">
                 {BUSINESS_PHONE}
               </p>
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-primary">Email</h2>
-              <p className="mt-2 text-base leading-7 text-gray-600">
+              <h2 className="text-lg font-semibold text-light">Email</h2>
+              <p className="mt-2 text-base leading-7 text-gray-100">
                 {BUSINESS_EMAIL}
               </p>
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-primary">
+              <h2 className="text-lg font-semibold text-light">
                 Payment Methods
               </h2>
-              <p className="mt-2 text-base leading-7 text-gray-600">
+              <p className="mt-2 text-base leading-7 text-gray-100">
                 Cash, debit, credit, and e-transfer.
               </p>
             </div>
@@ -85,13 +86,15 @@ export default function ContactPage() {
           <div className="mx-auto mt-12 max-w-2xl text-center">
             <Link
               href={ACUITY_URL}
-              className="inline-flex rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-light shadow-sm hover:opacity-90"
+              className="inline-flex rounded-md bg-light px-4 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-primary-50"
             >
               Book an Appointment
             </Link>
           </div>
         </Container>
       </div>
+
+      <Footer ctaBgVariant="primary" />
     </div>
   )
 }

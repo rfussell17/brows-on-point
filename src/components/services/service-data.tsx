@@ -73,15 +73,15 @@ export const pmuContraindications = (
   <div className="mx-auto max-w-2xl px-6">
     <ul className="list-disc space-y-2 pl-6">
       <li>Pregnancy or breastfeeding</li>
-      <li>Active skin conditions in the treatment area</li>
-      <li>Uncontrolled autoimmune conditions</li>
+      <li>Active skin conditions or uncontrolled autoimmune conditions</li>
       <li>
         Lupus or rheumatoid arthritis, unless controlled and cleared with a
         doctor&apos;s note
       </li>
-      <li>Recent chemotherapy</li>
-      <li>Blood-thinning medications</li>
-      <li>Keloid scarring history</li>
+      <li>
+        Recent chemotherapy, Blood-thinning medications, or Keloid scarring
+        history
+      </li>
     </ul>
   </div>
 )
@@ -128,14 +128,12 @@ export const teethWhiteningContraindications = (
  * wins over the 48-hour wording found in Acuity's service descriptions.
  */
 export const pmuBookingFeeNotice = (
-  <div className="mx-auto max-w-2xl px-6">
-    <ul className="list-disc space-y-2 pl-6 text-sm text-gray-600">
-      <li>A $50 booking fee secures your appointment</li>
-      <li>Transferable to a new date, with 24 hours&apos; notice, once only</li>
-      <li>No-shows forfeit the $50</li>
-      <li>More than 10 minutes late and the appointment is cancelled</li>
-    </ul>
-  </div>
+  <ul className="list-disc space-y-2 pl-6">
+    <li>A $50 booking fee secures your appointment</li>
+    <li>Transferable to a new date, with 24 hours&apos; notice, once only</li>
+    <li>No-shows forfeit the $50</li>
+    <li>More than 10 minutes late and the appointment is cancelled</li>
+  </ul>
 )
 
 // Add slug and shortDescription to each service
@@ -953,15 +951,16 @@ export const salineRemovalServiceData: ServiceData = {
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
         <li>Pregnancy or breastfeeding</li>
-        <li>Active skin conditions in the treatment area</li>
-        <li>Uncontrolled autoimmune conditions</li>
+        <li>Active skin conditions or uncontrolled autoimmune conditions</li>
         <li>
           Lupus or rheumatoid arthritis, unless controlled and cleared with a
           doctor&apos;s note
         </li>
-        <li>Recent chemotherapy</li>
-        <li>Blood-thinning medications</li>
-        <li>Keloid scarring history</li>
+        <li>
+          Recent chemotherapy, Blood-thinning medications, or Keloid scarring
+          history
+        </li>
+
         <li>Allergy to aloe</li>
       </ul>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Container } from './container'
 import { FaqPageJsonLd } from './json-ld/faq-page'
 
 interface FAQ {
@@ -31,27 +32,40 @@ interface FAQSectionProps {
   faqs: Array<FAQ>
   title?: string
   className?: string
+  /** Defaults to the original light section. Pass a dark variant to match whatever section precedes this one on the page. */
+  bgVariant?: 'light' | 'primary' | 'primary-950'
 }
 
 const FAQSection: React.FC<FAQSectionProps> = ({
   faqs,
   title = 'Frequently Asked Questions',
   className = '',
+  bgVariant = 'light',
 }) => {
+  const bgClass =
+    bgVariant === 'primary-950'
+      ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
+      : bgVariant === 'primary'
+        ? 'bg-primary'
+        : 'bg-light'
+  const headingClass = bgVariant === 'light' ? 'text-primary' : 'text-light'
+
   return (
-    <section className={`p-8 sm:p-24 ${className} bg-light`}>
+    <section className={`${bgClass} py-24 sm:py-32 ${className}`}>
       <FaqPageJsonLd faqs={faqs} />
-      <h2 className="py-16 text-3xl text-primary sm:text-5xl">{title}</h2>
-      <div className="grid gap-4">
-        {faqs.map((faq, index) => (
-          <Card key={index}>
-            <CardHeader className="bg-primary font-bold text-light transition-colors hover:bg-primary-800">
-              {faq.question}
-            </CardHeader>
-            <CardContent>{faq.answer}</CardContent>
-          </Card>
-        ))}
-      </div>
+      <Container>
+        <h2 className={`text-3xl sm:text-5xl ${headingClass}`}>{title}</h2>
+        <div className="mt-12 grid gap-4">
+          {faqs.map((faq, index) => (
+            <Card key={index}>
+              <CardHeader className="bg-primary font-bold text-light transition-colors hover:bg-primary-800">
+                {faq.question}
+              </CardHeader>
+              <CardContent>{faq.answer}</CardContent>
+            </Card>
+          ))}
+        </div>
+      </Container>
     </section>
   )
 }

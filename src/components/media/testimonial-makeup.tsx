@@ -1,12 +1,26 @@
 import Image from 'next/image'
 
-const TestimonialMakeup: React.FC = () => {
+interface TestimonialProps {
+  /** Alternates against whatever section precedes this one, so two identically-coloured dark sections never land back to back. */
+  bgVariant?: 'primary' | 'primary-950'
+}
+
+const TestimonialMakeup: React.FC<TestimonialProps> = ({
+  bgVariant = 'primary',
+}) => {
+  const bgClass = bgVariant === 'primary-950' ? 'bg-primary-950' : 'bg-primary'
+  const sectionRingClass =
+    bgVariant === 'primary-950' ? 'ring-1 ring-inset ring-secondary-700' : ''
+
   return (
-    <section className="relative isolate overflow-hidden bg-primary px-6 lg:px-8">
-      <div className="relative mx-auto max-w-2xl py-20 sm:py-28 lg:max-w-4xl">
+    <section
+      className={`relative isolate overflow-hidden ${bgClass} ${sectionRingClass} px-6 lg:px-8`}
+    >
+      <div className="relative mx-auto max-w-2xl py-24 sm:py-32 lg:max-w-7xl">
         {/* Background Elements */}
-        <div className="absolute left-1/2 top-0 -z-10 h-[50rem] w-[90rem] -translate-x-1/2 bg-[radial-gradient(50%_100%_at_top,theme(colors.primary.DEFAULT),theme(colors.light))] opacity-20 lg:left-36" />
-        <div className="shadow-primary-600/10 absolute inset-y-0 right-1/2 -z-10 mr-12 w-[150vw] origin-bottom-left skew-x-[-30deg] bg-primary shadow-xl ring-1 ring-secondary sm:mr-20 md:mr-0 lg:right-full lg:-mr-36 lg:origin-center" />
+        <div
+          className={`absolute inset-y-0 right-1/2 -z-10 mr-12 w-[150vw] origin-bottom-left skew-x-[-30deg] ${bgClass} shadow-xl shadow-primary-600/10 ring-1 ring-secondary sm:mr-20 md:mr-0 lg:right-full lg:-mr-36 lg:origin-center`}
+        />
 
         {/* Testimonial Content */}
         <figure className="grid grid-cols-1 items-center gap-x-6 gap-y-8 lg:gap-x-10">

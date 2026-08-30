@@ -1,6 +1,7 @@
 import CallToAction from '@/components/cta'
 import DetailRow from '@/components/detail-row'
 import FAQSection from '@/components/faq-section'
+import { Footer } from '@/components/footer'
 import Hero from '@/components/hero'
 import LashLiftHome from '@/components/lash-lift-home'
 import LogoGrid, { logos } from '@/components/media/logo-grid'
@@ -81,6 +82,8 @@ export default function Home() {
         }}
       />
       <FAQSection faqs={generalFAQs} title="Common Questions" className="" />
+
+      <Footer />
     </div>
   )
 }

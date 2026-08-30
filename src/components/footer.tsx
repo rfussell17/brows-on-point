@@ -79,11 +79,23 @@ function SocialIconInstagram(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-export function Footer() {
+interface FooterProps {
+  /** Colour of the section immediately above the footer varies per page — this lets the CTA strip pick the opposite tone instead of always clashing as bg-primary. The links area below it stays bg-primary-950 regardless; that transition always reads fine. */
+  ctaBgVariant?: 'primary' | 'primary-950'
+}
+
+export function Footer({ ctaBgVariant = 'primary' }: FooterProps) {
+  const ctaBgClass =
+    ctaBgVariant === 'primary-950'
+      ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
+      : 'bg-primary'
+
   return (
     <footer className="bg-primary">
       {/* CTA strip */}
-      <div className="border-b border-light/10 py-16 text-center">
+      <div
+        className={`${ctaBgClass} border-b border-light/10 py-16 text-center`}
+      >
         <Container>
           <h2 className="text-3xl text-light sm:text-5xl">
             Book your appointment today

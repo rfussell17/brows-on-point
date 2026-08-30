@@ -5,12 +5,12 @@ import {
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
+import { Container } from '../container'
 import { ImagePlaceholder } from './image-placeholder'
 
 interface ServiceHomeProps {
   title: string
   eyebrow?: string
-  introText: string | ReactNode
   descriptionText: string | ReactNode
   duration: string
   results: string | ReactNode
@@ -23,7 +23,6 @@ interface ServiceHomeProps {
   bookingUrl?: string
   learnMoreUrl?: string
   learnMoreLabel?: string
-  secondaryCta?: { text: string; href: string }
 }
 
 const stats = [
@@ -35,7 +34,6 @@ const stats = [
 export default function ServiceHome({
   title,
   eyebrow,
-  introText,
   descriptionText,
   duration,
   results,
@@ -45,7 +43,6 @@ export default function ServiceHome({
   bookingUrl = 'https://app.acuityscheduling.com/schedule.php?owner=15235407',
   learnMoreUrl = '/services',
   learnMoreLabel = 'All Services',
-  secondaryCta,
 }: ServiceHomeProps) {
   const values: Record<(typeof stats)[number]['key'], string | ReactNode> = {
     duration,
@@ -55,7 +52,7 @@ export default function ServiceHome({
 
   return (
     <div className="overflow-hidden bg-primary py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <Container>
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pr-4 lg:pt-4">
             <div className="lg:max-w-lg">
@@ -67,10 +64,6 @@ export default function ServiceHome({
               <h1 className="mb-8 mt-2 text-3xl text-light sm:text-5xl">
                 {title}
               </h1>
-              <p className="mt-6 text-base leading-7 text-gray-100">
-                {introText}
-              </p>
-
               <p className="mt-6 text-base leading-7 text-gray-100">
                 {descriptionText}
               </p>
@@ -99,15 +92,6 @@ export default function ServiceHome({
                 >
                   Reserve Appointment
                 </Link>
-
-                {secondaryCta && (
-                  <Link
-                    href={secondaryCta.href}
-                    className="inline-flex rounded-md border border-light px-3.5 py-2.5 text-sm font-semibold text-light hover:bg-light/10"
-                  >
-                    {secondaryCta.text}
-                  </Link>
-                )}
 
                 <Link
                   href={learnMoreUrl}
@@ -147,7 +131,7 @@ export default function ServiceHome({
             )}
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { Container } from '@/components/container'
+import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
 import { ACUITY_URL } from '@/lib/site'
 import type { StaticImageData } from 'next/image'
@@ -27,6 +28,11 @@ export default function HubPage({
   trustBlock,
   secondaryCta,
 }: HubPageProps) {
+  // The footer's CTA strip needs to differ from whichever section is
+  // directly above it: trustBlock (bg-primary) if it exists, otherwise the
+  // spoke grid (bg-primary-950).
+  const footerCtaVariant = trustBlock ? 'primary-950' : 'primary'
+
   return (
     <div>
       <div className="bg-primary px-6 py-24 sm:py-32 lg:px-8">
@@ -54,7 +60,7 @@ export default function HubPage({
         </Container>
       </div>
 
-      <div className="bg-light py-16 sm:py-24">
+      <div className="bg-primary-950 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
         <Container>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {spokes.map((spoke) => (
@@ -70,19 +76,21 @@ export default function HubPage({
       </div>
 
       {trustBlock && (
-        <div className="bg-primary-light py-16 sm:py-24">
+        <div className="bg-primary py-24 sm:py-32">
           <Container>
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-2xl font-semibold text-primary sm:text-3xl">
+              <h2 className="text-2xl font-semibold text-light sm:text-3xl">
                 {trustBlock.heading}
               </h2>
-              <div className="mt-4 text-base leading-7 text-gray-600">
+              <div className="mt-4 text-base leading-7 text-gray-100">
                 {trustBlock.content}
               </div>
             </div>
           </Container>
         </div>
       )}
+
+      <Footer ctaBgVariant={footerCtaVariant} />
     </div>
   )
 }
