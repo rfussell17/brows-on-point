@@ -75,16 +75,6 @@ export default function PermanentMakeupPage() {
             image: '/services/permanent_eyeliner.jpg',
           },
         ]}
-        trustBlock={{
-          heading: 'Free Consultations, Always',
-          content: (
-            <>
-              Not sure which technique is right for you? Every permanent makeup
-              client is welcome to book a free 30-minute consultation first, no
-              pressure to book the full appointment until you&apos;re ready.
-            </>
-          ),
-        }}
       />
       <FAQSection faqs={faqs} />
     </>

@@ -75,6 +75,7 @@ export default function AboutPage() {
                 width={1000}
                 height={1000}
                 className="aspect-square w-full rounded-2xl object-cover shadow-xl"
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
             </div>
 
@@ -88,7 +89,7 @@ export default function AboutPage() {
                   <dd className="text-4xl font-semibold text-light">
                     {stat.value}
                   </dd>
-                  <dt className="mt-1 text-sm text-light/70">{stat.label}</dt>
+                  <dt className="mt-1 text-base text-light/70">{stat.label}</dt>
                 </div>
               ))}
             </div>
@@ -105,6 +106,7 @@ export default function AboutPage() {
                 height={500}
                 src="/jamie_brows_on_point_thumb.png"
                 className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
+                sizes="(min-width: 1024px) 384px, 100vw"
               />
               <div className="w-full flex-auto">
                 <h2 className="text-4xl text-light sm:text-5xl">

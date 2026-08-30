@@ -8,6 +8,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { type ComponentType, type FC, type ReactNode } from 'react'
 import { Container } from '../container'
+import InfoBanner from './info-banner'
 import type { ServiceData } from './service-data'
 
 interface ServiceDetailProps {
@@ -15,33 +16,79 @@ interface ServiceDetailProps {
   className?: string
 }
 
+type BgVariant = 'primary' | 'primary-950'
+const opposite = (variant: BgVariant): BgVariant =>
+  variant === 'primary' ? 'primary-950' : 'primary'
+
 /**
- * The main prep/process/aftercare block sits directly beneath either the
- * (always bg-primary) header or the (always bg-primary-950) "Choose Your
- * Service" module, and is directly followed by the testimonial section. To
- * avoid two identically-coloured sections landing back to back, it takes the
- * opposite of whatever immediately precedes it — see ServicePage, which uses
- * this same function to pick the testimonial's colour, one step further.
+ * Walks every full-bleed section ServiceDetail can render — extraSections,
+ * then serviceOptions, then the main prep/process/aftercare block — each
+ * taking the opposite tone of whatever precedes it, starting from the
+ * (always bg-primary) header. This is what keeps two identically-coloured
+ * sections from ever landing back to back, even on pages that render more
+ * than one of these optional blocks. ServicePage continues this same chain
+ * one step further for the testimonial's colour.
  */
-export const getServiceDetailBgVariant = (
-  data: ServiceData,
-): 'primary' | 'primary-950' =>
-  data.serviceOptions ? 'primary' : 'primary-950'
+const getSectionVariants = (data: ServiceData) => {
+  let last: BgVariant = 'primary'
+  let extraSectionsVariant: BgVariant | undefined
+  let serviceOptionsVariant: BgVariant | undefined
+
+  if (data.extraSections) {
+    extraSectionsVariant = opposite(last)
+    last = extraSectionsVariant
+  }
+  if (data.serviceOptions) {
+    serviceOptionsVariant = opposite(last)
+    last = serviceOptionsVariant
+  }
+
+  return {
+    extraSectionsVariant,
+    serviceOptionsVariant,
+    detailVariant: opposite(last),
+  }
+}
+
+export const getServiceDetailBgVariant = (data: ServiceData): BgVariant =>
+  getSectionVariants(data).detailVariant
 
 const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
-  const detailBgVariant = getServiceDetailBgVariant(data)
+  const { extraSectionsVariant, serviceOptionsVariant, detailVariant } =
+    getSectionVariants(data)
   const detailBgClass =
-    detailBgVariant === 'primary-950'
+    detailVariant === 'primary-950'
+      ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
+      : 'bg-primary'
+  const serviceOptionsBgClass =
+    serviceOptionsVariant === 'primary-950'
       ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
       : 'bg-primary'
   const renderSection = (
     title: string,
     Icon: ComponentType<{ className?: string }>,
     content: ReactNode,
-    variant: 'light' | 'dark' = 'light',
-  ) =>
-    variant === 'dark' ? (
-      <div className="rounded-lg bg-primary-800 p-6 ring-1 ring-secondary-700">
+    variant: 'light' | 'dark' | 'darker' = 'light',
+  ) => {
+    if (variant === 'light') {
+      return (
+        <div className="rounded-2xl bg-gray-200 p-6 ring-1 ring-primary-100">
+          <h3 className="flex items-center gap-2 text-lg font-semibold text-primary">
+            <Icon className="h-5 w-5 text-secondary" aria-hidden="true" />
+            {title}
+          </h3>
+          <div className="prose prose-sm mt-3 max-w-none leading-7 text-gray-600">
+            {content}
+          </div>
+        </div>
+      )
+    }
+    const cardBgClass =
+      variant === 'darker' ? 'bg-primary-950' : 'bg-primary-800'
+    return (
+      <div
+        className={`rounded-lg ${cardBgClass} p-6 ring-1 ring-secondary-700`}
+      >
         <h3 className="flex items-center gap-2 text-lg font-semibold text-light">
           <Icon className="h-5 w-5 text-secondary-300" aria-hidden="true" />
           {title}
@@ -50,41 +97,20 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
           {content}
         </div>
       </div>
-    ) : (
-      <div className="rounded-2xl bg-gray-200 p-6 ring-1 ring-primary-100">
-        <h3 className="flex items-center gap-2 text-lg font-semibold text-primary">
-          <Icon className="h-5 w-5 text-secondary" aria-hidden="true" />
-          {title}
-        </h3>
-        <div className="prose prose-sm mt-3 max-w-none leading-7 text-gray-600">
-          {content}
-        </div>
-      </div>
     )
+  }
 
   return (
     <div className={className}>
       {data.extraSections && (
-        <div className="relative bg-light py-24 sm:py-32">
-          <Container>
-            <div className="flex flex-col space-y-10">
-              {data.extraSections.map((section) => (
-                <div key={section.heading}>
-                  <h2 className="text-2xl font-semibold text-primary">
-                    {section.heading}
-                  </h2>
-                  <div className="prose mt-2 text-base leading-7 text-gray-600">
-                    {section.content}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Container>
-        </div>
+        <InfoBanner
+          sections={data.extraSections}
+          bgVariant={extraSectionsVariant}
+        />
       )}
 
       {data.serviceOptions && (
-        <div className="bg-primary-950 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
+        <div className={`${serviceOptionsBgClass} py-24 sm:py-32`}>
           <Container>
             <h3 className="text-xl font-semibold text-light">
               {data.serviceOptionsHeading ?? 'Choose Your Service'}
@@ -126,8 +152,8 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
             <div
               className={
                 data.contraindications && data.policyNotice
-                  ? 'mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2'
-                  : 'mt-6'
+                  ? 'mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2'
+                  : 'mt-10'
               }
             >
               {data.contraindications &&
@@ -135,7 +161,7 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
                   'Who Should Avoid This',
                   ShieldExclamationIcon,
                   data.contraindications,
-                  'dark',
+                  'darker',
                 )}
               {data.policyNotice &&
                 renderSection(
@@ -154,19 +180,21 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
               </h3>
               <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-3">
                 <div className="rounded-lg bg-primary-50 p-6 text-center ring-1 ring-primary-100">
-                  <div className="text-sm text-gray-600">First Appointment</div>
+                  <div className="text-base text-gray-600">
+                    First Appointment
+                  </div>
                   <div className="mt-1 text-lg font-semibold text-primary">
                     {data.touchUpPricing.firstAppointment}
                   </div>
                 </div>
                 <div className="rounded-lg bg-primary-50 p-6 text-center ring-1 ring-primary-100">
-                  <div className="text-sm text-gray-600">Touch-Up</div>
+                  <div className="text-base text-gray-600">Touch-Up</div>
                   <div className="mt-1 text-lg font-semibold text-primary">
                     {data.touchUpPricing.touchUp}
                   </div>
                 </div>
                 <div className="rounded-lg bg-primary-50 p-6 text-center ring-1 ring-primary-100">
-                  <div className="text-sm text-gray-600">Year One Total</div>
+                  <div className="text-base text-gray-600">Year One Total</div>
                   <div className="mt-1 text-lg font-semibold text-primary">
                     {data.touchUpPricing.yearOne}
                   </div>

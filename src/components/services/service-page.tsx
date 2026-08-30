@@ -3,7 +3,6 @@ import React from 'react'
 import FAQSection from '../faq-section'
 import { Footer } from '../footer'
 import { ServiceJsonLd } from '../json-ld/service'
-import { Link } from '../link'
 import type { ServiceData } from './service-data'
 import ServiceDetail, { getServiceDetailBgVariant } from './service-detail'
 import ServiceHeader from './service-header'
@@ -30,13 +29,6 @@ const ServicePage: React.FC<ServicePageProps> = ({ data }) => {
 
   const faqBgVariant = opposite(lastVariant)
   lastVariant = faqBgVariant
-
-  const closingCtaBgVariant = opposite(lastVariant)
-  const closingCtaBgClass =
-    closingCtaBgVariant === 'primary-950'
-      ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
-      : 'bg-primary'
-  if (data.secondaryCta) lastVariant = closingCtaBgVariant
 
   const footerCtaVariant = opposite(lastVariant)
 
@@ -71,17 +63,6 @@ const ServicePage: React.FC<ServicePageProps> = ({ data }) => {
       )}
 
       <FAQSection faqs={data.faqs} bgVariant={faqBgVariant} />
-
-      {data.secondaryCta && (
-        <div className={`${closingCtaBgClass} py-12 text-center`}>
-          <Link
-            href={data.secondaryCta.href}
-            className="inline-flex rounded-md bg-light px-5 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-primary-50"
-          >
-            {data.secondaryCta.text}
-          </Link>
-        </div>
-      )}
 
       <Footer ctaBgVariant={footerCtaVariant} />
     </div>

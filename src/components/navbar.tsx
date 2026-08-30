@@ -93,7 +93,7 @@ function DesktopNav() {
                 href={category.href}
                 className="block rounded-lg px-3 py-2 hover:bg-secondary-50"
               >
-                <div className="text-sm font-semibold text-primary">
+                <div className="text-base font-semibold text-primary">
                   {category.label}
                 </div>
                 <div className="text-xs text-gray-500">
@@ -103,7 +103,7 @@ function DesktopNav() {
             ))}
             <NavLink
               href="/services"
-              className="mt-1 block rounded-lg border-t border-gray-100 px-3 pt-3 text-sm font-semibold text-secondary hover:bg-secondary-50"
+              className="mt-1 block rounded-lg border-t border-gray-100 px-3 pt-3 text-base font-semibold text-secondary hover:bg-secondary-50"
             >
               All Services
             </NavLink>
@@ -154,7 +154,7 @@ function MobileNav() {
     <DisclosurePanel className="lg:hidden">
       <div className="flex flex-col gap-6 py-4">
         <div className="px-6">
-          <div className="text-sm font-semibold uppercase tracking-wider text-gray-500">
+          <div className="text-base font-semibold uppercase tracking-wider text-gray-500">
             Services
           </div>
           <div className="mt-2 flex flex-col gap-3">

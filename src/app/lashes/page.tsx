@@ -43,17 +43,6 @@ export default function LashesHubPage() {
           image: '/services/lash2.png',
         },
       ]}
-      trustBlock={{
-        heading: 'One Lash Tech, Every Appointment',
-        content: (
-          <>
-            No rotating staff. Every lash appointment at Brows on Point in West
-            Kelowna is with Jamie. If you&apos;re not sure whether a lash lift,
-            a lash tint, or both is right for you, say so when you book and
-            I&apos;ll talk it through at your appointment.
-          </>
-        ),
-      }}
     />
   )
 }

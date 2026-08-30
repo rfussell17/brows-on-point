@@ -19,7 +19,7 @@ export function PagePending({ title, note }: { title: string; note?: string }) {
         <div className="mt-8">
           <Link
             href="https://app.acuityscheduling.com/schedule.php?owner=15235407"
-            className="inline-flex rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-light shadow-sm hover:opacity-90"
+            className="inline-flex rounded-md bg-primary px-3.5 py-2.5 text-base font-semibold text-light shadow-sm hover:opacity-90"
           >
             Book Now
           </Link>

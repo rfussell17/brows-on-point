@@ -25,8 +25,8 @@ const TestimonialTeeth: React.FC<TestimonialProps> = ({
         {/* Testimonial Content */}
         <figure className="grid grid-cols-1 items-center gap-x-6 gap-y-8 lg:gap-x-10">
           {/* Testimonial Quote */}
-          <div className="relative col-span-2 lg:col-start-1 lg:row-start-2">
-            <blockquote className="leading-8 text-light sm:text-xl">
+          <div className="relative col-span-2 px-4 sm:px-6 lg:col-start-1 lg:row-start-2 lg:px-0">
+            <blockquote className="text-xl leading-8 text-light sm:text-2xl">
               <p>
                 “Jamie is my go-to for teeth whitening. She’s so sweet and it’s
                 always a fun, relaxing visit. I love how white she can get my
@@ -43,6 +43,7 @@ const TestimonialTeeth: React.FC<TestimonialProps> = ({
               width={576}
               height={576}
               className="rounded-xl bg-gray-100"
+              sizes="(min-width: 1024px) 288px, 64px"
             />
           </div>
 

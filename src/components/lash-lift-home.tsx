@@ -21,7 +21,7 @@ export default function LashLiftHome() {
 
               <p className="mt-6 text-base leading-7 text-gray-600">
                 I offer two options: my exlusive{' '}
-                <strong className="font-fancy font-bold"> BOMB </strong>Lift for
+                <strong> BOMB </strong>Lift for
                 a dramatic effect or the <strong>Keratin Lift</strong> for a
                 natural look. Both provide long-lasting results. Post-care
                 products are available to nourish and enhance lash health.
@@ -29,20 +29,20 @@ export default function LashLiftHome() {
               <div className="mt-8">
                 <Link
                   href="https://app.acuityscheduling.com/schedule.php?owner=15235407"
-                  className="inline-flex rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-light shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="inline-flex rounded-md bg-primary px-3.5 py-2.5 text-base font-semibold text-light shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   Reserve Appointment
                 </Link>
 
                 <Link
                   href="/lash-lift"
-                  className="px-3.5 text-sm font-semibold text-primary"
+                  className="px-3.5 text-base font-semibold text-primary"
                 >
                   Explore Lash Lifts <span aria-hidden="true">→</span>
                 </Link>
               </div>
               <figure className="mt-16 border-l border-secondary pl-8 text-gray-600">
-                <blockquote className="text-base leading-7">
+                <blockquote className="text-lg leading-7">
                   <p>
                     “Recently had my Keratin Lash Lift and Tint done by Jamie
                     and I am in love! This is definitely a service I will
@@ -52,9 +52,9 @@ export default function LashLiftHome() {
                     clean, organized and welcoming.”
                   </p>
                 </blockquote>
-                <figcaption className="mt-6 flex gap-x-4 text-sm">
+                <figcaption className="mt-6 flex gap-x-4 text-base">
                   <div>
-                    <span className="font-semibold text-gray-900">Kyla S.</span>{' '}
+                    <span className="font-fancy text-gray-900">Kyla S.</span>{' '}
                   </div>
                 </figcaption>
               </figure>
@@ -66,6 +66,7 @@ export default function LashLiftHome() {
             className="rounded-xl"
             width={800}
             height={1000}
+            sizes="(min-width: 1024px) 50vw, 100vw"
           />
         </div>
       </div>

@@ -13,11 +13,7 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ children, className = '' }) => (
-  <div
-    className={`overflow-hidden rounded-lg bg-light shadow-md ring-1 ring-primary-100 ${className}`}
-  >
-    {children}
-  </div>
+  <div className={`overflow-hidden rounded-lg ${className}`}>{children}</div>
 )
 
 const CardHeader: React.FC<CardProps> = ({ children, className = '' }) => (
@@ -42,13 +38,21 @@ const FAQSection: React.FC<FAQSectionProps> = ({
   className = '',
   bgVariant = 'light',
 }) => {
+  const isDark = bgVariant !== 'light'
   const bgClass =
     bgVariant === 'primary-950'
       ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
       : bgVariant === 'primary'
         ? 'bg-primary'
         : 'bg-light'
-  const headingClass = bgVariant === 'light' ? 'text-primary' : 'text-light'
+  const headingClass = isDark ? 'text-light' : 'text-primary'
+  const cardClass = isDark
+    ? 'bg-primary-800 ring-1 ring-secondary-700'
+    : 'bg-light shadow-md ring-1 ring-primary-100'
+  const headerClass = isDark
+    ? 'border-secondary-700 bg-primary-950 font-bold text-light transition-colors hover:bg-primary-900'
+    : 'bg-primary font-bold text-light transition-colors hover:bg-primary-800'
+  const contentClass = isDark ? 'text-light/80' : ''
 
   return (
     <section className={`${bgClass} py-24 sm:py-32 ${className}`}>
@@ -57,11 +61,9 @@ const FAQSection: React.FC<FAQSectionProps> = ({
         <h2 className={`text-3xl sm:text-5xl ${headingClass}`}>{title}</h2>
         <div className="mt-12 grid gap-4">
           {faqs.map((faq, index) => (
-            <Card key={index}>
-              <CardHeader className="bg-primary font-bold text-light transition-colors hover:bg-primary-800">
-                {faq.question}
-              </CardHeader>
-              <CardContent>{faq.answer}</CardContent>
+            <Card key={index} className={cardClass}>
+              <CardHeader className={headerClass}>{faq.question}</CardHeader>
+              <CardContent className={contentClass}>{faq.answer}</CardContent>
             </Card>
           ))}
         </div>

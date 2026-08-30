@@ -17,7 +17,6 @@ interface HubPageProps {
   title: string
   intro: ReactNode
   spokes: HubSpoke[]
-  trustBlock?: { heading: string; content: ReactNode }
   secondaryCta?: { text: string; href: string }
 }
 
@@ -25,13 +24,11 @@ export default function HubPage({
   title,
   intro,
   spokes,
-  trustBlock,
   secondaryCta,
 }: HubPageProps) {
-  // The footer's CTA strip needs to differ from whichever section is
-  // directly above it: trustBlock (bg-primary) if it exists, otherwise the
-  // spoke grid (bg-primary-950).
-  const footerCtaVariant = trustBlock ? 'primary-950' : 'primary'
+  // The footer's CTA strip needs to differ from the spoke grid (always
+  // bg-primary-950) directly above it.
+  const footerCtaVariant = 'primary'
 
   return (
     <div>
@@ -43,14 +40,14 @@ export default function HubPage({
             <div className="mt-8 flex items-center justify-center gap-x-4">
               <Link
                 href={ACUITY_URL}
-                className="inline-flex rounded-md bg-light px-4 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-primary-50"
+                className="inline-flex rounded-md bg-light px-4 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50"
               >
                 Book Now
               </Link>
               {secondaryCta && (
                 <Link
                   href={secondaryCta.href}
-                  className="inline-flex rounded-md border border-light px-4 py-2.5 text-sm font-semibold text-light hover:bg-light/10"
+                  className="inline-flex rounded-md border border-light px-4 py-2.5 text-base font-semibold text-light hover:bg-light/10"
                 >
                   {secondaryCta.text}
                 </Link>
@@ -74,21 +71,6 @@ export default function HubPage({
           </div>
         </Container>
       </div>
-
-      {trustBlock && (
-        <div className="bg-primary py-24 sm:py-32">
-          <Container>
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-2xl font-semibold text-light sm:text-3xl">
-                {trustBlock.heading}
-              </h2>
-              <div className="mt-4 text-base leading-7 text-gray-100">
-                {trustBlock.content}
-              </div>
-            </div>
-          </Container>
-        </div>
-      )}
 
       <Footer ctaBgVariant={footerCtaVariant} />
     </div>

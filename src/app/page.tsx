@@ -4,9 +4,10 @@ import FAQSection from '@/components/faq-section'
 import { Footer } from '@/components/footer'
 import Hero from '@/components/hero'
 import LashLiftHome from '@/components/lash-lift-home'
+import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
 import LogoGrid, { logos } from '@/components/media/logo-grid'
 import TestimonialGroup from '@/components/media/testimonial-group'
-import TestimonialOne from '@/components/media/testimonial-one'
+import TestimonialTwo from '@/components/media/testimonial-two'
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
   description:
@@ -69,8 +70,7 @@ export default function Home() {
           }}
         />
         <LashLiftHome />
-        {/* <TestimonialTwo /> */}
-        <TestimonialOne />
+        <TestimonialTwo />
       </main>
       <TestimonialGroup />
 
@@ -81,9 +81,20 @@ export default function Home() {
           href: 'https://app.acuityscheduling.com/schedule.php?owner=15235407',
         }}
       />
-      <FAQSection faqs={generalFAQs} title="Common Questions" className="" />
+      <FAQSection
+        faqs={generalFAQs}
+        title="Common Questions"
+        bgVariant="primary-950"
+      />
 
-      <Footer />
+      <GoogleReviewsBanner
+        rating={4.9}
+        reviewCount={138}
+        reviewsUrl="https://share.google/I3DmUVnWFhe0tZRgt"
+        theme="dark"
+      />
+
+      <Footer ctaBgVariant="primary-950" />
     </div>
   )
 }

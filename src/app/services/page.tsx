@@ -2,7 +2,7 @@ import { Container } from '@/components/container'
 import FAQSection from '@/components/faq-section'
 import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
-import TestimonialTwo from '@/components/media/testimonial-two'
+import TestimonialMakeup from '@/components/media/testimonial-makeup'
 import { ImagePlaceholder } from '@/components/services/image-placeholder'
 import { CheckIcon } from '@heroicons/react/24/outline'
 import type { Metadata } from 'next'
@@ -144,7 +144,7 @@ const ServicesPage = () => {
                     {category.highlights.map((highlight) => (
                       <li
                         key={highlight}
-                        className="flex items-center gap-2 text-sm text-gray-100"
+                        className="flex items-center gap-2 text-base text-gray-100"
                       >
                         <CheckIcon
                           className="h-4 w-4 flex-none text-secondary-300"
@@ -156,7 +156,7 @@ const ServicesPage = () => {
                   </ul>
                   <Link
                     href={category.href}
-                    className="mt-6 inline-flex rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-light shadow-sm hover:opacity-90"
+                    className="mt-6 inline-flex rounded-md bg-primary px-4 py-2.5 text-base font-semibold text-light shadow-sm hover:opacity-90"
                   >
                     Explore {category.title}
                   </Link>
@@ -167,7 +167,7 @@ const ServicesPage = () => {
         </Container>
       </div>
 
-      <TestimonialTwo bgVariant="primary" />
+      <TestimonialMakeup bgVariant="primary" />
 
       <FAQSection faqs={faqs} bgVariant="primary-950" />
 

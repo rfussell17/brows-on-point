@@ -1,4 +1,5 @@
 import Image, { type StaticImageData } from 'next/image'
+import { Container } from '../container'
 
 interface Logo {
   alt: string
@@ -30,39 +31,34 @@ export const logos = [
   },
 ]
 
-const LogoGrid: React.FC<LogoGridProps> = ({
-  title,
-  logos,
-  theme = 'light',
-}) => {
+const LogoGrid: React.FC<LogoGridProps> = ({ title, logos, theme = 'dark' }) => {
   const bgClass = theme === 'dark' ? 'bg-primary' : 'bg-light'
-  const titleColor = 'text-light'
+  const headingColor = theme === 'dark' ? 'text-light' : 'text-primary'
 
   return (
     <div className={`${bgClass} py-8 md:py-12 lg:py-20`}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className={`text-center text-4xl sm:text-6xl ${titleColor}`}>
+      <Container>
+        <h2 className={`text-center text-3xl sm:text-5xl ${headingColor}`}>
           {title}
         </h2>
-        <div className="mt-8 flow-root">
-          <div className="grid grid-cols-1 justify-items-center gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {logos.map((logo, index) => (
-              <div
-                key={index}
-                className="flex w-full max-w-40 items-center justify-center lg:max-w-none"
-              >
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={300}
-                  height={10}
-                  className="h-12 w-full object-contain"
-                />
-              </div>
-            ))}
-          </div>
+        <div className="mt-8 grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-3">
+          {logos.map((logo, index) => (
+            <div
+              key={index}
+              className="flex w-full max-w-40 items-center justify-center"
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={300}
+                height={10}
+                className="h-12 w-full object-contain"
+                sizes="160px"
+              />
+            </div>
+          ))}
         </div>
-      </div>
+      </Container>
     </div>
   )
 }

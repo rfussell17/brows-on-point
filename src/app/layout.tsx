@@ -17,6 +17,14 @@ export const metadata: Metadata = {
   },
   description:
     "West Kelowna's lash and brow bar for lash lifts, brow tinting, permanent makeup, teeth whitening, and tooth gems. Book online today.",
+  openGraph: {
+    type: 'website',
+    siteName: 'Brows on Point',
+    title:
+      'Brows on Point | Lash, Brow & Permanent Makeup Studio in West Kelowna',
+    description:
+      "West Kelowna's lash and brow bar for lash lifts, brow tinting, permanent makeup, teeth whitening, and tooth gems. Book online today.",
+  },
 }
 
 const hurricane = Hurricane({

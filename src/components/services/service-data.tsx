@@ -1,13 +1,15 @@
 import { ACUITY_URL } from '@/lib/site'
 import type { StaticImageData } from 'next/image'
+import Link from 'next/link'
 import type { ComponentType, ReactNode } from 'react'
 import bombLiftImage from '../../../public/services/bomb_lift_and_tint.jpg'
 import lashImage from '../../../public/services/lash2.png'
 import microbladeImage from '../../../public/services/microblade.jpg'
 import powderBrowImage from '../../../public/services/powder_brow.jpg'
-import TestimonialBrows from '../media/testimonial-brows'
 import TestimonialMakeup from '../media/testimonial-makeup'
 import TestimonialOne from '../media/testimonial-one'
+import TestimonialTeeth from '../media/testimonial-teeth'
+import TestimonialTwo from '../media/testimonial-two'
 export interface ServiceData {
   thumbnail: string
   title: string
@@ -47,8 +49,6 @@ export interface ServiceData {
   }
   /** Policy notices (e.g. the booking-fee block) rendered between the header and detail sections. */
   policyNotice?: ReactNode
-  /** Secondary CTA — e.g. the free consultation button on PMU pages (Q51). */
-  secondaryCta?: { text: string; href: string }
   /** Link back up to this spoke's hub — e.g. { text: 'All Lash Services', href: '/lashes' }. Defaults to the /services index. */
   hubLink?: { text: string; href: string }
   testimonial?: {
@@ -519,7 +519,7 @@ export const microbladingServiceData: ServiceData = {
   results: '1-2 years',
   price: '$275',
   testimonial: {
-    component: TestimonialBrows,
+    component: TestimonialTwo,
   },
   thumbnail: '/services/thumbnail_brows_brows_on_point.png',
   about: (
@@ -596,7 +596,6 @@ export const microbladingServiceData: ServiceData = {
   ),
   contraindications: pmuContraindications,
   policyNotice: pmuBookingFeeNotice,
-  secondaryCta: { text: 'Book Free Consultation', href: ACUITY_URL },
   touchUpPricing: {
     firstAppointment: '$275',
     touchUp: '$100',
@@ -657,7 +656,7 @@ export const browTintWaxShapeData: ServiceData = {
   results: '3-6 weeks for tint, ongoing for shape',
   price: '$25',
   testimonial: {
-    component: TestimonialBrows,
+    component: TestimonialMakeup,
   },
   about: (
     <>
@@ -755,7 +754,7 @@ export const powderBrowsServiceData: ServiceData = {
   results: 'Varies by skin type — ask at your consultation',
   price: '$300',
   testimonial: {
-    component: TestimonialBrows,
+    component: TestimonialMakeup,
   },
   thumbnail: '/services/thumbnail_brows_brows_on_point.png',
   about: (
@@ -814,7 +813,6 @@ export const powderBrowsServiceData: ServiceData = {
   ),
   contraindications: pmuContraindications,
   policyNotice: pmuBookingFeeNotice,
-  secondaryCta: { text: 'Book Free Consultation', href: ACUITY_URL },
   touchUpPricing: {
     firstAppointment: '$300',
     touchUp: '$125',
@@ -966,7 +964,6 @@ export const salineRemovalServiceData: ServiceData = {
     </div>
   ),
   policyNotice: pmuBookingFeeNotice,
-  secondaryCta: { text: 'Book Free Consultation', href: ACUITY_URL },
   extraSections: [
     {
       heading: 'Emergency / After-Hours Removal',
@@ -1105,7 +1102,6 @@ export const permanentEyelinerServiceData: ServiceData = {
   ),
   contraindications: pmuContraindications,
   policyNotice: pmuBookingFeeNotice,
-  secondaryCta: { text: 'Book Free Consultation', href: ACUITY_URL },
   galleryCaption: 'Permanent eyeliner before & after',
   faqs: [
     {
@@ -1281,6 +1277,9 @@ export const teethWhiteningServiceData: ServiceData = {
   results: 'Up to 6 months',
   price: '$99',
   serviceOptionsHeading: 'Choose Your Whitening',
+  testimonial: {
+    component: TestimonialTeeth,
+  },
   about: (
     <>
       Professional, cosmetic teeth whitening uses a stronger whitening gel and
@@ -1308,9 +1307,9 @@ export const teethWhiteningServiceData: ServiceData = {
       description: (
         <>
           A gentler gold-infused option, built for sensitive teeth. See my{' '}
-          <a href="/smile/sensitive-teeth-whitening" className="underline">
+          <Link href="/smile/sensitive-teeth-whitening" className="underline">
             sensitive teeth whitening page
-          </a>{' '}
+          </Link>{' '}
           for details.
         </>
       ),

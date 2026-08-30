@@ -100,7 +100,7 @@ export function Footer({ ctaBgVariant = 'primary' }: FooterProps) {
           <h2 className="text-3xl text-light sm:text-5xl">
             Book your appointment today
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-base text-light/70">
+          <p className="mx-auto mt-4 max-w-md text-sm text-light/70">
             West Kelowna&apos;s trusted studio for lash lifts, brow
             enhancements, and permanent makeup.
           </p>

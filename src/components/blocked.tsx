@@ -7,7 +7,7 @@ export function Blocked({ source, needs }: { source: string; needs: string }) {
   return (
     <div
       data-blocked={source}
-      className="my-6 border-l-4 border-red-500 bg-red-50 p-4 text-sm text-red-900"
+      className="my-6 border-l-4 border-red-500 bg-red-50 p-4 text-base text-red-900"
     >
       <strong>BLOCKED — {source}</strong>
       <p className="mt-1">{needs}</p>

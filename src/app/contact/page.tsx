@@ -86,7 +86,7 @@ export default function ContactPage() {
           <div className="mx-auto mt-12 max-w-2xl text-center">
             <Link
               href={ACUITY_URL}
-              className="inline-flex rounded-md bg-light px-4 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-primary-50"
+              className="inline-flex rounded-md bg-light px-4 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50"
             >
               Book an Appointment
             </Link>

@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -12,7 +10,7 @@ const Hero: React.FC = () => {
           <div className="relative px-6 py-16 sm:py-20 lg:px-8 lg:py-0 lg:pr-0">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
               <div className="hidden sm:mb-10 sm:flex">
-                <div className="relative rounded-full border border-gray-200 bg-light px-3 py-1 text-sm leading-6 text-gray-600">
+                <div className="relative inline-block rounded-full bg-secondary-900 px-3 py-1 text-xs font-semibold tracking-wider text-secondary-200">
                   High-Quality Esthetic Treatments in West Kelowna
                 </div>
               </div>
@@ -35,13 +33,13 @@ const Hero: React.FC = () => {
               <div className="mt-10 flex items-center gap-x-6">
                 <Link
                   href="https://app.acuityscheduling.com/schedule.php?owner=15235407"
-                  className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-light shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="rounded-md bg-primary px-3.5 py-2.5 text-base font-semibold text-light shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   Book Now
                 </Link>
                 <Link
                   href="/services"
-                  className="text-sm font-semibold leading-6 text-primary"
+                  className="text-base font-semibold leading-6 text-primary"
                 >
                   All Services <span aria-hidden="true">→</span>
                 </Link>
@@ -57,6 +55,7 @@ const Hero: React.FC = () => {
           height={800}
           src="/jamie_fussell_brows_on_point_3.jpg"
           className="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
+          sizes="(min-width: 1024px) 50vw, 100vw"
         />
       </div>
     </div>

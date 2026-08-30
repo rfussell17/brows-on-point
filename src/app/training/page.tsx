@@ -57,7 +57,7 @@ export default function TrainingPage() {
                 <div className="mt-2 text-2xl font-semibold text-primary">
                   {course.price}
                 </div>
-                <p className="mt-4 text-sm leading-6 text-gray-600">
+                <p className="mt-4 text-base leading-6 text-gray-600">
                   {course.description}
                 </p>
               </div>
@@ -85,7 +85,7 @@ export default function TrainingPage() {
           <div className="mx-auto mt-12 max-w-2xl text-center">
             <Link
               href={ACUITY_URL}
-              className="inline-flex rounded-md bg-light px-4 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-primary-50"
+              className="inline-flex rounded-md bg-light px-4 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50"
             >
               Book a Training Course
             </Link>

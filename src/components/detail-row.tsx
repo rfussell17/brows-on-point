@@ -55,7 +55,7 @@ const DetailRow: React.FC = () => {
                   <p className="mt-4">
                     <Link
                       href={service.href}
-                      className="text-dark text-sm leading-6"
+                      className="text-dark text-base leading-6"
                     >
                       <strong>View {service.name}</strong>
                       <span aria-hidden="true"> →</span>

@@ -43,18 +43,6 @@ export default function BrowsHubPage() {
           image: '/services/powder_brow.jpg',
         },
       ]}
-      trustBlock={{
-        heading: 'Your Local Brow Studio',
-        content: (
-          <>
-            Brows on Point has been serving West Kelowna since 2016. Whether you
-            want a quick eyebrow wax and tint or you&apos;re ready for
-            semi-permanent microblading or powder brows, every appointment
-            starts with a conversation about the shape that actually suits your
-            face, not a one-size-fits-all brow.
-          </>
-        ),
-      }}
     />
   )
 }

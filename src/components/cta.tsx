@@ -30,7 +30,7 @@ const CallToAction: FC<CallToActionProps> = ({
             {primaryButton && (
               <Link
                 href={primaryButton.href}
-                className="rounded-md bg-light px-3.5 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light"
+                className="rounded-md bg-light px-3.5 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light"
               >
                 {primaryButton.text}
               </Link>
@@ -38,7 +38,7 @@ const CallToAction: FC<CallToActionProps> = ({
             {secondaryButton && (
               <Link
                 href={secondaryButton.href}
-                className="text-sm font-semibold leading-6 text-light"
+                className="text-base font-semibold leading-6 text-light"
               >
                 {secondaryButton.text} <span aria-hidden="true">→</span>
               </Link>

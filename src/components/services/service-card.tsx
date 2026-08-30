@@ -22,8 +22,8 @@ export function ServiceCard({ title, description, href }: ServiceCardItem) {
       <ImagePlaceholder className="aspect-[4/3] w-full" />
       <div className="flex flex-1 flex-col p-6">
         <h3 className="text-xl font-semibold text-primary">{title}</h3>
-        <p className="mt-2 text-sm leading-6 text-gray-600">{description}</p>
-        <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-secondary">
+        <p className="mt-2 text-base leading-6 text-gray-600">{description}</p>
+        <span className="mt-4 inline-flex items-center gap-1 text-base font-semibold text-secondary">
           Explore
           <span
             aria-hidden="true"

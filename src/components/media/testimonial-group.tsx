@@ -107,7 +107,7 @@ const testimonials: Testimonial[] = [
 
 const TestimonialGroup: React.FC = () => {
   return (
-    <div className="bg-primary-50 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
+    <div className="bg-primary-950 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
       <Container>
         <div className="mx-auto max-w-xl text-center">
           <h2 className="text-3xl text-light sm:text-5xl">Testimonials</h2>
@@ -123,7 +123,7 @@ const TestimonialGroup: React.FC = () => {
                 key={testimonial.author.name}
                 className="pt-8 sm:inline-block sm:w-full sm:px-4"
               >
-                <figure className="rounded-2xl bg-primary-800 p-8 text-sm leading-6 ring-1 ring-secondary-700">
+                <figure className="rounded-2xl bg-primary-800 p-8 text-lg leading-7 ring-1 ring-secondary-700">
                   <blockquote className="text-light/90">
                     <p>{`“${testimonial.body}”`}</p>
                   </blockquote>
@@ -136,7 +136,7 @@ const TestimonialGroup: React.FC = () => {
                       className="h-10 w-10 rounded-full bg-primary-50"
                     /> */}
                     <div>
-                      <div className="font-semibold text-light">
+                      <div className="font-fancy text-light">
                         {testimonial.author.name}
                       </div>
                     </div>

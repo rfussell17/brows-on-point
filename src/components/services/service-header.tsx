@@ -57,7 +57,7 @@ export default function ServiceHome({
           <div className="lg:pr-4 lg:pt-4">
             <div className="lg:max-w-lg">
               {eyebrow && (
-                <span className="inline-block rounded-full bg-secondary-900 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-secondary-200">
+                <span className="inline-block rounded-full bg-secondary-900 px-3 py-1 text-xs font-semibold tracking-wider text-secondary-200">
                   {eyebrow}
                 </span>
               )}
@@ -71,7 +71,7 @@ export default function ServiceHome({
               <dl className="mt-8 grid grid-cols-3 gap-2 rounded-2xl bg-light p-6 shadow-sm">
                 {stats.map(({ key, label, icon: Icon }) => (
                   <div key={key}>
-                    <dt className="flex items-center gap-1.5 text-sm font-semibold text-gray-500">
+                    <dt className="flex items-center gap-1.5 text-base font-semibold text-gray-500">
                       <Icon
                         className="h-4 w-4 text-secondary"
                         aria-hidden="true"
@@ -88,14 +88,14 @@ export default function ServiceHome({
               <div className="mt-8 flex flex-wrap items-center gap-x-3.5 gap-y-3">
                 <Link
                   href={bookingUrl}
-                  className="inline-flex rounded-md bg-light px-3.5 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light"
+                  className="inline-flex rounded-md bg-light px-3.5 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light"
                 >
                   Reserve Appointment
                 </Link>
 
                 <Link
                   href={learnMoreUrl}
-                  className="text-sm font-semibold text-light"
+                  className="text-base font-semibold text-light"
                 >
                   {learnMoreLabel} <span aria-hidden="true">→</span>
                 </Link>
@@ -103,12 +103,12 @@ export default function ServiceHome({
 
               {testimonial && (
                 <figure className="mt-16 border-l border-light/30 pl-8 text-gray-100">
-                  <blockquote className="text-base leading-7">
+                  <blockquote className="text-lg leading-7">
                     <p>{testimonial.quote}</p>
                   </blockquote>
-                  <figcaption className="mt-6 flex gap-x-4 text-sm">
+                  <figcaption className="mt-6 flex gap-x-4 text-base">
                     <div>
-                      <span className="font-semibold text-light">
+                      <span className="font-fancy text-light">
                         {testimonial.author}
                       </span>
                     </div>
@@ -125,7 +125,7 @@ export default function ServiceHome({
             </div>
 
             {galleryCaption && (
-              <p className="mt-3 text-center text-sm text-light/50">
+              <p className="mt-3 text-center text-base text-light/50">
                 {galleryCaption}
               </p>
             )}
