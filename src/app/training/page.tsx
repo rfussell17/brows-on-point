@@ -68,9 +68,18 @@ export default function TrainingPage() {
               Your Trainer
             </h2>
             <div className="mt-4 text-base leading-7 text-gray-600">
-              <p className="italic text-gray-400">
-                Trainer credentials coming soon.
-              </p>
+              <ul className="list-disc space-y-2 pl-6">
+                <li>Microblading Training Program</li>
+                <li>Advanced Microblading Training Program</li>
+                <li>Permanent Makeup Technician Training</li>
+                <li>Hypertonic Saline Tattoo & Permanent Makeup Removal</li>
+                <li>Lash Lift and Tint Training Program</li>
+                <li>Fluffy Brow Latex Workshop</li>
+                <li>Classic Brow Pattern Workshop</li>
+                <li>Korean Lash Lift Technician Course</li>
+                <li>Radio Frequency (RF) Facial Training</li>
+                <li>Skin Anatomy Workshop</li>
+              </ul>
             </div>
           </div>
 

@@ -1,21 +1,19 @@
 import { BUSINESS_EMAIL, BUSINESS_PHONE } from '@/lib/site'
 
-// PLACEHOLDER, not sourced from Q40 — Robin asked (2026-08-25) for a generic
-// schedule here so builds aren't blocked sitewide while hours are pending.
-// Replace with Jamie's real Mon–Sun hours the moment Q40 is answered — see
-// BLOCKERS.md. Do not treat this as a real fact anywhere else on the site.
-const GENERIC_OPENING_HOURS = [
+// Q40 — Monday–Saturday 9am–9pm, closed Sunday.
+const OPENING_HOURS = [
   {
     '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    dayOfWeek: [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+    ],
     opens: '09:00',
-    closes: '18:00',
-  },
-  {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Saturday'],
-    opens: '09:00',
-    closes: '16:00',
+    closes: '21:00',
   },
 ]
 
@@ -47,7 +45,7 @@ export function LocalBusinessJsonLd() {
     areaServed: 'West Kelowna, BC',
     priceRange: '$$',
     paymentAccepted: ['Cash', 'Debit Card', 'Credit Card', 'E-transfer'],
-    openingHoursSpecification: GENERIC_OPENING_HOURS,
+    openingHoursSpecification: OPENING_HOURS,
   }
 
   return (

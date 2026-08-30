@@ -7,7 +7,6 @@ import {
 } from '@heroicons/react/24/outline'
 import { type ComponentType, type FC, type ReactNode } from 'react'
 import type { ServiceData } from './service-data'
-import { missedTouchUpWindowNotice } from './service-data'
 
 interface ServiceDetailProps {
   data: ServiceData
@@ -68,7 +67,7 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
                   <div className="mt-1 text-lg font-semibold text-light">
                     {option.price}
                   </div>
-                  <div className="prose prose-invert prose-sm mt-2 leading-6 text-light/70">
+                  <div className="prose prose-sm prose-invert mt-2 leading-6 text-light/70">
                     {option.description}
                   </div>
                 </div>
@@ -91,11 +90,7 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
               data.preparation,
             )}
             {renderSection('Process', ArrowPathIcon, data.process)}
-            {renderSection(
-              'Aftercare Instructions',
-              HeartIcon,
-              data.aftercare,
-            )}
+            {renderSection('Aftercare Instructions', HeartIcon, data.aftercare)}
             {renderSection('Results', CheckBadgeIcon, data.benefits)}
           </div>
 
@@ -116,9 +111,7 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
               </h3>
               <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-3">
                 <div className="rounded-lg bg-primary-50 p-6 text-center ring-1 ring-primary-100">
-                  <div className="text-sm text-gray-600">
-                    First Appointment
-                  </div>
+                  <div className="text-sm text-gray-600">First Appointment</div>
                   <div className="mt-1 text-lg font-semibold text-primary">
                     {data.touchUpPricing.firstAppointment}
                   </div>
@@ -136,7 +129,6 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
                   </div>
                 </div>
               </div>
-              {missedTouchUpWindowNotice}
             </div>
           )}
         </div>

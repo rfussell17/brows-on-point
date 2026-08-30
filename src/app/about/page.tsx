@@ -53,11 +53,6 @@ const values = [
     description:
       'Genuine Swarovski crystal gems for your smile, professionally applied to last 6-24 months. Custom designs available.',
   },
-  {
-    name: 'Lip Plumping Kit',
-    description:
-      'Day and night lip enhancement system for fuller, healthier lips. Includes plumping day treatment and nourishing night repair.',
-  },
 ]
 
 export default function AboutPage() {
@@ -176,10 +171,19 @@ export default function AboutPage() {
                 <h2 className="text-4xl text-primary sm:text-5xl">
                   Certifications
                 </h2>
-                <div className="mt-6 text-lg text-gray-600">
-                  <p className="italic text-gray-400">
-                    Certification details coming soon.
-                  </p>
+                <div className="mt-6 text-base leading-7 text-gray-600">
+                  <ul className="list-disc space-y-2 pl-6">
+                    <li>Microblading Training Program</li>
+                    <li>Advanced Microblading Training Program</li>
+                    <li>Permanent Makeup Technician Training</li>
+                    <li>Hypertonic Saline Tattoo & Permanent Makeup Removal</li>
+                    <li>Lash Lift and Tint Training Program</li>
+                    <li>Fluffy Brow Latex Workshop</li>
+                    <li>Classic Brow Pattern Workshop</li>
+                    <li>Korean Lash Lift Technician Course</li>
+                    <li>Radio Frequency (RF) Facial Training</li>
+                    <li>Skin Anatomy Workshop</li>
+                  </ul>
                 </div>
               </div>
             </div>

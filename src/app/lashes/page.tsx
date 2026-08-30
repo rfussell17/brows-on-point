@@ -15,10 +15,9 @@ export default function LashesHubPage() {
         <>
           Jamie is the lash tech behind every appointment at Brows on Point, a
           lash studio in West Kelowna offering lash lifts, lash and brow
-          tinting, and a lash growth serum to use between visits.{' '}
-          <span className="italic text-gray-400">
-            Certification details coming soon.
-          </span>
+          tinting, and a lash growth serum to use between visits. She&apos;s
+          completed a Lash Lift and Tint Training Program and a Korean Lash Lift
+          Technician Course.
         </>
       }
       spokes={[

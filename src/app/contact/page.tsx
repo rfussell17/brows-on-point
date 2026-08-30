@@ -1,4 +1,3 @@
-import { Blocked } from '@/components/blocked'
 import { Container } from '@/components/container'
 import { Link } from '@/components/link'
 import {
@@ -38,10 +37,8 @@ export default function ContactPage() {
             <div>
               <h2 className="text-lg font-semibold text-primary">Hours</h2>
               <div className="mt-2 text-base leading-7 text-gray-600">
-                <Blocked
-                  source="Opening hours"
-                  needs="Q40 — blank in the questionnaire. The single highest-impact blank overall; blocks this page, the footer, and the LocalBusiness schema."
-                />
+                <p>Monday–Saturday: 9am–9pm</p>
+                <p>Sunday: Closed</p>
               </div>
             </div>
 
@@ -50,10 +47,7 @@ export default function ContactPage() {
                 Parking & Directions
               </h2>
               <div className="mt-2 text-base leading-7 text-gray-600">
-                <Blocked
-                  source="Parking & directions"
-                  needs="Q49 — blank in the questionnaire. Needs Jamie's guidance on parking and finding the door."
-                />
+                <p>Street parking is available nearby.</p>
               </div>
             </div>
 

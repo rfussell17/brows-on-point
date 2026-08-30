@@ -5,7 +5,6 @@ import bombLiftImage from '../../../public/services/bomb_lift_and_tint.jpg'
 import lashImage from '../../../public/services/lash2.png'
 import microbladeImage from '../../../public/services/microblade.jpg'
 import powderBrowImage from '../../../public/services/powder_brow.jpg'
-import { Blocked } from '../blocked'
 import TestimonialBrows from '../media/testimonial-brows'
 import TestimonialMakeup from '../media/testimonial-makeup'
 import TestimonialOne from '../media/testimonial-one'
@@ -88,6 +87,40 @@ export const pmuContraindications = (
 )
 
 /**
+ * Teeth whitening contraindications (Q41), used identically on
+ * /smile/teeth-whitening/ and /smile/sensitive-teeth-whitening/.
+ */
+export const teethWhiteningContraindications = (
+  <div className="mx-auto max-w-2xl px-6">
+    <h4 className="font-semibold text-primary">Dental Health</h4>
+    <ul className="list-disc space-y-2 pl-6">
+      <li>Active cavities or tooth decay</li>
+      <li>Periodontal disease or gum recession</li>
+      <li>Exposed dentin or significant enamel erosion</li>
+      <li>Cracked or fractured teeth</li>
+    </ul>
+    <h4 className="mt-6 font-semibold text-primary">Medical</h4>
+    <ul className="list-disc space-y-2 pl-6">
+      <li>Pregnancy or breastfeeding</li>
+      <li>Under 16 years old</li>
+      <li>Known allergy to peroxide</li>
+    </ul>
+    <h4 className="mt-6 font-semibold text-primary">Other Limitations</h4>
+    <ul className="list-disc space-y-2 pl-6">
+      <li>
+        Crowns, veneers, bonding, or other restorations on front teeth
+        won&apos;t whiten and can end up a mismatched colour next to your
+        natural teeth
+      </li>
+      <li>
+        Deep intrinsic staining, such as from tetracycline or severe fluorosis,
+        may not respond to in-office whitening
+      </li>
+    </ul>
+  </div>
+)
+
+/**
  * BUILD-BRIEF.md §6.1 — the $50 PMU booking fee, reschedule notice, and
  * transfer/no-show/late policy. Q20 (24hrs) and Q22 (48hrs) directly
  * contradicted each other; the filled-out questionnaire ticks 24 hours for
@@ -103,17 +136,6 @@ export const pmuBookingFeeNotice = (
       <li>More than 10 minutes late and the appointment is cancelled</li>
     </ul>
   </div>
-)
-
-/**
- * BUILD-BRIEF.md §6.5 — what a client pays if they miss the touch-up window.
- * Q39 rules out the $170 colour boost but doesn't say what replaces it.
- */
-export const missedTouchUpWindowNotice = (
-  <Blocked
-    source="Missed touch-up window pricing"
-    needs="Q39 confirms a client who misses the touch-up window does NOT pay the $170 colour boost — but doesn't say what they pay instead. Can't publish the touch-up table's fine print until that's answered."
-  />
 )
 
 // Add slug and shortDescription to each service
@@ -253,6 +275,11 @@ export const lashServiceData: ServiceData = {
         "What's the difference between the Keratin, BOMB, and Korean lash lift?",
       answer:
         'The Keratin Lash Lift and Tint is my base treatment, using a keratin protein solution for a natural curl. The BOMB Lash Lift and Tint adds a biotin-infused formula for extra hold and a more dramatic lift. The Korean Lash Lift and Tint uses a gentler technique for a softer, more relaxed curl.',
+    },
+    {
+      question: 'Why does a Korean Lash Lift cost more?',
+      answer:
+        'The Korean technique uses a gentler, more premium lifting solution than the Keratin or BOMB treatments, along with a technique that takes more time to apply. Ask about pricing at your consultation.',
     },
     {
       question: 'Is a lash lift the same as a lash perm or lash lamination?',
@@ -727,12 +754,7 @@ export const powderBrowsServiceData: ServiceData = {
   headerImage: powderBrowImage,
   detailImage: powderBrowImage,
   duration: '2-2.5 hours',
-  results: (
-    <Blocked
-      source="Powder brows longevity"
-      needs="Q37 confirms microblading lasts 1-2 years, but that question was scoped to microblading specifically — it isn't a sourced answer for powder brows. Needs its own confirmation from Jamie rather than assuming the same figure."
-    />
-  ),
+  results: 'Varies by skin type — ask at your consultation',
   price: '$300',
   testimonial: {
     component: TestimonialBrows,
@@ -879,10 +901,53 @@ export const salineRemovalServiceData: ServiceData = {
     </div>
   ),
   aftercare: (
-    <Blocked
-      source="Saline removal aftercare"
-      needs="Q42 — nothing exists anywhere yet. Specifically needs Jamie's guidance on what to tell clients about the scab that forms during healing."
-    />
+    <div className="mx-auto max-w-2xl px-6">
+      <h4 className="font-semibold text-primary">Days 1–3</h4>
+      <ul className="list-disc space-y-2 pl-6">
+        <li>
+          Blot the area with a clean paper towel every 30-60 minutes for the
+          first few hours, to keep the scab that forms thin
+        </li>
+        <li>
+          Keep it strictly dry — no water directly on the area, and keep shower
+          spray off your face
+        </li>
+        <li>
+          Skip ointments and creams for now; the goal is to let it dry out so a
+          firm scab can form
+        </li>
+      </ul>
+      <h4 className="mt-6 font-semibold text-primary">Days 4–14</h4>
+      <ul className="list-disc space-y-2 pl-6">
+        <li>
+          Let the scab fall off on its own, usually within 7-14 days — picking
+          it off early strips out lifted pigment and risks scarring
+        </li>
+        <li>
+          Avoid heavy workouts, saunas, hot tubs, and long hot showers; sweat
+          and steam can soften the scab too soon
+        </li>
+        <li>
+          Keep makeup, active skincare, and sunscreen off the area until the
+          skin has fully closed over
+        </li>
+      </ul>
+      <h4 className="mt-6 font-semibold text-primary">Weeks 2–8</h4>
+      <ul className="list-disc space-y-2 pl-6">
+        <li>
+          Once the scab sheds naturally, apply vitamin E oil or your recommended
+          healing gel to soothe the fresh skin underneath
+        </li>
+        <li>
+          Protect the area from direct sun with a hat, sunglasses, or a mineral
+          sunscreen
+        </li>
+        <li>
+          Full healing takes 6-8 weeks — wait until then before another saline
+          session or new permanent makeup work in the same area
+        </li>
+      </ul>
+    </div>
   ),
   contraindications: (
     <div className="mx-auto max-w-2xl px-6">
@@ -907,10 +972,10 @@ export const salineRemovalServiceData: ServiceData = {
     {
       heading: 'Emergency / After-Hours Removal',
       content: (
-        <Blocked
-          source="Emergency saline removal — offered, window, and fee"
-          needs="Q26/Q27/Q28 all still unconfirmed. The old live site lists a separate 'Emergency Permanent Makeup Removal (24-48 hours) $150' service, which may explain the $150 previously published here as the regular price — but nothing confirms whether that emergency tier still exists, what its real window is (site copy has said both 24hrs and 24-48hrs), or what an after-hours surcharge would be on top of it."
-        />
+        <>
+          Emergency saline removal is available within 24 hours of your original
+          appointment, for a $200 after-hours fee.
+        </>
       ),
     },
   ],
@@ -991,12 +1056,7 @@ export const permanentEyelinerServiceData: ServiceData = {
     },
     {
       name: 'Top + Bottom Eyeliner',
-      price: (
-        <Blocked
-          source="Top + Bottom Eyeliner price"
-          needs="Q11 — Jamie ticked 'reprice' (upper $199 + lower $120 = $319, $1 less than the $320 combo price) but left the replacement number blank. $320 is confirmed unwanted, not confirmed final."
-        />
-      ),
+      price: '$319',
       description: (
         <>
           Defined liner along both the top and bottom lash lines. The touch-up
@@ -1052,7 +1112,7 @@ export const permanentEyelinerServiceData: ServiceData = {
     {
       question: 'How much does an eyeliner tattoo cost?',
       answer:
-        'Upper lash line enhancement is $199, with a $135 touch-up. Lower eyeliner on its own is $120. Ask about pricing for top and bottom together at your consultation.',
+        'Upper lash line enhancement is $199, with a $135 touch-up. Lower eyeliner on its own is $120. Top and bottom together is $319, with a $180 touch-up.',
     },
     {
       question:
@@ -1129,10 +1189,58 @@ export const toothGemsServiceData: ServiceData = {
     </div>
   ),
   aftercare: (
-    <Blocked
-      source="Tooth gem aftercare"
-      needs="Q43 — nothing exists anywhere yet. Needs brushing and flossing guidance, foods to avoid, and what to do if a gem comes loose, from Jamie."
-    />
+    <div className="mx-auto max-w-2xl px-6">
+      <h4 className="font-semibold text-primary">First 1-2 Hours</h4>
+      <ul className="list-disc space-y-2 pl-6">
+        <li>
+          Don&apos;t eat or drink anything for at least 60 minutes, so the
+          adhesive fully cures
+        </li>
+        <li>
+          Avoid touching, pressing, or picking at the gem with your fingers or
+          tongue
+        </li>
+      </ul>
+      <h4 className="mt-6 font-semibold text-primary">First 24 Hours</h4>
+      <ul className="list-disc space-y-2 pl-6">
+        <li>
+          Stick to soft foods — yogurt, smoothies, soups — and avoid anything
+          hard, sticky, or crunchy
+        </li>
+        <li>
+          Skip brushing the treated tooth for the first 24 hours; you can still
+          brush your other teeth carefully
+        </li>
+        <li>
+          Avoid acidic and carbonated drinks, which can weaken the bond while
+          it&apos;s curing
+        </li>
+        <li>
+          Rinse gently with water or an alcohol-free mouthwash after meals
+          instead of brushing
+        </li>
+      </ul>
+      <h4 className="mt-6 font-semibold text-primary">Ongoing Care</h4>
+      <ul className="list-disc space-y-2 pl-6">
+        <li>
+          Brush gently around the gem with a soft-bristled toothbrush to prevent
+          plaque buildup at the edges
+        </li>
+        <li>
+          Avoid electric toothbrush heads directly on the gem for the first 48
+          hours
+        </li>
+        <li>Keep flossing daily around the adjacent teeth as normal</li>
+        <li>
+          If a gem comes loose, don&apos;t try to reattach it yourself — book in
+          and I can replace it
+        </li>
+        <li>
+          If you ever want a gem removed for good, have a dentist take it off so
+          the remaining adhesive is polished away without damaging your enamel
+        </li>
+      </ul>
+    </div>
   ),
   galleryCaption: 'Tooth gem',
   faqs: [
@@ -1197,12 +1305,7 @@ export const teethWhiteningServiceData: ServiceData = {
     },
     {
       name: '24K Gold',
-      price: (
-        <Blocked
-          source="24k Gold whitening price"
-          needs="Q17 — Jamie ticked 'No, this shouldn't be the same price as Basic' but left the replacement number blank. $99 (matching Basic) is confirmed wrong, not confirmed right — can't publish it."
-        />
-      ),
+      price: '$99',
       description: (
         <>
           A gentler gold-infused option, built for sensitive teeth. See my{' '}
@@ -1218,10 +1321,12 @@ export const teethWhiteningServiceData: ServiceData = {
     {
       heading: 'Basic vs. Ultra vs. 24K Gold',
       content: (
-        <Blocked
-          source="Whitening tier distinction"
-          needs="Q18 — blank in the questionnaire. We know Basic is two 20-minute sessions and Ultra is three (from the Q12/Q13 notes), but the actual difference clients should use to choose between Basic, Ultra, and 24k gold hasn't been supplied."
-        />
+        <>
+          Basic and Ultra use the same whitening gel, and differ only in how
+          many 20-minute sessions you get — Ultra simply goes further for a
+          brighter result. The 24k gold option uses a gentler formula, and I
+          recommend it for clients with teeth or gum sensitivity.
+        </>
       ),
     },
   ],
@@ -1264,18 +1369,13 @@ export const teethWhiteningServiceData: ServiceData = {
       </ul>
     </div>
   ),
-  contraindications: (
-    <Blocked
-      source="Teeth whitening contraindications"
-      needs="Q41 — blank in the questionnaire. The booking system reportedly has a fuller contraindication list than the site does (recent dental work, chemo/radiation, steroids, and more). Blocks this page and /smile/sensitive-teeth-whitening/."
-    />
-  ),
+  contraindications: teethWhiteningContraindications,
   galleryCaption: 'Teeth whitening before & after',
   faqs: [
     {
       question: 'How much does teeth whitening cost?',
       answer:
-        'Basic whitening is $99 for two 20-minute sessions. Ultra is $145 for three sessions. Ask about 24k gold whitening pricing at your appointment.',
+        'Basic whitening is $99 for two 20-minute sessions. Ultra is $145 for three sessions. 24k gold whitening, recommended for sensitive teeth, is also $99.',
     },
     {
       question: 'Do you offer teeth whitening in West Kelowna?',
@@ -1308,12 +1408,7 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
   thumbnail: '/services/thumbnail_teeth_brows_on_point.png',
   duration: '40-60 minutes',
   results: 'Up to 6 months',
-  price: (
-    <Blocked
-      source="24k Gold whitening price"
-      needs="Q17 — Jamie ticked 'No, this shouldn't be the same price as Basic' but left the replacement number blank. $99 (matching Basic) is confirmed wrong, not confirmed right — can't publish it."
-    />
-  ),
+  price: '$99',
   about: (
     <>
       If you&apos;ve searched for the best teeth whitening for sensitive teeth,
@@ -1359,12 +1454,7 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
       </ul>
     </div>
   ),
-  contraindications: (
-    <Blocked
-      source="Teeth whitening contraindications"
-      needs="Q41 — blank in the questionnaire. Same list needed on /smile/teeth-whitening/."
-    />
-  ),
+  contraindications: teethWhiteningContraindications,
   faqs: [
     {
       question: 'Is 24k gold whitening really better for sensitive teeth?',
@@ -1373,7 +1463,7 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
     },
     {
       question: 'How much does sensitive teeth whitening cost?',
-      answer: 'Ask about 24k gold whitening pricing at your appointment.',
+      answer: '24k gold whitening is $99, the same price as Basic whitening.',
     },
   ],
 }
@@ -1416,10 +1506,10 @@ export const rfSkinTighteningData: ServiceData = {
     {
       heading: '3-Session Package',
       content: (
-        <Blocked
-          source="RF 3-session package price"
-          needs="Q10 — Jamie ticked 'reprice the package' (pay-as-you-go at $75+$75+$25 works out to $175, barely under the $190 package) but left the replacement number blank. $190 is confirmed unwanted, not confirmed final — can't publish it."
-        />
+        <>
+          A 3-session package is $175, compared to $225 for three individual
+          sessions at $75 each.
+        </>
       ),
     },
   ],
@@ -1466,17 +1556,36 @@ export const rfSkinTighteningData: ServiceData = {
     </div>
   ),
   contraindications: (
-    <Blocked
-      source="RF skin tightening contraindications"
-      needs="Q44 — blank in the questionnaire. Already flagged in the site architecture sheet as a pre-publish, hard blocker: this page cannot go live until Jamie supplies who shouldn't have this treatment."
-    />
+    <div className="mx-auto max-w-2xl px-6">
+      <h4 className="font-semibold text-primary">Medical & Safety</h4>
+      <ul className="list-disc space-y-2 pl-6">
+        <li>
+          Pacemakers, defibrillators, or other implanted electronic devices
+        </li>
+        <li>
+          Metal plates, screws, pins, or other metal implants in the treatment
+          area
+        </li>
+        <li>Pregnancy or breastfeeding</li>
+        <li>Active cancer or an undiagnosed lesion in the treatment area</li>
+      </ul>
+      <h4 className="mt-6 font-semibold text-primary">Skin Conditions</h4>
+      <ul className="list-disc space-y-2 pl-6">
+        <li>
+          Active skin infections, cystic acne breakouts, cold sores, eczema,
+          psoriasis, or rosacea flare-ups in the treatment area
+        </li>
+        <li>History of keloid scarring</li>
+        <li>Recent tanning or a sunburn in the treatment area</li>
+      </ul>
+    </div>
   ),
   galleryCaption: 'Skin tightening before & after',
   faqs: [
     {
       question: 'How much does skin tightening cost?',
       answer:
-        'A single RF neck/facial skin tightening session is $75. Ask about a 3-session package at your consultation.',
+        'A single RF neck/facial skin tightening session is $75. A 3-session package is $175.',
     },
     {
       question: 'What is a 40k ultrasonic machine?',

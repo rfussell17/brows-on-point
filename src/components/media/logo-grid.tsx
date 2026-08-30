@@ -14,11 +14,6 @@ interface LogoGridProps {
 
 export const logos = [
   {
-    name: 'Derol',
-    alt: 'Derol logo',
-    src: '/logo-cloud/derol_logo.png',
-  },
-  {
     name: 'Swarovski',
     alt: 'Swarovski logo',
     src: '/logo-cloud/swarovski_logo.png',
