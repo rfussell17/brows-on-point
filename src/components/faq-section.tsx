@@ -58,7 +58,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
     <section className={`${bgClass} py-24 sm:py-32 ${className}`}>
       <FaqPageJsonLd faqs={faqs} />
       <Container>
-        <h2 className={`text-3xl sm:text-5xl ${headingClass}`}>{title}</h2>
+        <h2 className={`text-5xl ${headingClass}`}>{title}</h2>
         <div className="mt-12 grid gap-4">
           {faqs.map((faq, index) => (
             <Card key={index} className={cardClass}>

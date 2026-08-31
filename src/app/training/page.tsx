@@ -38,7 +38,7 @@ export default function TrainingPage() {
       <div className="bg-primary px-6 py-24 sm:py-32 lg:px-8">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl text-light sm:text-5xl">
+            <h1 className="text-5xl text-light sm:text-7xl">
               Lash Lift & Teeth Whitening Training
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-100">
@@ -58,10 +58,10 @@ export default function TrainingPage() {
                 key={course.name}
                 className="rounded-2xl bg-primary-800 p-8 ring-1 ring-secondary-700"
               >
-                <h2 className="text-xl font-semibold text-light">
+                <h2 className="text-lg font-semibold text-light">
                   {course.name}
                 </h2>
-                <div className="mt-2 text-2xl font-semibold text-light">
+                <div className="mt-2 text-lg font-semibold text-light">
                   {course.price}
                 </div>
                 <p className="mt-4 text-base leading-6 text-light/70">
@@ -72,7 +72,7 @@ export default function TrainingPage() {
           </div>
 
           <div className="mx-auto mt-16 max-w-2xl">
-            <h2 className="text-2xl font-semibold text-light">Your Trainer</h2>
+            <h2 className="text-lg font-semibold text-light">Your Trainer</h2>
             <div className="mt-4 text-base leading-7 text-gray-100">
               <ul className="list-disc space-y-2 pl-6">
                 <li>Microblading Training Program</li>

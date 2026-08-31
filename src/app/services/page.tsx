@@ -115,7 +115,7 @@ const ServicesPage = () => {
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-5xl text-light sm:text-7xl">My Services</h1>
-            <p className="mt-8 text-pretty text-lg font-medium text-gray-100 sm:text-xl/8">
+            <p className="mt-8 text-lg leading-8 text-gray-100">
               Welcome to Brows on Point, where beauty meets affordability and
               expertise. Since 2016, I&apos;ve been helping clients discover
               their most confident selves through personalized aesthetic
@@ -141,7 +141,7 @@ const ServicesPage = () => {
                   </div>
                 </div>
                 <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <h2 className="text-3xl font-semibold text-light sm:text-4xl">
+                  <h2 className="text-5xl text-light">
                     {category.title}
                   </h2>
                   <p className="mt-4 text-base leading-7 text-gray-100">

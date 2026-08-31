@@ -41,10 +41,10 @@ const DetailRow: React.FC<DetailRowProps> = ({ bgVariant = 'primary' }) => {
     <div className={`${bgClass} py-24 sm:py-32`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl lg:mx-0">
-          <h2 className="text-4xl text-light sm:text-6xl">
+          <h2 className="text-5xl text-light">
             Feel Wonderful Inside and Out
           </h2>
-          <p className="mt-6 text-base leading-8 text-gray-100">
+          <p className="mt-6 text-lg leading-8 text-gray-100">
             I offer a variety of beauty and self-care services at Brows on Point
             to help you look and feel your best. From enhancing your lashes and
             brows to expert permanent makeup techniques, there’s something for

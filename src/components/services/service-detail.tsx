@@ -112,7 +112,7 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
       {data.serviceOptions && (
         <div className={`${serviceOptionsBgClass} py-24 sm:py-32`}>
           <Container>
-            <h3 className="text-xl font-semibold text-light">
+            <h3 className="text-lg font-semibold text-light">
               {data.serviceOptionsHeading ?? 'Choose Your Service'}
             </h3>
             <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
@@ -121,7 +121,7 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
                   key={option.name}
                   className="rounded-lg bg-primary-800 p-6 ring-1 ring-secondary-700 transition-colors hover:bg-primary-700 hover:ring-secondary-500"
                 >
-                  <h4 className="font-semibold text-light">{option.name}</h4>
+                  <h4 className="text-lg font-semibold text-light">{option.name}</h4>
                   <div className="mt-1 text-lg font-semibold text-light">
                     {option.price}
                   </div>
@@ -175,7 +175,7 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
 
           {data.touchUpPricing && (
             <div className="mt-10">
-              <h3 className="text-xl font-semibold text-light">
+              <h3 className="text-lg font-semibold text-light">
                 Touch-Up Pricing
               </h3>
               <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-3">

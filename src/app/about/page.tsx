@@ -37,7 +37,7 @@ export default function AboutPage() {
               <h1 className="text-5xl text-light sm:text-7xl">
                 About Brows on Point
               </h1>
-              <p className="mt-8 text-pretty text-lg font-medium text-gray-100 sm:text-xl/8">
+              <p className="mt-8 text-lg leading-8 text-gray-100">
                 Welcome to Brows on Point, where beauty meets affordability and
                 expertise. Since 2016, I&apos;ve been helping clients discover
                 their most confident selves through personalized aesthetic
@@ -52,7 +52,7 @@ export default function AboutPage() {
           <Container>
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
               <div>
-                <h2 className="text-4xl text-light sm:text-5xl">My Story</h2>
+                <h2 className="text-5xl text-light">My Story</h2>
                 <div className="mt-6 space-y-6 text-base leading-7 text-gray-100">
                   <p>
                     <strong>
@@ -116,7 +116,7 @@ export default function AboutPage() {
                 sizes="(min-width: 1024px) 384px, 100vw"
               />
               <div className="w-full flex-auto">
-                <h2 className="text-4xl text-light sm:text-5xl">
+                <h2 className="text-5xl text-light">
                   Certifications
                 </h2>
                 <div className="mt-6 rounded-lg bg-primary-800 p-6 ring-1 ring-secondary-700">

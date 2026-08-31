@@ -11,7 +11,7 @@ export function PagePending({ title, note }: { title: string; note?: string }) {
   return (
     <div className="bg-primary-light py-24 sm:py-32">
       <Container>
-        <h1 className="text-4xl text-primary sm:text-5xl">{title}</h1>
+        <h1 className="text-5xl text-primary sm:text-7xl">{title}</h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-gray-600">
           {note ??
             "This page's content is scheduled in the Phase 2 build order and hasn't been written yet."}

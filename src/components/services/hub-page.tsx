@@ -42,7 +42,7 @@ export default function HubPage({
       <div className="bg-primary px-6 py-24 sm:py-32 lg:px-8">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl text-light sm:text-5xl">{title}</h1>
+            <h1 className="text-5xl text-light sm:text-7xl">{title}</h1>
             <div className="mt-6 text-lg leading-8 text-gray-100">{intro}</div>
             <div className="mt-8 flex items-center justify-center gap-x-4">
               <Link

@@ -74,7 +74,7 @@ const GoogleReviewsBanner: React.FC<GoogleReviewsBannerProps> = ({
           >
             <div className="flex items-center gap-3">
               <GoogleLogo />
-              <h2 className={`text-3xl sm:text-5xl ${headingColor}`}>
+              <h2 className={`text-5xl ${headingColor}`}>
                 {rating.toFixed(1)} out of 5
               </h2>
             </div>
@@ -104,7 +104,7 @@ const GoogleReviewsBanner: React.FC<GoogleReviewsBannerProps> = ({
 
           {cta && (
             <div className="flex flex-col items-center text-center lg:col-span-3">
-              <h2 className={`text-3xl sm:text-5xl ${headingColor}`}>
+              <h2 className={`text-5xl ${headingColor}`}>
                 {cta.title}
               </h2>
               <p className={`mx-auto mt-4 max-w-md text-base ${subColor}`}>

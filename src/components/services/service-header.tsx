@@ -61,7 +61,7 @@ export default function ServiceHome({
                   {eyebrow}
                 </span>
               )}
-              <h1 className="mb-8 mt-2 text-3xl text-light sm:text-5xl">
+              <h1 className="mb-8 mt-2 text-5xl text-light sm:text-7xl">
                 {title}
               </h1>
               <p className="mt-6 text-base leading-7 text-gray-100">

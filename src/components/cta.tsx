@@ -32,7 +32,7 @@ const CallToAction: FC<CallToActionProps> = ({
     <div className={`${bgClass} py-24 sm:py-32 ${className}`}>
       <Container>
         <div className="lg:flex lg:items-center lg:justify-between">
-          <h2 className="text-4xl text-light sm:text-6xl">{title}</h2>
+          <h2 className="text-5xl text-light">{title}</h2>
           <div className="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
             {primaryButton && (
               <Link
