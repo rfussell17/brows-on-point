@@ -71,7 +71,10 @@ const serviceCategories = [
   },
 ]
 
-const links = [{ href: ACUITY_URL, label: 'Reserve Appointment' }]
+const links = [
+  { href: '/blog', label: 'Blog' },
+  { href: ACUITY_URL, label: 'Reserve Appointment' },
+]
 
 function DesktopNav() {
   return (

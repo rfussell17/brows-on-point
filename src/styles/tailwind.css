@@ -22,3 +22,11 @@ h5,
 h6 {
   font-family: var(--font-roboto), sans-serif;
 }
+
+/* The blog reads better without the cursive brand font on its headings —
+   scoped to .blog-page so the rest of the site keeps it. */
+.blog-page h1,
+.blog-page h2 {
+  font-family: var(--font-roboto), sans-serif;
+  letter-spacing: normal;
+}

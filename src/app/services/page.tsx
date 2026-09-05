@@ -100,18 +100,12 @@ const ServicesPage = () => {
       <div className="bg-primary-950 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
         <Container>
           <div className="flex flex-col gap-20">
-            {categories.map((category, index) => (
+            {categories.map((category) => (
               <div
                 key={category.href}
                 className="grid grid-cols-1 items-center gap-x-12 gap-y-8 lg:grid-cols-2"
               >
-                <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="grid grid-cols-2 gap-4">
-                    <ImagePlaceholder className="aspect-square rounded-2xl" />
-                    <ImagePlaceholder className="aspect-square rounded-2xl" />
-                  </div>
-                </div>
-                <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                <div>
                   <h2 className="text-5xl text-light">
                     {category.title}
                   </h2>
@@ -138,6 +132,11 @@ const ServicesPage = () => {
                   >
                     Explore {category.title}
                   </Link>
+                </div>
+                <div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <ImagePlaceholder className="aspect-square rounded-2xl" />
+                  </div>
                 </div>
               </div>
             ))}

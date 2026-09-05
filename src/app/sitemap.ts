@@ -1,3 +1,4 @@
+import { getPosts } from '@/lib/blog'
 import { SITE_URL } from '@/lib/site'
 import type { MetadataRoute } from 'next'
 
@@ -23,10 +24,14 @@ const routes = [
   '/smile/sensitive-teeth-whitening',
   '/smile/tooth-gems',
   '/skin-tightening',
+  '/blog',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({
+  const posts = getPosts()
+  const postRoutes = posts.map((post) => `/blog/${post.slug}`)
+
+  return [...routes, ...postRoutes].map((route) => ({
     url: `${SITE_URL}${route}`,
     lastModified: new Date(),
   }))

@@ -46,6 +46,7 @@ function Sitemap() {
           <SitemapLink href="/training">Training</SitemapLink>
           <SitemapLink href="/contact">Contact</SitemapLink>
           <SitemapLink href="/services">All Services</SitemapLink>
+          <SitemapLink href="/blog">Blog</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
