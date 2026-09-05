@@ -295,12 +295,12 @@ export const lashServiceData: ServiceData = {
         'Around 45-60 minutes, depending on which lash lift you choose and how many lashes you have.',
     },
     {
-      question: 'Is the treatment painful?',
+      question: 'Is a lash lift painful?',
       answer:
         "No. You'll relax with your eyes closed for the whole appointment, and most clients describe it as comfortable, not painful.",
     },
     {
-      question: 'How long do results last?',
+      question: 'How long do lash lift and tint results last?',
       answer:
         'A lash lift and tint typically lasts 6-12 weeks, depending on which technique you choose and your natural lash growth cycle.',
     },
@@ -608,7 +608,7 @@ export const microbladingServiceData: ServiceData = {
         'Microblading typically lasts 1-2 years, depending on your skin type and how well you follow the aftercare instructions.',
     },
     {
-      question: 'Do I need a touch-up?',
+      question: 'Do I need a microblading touch-up?',
       answer:
         "Yes. Your first touch-up should happen within 2 months of your initial appointment, so I can fill in any spots where pigment didn't fully retain.",
     },
@@ -1577,12 +1577,12 @@ export const rfSkinTighteningData: ServiceData = {
         'No, most clients describe a warm, relaxing sensation during treatment with no discomfort.',
     },
     {
-      question: 'How many sessions will I need?',
+      question: 'How many skin tightening sessions will I need?',
       answer:
         "Results build over a course of treatments. I'll recommend a personalized plan during your consultation based on your skin goals.",
     },
     {
-      question: 'Is there any downtime?',
+      question: 'Is there any downtime after skin tightening?',
       answer:
         'None. You can return to your normal routine immediately after treatment.',
     },

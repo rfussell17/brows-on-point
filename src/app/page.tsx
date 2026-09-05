@@ -27,12 +27,12 @@ export const metadata: Metadata = {
 
 const generalFAQs = [
   {
-    question: 'What services do you offer?',
+    question: 'What services does Brows on Point offer?',
     answer:
       'Lash lifts and tinting, brow tinting, shaping and permanent makeup, teeth whitening and tooth gems, and RF skin tightening — all from one studio in West Kelowna. Each treatment is customized to you.',
   },
   {
-    question: 'Is it safe?',
+    question: 'Is permanent makeup safe at Brows on Point?',
     answer:
       'Yes. Every procedure follows strict public health guidelines, with single-use sterile needles and supplies and thorough sanitation between every client.',
   },
@@ -42,14 +42,14 @@ const generalFAQs = [
       'All clients must be 18 years or older and present valid ID at their appointment.',
   },
   {
-    question: 'Do the procedures hurt?',
+    question: 'Do lash, brow, and permanent makeup treatments hurt?',
     answer:
       "It depends on the treatment. Needle-based services like permanent makeup use a topical anesthetic for comfort, while lash lifts, tinting, and teeth whitening are generally pain-free.",
   },
   {
-    question: 'What about aftercare?',
+    question: 'Does Brows on Point provide aftercare instructions?',
     answer:
-      'Aftercare makes a real difference to your results. Every service comes with clear aftercare instructions, and any products you need are included.',
+      'Yes. Every service comes with clear aftercare instructions, and any products you need are included with your treatment.',
   },
 ]
 
