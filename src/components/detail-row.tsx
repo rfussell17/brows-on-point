@@ -20,7 +20,7 @@ const services = [
     href: '/permanent-makeup',
   },
   {
-    name: 'Smile',
+    name: 'Smile Services',
     description:
       'Brighten your smile with professional teeth whitening, or add a bit of sparkle with genuine Swarovski tooth gems.',
     href: '/smile',

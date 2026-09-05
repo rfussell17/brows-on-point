@@ -1,3 +1,4 @@
+import { ACUITY_URL } from '@/lib/site'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -39,7 +40,7 @@ export default function LashLiftHome({
               </p>
               <div className="mt-8">
                 <Link
-                  href="https://app.acuityscheduling.com/schedule.php?owner=15235407"
+                  href={ACUITY_URL}
                   className="inline-flex rounded-md bg-light px-3.5 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light"
                 >
                   Reserve Appointment

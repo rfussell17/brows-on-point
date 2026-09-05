@@ -1,5 +1,6 @@
 import { Container } from '@/components/container'
 import { Link } from '@/components/link'
+import { ACUITY_URL } from '@/lib/site'
 import Image from 'next/image'
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
@@ -34,7 +35,7 @@ function Sitemap() {
           <SitemapLink href="/lashes">Lashes</SitemapLink>
           <SitemapLink href="/brows">Brows</SitemapLink>
           <SitemapLink href="/permanent-makeup">Permanent Makeup</SitemapLink>
-          <SitemapLink href="/smile">Smile</SitemapLink>
+          <SitemapLink href="/smile">Smile Services</SitemapLink>
           <SitemapLink href="/skin-tightening">Skin Tightening</SitemapLink>
         </SitemapLinks>
       </div>
@@ -50,7 +51,7 @@ function Sitemap() {
       <div>
         <SitemapHeading>Help</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="https://app.acuityscheduling.com/schedule.php?owner=15235407">
+          <SitemapLink href={ACUITY_URL}>
             Book Appointment
           </SitemapLink>
         </SitemapLinks>

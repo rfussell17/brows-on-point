@@ -1,5 +1,4 @@
 import { Container } from '@/components/container'
-import FAQSection from '@/components/faq-section'
 import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
 import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
@@ -56,7 +55,7 @@ const categories = [
     ],
   },
   {
-    title: 'Smile',
+    title: 'Smile Services',
     description:
       'Brighten your smile with in-studio teeth whitening, or add a bit of sparkle with a genuine Swarovski crystal tooth gem.',
     href: '/smile',
@@ -76,34 +75,6 @@ const categories = [
       'Face, neck & jowl area',
       '3-session package available',
     ],
-  },
-]
-
-const faqs = [
-  {
-    question: 'What services do you offer?',
-    answer:
-      'I specialize in permanent makeup, lash lifts, brow enhancements, and teeth whitening + gems. Each service is performed with the highest safety standards and customized to your unique features and preferences.',
-  },
-  {
-    question: 'Is it safe?',
-    answer:
-      'Yes, all my procedures follow strict Public Health Guidelines. I use only single-use sterile needles and supplies, maintain rigorous sanitation protocols, and use dermatologist-tested products.',
-  },
-  {
-    question: "What's the age requirement?",
-    answer:
-      'All clients must be 18 years or older and present valid ID at their appointment.',
-  },
-  {
-    question: 'Do the procedures hurt?',
-    answer:
-      'While individual pain tolerance varies, I use medical-grade topical anesthetics before and during procedures to ensure your comfort.',
-  },
-  {
-    question: 'What about aftercare?',
-    answer:
-      'Aftercare makes a real difference to your results. I provide detailed instructions for each service and include all necessary aftercare products with your treatment.',
   },
 ]
 
@@ -175,8 +146,6 @@ const ServicesPage = () => {
       </div>
 
       <TestimonialMakeup bgVariant="primary" />
-
-      <FAQSection faqs={faqs} bgVariant="primary-950" />
 
       <GoogleReviewsBanner
         rating={GOOGLE_RATING}

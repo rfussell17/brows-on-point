@@ -141,10 +141,10 @@ export const lashServiceData: ServiceData = {
   slug: 'lashes/lash-lift-and-tint',
   hubLink: { text: 'All Lash Services', href: '/lashes' },
   shortDescription:
-    'Three lash lift options in West Kelowna: Keratin, BOMB, and Korean Lash Lift and Tint, for lifted, darker lashes with no extensions.',
-  title: 'Lash Lift and Tint in West Kelowna',
+    'Three lash lift options — Keratin, BOMB, and Korean Lash Lift and Tint — for lifted, darker lashes with no extensions.',
+  title: 'Lash Lift and Tint',
   description:
-    'A lash lift and tint lifts and darkens your natural lashes from root to tip, for a wide-awake look with no extensions and no daily curling. At Brows on Point in West Kelowna, you can choose from three techniques: Keratin, BOMB, and Korean, depending on the curl and finish you want.',
+    'A lash lift and tint lifts and darkens your natural lashes from root to tip, for a wide-awake look with no extensions and no daily curling. At Brows on Point, you can choose from three techniques: Keratin, BOMB, and Korean, depending on the curl and finish you want.',
   headerImage: bombLiftImage,
   detailImage: lashImage,
   duration: '45-60 minutes',
@@ -159,12 +159,12 @@ export const lashServiceData: ServiceData = {
       A lash lift and tint (also called a lash perm or lash lamination) reshapes
       your natural lashes around a small silicone rod, then tints them a darker
       shade, so you wake up in the morning with definition and no mascara
-      required. If you&apos;ve been searching for a lash lift in West Kelowna,
-      Brows on Point offers three distinct versions of this: the Keratin Lash
-      Lift and Tint, my signature BOMB Lash Lift and Tint, and the Korean Lash
-      Lift and Tint. They&apos;re genuinely different treatments, not just
-      different names for the same thing, so the sections below cover each one
-      on its own: what it is, what it costs, and who it tends to suit.
+      required. Brows on Point, in West Kelowna, offers three distinct versions
+      of this: the Keratin Lash Lift and Tint, my signature BOMB Lash Lift and
+      Tint, and the Korean Lash Lift and Tint. They&apos;re genuinely different
+      treatments, not just different names for the same thing, so the sections
+      below cover each one on its own: what it is, what it costs, and who it
+      tends to suit.
     </>
   ),
   serviceOptionsHeading: 'Choose Your Lash Lift',
@@ -316,8 +316,8 @@ export const lashGrowthSerumServiceData: ServiceData = {
   slug: 'lashes/lash-growth-serum',
   hubLink: { text: 'All Lash Services', href: '/lashes' },
   shortDescription:
-    'Keratin lash growth serum and tinted mascara, available in-studio at Brows on Point in West Kelowna.',
-  title: 'Lash Growth Serum in West Kelowna',
+    'Keratin lash growth serum and tinted mascara, available in-studio at Brows on Point.',
+  title: 'Lash Growth Serum',
   description:
     "Brows on Point carries a keratin lash growth serum and a tinted lash serum/mascara to help condition your natural lashes between lash lift or tint appointments. It's a retail product, available in-studio: ask about it at your next appointment.",
   headerImage: lashImage,
@@ -390,10 +390,10 @@ export const lashAndBrowTintingServiceData: ServiceData = {
   slug: 'lashes/lash-and-brow-tinting',
   hubLink: { text: 'All Lash Services', href: '/lashes' },
   shortDescription:
-    'Eyelash tinting in West Kelowna: darker lashes and brows without daily mascara.',
-  title: 'Lash & Brow Tinting in West Kelowna',
+    'Eyelash tinting: darker lashes and brows without daily mascara.',
+  title: 'Lash & Brow Tinting',
   description:
-    'An eyelash tint uses a semi-permanent dye to darken your natural lashes, so they show up without mascara. At Brows on Point in West Kelowna, you can book an eyelash tint on its own, or pair it with a brow tint in the same appointment.',
+    'An eyelash tint uses a semi-permanent dye to darken your natural lashes, so they show up without mascara. At Brows on Point, you can book an eyelash tint on its own, or pair it with a brow tint in the same appointment.',
   headerImage: lashImage,
   detailImage: lashImage,
   duration: '15-30 minutes, depending on whether you add brow tint',
@@ -406,9 +406,8 @@ export const lashAndBrowTintingServiceData: ServiceData = {
       Eyelash tinting (sometimes called eyelash dye) is a fast, low-fuss way to
       darken your natural lash line without a lash lift. It&apos;s a separate
       service from a lash lift: tinting only changes colour, while a lift also
-      changes the curl. If you&apos;re after lash tinting near you in West
-      Kelowna, you can book lash tint alone, or add a brow tint and shape to the
-      same appointment.
+      changes the curl. If you&apos;re after lash tinting, you can book lash
+      tint alone, or add a brow tint and shape to the same appointment.
     </>
   ),
   serviceOptions: [
@@ -483,11 +482,6 @@ export const lashAndBrowTintingServiceData: ServiceData = {
         'Lash Tint Only is $25. Adding a lash tint onto a Brow Tint & Shape appointment is $40 total for both.',
     },
     {
-      question: "What's the difference between a lash tint and a lash lift?",
-      answer:
-        'A lash tint only darkens your lash colour. A lash lift changes the curl and shape of your lashes. Many clients book both together, but they are separate services.',
-    },
-    {
       question: 'How long does an eyelash tint last?',
       answer:
         'A lash or brow tint typically lasts 3-6 weeks, depending on your skin type and how quickly your hair sheds and regrows.',
@@ -509,10 +503,10 @@ export const microbladingServiceData: ServiceData = {
   slug: 'permanent-makeup/microblading',
   hubLink: { text: 'All Permanent Makeup', href: '/permanent-makeup' },
   shortDescription:
-    'Microblading in West Kelowna: natural-looking hair-stroke brows for sparse or over-tweezed eyebrows.',
-  title: 'Microblading in West Kelowna',
+    'Microblading: natural-looking hair-stroke brows for sparse or over-tweezed eyebrows.',
+  title: 'Microblading',
   description:
-    'Microblading is a semi-permanent tattoo technique that draws individual, hair-like strokes into your brows, filling in sparse patches or reshaping a brow that over-tweezing left behind. At Brows on Point in West Kelowna, every microblading appointment starts with a full brow mapping session, so the shape is agreed before any pigment goes in.',
+    'Microblading is a semi-permanent tattoo technique that draws individual, hair-like strokes into your brows, filling in sparse patches or reshaping a brow that over-tweezing left behind. Every microblading appointment starts with a full brow mapping session, so the shape is agreed before any pigment goes in.',
   headerImage: microbladeImage,
   detailImage: microbladeImage,
   duration: '2-2.5 hours',
@@ -524,13 +518,13 @@ export const microbladingServiceData: ServiceData = {
   thumbnail: '/services/thumbnail_brows_brows_on_point.png',
   about: (
     <>
-      If you&apos;ve been searching for microblading near you in West Kelowna,
-      here&apos;s what makes it different from other brow treatments: instead of
-      filling brows in with powder or product, brow microblading uses a fine
-      hand tool to deposit pigment in thin, hair-like strokes that follow your
+      Here&apos;s what makes microblading different from other brow treatments:
+      instead of filling brows in with powder or product, it uses a fine hand
+      tool to deposit pigment in thin, hair-like strokes that follow your
       natural growth pattern. The result is microbladed eyebrows that look like
-      real hair, not makeup. It&apos;s a good fit if your brows are sparse,
-      uneven, or were over-tweezed at some point and never quite grew back.
+      real hair, not makeup. At Brows on Point in West Kelowna, it&apos;s a good
+      fit if your brows are sparse, uneven, or were over-tweezed at some point
+      and never quite grew back.
     </>
   ),
   extraSections: [
@@ -624,11 +618,6 @@ export const microbladingServiceData: ServiceData = {
         'A colour boost refreshes microblading that has started to fade, typically 9-18 months after your last appointment. It costs $170.',
     },
     {
-      question: "What's the difference between microblading and powder brows?",
-      answer:
-        'Microblading draws individual hair-like strokes for a natural, textured look. Powder brows use a shading technique for a softer, more filled-in look, similar to brow makeup. Many clients ask about both at their consultation.',
-    },
-    {
       question: 'Is microblading painful?',
       answer:
         'I apply a topical anesthetic before starting, so most clients describe the sensation as pressure rather than pain.',
@@ -645,10 +634,10 @@ export const browTintWaxShapeData: ServiceData = {
   slug: 'brows/brow-tint-and-shape',
   hubLink: { text: 'All Brow Services', href: '/brows' },
   shortDescription:
-    'Eyebrow tint and shape in West Kelowna: tinting and hot-wax shaping together in one appointment.',
-  title: 'Eyebrow Tint & Shape in West Kelowna',
+    'Eyebrow tint and shape: tinting and hot-wax shaping together in one appointment.',
+  title: 'Eyebrow Tint & Shape',
   description:
-    'An eyebrow tint darkens and defines your natural brow hair with a semi-permanent dye, so your brows look fuller without any daily filling-in. At Brows on Point in West Kelowna, tint, wax, and shape are each their own service, bookable separately or together, depending on what your brows need.',
+    'An eyebrow tint darkens and defines your natural brow hair with a semi-permanent dye, and hot-wax shaping cleans up the line at the same time, so your brows look fuller and more defined in one $25 appointment.',
   headerImage: '/services/powder_brow.jpg',
   thumbnail: '/services/thumbnail_brows_brows_on_point.png',
   detailImage: '/services/powder_brow.jpg',
@@ -661,12 +650,11 @@ export const browTintWaxShapeData: ServiceData = {
   about: (
     <>
       Not every brow needs permanent makeup. If you&apos;re after something
-      lower-commitment, Brow Tint &amp; Shape in West Kelowna covers most of
-      what people search for when they want &quot;eyebrows near me&quot; without
-      a needle involved: eyebrow tinting, eyebrow waxing, and brow shaping, all
-      in one $25 appointment. Tint adds colour with a semi-permanent dye, and
-      shape uses precise hot-wax hair removal to clean up stray hairs and define
-      the line, mapped to your face rather than a generic arch.
+      lower-commitment, Brow Tint &amp; Shape in West Kelowna covers eyebrow
+      tinting, eyebrow waxing, and brow shaping, all in one $25 appointment.
+      Tint adds colour with a semi-permanent dye, and shape uses precise
+      hot-wax hair removal to clean up stray hairs and define the line, mapped
+      to your face rather than a generic arch.
     </>
   ),
   benefits: (
@@ -744,10 +732,10 @@ export const powderBrowsServiceData: ServiceData = {
   slug: 'permanent-makeup/powder-brows',
   hubLink: { text: 'All Permanent Makeup', href: '/permanent-makeup' },
   shortDescription:
-    'Powder brows in West Kelowna: a soft, filled-in brow that holds its shape day to day.',
-  title: 'Powder Brows in West Kelowna',
+    'Powder brows: a soft, filled-in brow that holds its shape day to day.',
+  title: 'Powder Brows',
   description:
-    'Powder brows use a shading technique to build up soft, filled-in colour across your whole brow, like brow makeup that never comes off. At Brows on Point in West Kelowna, powder eyebrows are a good fit if you already fill your brows in daily and want that look without the routine.',
+    'Powder brows use a shading technique to build up soft, filled-in colour across your whole brow, like brow makeup that never comes off. At Brows on Point, powder eyebrows are a good fit if you already fill your brows in daily and want that look without the routine.',
   headerImage: powderBrowImage,
   detailImage: powderBrowImage,
   duration: '2-2.5 hours',
@@ -764,8 +752,8 @@ export const powderBrowsServiceData: ServiceData = {
       of pigment, blended into an even, filled-in finish, similar to the look of
       powder brow makeup, but semi-permanent. It suits most skin types,
       including oily skin, where fine hair-stroke work tends to blur over time.
-      Looking for powder brows near you in West Kelowna? Every appointment
-      starts with a consultation on shape and depth of colour before I begin.
+      Every appointment starts with a consultation on shape and depth of colour
+      before I begin.
     </>
   ),
   benefits: (
@@ -826,11 +814,6 @@ export const powderBrowsServiceData: ServiceData = {
         'Powder brows are $300 for your first appointment. A touch-up is $125, bringing your total first year to $425.',
     },
     {
-      question: 'Is powder brows the same as microblading?',
-      answer:
-        "No, they're different techniques. Powder brows use a shading technique for a soft, filled-in look, while microblading draws individual hair-like strokes. Ask me at your consultation which suits your skin and the look you want.",
-    },
-    {
       question: 'Does powder brows suit oily skin?',
       answer:
         'Yes. Powder brows tend to hold up well on oily and combination skin, where fine hair-stroke techniques can blur more quickly.',
@@ -847,10 +830,10 @@ export const salineRemovalServiceData: ServiceData = {
   slug: 'permanent-makeup/saline-tattoo-removal',
   hubLink: { text: 'All Permanent Makeup', href: '/permanent-makeup' },
   shortDescription:
-    'Saline tattoo and PMU removal in West Kelowna: a gentler alternative to laser removal.',
-  title: 'Saline Tattoo & PMU Removal in West Kelowna',
+    'Saline tattoo and PMU removal: a gentler alternative to laser removal.',
+  title: 'Saline Tattoo & PMU Removal',
   description:
-    "Saline removal draws unwanted permanent makeup or a small tattoo out of the skin using a saline solution, rather than breaking it down with a laser. Brows on Point offers saline eyebrow tattoo and microblading removal in West Kelowna. I don't offer laser removal, but I'm happy to explain how saline compares if you're deciding between the two.",
+    "Saline removal draws unwanted permanent makeup or a small tattoo out of the skin using a saline solution, rather than breaking it down with a laser. Brows on Point offers saline eyebrow tattoo and microblading removal. I don't offer laser removal, but I'm happy to explain how saline compares if you're deciding between the two.",
   headerImage: '/services/permanent_eyeliner.jpg',
   detailImage: '/services/permanent_eyeliner.jpg',
   thumbnail: '/services/thumbnail_makeup_brows_on_point.png',
@@ -859,13 +842,13 @@ export const salineRemovalServiceData: ServiceData = {
   price: '$125',
   about: (
     <>
-      Several people search for laser eyebrow tattoo removal or laser tattoo
-      removal in West Kelowna. To be upfront, Brows on Point offers saline
-      removal, not laser. Saline removal draws pigment out of the skin using a
-      saline solution and works well for microblading removal and small tattoos.
-      It&apos;s a different mechanism than laser, which breaks pigment down with
-      light energy, and it&apos;s worth knowing the difference before you book
-      either.
+      If you&apos;re comparing laser eyebrow tattoo removal to other options,
+      here&apos;s the upfront answer: Brows on Point in West Kelowna offers
+      saline removal, not laser. Saline removal draws pigment out of the skin
+      using a saline solution and works well for microblading removal and small
+      tattoos. It&apos;s a different mechanism than laser, which breaks pigment
+      down with light energy, and it&apos;s worth knowing the difference before
+      you book either.
     </>
   ),
   benefits: (
@@ -1004,10 +987,10 @@ export const permanentEyelinerServiceData: ServiceData = {
   slug: 'permanent-makeup/permanent-eyeliner',
   hubLink: { text: 'All Permanent Makeup', href: '/permanent-makeup' },
   shortDescription:
-    'Permanent eyeliner in West Kelowna: upper lash line enhancement, lower eyeliner, or top and bottom together.',
-  title: 'Permanent Eyeliner Near Me in West Kelowna',
+    'Permanent eyeliner: upper lash line enhancement, lower eyeliner, or top and bottom together.',
+  title: 'Permanent Eyeliner',
   description:
-    "If you're searching for permanent eyeliner near you, Brows on Point in West Kelowna offers a subtle upper lash line enhancement, a lower eyeliner tattoo, or top and bottom together for a more defined look.",
+    'Brows on Point offers a subtle upper lash line enhancement, a lower eyeliner tattoo, or top and bottom together for a more defined look.',
   headerImage: '/services/permanent_eyeliner.jpg',
   detailImage: '/services/permanent_eyeliner.jpg',
   thumbnail: '/services/thumbnail_makeup_brows_on_point.png',
@@ -1127,10 +1110,10 @@ export const toothGemsServiceData: ServiceData = {
   slug: 'smile/tooth-gems',
   hubLink: { text: 'All Smile Services', href: '/smile' },
   shortDescription:
-    'Swarovski tooth gems in West Kelowna: genuine crystal, professionally applied, starting at $40.',
-  title: 'Swarovski Tooth Gems in West Kelowna',
+    'Swarovski tooth gems: genuine crystal, professionally applied, starting at $40.',
+  title: 'Swarovski Tooth Gems',
   description:
-    'Tooth gems are a genuine Swarovski crystal applied directly to your tooth with dental-grade adhesive: no drilling, no damage to your enamel. At Brows on Point in West Kelowna, a single tooth gem starts at $40, with options to add more or choose a shape like a butterfly tooth gem.',
+    'Tooth gems are a genuine Swarovski crystal applied directly to your tooth with dental-grade adhesive: no drilling, no damage to your enamel. At Brows on Point, a single tooth gem starts at $40, with options to add more or choose a shape like a butterfly tooth gem.',
   headerImage: '/services/swarovski_crystal_gem.jpg',
   detailImage: '/services/swarovski_crystal_gem.jpg',
   duration: '15-20 minutes',
@@ -1266,10 +1249,10 @@ export const teethWhiteningServiceData: ServiceData = {
   slug: 'smile/teeth-whitening',
   hubLink: { text: 'All Smile Services', href: '/smile' },
   shortDescription:
-    'Professional teeth whitening in West Kelowna: Basic and Ultra sessions, plus a 24k gold option.',
-  title: 'Teeth Whitening Near Me in West Kelowna',
+    'Professional teeth whitening: Basic and Ultra sessions, plus a 24k gold option.',
+  title: 'Teeth Whitening',
   description:
-    "If you've been searching for teeth whitening near you, Brows on Point offers professional, in-office teeth whitening in West Kelowna with a Basic and an Ultra session length, plus a 24k gold option for sensitive teeth.",
+    'Brows on Point offers professional, in-office teeth whitening with a Basic and an Ultra session length, plus a 24k gold option for sensitive teeth.',
   headerImage: '/services/thumbnail_teeth_brows_on_point.png',
   detailImage: '/services/thumbnail_teeth_brows_on_point.png',
   thumbnail: '/services/thumbnail_teeth_brows_on_point.png',
@@ -1284,10 +1267,9 @@ export const teethWhiteningServiceData: ServiceData = {
     <>
       Professional, cosmetic teeth whitening uses a stronger whitening gel and
       an LED light than at-home strips, so results show up in one in-office
-      session instead of weeks of daily treatments. Brows on Point serves
-      clients across West Kelowna looking for professional teeth whitening near
-      them. Basic and Ultra sessions differ in treatment time, and I also offer
-      a 24k gold whitening option built for sensitive teeth.
+      session instead of weeks of daily treatments. At Brows on Point in West
+      Kelowna, Basic and Ultra sessions differ in treatment time, and I also
+      offer a 24k gold whitening option built for sensitive teeth.
     </>
   ),
   serviceOptions: [
@@ -1334,7 +1316,6 @@ export const teethWhiteningServiceData: ServiceData = {
         <li>Visible results in a single appointment</li>
         <li>Professional-grade whitening gel and LED light</li>
         <li>Choice of Basic, Ultra, or 24k gold sessions</li>
-        <li>Serving clients across West Kelowna</li>
       </ul>
     </div>
   ),
@@ -1397,10 +1378,10 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
   slug: 'smile/sensitive-teeth-whitening',
   hubLink: { text: 'All Smile Services', href: '/smile' },
   shortDescription:
-    '24k gold teeth whitening in West Kelowna, built for clients with sensitive teeth.',
-  title: '24K Gold Whitening for Sensitive Teeth in West Kelowna',
+    '24k gold teeth whitening, built for clients with sensitive teeth.',
+  title: '24K Gold Whitening for Sensitive Teeth',
   description:
-    "If regular whitening leaves your teeth feeling sensitive, Brows on Point's 24k gold whitening option in West Kelowna is designed with sensitive teeth in mind: the same in-office professional whitening, in a gentler formula.",
+    "If regular whitening leaves your teeth feeling sensitive, Brows on Point's 24k gold whitening option is designed with sensitive teeth in mind: the same in-office professional whitening, in a gentler formula.",
   headerImage: '/services/thumbnail_teeth_brows_on_point.png',
   detailImage: '/services/thumbnail_teeth_brows_on_point.png',
   thumbnail: '/services/thumbnail_teeth_brows_on_point.png',
@@ -1409,12 +1390,12 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
   price: '$99',
   about: (
     <>
-      If you&apos;ve searched for the best teeth whitening for sensitive teeth,
-      this is my answer to that question. My 24k gold whitening option uses the
-      same professional, in-office process as my Basic and Ultra sessions,
-      formulated to be gentler on sensitive teeth. This page covers my in-studio
-      option. For at-home whitening strips or products, that&apos;s a different
-      category of product I don&apos;t sell here.
+      My 24k gold whitening option answers the most common question about
+      sensitive-teeth whitening: it uses the same professional, in-office
+      process as my Basic and Ultra sessions, formulated to be gentler on
+      sensitive teeth. This page covers my in-studio option. For at-home
+      whitening strips or products, that&apos;s a different category of product
+      I don&apos;t sell here.
     </>
   ),
   benefits: (
@@ -1469,8 +1450,8 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
 export const rfSkinTighteningData: ServiceData = {
   slug: 'skin-tightening',
   shortDescription:
-    'RF skin tightening in West Kelowna: a non-invasive treatment for face, neck, and body using a 40k ultrasonic machine.',
-  title: 'Skin Tightening Treatment in West Kelowna',
+    'RF skin tightening: a non-invasive treatment for face, neck, and body using a 40k ultrasonic machine.',
+  title: 'Skin Tightening Treatment',
   description:
     'RF skin tightening uses radiofrequency energy to gently heat the deeper layers of skin, encouraging your body to produce more collagen so skin looks firmer over time. At Brows on Point in West Kelowna, treatment is done with a 40k ultrasonic RF machine that combines skin tightening with ultrasonic exfoliation in one session.',
   headerImage: '/services/thumbail_main_brows_on_point.png',

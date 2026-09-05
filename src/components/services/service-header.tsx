@@ -3,6 +3,7 @@ import {
   CurrencyDollarIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline'
+import { ACUITY_URL } from '@/lib/site'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { Container } from '../container'
@@ -40,7 +41,7 @@ export default function ServiceHome({
   price,
   galleryCaption,
   testimonial,
-  bookingUrl = 'https://app.acuityscheduling.com/schedule.php?owner=15235407',
+  bookingUrl = ACUITY_URL,
   learnMoreUrl = '/services',
   learnMoreLabel = 'All Services',
 }: ServiceHomeProps) {

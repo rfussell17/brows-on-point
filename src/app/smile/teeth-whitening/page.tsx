@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Teeth Whitening Near Me in West Kelowna',
   description:
-    'Looking for teeth whitening near you? Brows on Point in West Kelowna offers professional in-studio whitening. Book your appointment online today.',
+    'Professional in-studio teeth whitening in West Kelowna at Brows on Point, with Basic, Ultra, and 24k gold sessions. Book your appointment online today.',
 }
 
 export default function TeethWhiteningPage() {

@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Permanent Eyeliner Near Me in West Kelowna',
   description:
-    'Looking for permanent eyeliner near you? Brows on Point in West Kelowna offers lash line enhancement and permanent eyeliner tattoo. Book online today.',
+    'Permanent eyeliner in West Kelowna at Brows on Point: subtle lash line enhancement or a fully defined eyeliner tattoo. Book online today.',
 }
 
 export default function PermanentEyelinerPage() {

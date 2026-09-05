@@ -1,5 +1,6 @@
 import { Container } from '@/components/container'
 import { Link } from '@/components/link'
+import { ACUITY_URL } from '@/lib/site'
 
 /**
  * Placeholder for a route that exists (so redirects/sitemap/nav have a real
@@ -18,7 +19,7 @@ export function PagePending({ title, note }: { title: string; note?: string }) {
         </p>
         <div className="mt-8">
           <Link
-            href="https://app.acuityscheduling.com/schedule.php?owner=15235407"
+            href={ACUITY_URL}
             className="inline-flex rounded-md bg-primary px-3.5 py-2.5 text-base font-semibold text-light shadow-sm hover:opacity-90"
           >
             Book Now

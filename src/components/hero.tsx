@@ -1,3 +1,4 @@
+import { ACUITY_URL } from '@/lib/site'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -56,7 +57,7 @@ const Hero: React.FC<HeroProps> = ({ bgVariant = 'light' }) => {
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <Link
-                  href="https://app.acuityscheduling.com/schedule.php?owner=15235407"
+                  href={ACUITY_URL}
                   className={
                     isDark
                       ? 'rounded-md bg-light px-3.5 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light'

@@ -9,6 +9,7 @@ import LogoGrid, { logos } from '@/components/media/logo-grid'
 import TestimonialGroup from '@/components/media/testimonial-group'
 import TestimonialTwo from '@/components/media/testimonial-two'
 import {
+  ACUITY_URL,
   BOOKING_CTA,
   GOOGLE_RATING,
   GOOGLE_REVIEW_COUNT,
@@ -28,12 +29,12 @@ const generalFAQs = [
   {
     question: 'What services do you offer?',
     answer:
-      'I specialize in permanent makeup, lash lifts, brow enhancements, and teeth whitening + gems. Each service is performed with the highest safety standards and customized to your unique features and preferences.',
+      'Lash lifts and tinting, brow tinting, shaping and permanent makeup, teeth whitening and tooth gems, and RF skin tightening — all from one studio in West Kelowna. Each treatment is customized to you.',
   },
   {
     question: 'Is it safe?',
     answer:
-      'Yes, all my procedures follow strict Public Health Guidelines. I use only single-use sterile needles and supplies, maintain rigorous sanitation protocols, and use dermatologist-tested products.',
+      'Yes. Every procedure follows strict public health guidelines, with single-use sterile needles and supplies and thorough sanitation between every client.',
   },
   {
     question: "What's the age requirement?",
@@ -43,12 +44,12 @@ const generalFAQs = [
   {
     question: 'Do the procedures hurt?',
     answer:
-      'While individual pain tolerance varies, I use medical-grade topical anesthetics before and during procedures to ensure your comfort.',
+      "It depends on the treatment. Needle-based services like permanent makeup use a topical anesthetic for comfort, while lash lifts, tinting, and teeth whitening are generally pain-free.",
   },
   {
     question: 'What about aftercare?',
     answer:
-      'Aftercare makes a real difference to your results. I provide detailed instructions for each service and include all necessary aftercare products with your treatment.',
+      'Aftercare makes a real difference to your results. Every service comes with clear aftercare instructions, and any products you need are included.',
   },
 ]
 
@@ -84,7 +85,7 @@ export default function Home() {
           }}
           secondaryButton={{
             text: 'Book Now',
-            href: 'https://app.acuityscheduling.com/schedule.php?owner=15235407',
+            href: ACUITY_URL,
           }}
           bgVariant={cta1Variant}
         />

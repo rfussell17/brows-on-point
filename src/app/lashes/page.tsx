@@ -4,20 +4,33 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Lashes Near Me in West Kelowna',
   description:
-    'Looking for lashes near you in West Kelowna? Brows on Point offers keratin lash lifts, lash and brow tinting, and lash growth serum. Book online today.',
+    'Keratin lash lifts, lash and brow tinting, and lash growth serum in West Kelowna. Brows on Point is a lash studio covering every option. Book online today.',
 }
+
+const faqs = [
+  {
+    question: 'What lash services do you offer?',
+    answer:
+      'Lash Lift and Tint for lifted, darker lashes without extensions, Lash & Brow Tinting for a fast colour boost, and a Lash Growth Serum to use between appointments.',
+  },
+  {
+    question: "What's the difference between a lash lift and a lash tint?",
+    answer:
+      'A lash tint only darkens your lash colour. A lash lift changes the curl and shape of your lashes. Many clients book both together, but they are separate services.',
+  },
+]
 
 export default function LashesHubPage() {
   return (
     <HubPage
-      title="Lashes Near Me in West Kelowna"
+      title="Lashes"
       intro={
         <>
-          Jamie is the lash tech behind every appointment at Brows on Point, a
-          lash studio in West Kelowna offering lash lifts, lash and brow
+          Jamie is the lash tech behind every appointment at Brows on Point,
+          a lash studio in West Kelowna offering lash lifts, lash and brow
           tinting, and a lash growth serum to use between visits. She&apos;s
-          completed a Lash Lift and Tint Training Program and a Korean Lash Lift
-          Technician Course.
+          completed a Lash Lift and Tint Training Program and a Korean Lash
+          Lift Technician Course.
         </>
       }
       spokes={[
@@ -43,6 +56,7 @@ export default function LashesHubPage() {
           image: '/services/lash2.png',
         },
       ]}
+      faqs={faqs}
     />
   )
 }

@@ -1,4 +1,5 @@
 import { Container } from '@/components/container'
+import FAQSection from '@/components/faq-section'
 import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
 import {
@@ -25,6 +26,7 @@ interface HubPageProps {
   intro: ReactNode
   spokes: HubSpoke[]
   secondaryCta?: { text: string; href: string }
+  faqs?: Array<{ question: string; answer: string }>
 }
 
 export default function HubPage({
@@ -32,10 +34,12 @@ export default function HubPage({
   intro,
   spokes,
   secondaryCta,
+  faqs,
 }: HubPageProps) {
-  // The reviews/CTA/map banner needs to differ from the spoke grid (always
-  // bg-primary-950) directly above it.
-  const reviewsBgVariant = 'primary'
+  // The reviews/CTA/map banner needs to differ from whatever landed right
+  // before it — the spoke grid (always bg-primary-950) when there's no FAQ
+  // section, or the FAQ section (bg-primary) when there is one.
+  const reviewsBgVariant = faqs ? 'primary-950' : 'primary'
 
   return (
     <div>
@@ -78,6 +82,8 @@ export default function HubPage({
           </div>
         </Container>
       </div>
+
+      {faqs && <FAQSection faqs={faqs} bgVariant="primary" />}
 
       <GoogleReviewsBanner
         rating={GOOGLE_RATING}

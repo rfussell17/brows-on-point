@@ -10,7 +10,7 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    body: "Recently had my keratin lash lift and tint done by Jamie and I am in love! This is definitely a service I will continue receiving. She walked me through the process and explained everything she's doing as she's doing it, which made me feel very comfortable. Her studio was very clean, organized and welcoming. And the little take-home after-treatment bag was cute! I can't wait to try the lip plump treatment! I will recommend this service, and if I decide to get permanent makeup down the road I will be booking through Jamie at Brows on Point",
+    body: 'Recently had my keratin lash lift and tint done by Jamie and I am in love! This is definitely a service I will continue receiving.',
     author: {
       name: 'Kyla S',
       imageUrl:
@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
     },
   },
   {
-    body: 'Since starting with powder brows (after having microblading somewhere else) I can only give praise to Jamie for being an expert on the technique! My only regret is not having found Jamie earlier...with my skin type this should have been the way to go from the start. Very pleased with the results and encourage anyone to discuss with her what you are looking for. She will guide you on what makes the most sense depending on your skin type/facial features, etc. You will be on very good hands.',
+    body: 'Since starting with powder brows (after having microblading somewhere else) I can only give praise to Jamie for being an expert on the technique! My only regret is not having found Jamie earlier...with my skin type this should have been the way to go from the start.',
     author: {
       name: 'Y. Tobar',
       imageUrl:
@@ -43,7 +43,7 @@ const testimonials: Testimonial[] = [
     },
   },
   {
-    body: 'I really wanted my brows micro bladed but was a little nervous about any pain I might have. Jamie was very reassuring and thoroughly explained the process and what to expect. I was so happy with the results and the shape of my brows. The Lash Lift was amazing as well and I loved getting up in the morning knowing I could leave the house and I was ready for the day. I have since had the brow touch up and look forward to another Keratin Lash Lift just before a trip I am taking!',
+    body: 'Jamie was very reassuring and thoroughly explained the process and what to expect. I was so happy with the results and the shape of my brows. The Lash Lift was amazing as well and I loved getting up in the morning knowing I could leave the house and I was ready for the day. I have since had the brow touch up and look forward to another Keratin Lash Lift!',
     author: {
       name: 'C. Pilz',
       imageUrl:
@@ -59,7 +59,7 @@ const testimonials: Testimonial[] = [
     },
   },
   {
-    body: 'Can’t say enough about the services I have received from Jamie at Brows on Point and tonight was no exception! She offers attention to detail from the consultation to working with your requests, right through to the after care instruction and take home kit. She made me feel at ease, stopping along the way to ensure I was going to be pleased with the outcome and I am! A very professional, caring artist!',
+    body: 'Can’t say enough about the services I have received from Jamie at Brows on Point! She offers attention to detail from the consultation to working with your requests, right through to the after care instruction and take home kit. She made me feel at ease, stopping along the way to ensure I was going to be pleased with the outcome and I am! A very professional, caring artist!',
     author: {
       name: 'Ally F',
       imageUrl:

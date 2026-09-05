@@ -61,7 +61,7 @@ const serviceCategories = [
   },
   {
     href: '/smile',
-    label: 'Smile',
+    label: 'Smile Services',
     description: 'Teeth whitening, Swarovski tooth gems',
   },
   {

@@ -1,4 +1,3 @@
-import FAQSection from '@/components/faq-section'
 import HubPage from '@/components/services/hub-page'
 import { ACUITY_URL } from '@/lib/site'
 import type { Metadata } from 'next'
@@ -25,58 +24,61 @@ const faqs = [
     answer:
       'Microblading, powder brows, permanent eyeliner and lash line enhancement, and saline removal for existing permanent makeup or small tattoos.',
   },
+  {
+    question: "What's the difference between microblading and powder brows?",
+    answer:
+      'Microblading draws individual hair-like strokes for a natural, textured look. Powder brows use a shading technique for a softer, more filled-in look, similar to brow makeup. Ask me at your consultation which suits your skin and the look you want.',
+  },
 ]
 
 export default function PermanentMakeupPage() {
   return (
-    <>
-      <HubPage
-        title="Permanent Eyebrows in West Kelowna"
-        intro={
-          <>
-            Permanent makeup at Brows on Point covers semi-permanent eyebrows,
-            permanent eyeliner, and saline removal for PMU or small tattoos you
-            no longer want. Every technique below is its own service with its
-            own process and pricing. Browse the options, or book a free
-            consultation if you&apos;re not sure which is right for you.
-          </>
-        }
-        secondaryCta={{
-          text: 'Book Free Consultation',
-          href: ACUITY_URL,
-        }}
-        spokes={[
-          {
-            title: 'Microblading',
-            description:
-              'Natural, hair-stroke semi-permanent brows for sparse or over-tweezed eyebrows.',
-            href: '/permanent-makeup/microblading',
-            image: '/services/microblade.jpg',
-          },
-          {
-            title: 'Powder Brows',
-            description:
-              'A soft, filled-in powder finish that holds its shape day to day.',
-            href: '/permanent-makeup/powder-brows',
-            image: '/services/powder_brow.jpg',
-          },
-          {
-            title: 'Permanent Eyeliner',
-            description:
-              'Subtle lash line enhancement or a defined liner look that doesn’t smudge.',
-            href: '/permanent-makeup/permanent-eyeliner',
-            image: '/services/permanent_eyeliner.jpg',
-          },
-          {
-            title: 'Saline Tattoo & PMU Removal',
-            description:
-              'A gentler, saline-based alternative to laser removal for PMU or small tattoos.',
-            href: '/permanent-makeup/saline-tattoo-removal',
-            image: '/services/permanent_eyeliner.jpg',
-          },
-        ]}
-      />
-      <FAQSection faqs={faqs} />
-    </>
+    <HubPage
+      title="Permanent Eyebrows"
+      intro={
+        <>
+          Permanent makeup at Brows on Point covers semi-permanent eyebrows,
+          permanent eyeliner, and saline removal for PMU or small tattoos you
+          no longer want. Every technique below is its own service with its
+          own process and pricing. Browse the options, or book a free
+          consultation if you&apos;re not sure which is right for you.
+        </>
+      }
+      secondaryCta={{
+        text: 'Book Free Consultation',
+        href: ACUITY_URL,
+      }}
+      spokes={[
+        {
+          title: 'Microblading',
+          description:
+            'Natural, hair-stroke semi-permanent brows for sparse or over-tweezed eyebrows.',
+          href: '/permanent-makeup/microblading',
+          image: '/services/microblade.jpg',
+        },
+        {
+          title: 'Powder Brows',
+          description:
+            'A soft, filled-in powder finish that holds its shape day to day.',
+          href: '/permanent-makeup/powder-brows',
+          image: '/services/powder_brow.jpg',
+        },
+        {
+          title: 'Permanent Eyeliner',
+          description:
+            'Subtle lash line enhancement or a defined liner look that doesn’t smudge.',
+          href: '/permanent-makeup/permanent-eyeliner',
+          image: '/services/permanent_eyeliner.jpg',
+        },
+        {
+          title: 'Saline Tattoo & PMU Removal',
+          description:
+            'A gentler, saline-based alternative to laser removal for PMU or small tattoos.',
+          href: '/permanent-makeup/saline-tattoo-removal',
+          image: '/services/permanent_eyeliner.jpg',
+        },
+      ]}
+      faqs={faqs}
+    />
   )
 }
