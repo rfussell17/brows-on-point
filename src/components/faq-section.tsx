@@ -62,7 +62,9 @@ const FAQSection: React.FC<FAQSectionProps> = ({
         <div className="mt-12 grid gap-4">
           {faqs.map((faq, index) => (
             <Card key={index} className={cardClass}>
-              <CardHeader className={headerClass}>{faq.question}</CardHeader>
+              <CardHeader className={headerClass}>
+                <h3 className="m-0 text-inherit">{faq.question}</h3>
+              </CardHeader>
               <CardContent className={contentClass}>{faq.answer}</CardContent>
             </Card>
           ))}
