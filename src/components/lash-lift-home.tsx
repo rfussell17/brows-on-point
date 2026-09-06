@@ -32,11 +32,12 @@ export default function LashLiftHome({
               </p>
 
               <p className="mt-6 text-base leading-7 text-gray-100">
-                I offer two options: my exlusive{' '}
-                <strong> BOMB </strong>Lift for
-                a dramatic effect or the <strong>Keratin Lift</strong> for a
-                natural look. Both provide long-lasting results. Post-care
-                products are available to nourish and enhance lash health.
+                I offer three options: my exclusive <strong>BOMB Lift</strong>{' '}
+                for a dramatic effect, the <strong>Keratin Lift</strong> for a
+                natural look, or the <strong>Korean Lash Lift</strong> for a
+                softer, more relaxed curl. All three provide long-lasting
+                results. Post-care products are available to nourish and
+                enhance lash health.
               </p>
               <div className="mt-8">
                 <Link
@@ -73,8 +74,8 @@ export default function LashLiftHome({
             </div>
           </div>
           <Image
-            src="/services/bomb_lift_and_tint.jpg"
-            alt="Product screenshot"
+            src="/services/bomb-lift-and-tint_brows-on-point.jpg"
+            alt="Lash lift and tint results"
             className="rounded-xl"
             width={800}
             height={1000}

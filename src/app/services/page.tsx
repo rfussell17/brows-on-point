@@ -12,6 +12,7 @@ import {
 } from '@/lib/site'
 import { CheckIcon } from '@heroicons/react/24/outline'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'All Services',
@@ -30,6 +31,7 @@ const categories = [
       'From a quick tint and shape to semi-permanent results, my brow services are built around finding the shape that actually suits your face — not a one-size-fits-all template.',
     href: '/brows',
     highlights: ['Eyebrow Tint & Shape', 'Microblading', 'Powder Brows'],
+    image: '/services/microblade_brows-on-point.jpg',
   },
   {
     title: 'Lashes',
@@ -41,6 +43,7 @@ const categories = [
       'Lash & Brow Tinting',
       'Lash Growth Serum',
     ],
+    image: '/services/lash-lift_brows-on-point.png',
   },
   {
     title: 'Permanent Makeup',
@@ -53,6 +56,7 @@ const categories = [
       'Permanent Eyeliner',
       'Saline PMU Removal',
     ],
+    image: '/services/permanent-eyeliner_brows-on-point.jpg',
   },
   {
     title: 'Smile Services',
@@ -64,6 +68,7 @@ const categories = [
       'Sensitive-Teeth Whitening',
       'Swarovski Tooth Gems',
     ],
+    image: '/services/teeth-whitening_brows-on-point.jpg',
   },
   {
     title: 'Skin Tightening',
@@ -135,7 +140,18 @@ const ServicesPage = () => {
                 </div>
                 <div>
                   <div className="grid grid-cols-2 gap-4">
-                    <ImagePlaceholder className="aspect-square rounded-2xl" />
+                    {category.image ? (
+                      <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
+                        <Image
+                          fill
+                          src={category.image}
+                          alt={category.title}
+                          className="object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <ImagePlaceholder className="aspect-square rounded-2xl" />
+                    )}
                   </div>
                 </div>
               </div>

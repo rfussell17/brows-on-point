@@ -39,21 +39,20 @@ export default function BrowsHubPage() {
           description:
             'Semi-permanent tint and precise hot-wax shaping together, $25.',
           href: '/brows/brow-tint-and-shape',
-          image: '/services/powder_brow.jpg',
         },
         {
           title: 'Microblading',
           description:
             'Natural, hair-stroke semi-permanent brows for sparse or over-tweezed eyebrows.',
           href: '/permanent-makeup/microblading',
-          image: '/services/microblade.jpg',
+          image: '/services/microblade_brows-on-point.jpg',
         },
         {
           title: 'Powder Brows',
           description:
             'A soft, filled-in powder finish that holds its shape day to day.',
           href: '/permanent-makeup/powder-brows',
-          image: '/services/powder_brow.jpg',
+          image: '/services/powder-brow_brows-on-point.png',
         },
       ]}
       faqs={faqs}

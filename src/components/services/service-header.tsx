@@ -4,6 +4,7 @@ import {
   SparklesIcon,
 } from '@heroicons/react/24/outline'
 import { ACUITY_URL } from '@/lib/site'
+import Image from 'next/image'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { Container } from '../container'
@@ -17,6 +18,8 @@ interface ServiceHomeProps {
   results: string | ReactNode
   price: string | ReactNode
   galleryCaption?: string
+  /** Real photos for the header gallery grid, up to 4. Empty slots fall back to <ImagePlaceholder/>. */
+  images?: string[]
   testimonial?: {
     quote: string
     author: string
@@ -40,6 +43,7 @@ export default function ServiceHome({
   results,
   price,
   galleryCaption,
+  images = [],
   testimonial,
   bookingUrl = ACUITY_URL,
   learnMoreUrl = '/services',
@@ -120,9 +124,20 @@ export default function ServiceHome({
           </div>
           <div className="sm:px-6 lg:px-0">
             <div className="grid grid-cols-2 gap-1 overflow-hidden rounded-2xl bg-light shadow-xl">
-              {Array.from({ length: 4 }).map((_, i) => (
-                <ImagePlaceholder key={i} className="aspect-square w-full" />
-              ))}
+              {Array.from({ length: 4 }).map((_, i) =>
+                images[i] ? (
+                  <div key={i} className="relative aspect-square w-full overflow-hidden">
+                    <Image
+                      fill
+                      src={images[i]}
+                      alt={title}
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <ImagePlaceholder key={i} className="aspect-square w-full" />
+                ),
+              )}
             </div>
 
             {galleryCaption && (

@@ -9,7 +9,6 @@ import {
   GOOGLE_REVIEW_COUNT,
   GOOGLE_REVIEWS_URL,
 } from '@/lib/site'
-import type { StaticImageData } from 'next/image'
 import type { ReactNode } from 'react'
 import GoogleReviewsBanner from '../media/google-reviews-banner'
 import { ServiceCard } from './service-card'
@@ -18,7 +17,7 @@ export interface HubSpoke {
   title: string
   description: string
   href: string
-  image: string | StaticImageData
+  image?: string
 }
 
 interface HubPageProps {
@@ -77,6 +76,7 @@ export default function HubPage({
                 title={spoke.title}
                 description={spoke.description}
                 href={spoke.href}
+                image={spoke.image}
               />
             ))}
           </div>

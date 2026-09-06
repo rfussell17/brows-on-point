@@ -39,21 +39,19 @@ export default function LashesHubPage() {
           description:
             'Keratin, BOMB, or Korean lash lift and tint: lifted, darker lashes with no extensions.',
           href: '/lashes/lash-lift-and-tint',
-          image: '/services/bomb_lift_and_tint.jpg',
+          image: '/services/lash-lift_brows-on-point.png',
         },
         {
           title: 'Lash & Brow Tinting',
           description:
             'Semi-permanent tint for lashes, brows, or both: a fast way to skip the daily mascara.',
           href: '/lashes/lash-and-brow-tinting',
-          image: '/services/lash2.png',
         },
         {
           title: 'Lash Growth Serum',
           description:
             'A keratin lash growth serum and tinted mascara to support your natural lashes at home.',
           href: '/lashes/lash-growth-serum',
-          image: '/services/lash2.png',
         },
       ]}
       faqs={faqs}
