@@ -102,7 +102,7 @@ export default function AboutPage() {
               </div>
               <Image
                 alt="Jamie at Brows on Point"
-                src="/jamie_brows_on_point.png"
+                src="/jamie_brows_on_point_2.jpg"
                 width={1000}
                 height={1000}
                 className="aspect-square w-full rounded-2xl object-cover shadow-xl"
@@ -140,9 +140,7 @@ export default function AboutPage() {
                 sizes="(min-width: 1024px) 384px, 100vw"
               />
               <div className="w-full flex-auto">
-                <h2 className="text-5xl text-light">
-                  Certifications
-                </h2>
+                <h2 className="text-5xl text-light">Certifications</h2>
                 <div className="mt-6 rounded-lg bg-primary-800 p-6 ring-1 ring-secondary-700">
                   <ul className="grid grid-cols-1 gap-x-8 gap-y-2 text-base leading-7 text-gray-100 sm:grid-cols-2">
                     {certifications.map((cert) => (
