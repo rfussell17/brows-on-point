@@ -1,10 +1,12 @@
 import HubPage from '@/components/services/hub-page'
+import { ogMeta } from '@/lib/site'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Eyebrows Near Me in West Kelowna',
   description:
     'Eyebrow tinting, waxing, shaping, microblading, and powder brows in West Kelowna. Brows on Point is a brow bar covering the full range. Book online today.',
+  openGraph: ogMeta('/og/eyebrows-og_brows-on-point.jpg', 'Eyebrows'),
 }
 
 const faqs = [
@@ -25,6 +27,7 @@ export default function BrowsHubPage() {
   return (
     <HubPage
       title="Eyebrows"
+      path="/brows"
       intro={
         <>
           Brows on Point is a brow bar in West Kelowna covering the full

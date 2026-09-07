@@ -2,6 +2,7 @@ import { Container } from '@/components/container'
 import FAQSection from '@/components/faq-section'
 import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
+import { BreadcrumbJsonLd } from '@/components/json-ld/breadcrumb'
 import {
   ACUITY_URL,
   BOOKING_CTA,
@@ -22,6 +23,8 @@ export interface HubSpoke {
 
 interface HubPageProps {
   title: string
+  /** This hub's own path, e.g. "/brows" — used for its BreadcrumbList. */
+  path: string
   intro: ReactNode
   spokes: HubSpoke[]
   secondaryCta?: { text: string; href: string }
@@ -30,6 +33,7 @@ interface HubPageProps {
 
 export default function HubPage({
   title,
+  path,
   intro,
   spokes,
   secondaryCta,
@@ -42,6 +46,12 @@ export default function HubPage({
 
   return (
     <div>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: title, path },
+        ]}
+      />
       <div className="bg-primary px-6 py-24 sm:py-32 lg:px-8">
         <Container>
           <div className="mx-auto max-w-2xl text-center">

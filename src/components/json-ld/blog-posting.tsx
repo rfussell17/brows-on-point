@@ -5,17 +5,17 @@ export function BlogPostingJsonLd({
   description,
   date,
   slug,
-  imageUrl,
+  ogImage,
   category,
 }: {
   title: string
   description: string
   date: string
   slug: string
-  imageUrl: string | null
+  ogImage?: string
   category?: string
 }) {
-  const image = `${SITE_URL}${imageUrl ?? '/default-image.jpg'}`
+  const image = `${SITE_URL}${ogImage ?? '/og/brows-on-point-og.jpg'}`
   const pageUrl = `${SITE_URL}/blog/${slug}`
 
   const data = {

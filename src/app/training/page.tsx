@@ -1,6 +1,8 @@
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
+import { BreadcrumbJsonLd } from '@/components/json-ld/breadcrumb'
+import { CourseJsonLd } from '@/components/json-ld/course'
 import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
 import {
   ACUITY_URL,
@@ -8,6 +10,7 @@ import {
   GOOGLE_RATING,
   GOOGLE_REVIEW_COUNT,
   GOOGLE_REVIEWS_URL,
+  ogMeta,
 } from '@/lib/site'
 import type { Metadata } from 'next'
 
@@ -15,6 +18,10 @@ export const metadata: Metadata = {
   title: 'Lash Lift & Teeth Whitening Training',
   description:
     'Train with Brows on Point in West Kelowna. Hands-on lash lift and teeth whitening training courses for aspiring beauty professionals.',
+  openGraph: ogMeta(
+    '/og/training-og_brows-on-point.jpg',
+    'Lash Lift & Teeth Whitening Training',
+  ),
 }
 
 const courses = [
@@ -35,6 +42,13 @@ const courses = [
 export default function TrainingPage() {
   return (
     <div>
+      <CourseJsonLd courses={courses} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Training', path: '/training' },
+        ]}
+      />
       <div className="bg-primary px-6 py-24 sm:py-32 lg:px-8">
         <Container>
           <div className="mx-auto max-w-2xl text-center">

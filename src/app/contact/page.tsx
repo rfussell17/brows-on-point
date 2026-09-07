@@ -1,6 +1,7 @@
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
+import { BreadcrumbJsonLd } from '@/components/json-ld/breadcrumb'
 import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
 import {
   ACUITY_URL,
@@ -11,6 +12,7 @@ import {
   GOOGLE_RATING,
   GOOGLE_REVIEW_COUNT,
   GOOGLE_REVIEWS_URL,
+  ogMeta,
 } from '@/lib/site'
 import type { Metadata } from 'next'
 
@@ -18,11 +20,18 @@ export const metadata: Metadata = {
   title: 'Contact Me',
   description:
     'Contact Brows on Point in West Kelowna to book an appointment or ask a question about my lash, brow, permanent makeup, and teeth whitening services.',
+  openGraph: ogMeta('/og/contact-og_brows-on-point.jpg', 'Contact Brows on Point'),
 }
 
 export default function ContactPage() {
   return (
     <div>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Contact', path: '/contact' },
+        ]}
+      />
       <div className="bg-primary px-6 py-24 sm:py-32 lg:px-8">
         <Container>
           <div className="mx-auto max-w-2xl text-center">

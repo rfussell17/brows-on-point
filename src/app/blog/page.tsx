@@ -1,6 +1,7 @@
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { BlogFilter } from '@/components/blog/blog-filter'
+import { BreadcrumbJsonLd } from '@/components/json-ld/breadcrumb'
 import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
 import { getPosts } from '@/lib/blog'
 import {
@@ -8,6 +9,7 @@ import {
   GOOGLE_RATING,
   GOOGLE_REVIEW_COUNT,
   GOOGLE_REVIEWS_URL,
+  ogMeta,
 } from '@/lib/site'
 import type { Metadata } from 'next'
 
@@ -15,6 +17,7 @@ export const metadata: Metadata = {
   title: 'Blog',
   description:
     'Lash, brow, and skin care tips from Brows on Point in West Kelowna — aftercare advice, treatment comparisons, and answers to what clients ask most.',
+  openGraph: ogMeta('/og/blog-og_brows-on-point.jpg', 'Blog'),
 }
 
 export default function BlogPage() {
@@ -25,6 +28,12 @@ export default function BlogPage() {
 
   return (
     <div>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Blog', path: '/blog' },
+        ]}
+      />
       <div className="bg-primary py-24 sm:py-32">
         <Container>
           <div className="mx-auto max-w-2xl text-center">

@@ -8,6 +8,7 @@ import {
 import React from 'react'
 import FAQSection from '../faq-section'
 import { Footer } from '../footer'
+import { BreadcrumbJsonLd } from '../json-ld/breadcrumb'
 import { ServiceJsonLd } from '../json-ld/service'
 import GoogleReviewsBanner from '../media/google-reviews-banner'
 import type { ServiceData } from './service-data'
@@ -37,13 +38,18 @@ const ServicePage: React.FC<ServicePageProps> = ({ data }) => {
   const faqBgVariant = opposite(lastVariant)
   const reviewsBgVariant = opposite(faqBgVariant)
 
+  const breadcrumbItems = [
+    { name: 'Home', path: '/' },
+    ...(data.hubLink
+      ? [{ name: data.hubLink.text.replace(/^All /, ''), path: data.hubLink.href }]
+      : []),
+    { name: data.title, path: `/${data.slug}` },
+  ]
+
   return (
     <div>
-      <ServiceJsonLd
-        name={data.title}
-        description={data.description}
-        slug={data.slug}
-      />
+      <ServiceJsonLd data={data} />
+      <BreadcrumbJsonLd items={breadcrumbItems} />
       <ServiceHeader
         title={data.title}
         eyebrow={data.hubLink?.text.replace(/^All /, '')}

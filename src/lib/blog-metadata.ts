@@ -1,6 +1,6 @@
 import { SITE_URL } from '@/lib/site'
 import type { Metadata } from 'next'
-import { coverImagePath, type BlogPostMeta } from './blog'
+import type { BlogPostMeta } from './blog'
 
 /**
  * Builds a post's Next.js `metadata` export from the same `postMeta` object
@@ -12,8 +12,8 @@ export function createPostMetadata(
   slug: string,
   postMeta: BlogPostMeta,
 ): Metadata {
-  const { title, description, date, keywords = [] } = postMeta
-  const image = `${SITE_URL}${coverImagePath(slug) ?? '/default-image.jpg'}`
+  const { title, description, date, keywords = [], ogImage } = postMeta
+  const image = `${SITE_URL}${ogImage ?? '/og/brows-on-point-og.jpg'}`
 
   return {
     title,

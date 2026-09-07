@@ -1,11 +1,15 @@
 import HubPage from '@/components/services/hub-page'
-import { ACUITY_URL } from '@/lib/site'
+import { ACUITY_URL, ogMeta } from '@/lib/site'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Permanent Eyebrows in West Kelowna',
   description:
     'Permanent eyebrows in West Kelowna. Brows on Point offers microblading, powder brows, permanent eyeliner, and saline PMU removal. Book a consult today.',
+  openGraph: ogMeta(
+    '/og/permanent-makeup-og_brows-on-point.jpg',
+    'Permanent Eyebrows',
+  ),
 }
 
 const faqs = [
@@ -35,6 +39,7 @@ export default function PermanentMakeupPage() {
   return (
     <HubPage
       title="Permanent Eyebrows"
+      path="/permanent-makeup"
       intro={
         <>
           Permanent makeup at Brows on Point covers semi-permanent eyebrows,

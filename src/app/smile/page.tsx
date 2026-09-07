@@ -1,16 +1,19 @@
 import HubPage from '@/components/services/hub-page'
+import { ogMeta } from '@/lib/site'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Smile Services',
   description:
     'Teeth whitening and Swarovski tooth gems from Brows on Point in West Kelowna. Explore my smile services and book your appointment online.',
+  openGraph: ogMeta('/og/smile-services-og_brows-on-point.jpg', 'Smile Services'),
 }
 
 export default function SmileHubPage() {
   return (
     <HubPage
       title="Smile Services"
+      path="/smile"
       intro={
         <>
           Brows on Point offers professional teeth whitening and Swarovski tooth

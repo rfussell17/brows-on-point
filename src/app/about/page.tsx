@@ -1,11 +1,14 @@
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
+import { BreadcrumbJsonLd } from '@/components/json-ld/breadcrumb'
+import { PersonJsonLd } from '@/components/json-ld/person'
 import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
 import {
   BOOKING_CTA,
   GOOGLE_RATING,
   GOOGLE_REVIEW_COUNT,
   GOOGLE_REVIEWS_URL,
+  ogMeta,
 } from '@/lib/site'
 import type { Metadata } from 'next'
 import Image from 'next/image'
@@ -18,6 +21,7 @@ export const metadata: Metadata = {
     index: false,
     follow: false,
   },
+  openGraph: ogMeta('/og/about-og_brows-on-point.jpg', 'About Brows on Point'),
 }
 
 const stats = [
@@ -26,9 +30,29 @@ const stats = [
   { label: 'Happy Clients', value: '1200+' },
 ]
 
+const certifications = [
+  'Microblading Training Program',
+  'Advanced Microblading Training Program',
+  'Permanent Makeup Technician Training',
+  'Hypertonic Saline Tattoo & Permanent Makeup Removal',
+  'Lash Lift and Tint Training Program',
+  'Fluffy Brow Latex Workshop',
+  'Classic Brow Pattern Workshop',
+  'Korean Lash Lift Technician Course',
+  'Radio Frequency (RF) Facial Training',
+  'Skin Anatomy Workshop',
+]
+
 export default function AboutPage() {
   return (
     <div>
+      <PersonJsonLd credentials={certifications} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'About', path: '/about' },
+        ]}
+      />
       <main>
         {/* Hero */}
         <div className="bg-primary py-24 sm:py-32">
@@ -121,34 +145,11 @@ export default function AboutPage() {
                 </h2>
                 <div className="mt-6 rounded-lg bg-primary-800 p-6 ring-1 ring-secondary-700">
                   <ul className="grid grid-cols-1 gap-x-8 gap-y-2 text-base leading-7 text-gray-100 sm:grid-cols-2">
-                    <li className="ml-6 list-disc">
-                      Microblading Training Program
-                    </li>
-                    <li className="ml-6 list-disc">
-                      Advanced Microblading Training Program
-                    </li>
-                    <li className="ml-6 list-disc">
-                      Permanent Makeup Technician Training
-                    </li>
-                    <li className="ml-6 list-disc">
-                      Hypertonic Saline Tattoo & Permanent Makeup Removal
-                    </li>
-                    <li className="ml-6 list-disc">
-                      Lash Lift and Tint Training Program
-                    </li>
-                    <li className="ml-6 list-disc">
-                      Fluffy Brow Latex Workshop
-                    </li>
-                    <li className="ml-6 list-disc">
-                      Classic Brow Pattern Workshop
-                    </li>
-                    <li className="ml-6 list-disc">
-                      Korean Lash Lift Technician Course
-                    </li>
-                    <li className="ml-6 list-disc">
-                      Radio Frequency (RF) Facial Training
-                    </li>
-                    <li className="ml-6 list-disc">Skin Anatomy Workshop</li>
+                    {certifications.map((cert) => (
+                      <li key={cert} className="ml-6 list-disc">
+                        {cert}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

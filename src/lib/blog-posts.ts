@@ -18,6 +18,7 @@ export const blogPosts: Record<string, BlogPostMeta> = {
       'The first 48 hours after a lash lift and tint matter most. Here are the aftercare habits that help your lift and tint last the full 6-12 weeks.',
     date: '2026-09-05',
     category: 'Lashes',
+    ogImage: '/og/make-your-lash-lift-and-tint-last-longer-og_brows-on-point.jpg',
     keywords: [
       'lash lift aftercare',
       'lash lift and tint',

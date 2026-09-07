@@ -28,3 +28,17 @@ export const BOOKING_CTA = {
   buttonText: 'Reserve Appointment',
   buttonHref: ACUITY_URL,
 }
+
+/**
+ * A page's own `openGraph` object replaces the layout's entirely (Next.js
+ * doesn't deep-merge it — title/description alone still fall back to the
+ * page's top-level metadata, but siteName/type do not), so every page needs
+ * to repeat them here rather than just supplying `images`.
+ */
+export function ogMeta(path: string, alt: string) {
+  return {
+    type: 'website' as const,
+    siteName: 'Brows on Point',
+    images: [{ url: path, width: 1200, height: 630, alt }],
+  }
+}

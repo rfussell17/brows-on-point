@@ -14,6 +14,7 @@ import {
   GOOGLE_RATING,
   GOOGLE_REVIEW_COUNT,
   GOOGLE_REVIEWS_URL,
+  ogMeta,
 } from '@/lib/site'
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     index: false,
     follow: false,
   },
+  openGraph: ogMeta('/og/brows-on-point-og.jpg', 'Brows on Point'),
 }
 
 const generalFAQs = [

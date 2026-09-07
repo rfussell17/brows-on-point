@@ -3,12 +3,14 @@ import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
 import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
 import TestimonialMakeup from '@/components/media/testimonial-makeup'
+import { BreadcrumbJsonLd } from '@/components/json-ld/breadcrumb'
 import { ImagePlaceholder } from '@/components/services/image-placeholder'
 import {
   BOOKING_CTA,
   GOOGLE_RATING,
   GOOGLE_REVIEW_COUNT,
   GOOGLE_REVIEWS_URL,
+  ogMeta,
 } from '@/lib/site'
 import { CheckIcon } from '@heroicons/react/24/outline'
 import type { Metadata } from 'next'
@@ -22,6 +24,7 @@ export const metadata: Metadata = {
     index: false,
     follow: false,
   },
+  openGraph: ogMeta('/og/all-services-og_brows-on-point.jpg', 'My Services'),
 }
 
 const categories = [
@@ -86,6 +89,12 @@ const categories = [
 const ServicesPage = () => {
   return (
     <div>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Services', path: '/services' },
+        ]}
+      />
       {/* Hero */}
       <div className="bg-primary py-24 sm:py-32">
         <Container>

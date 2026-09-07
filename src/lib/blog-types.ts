@@ -5,6 +5,8 @@ export interface BlogPostMeta {
   date: string
   category: string
   keywords?: string[]
+  /** Public path to this post's 1200x630 OG/social share image, in /public/og/. Falls back to the site default when omitted. */
+  ogImage?: string
 }
 
 export interface BlogPost extends BlogPostMeta {

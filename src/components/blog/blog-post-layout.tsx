@@ -13,7 +13,6 @@ import {
 } from '@/lib/site'
 import {
   calcReadTime,
-  coverImagePath,
   formatPostDate,
   type BlogPostMeta,
 } from '@/lib/blog'
@@ -38,8 +37,7 @@ export function BlogPostLayout({
   faqs,
   relatedPosts,
 }: BlogPostLayoutProps) {
-  const { title, description, date, category } = postMeta
-  const imageUrl = coverImagePath(slug)
+  const { title, description, date, category, ogImage } = postMeta
   const readTime = calcReadTime(slug)
 
   return (
@@ -49,7 +47,7 @@ export function BlogPostLayout({
         description={description}
         date={date}
         slug={slug}
-        imageUrl={imageUrl}
+        ogImage={ogImage}
         category={category}
       />
       <BreadcrumbJsonLd
