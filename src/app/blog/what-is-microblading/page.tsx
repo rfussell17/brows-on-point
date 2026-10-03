@@ -32,7 +32,7 @@ const faqs = [
       'Initial healing takes about 7-10 days, and the colour settles into its final shade over the following few weeks.',
   },
   {
-    question: 'How much does microblading cost?',
+    question: 'How much does microblading cost at Brows on Point?',
     answer:
       'At Brows on Point, microblading is $275 for your first appointment, which includes brow mapping and the full procedure. A touch-up is $100, bringing your first year to $375.',
   },

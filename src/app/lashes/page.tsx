@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'What lash services do you offer?',
+    question: 'What lash services does Brows on Point offer?',
     answer:
       'Lash Lift and Tint for lifted, darker lashes without extensions, and Lash & Brow Tinting for a fast colour boost.',
   },

@@ -25,7 +25,7 @@ const faqs = [
       "People use both terms for the same thing. Technically it's micropigmentation: pigment implanted with a fine tool, not standard tattoo ink, which is why it fades gradually over 1-2 years rather than staying permanent.",
   },
   {
-    question: 'What permanent makeup services do you offer?',
+    question: 'What permanent makeup services does Brows on Point offer?',
     answer:
       'Microblading, powder brows, permanent eyeliner and lash line enhancement, and saline removal for existing permanent makeup or small tattoos.',
   },

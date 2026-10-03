@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'What eyebrow services do you offer?',
+    question: 'What eyebrow services does Brows on Point offer?',
     answer:
       'Eyebrow Tint & Shape for a same-day refresh, or semi-permanent options like Microblading and Powder Brows if you want your shape to last longer. Browse each below to see what fits.',
   },
   {
     question:
-      "What's the difference between a brow tint & shape and semi-permanent brows?",
+      "What's the difference between eyebrow tinting and shaping and semi-permanent brows like microblading?",
     answer:
       'Tint & Shape uses a semi-permanent dye and hot-wax shaping that lasts 3-6 weeks. Microblading and Powder Brows are cosmetic tattoo techniques that last 1-2 years. Which one suits you depends on how much upkeep you want.',
   },

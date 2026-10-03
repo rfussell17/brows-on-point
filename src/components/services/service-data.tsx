@@ -261,18 +261,19 @@ export const lashServiceData: ServiceData = {
   ),
   faqs: [
     {
-      question: 'How much does a lash lift cost in Kelowna?',
+      question: 'How much does a lash lift and tint cost in Kelowna?',
       answer:
         'It depends which lash lift you choose. My BOMB Lash Lift and Tint is $70, and my Keratin Lash Lift and Tint is $80. Ask about Korean Lash Lift and Tint pricing at your consultation.',
     },
     {
       question:
-        "What's the difference between the Keratin, BOMB, and Korean lash lift?",
+        "What's the difference between the Keratin, BOMB, and Korean lash lift and tint?",
       answer:
         'The Keratin Lash Lift and Tint is my base treatment, using a keratin protein solution for a natural curl. The BOMB Lash Lift and Tint adds a biotin-infused formula for extra hold and a more dramatic lift. The Korean Lash Lift and Tint uses a gentler technique for a softer, more relaxed curl.',
     },
     {
-      question: 'Why does a Korean Lash Lift cost more?',
+      question:
+        'Why does the Korean lash lift and tint cost more than Keratin or BOMB?',
       answer:
         'The Korean technique uses a gentler, more premium lifting solution than the Keratin or BOMB treatments, along with a technique that takes more time to apply. Ask about pricing at your consultation.',
     },
@@ -282,7 +283,7 @@ export const lashServiceData: ServiceData = {
         'Yes. Lash lift, lash perm, and lash lamination all describe the same style of treatment: lifting and setting your natural lashes around a small rod, rather than adding extensions. I tint the lashes as part of the treatment too.',
     },
     {
-      question: 'Can I get a lash lift without the tint?',
+      question: 'Can I get a lash lift without the lash tint?',
       answer:
         'Yes, Lash Lift Only is available at $50 if you just want the curl without darkening your lashes. Most clients choose lift and tint together, since the tint is what removes the need for mascara.',
     },
@@ -292,7 +293,7 @@ export const lashServiceData: ServiceData = {
         'Around 45-60 minutes, depending on which lash lift you choose and how many lashes you have.',
     },
     {
-      question: 'Is a lash lift painful?',
+      question: 'Is a lash lift and tint painful?',
       answer:
         "No. You'll relax with your eyes closed for the whole appointment, and most clients describe it as comfortable, not painful.",
     },
@@ -302,7 +303,7 @@ export const lashServiceData: ServiceData = {
         'A lash lift and tint typically lasts 6-12 weeks, depending on which technique you choose and your natural lash growth cycle.',
     },
     {
-      question: 'Can I wear mascara after a lash lift?',
+      question: 'Can I wear mascara after a lash lift and tint?',
       answer:
         "Yes, once the 48-hour aftercare window has passed, though many clients find they don't need it, since the lift and tint already do the work.",
     },
@@ -469,22 +470,25 @@ export const lashAndBrowTintingServiceData: ServiceData = {
   ),
   faqs: [
     {
-      question: 'How much does an eyelash tint cost in Kelowna?',
+      question:
+        'How much does a lash tint or lash and brow tint cost in Kelowna?',
       answer:
         'Lash Tint Only is $25. Adding a lash tint onto a Brow Tint & Shape appointment is $40 total for both.',
     },
     {
-      question: 'How long does an eyelash tint last?',
+      question: 'How long does a lash or brow tint last?',
       answer:
         'A lash or brow tint typically lasts 3-6 weeks, depending on your skin type and how quickly your hair sheds and regrows.',
     },
     {
-      question: 'Can I get my lashes and brows tinted at the same appointment?',
+      question:
+        'Can I get a lash tint and a brow tint at the same appointment?',
       answer:
         "Yes. Adding a lash tint onto a Brow Tint & Shape appointment is $40 total, and it's one of my most popular quick appointments.",
     },
     {
-      question: 'Is lash or brow tinting safe for sensitive eyes?',
+      question:
+        'Is lash or brow tinting safe if I have sensitive eyes or skin?',
       answer:
         'I do a patch test for first-time clients to check for any reaction before your full appointment.',
     },
@@ -604,12 +608,12 @@ export const microbladingServiceData: ServiceData = {
         'Microblading typically lasts 1-2 years, depending on your skin type and how well you follow the aftercare instructions.',
     },
     {
-      question: 'Do I need a microblading touch-up?',
+      question: 'Do I need a touch-up after my first microblading appointment?',
       answer:
         "Yes. Your first touch-up should happen within 2 months of your initial appointment, so I can fill in any spots where pigment didn't fully retain.",
     },
     {
-      question: 'What is a colour boost?',
+      question: 'What is a microblading colour boost, and when do I need one?',
       answer:
         'A colour boost refreshes microblading that has started to fade, typically 9-18 months after your last appointment. It costs $170.',
     },
@@ -724,22 +728,23 @@ export const browTintWaxShapeData: ServiceData = {
         'Brow Tint & Shape is $25, and includes both the tint and the hot-wax shaping in one appointment.',
     },
     {
-      question: 'Can I get my brows tinted and waxed at the same appointment?',
+      question:
+        'Can I get my eyebrows tinted and waxed at the same appointment?',
       answer:
         'Yes. Tint and shape are booked together as one appointment, sometimes called a hybrid brow tint and shape.',
     },
     {
-      question: 'How long does eyebrow tint last?',
+      question: 'How long does an eyebrow tint last?',
       answer:
         'A brow tint typically lasts 3-6 weeks, depending on your skin type and how quickly your brow hair sheds and regrows.',
     },
     {
-      question: 'Does eyebrow tinting hurt?',
+      question: 'Does eyebrow tinting or hot-wax shaping hurt?',
       answer:
         'No. Tinting is painless. The shaping step involves brief, mild discomfort as the wax is removed, similar to any hot-wax hair removal.',
     },
     {
-      question: 'How often should I get my brows tinted and shaped?',
+      question: 'How often should I book eyebrow tinting and shaping?',
       answer:
         'Most clients rebook every 3-4 weeks to keep their shape clean, though this varies with how quickly your hair grows back.',
     },
@@ -836,14 +841,14 @@ export const powderBrowsServiceData: ServiceData = {
         'Powder brows are $300 for your first appointment. A touch-up is $125, bringing your total first year to $425.',
     },
     {
-      question: 'Does powder brows suit oily skin?',
+      question: 'Are powder brows a good choice for oily skin?',
       answer:
         'Yes. Powder brows tend to hold up well on oily and combination skin, where fine hair-stroke techniques can blur more quickly.',
     },
     {
-      question: 'How long do powder brows last?',
+      question: 'How long do powder brows last before they need a refresh?',
       answer:
-        'Results vary by skin type and aftercare. Ask me at your consultation for a more specific estimate.',
+        'Powder brows typically last 1-2 years, depending on your skin type and how well you follow the aftercare. Ask me at your consultation for a more specific estimate.',
     },
   ],
 }
@@ -989,17 +994,17 @@ export const salineRemovalServiceData: ServiceData = {
         'Saline tattoo and PMU removal is $125. Most clients need more than one session, so ask about your specific case at a free consultation.',
     },
     {
-      question: 'Do you offer laser tattoo removal?',
+      question: 'Does Brows on Point offer laser tattoo removal?',
       answer:
         'No. Brows on Point offers saline removal, which uses a saline solution rather than laser energy. If you specifically need laser removal, that would be a different provider.',
     },
     {
-      question: 'How many sessions does saline removal take?',
+      question: 'How many sessions of saline tattoo removal will I need?',
       answer:
         'It varies by how much pigment is in the skin. Most clients need more than one session, and I can give you a better estimate at your consultation.',
     },
     {
-      question: 'Is saline removal good for microblading removal?',
+      question: 'Can saline removal remove or lighten microblading?',
       answer:
         'Yes. Saline removal is a common choice for removing or lightening microblading, since it works gently on the fine strokes typical of that technique.',
     },
@@ -1118,7 +1123,7 @@ export const permanentEyelinerServiceData: ServiceData = {
     },
     {
       question:
-        "What's the difference between lash enhancement and full eyeliner?",
+        "What's the difference between permanent lash line enhancement and full top-and-bottom permanent eyeliner?",
       answer:
         'Lash enhancement is subtle: pigment fills the gaps between your lashes so the line barely shows on its own. A full top-and-bottom eyeliner tattoo is more visibly defined.',
     },
@@ -1250,12 +1255,12 @@ export const toothGemsServiceData: ServiceData = {
   ),
   faqs: [
     {
-      question: 'How much are tooth gems in Kelowna?',
+      question: 'How much does a Swarovski tooth gem cost in Kelowna?',
       answer:
         'A single Swarovski tooth gem is $40. Ask about multi-gem pricing at your appointment.',
     },
     {
-      question: 'Do tooth gems damage your teeth?',
+      question: 'Do tooth gems damage your teeth or enamel?',
       answer:
         "No. I use a dental-grade adhesive that bonds to the tooth surface without drilling, and gems can be safely removed by a dental professional when you're ready.",
     },
@@ -1265,7 +1270,7 @@ export const toothGemsServiceData: ServiceData = {
         'With proper care, a tooth gem typically lasts 6-24 months before it needs replacing.',
     },
     {
-      question: 'Can I get more than one tooth gem?',
+      question: 'Can I get more than one tooth gem at the same appointment?',
       answer:
         'Yes. Many clients choose two or more. Ask about multi-gem pricing at your appointment.',
     },
@@ -1387,17 +1392,18 @@ export const teethWhiteningServiceData: ServiceData = {
         'Basic whitening is $99 for two 20-minute sessions. Ultra is $145 for three sessions. 24k gold whitening, recommended for sensitive teeth, is also $99.',
     },
     {
-      question: 'Do you offer teeth whitening in West Kelowna?',
+      question: 'Where does Brows on Point offer teeth whitening?',
       answer:
         'Yes. Brows on Point is based in West Kelowna and offers professional, in-office teeth whitening by appointment.',
     },
     {
-      question: 'How long does teeth whitening last?',
+      question: 'How long do professional teeth whitening results last?',
       answer:
         'Results typically last up to 6 months, depending on your diet and oral hygiene habits afterward.',
     },
     {
-      question: 'Is in-office whitening better than at-home strips?',
+      question:
+        'Is in-office teeth whitening better than at-home whitening strips?',
       answer:
         'In-office whitening uses a stronger professional gel with an LED light, so results are visible after one appointment rather than weeks of at-home use.',
     },
@@ -1470,12 +1476,14 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
   contraindications: teethWhiteningContraindications,
   faqs: [
     {
-      question: 'Is 24k gold whitening really better for sensitive teeth?',
+      question:
+        'Is 24k gold teeth whitening really better for sensitive teeth?',
       answer:
         "It's formulated to be gentler than my standard whitening options, which is why I recommend it for clients who know they have sensitive teeth.",
     },
     {
-      question: 'How much does sensitive teeth whitening cost?',
+      question:
+        'How much does 24k gold teeth whitening for sensitive teeth cost?',
       answer: '24k gold whitening is $99, the same price as Basic whitening.',
     },
   ],
@@ -1592,12 +1600,13 @@ export const rfSkinTighteningData: ServiceData = {
   ),
   faqs: [
     {
-      question: 'How much does skin tightening cost in Kelowna?',
+      question: 'How much does RF skin tightening cost in Kelowna?',
       answer:
         'A single RF neck/facial skin tightening session is $75. A 3-session package is $175.',
     },
     {
-      question: 'What is a 40k ultrasonic machine?',
+      question:
+        'What is the 40k ultrasonic machine used for RF skin tightening?',
       answer:
         "It's a facial device that combines radiofrequency (RF) energy with 40kHz ultrasonic vibration to tighten skin, boost collagen, and deeply exfoliate in a single treatment.",
     },
@@ -1607,12 +1616,12 @@ export const rfSkinTighteningData: ServiceData = {
         'No, most clients describe a warm, relaxing sensation during treatment with no discomfort.',
     },
     {
-      question: 'How many skin tightening sessions will I need?',
+      question: 'How many RF skin tightening sessions will I need?',
       answer:
         "Results build over a course of treatments. I'll recommend a personalized plan during your consultation based on your skin goals.",
     },
     {
-      question: 'Is there any downtime after skin tightening?',
+      question: 'Is there any downtime after RF skin tightening?',
       answer:
         'None. You can return to your normal routine immediately after treatment.',
     },

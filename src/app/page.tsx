@@ -39,14 +39,14 @@ const generalFAQs = [
       'Yes. Every procedure follows strict public health guidelines, with single-use sterile needles and supplies and thorough sanitation between every client.',
   },
   {
-    question: "What's the age requirement?",
+    question: 'What is the minimum age for services at Brows on Point?',
     answer:
       'All clients must be 18 years or older and present valid ID at their appointment.',
   },
   {
     question: 'Do lash, brow, and permanent makeup treatments hurt?',
     answer:
-      "It depends on the treatment. Needle-based services like permanent makeup use a topical anesthetic for comfort, while lash lifts, tinting, and teeth whitening are generally pain-free.",
+      'It depends on the treatment. Needle-based services like permanent makeup use a topical anesthetic for comfort, while lash lifts, tinting, and teeth whitening are generally pain-free.',
   },
   {
     question: 'Does Brows on Point provide aftercare instructions?',
