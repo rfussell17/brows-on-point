@@ -42,6 +42,7 @@ export default function BrowsHubPage() {
           description:
             'Semi-permanent tint and precise hot-wax shaping together, $25.',
           href: '/brows/brow-tint-and-shape',
+          image: '/services/brows/brows-tint-and-shape-closeup-01.jpg',
         },
         {
           title: 'Microblading',
