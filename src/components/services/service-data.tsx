@@ -839,7 +839,6 @@ export const salineRemovalServiceData: ServiceData = {
     "Saline removal draws unwanted permanent makeup or a small tattoo out of the skin using a saline solution, rather than breaking it down with a laser. Brows on Point offers saline eyebrow tattoo and microblading removal. I don't offer laser removal, but I'm happy to explain how saline compares if you're deciding between the two.",
   galleryImages: [
     '/services/permanent-makeup/permanent-makeup-removal-saline-before-after-02.jpg',
-    '/services/permanent-makeup/permanent-makeup-removal-microblade-before-after-01.jpg',
   ],
   thumbnail: '/services/permanent-makeup/permanent-makeup-removal-saline-before-after-01.jpg',
   duration: '90 minutes',
@@ -998,7 +997,6 @@ export const permanentEyelinerServiceData: ServiceData = {
     'Brows on Point offers a subtle upper lash line enhancement, a lower eyeliner tattoo, or top and bottom together for a more defined look.',
   galleryImages: [
     '/services/permanent-makeup/permanent-makeup-eyeliner-before-after-01.jpg',
-    '/services/permanent-makeup/permanent-makeup-eyeliner-before-after-02.jpg',
   ],
   thumbnail: '/services/permanent-makeup/permanent-makeup-eyeliner-closeup-01.jpg',
   duration: '1.5-2 hours',

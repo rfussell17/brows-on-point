@@ -119,25 +119,43 @@ export default function ServiceHome({
             </div>
           </div>
           <div className="sm:px-6 lg:px-0">
-            <div className="grid grid-cols-2 gap-1 overflow-hidden rounded-2xl bg-light shadow-xl">
-              {Array.from({ length: 4 }).map((_, i) =>
-                images[i] ? (
-                  <div
-                    key={i}
-                    className="relative aspect-square w-full overflow-hidden"
-                  >
-                    <Image
-                      fill
-                      src={images[i]}
-                      alt={title}
-                      className="object-cover"
+            {images.length > 0 && images.length < 4 ? (
+              // Fewer than four usable photos: show one large image instead of
+              // a grid padded out with placeholders.
+              <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-light shadow-xl">
+                <Image
+                  fill
+                  priority
+                  src={images[0]}
+                  alt={title}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            ) : (
+              <div className="grid grid-cols-2 gap-1 overflow-hidden rounded-2xl bg-light shadow-xl">
+                {Array.from({ length: 4 }).map((_, i) =>
+                  images[i] ? (
+                    <div
+                      key={i}
+                      className="relative aspect-square w-full overflow-hidden"
+                    >
+                      <Image
+                        fill
+                        src={images[i]}
+                        alt={title}
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <ImagePlaceholder
+                      key={i}
+                      className="aspect-square w-full"
                     />
-                  </div>
-                ) : (
-                  <ImagePlaceholder key={i} className="aspect-square w-full" />
-                ),
-              )}
-            </div>
+                  ),
+                )}
+              </div>
+            )}
 
             {galleryCaption && (
               <p className="mt-3 text-center text-body text-light/50">
