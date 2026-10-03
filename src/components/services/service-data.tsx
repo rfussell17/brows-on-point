@@ -142,10 +142,10 @@ export const lashServiceData: ServiceData = {
   description:
     'A lash lift and tint lifts and darkens your natural lashes from root to tip, for a wide-awake look with no extensions and no daily curling. At Brows on Point, you can choose from three techniques: Keratin, BOMB, and Korean, depending on the curl and finish you want.',
   galleryImages: [
-    '/services/bomb-lift-and-tint_brows-on-point.jpg',
-    '/services/bomb-lift-and-tint-2_brows-on-point.jpg',
-    '/services/keratine-lash-lift_brows-on-point.jpg',
-    '/services/lash-lift-and-tint_brows-on-point.jpg',
+    '/services/lashes/lashes-lift-bomb-before-after-01.jpg',
+    '/services/lashes/lashes-lift-keratin-before-after-01.jpg',
+    '/services/lashes/lashes-lift-bomb-before-after-02.jpg',
+    '/services/lashes/lashes-lift-keratin-before-after-02.jpg',
   ],
   duration: '45-60 minutes',
   results: '6-12 weeks',
@@ -153,7 +153,7 @@ export const lashServiceData: ServiceData = {
   testimonial: {
     component: TestimonialOne,
   },
-  thumbnail: '/services/lash-lift_brows-on-point.png',
+  thumbnail: '/services/lashes/lashes-lift-bomb-before-after-03.jpg',
   about: (
     <>
       A lash lift and tint (also called a lash perm or lash lamination) reshapes
@@ -502,10 +502,10 @@ export const microbladingServiceData: ServiceData = {
   description:
     'Microblading is a semi-permanent tattoo technique that draws individual, hair-like strokes into your brows, filling in sparse patches or reshaping a brow that over-tweezing left behind. Every microblading appointment starts with a full brow mapping session, so the shape is agreed before any pigment goes in.',
   galleryImages: [
-    '/services/microblade-1_brows-on-point.jpg',
-    '/services/microblade-2_brows-on-point.jpg',
-    '/services/microblade-3_brows-on-point.jpg',
-    '/services/microblade_brows-on-point.jpg',
+    '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
+    '/services/permanent-makeup/permanent-makeup-microblading-healed-01.jpg',
+    '/services/permanent-makeup/permanent-makeup-microblading-before-after-02.jpg',
+    '/services/permanent-makeup/permanent-makeup-microblading-before-after-03.jpg',
   ],
   duration: '2-2.5 hours',
   results: '1-2 years',
@@ -513,7 +513,7 @@ export const microbladingServiceData: ServiceData = {
   testimonial: {
     component: TestimonialTwo,
   },
-  thumbnail: '/services/microblade_brows-on-point.jpg',
+  thumbnail: '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
   about: (
     <>
       Here&apos;s what makes microblading different from other brow treatments:
@@ -636,12 +636,16 @@ export const browTintWaxShapeData: ServiceData = {
   title: 'Eyebrow Tint & Shape',
   description:
     'An eyebrow tint darkens and defines your natural brow hair with a semi-permanent dye, and hot-wax shaping cleans up the line at the same time, so your brows look fuller and more defined in one $25 appointment.',
+  galleryImages: [
+    '/services/brows/brows-tint-and-shape-closeup-01.jpg',
+  ],
   duration: '30 minutes',
   results: '3-6 weeks for tint, ongoing for shape',
   price: '$25',
   testimonial: {
     component: TestimonialMakeup,
   },
+  thumbnail: '/services/brows/brows-tint-and-shape-closeup-01.jpg',
   about: (
     <>
       Not every brow needs permanent makeup. If you&apos;re after something
@@ -732,10 +736,10 @@ export const powderBrowsServiceData: ServiceData = {
   description:
     'Powder brows use a shading technique to build up soft, filled-in colour across your whole brow, like brow makeup that never comes off. At Brows on Point, powder eyebrows are a good fit if you already fill your brows in daily and want that look without the routine.',
   galleryImages: [
-    '/services/powder-brow-healed_brows-on-point.jpg',
-    '/services/powder-brow-healed-2_brows-on-point.jpg',
-    '/services/powder-brow-outlining_brows-on-point.jpg',
-    '/services/powder-brow-touchup_brows-on-point.jpg',
+    '/services/permanent-makeup/permanent-makeup-powder-brows-before-after-01.jpg',
+    '/services/permanent-makeup/permanent-makeup-powder-brows-before-after-02.jpg',
+    '/services/permanent-makeup/permanent-makeup-powder-brows-before-after-03.jpg',
+    '/services/permanent-makeup/permanent-makeup-powder-brows-healed-01.jpg',
   ],
   duration: '2-2.5 hours',
   results: 'Varies by skin type — ask at your consultation',
@@ -743,7 +747,7 @@ export const powderBrowsServiceData: ServiceData = {
   testimonial: {
     component: TestimonialMakeup,
   },
-  thumbnail: '/services/powder-brow_brows-on-point.png',
+  thumbnail: '/services/permanent-makeup/permanent-makeup-powder-brows-before-after-01.jpg',
   about: (
     <>
       Where microblading draws individual hair strokes, powder brows (also
@@ -834,11 +838,12 @@ export const salineRemovalServiceData: ServiceData = {
   description:
     "Saline removal draws unwanted permanent makeup or a small tattoo out of the skin using a saline solution, rather than breaking it down with a laser. Brows on Point offers saline eyebrow tattoo and microblading removal. I don't offer laser removal, but I'm happy to explain how saline compares if you're deciding between the two.",
   galleryImages: [
-    '/services/saline-removal_brows-on-point.jpg',
-    '/services/mircoblade-removal_brows-on-point.jpg',
-    '/services/permanent-makeup-removal-1-session_brows-on-point.jpg',
+    '/services/permanent-makeup/permanent-makeup-removal-saline-before-after-01.jpg',
+    '/services/permanent-makeup/permanent-makeup-removal-microblade-before-after-01.jpg',
+    '/services/permanent-makeup/permanent-makeup-removal-saline-before-after-02.jpg',
+    '/services/permanent-makeup/permanent-makeup-removal-saline-procedure-01.jpg',
   ],
-  thumbnail: '/services/saline-removal_brows-on-point.jpg',
+  thumbnail: '/services/permanent-makeup/permanent-makeup-removal-saline-before-after-01.jpg',
   duration: '90 minutes',
   results: 'Often requires more than one session',
   price: '$125',
@@ -994,10 +999,12 @@ export const permanentEyelinerServiceData: ServiceData = {
   description:
     'Brows on Point offers a subtle upper lash line enhancement, a lower eyeliner tattoo, or top and bottom together for a more defined look.',
   galleryImages: [
-    '/services/permanent-eyeliner_brows-on-point.jpg',
-    '/services/lash-enhancement-eyeliner_brows-on-point.jpg',
+    '/services/permanent-makeup/permanent-makeup-eyeliner-closeup-01.jpg',
+    '/services/permanent-makeup/permanent-makeup-eyeliner-before-after-01.jpg',
+    '/services/permanent-makeup/permanent-makeup-eyeliner-before-after-02.jpg',
+    '/services/permanent-makeup/permanent-makeup-eyeliner-closeup-02.jpg',
   ],
-  thumbnail: '/services/permanent-eyeliner_brows-on-point.jpg',
+  thumbnail: '/services/permanent-makeup/permanent-makeup-eyeliner-closeup-01.jpg',
   duration: '1.5-2 hours',
   results: '2-3 years',
   price: '$199',
@@ -1119,15 +1126,15 @@ export const toothGemsServiceData: ServiceData = {
   description:
     'Tooth gems are a genuine Swarovski crystal applied directly to your tooth with dental-grade adhesive: no drilling, no damage to your enamel. At Brows on Point, a single tooth gem starts at $40, with options to add more or choose a shape like a butterfly tooth gem.',
   galleryImages: [
-    '/services/swarovski-crystal-tooth-gem-1_brows-on-point.jpg',
-    '/services/swarovski-crystal-tooth-gem-2_brows-on-point.png',
-    '/services/swarovski-crystal-tooth-gem-3_brows-on-point.jpg',
-    '/services/swarovski-crystal-tooth-gem-4_brows-on-point.jpg',
+    '/services/smile/smile-tooth-gem-closeup-01.jpg',
+    '/services/smile/smile-tooth-gem-closeup-02.jpg',
+    '/services/smile/smile-tooth-gem-closeup-03.jpg',
+    '/services/smile/smile-tooth-gem-closeup-04.png',
   ],
   duration: '15-20 minutes',
   results: '6-24 months',
   price: '$40',
-  thumbnail: '/services/swarovski-crystal-tooth-gem_brows-on-point.jpg',
+  thumbnail: '/services/smile/smile-tooth-gem-closeup-01.jpg',
   about: (
     <>
       A tooth gem, sometimes searched as a teeth gem, teeth jewel, or teeth
@@ -1261,8 +1268,13 @@ export const teethWhiteningServiceData: ServiceData = {
   title: 'Teeth Whitening',
   description:
     'Brows on Point offers professional, in-office teeth whitening with a Basic and an Ultra session length, plus a 24k gold option for sensitive teeth.',
-  galleryImages: ['/services/teeth-whitening_brows-on-point.jpg'],
-  thumbnail: '/services/teeth-whitening_brows-on-point.jpg',
+  galleryImages: [
+    '/services/smile/smile-teeth-whitening-basic-before-after-01.jpg',
+    '/services/smile/smile-teeth-whitening-ultra-before-after-01.jpg',
+    '/services/smile/smile-teeth-whitening-basic-before-after-02.jpg',
+    '/services/smile/smile-teeth-whitening-ultra-before-after-02.jpg',
+  ],
+  thumbnail: '/services/smile/smile-teeth-whitening-basic-before-after-01.jpg',
   duration: '40-60 minutes',
   results: 'Up to 6 months',
   price: '$99',

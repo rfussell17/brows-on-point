@@ -17,27 +17,27 @@ export const logos = [
   {
     name: 'Swarovski',
     alt: 'Swarovski logo',
-    src: '/logo-cloud/swarovski_logo.png',
+    src: '/partners/partners-swarovski-logo-01.png',
   },
   {
     name: 'Kwadron',
     alt: 'Kwadron logo',
-    src: '/logo-cloud/kwadron_white.png',
+    src: '/partners/partners-kwadron-logo-white-01.png',
   },
   {
     name: 'Brow Daddy',
     alt: 'Brow Daddy logo',
-    src: '/logo-cloud/brow_daddy.png',
+    src: '/partners/partners-brow-daddy-logo-01.png',
   },
   {
     name: 'Vertix',
     alt: 'Vertix logo',
-    src: '/logo-cloud/vertix.png',
+    src: '/partners/partners-vertix-logo-01.png',
   },
   {
     name: 'Inlei',
     alt: 'Inlei logo',
-    src: '/logo-cloud/inlei.png',
+    src: '/partners/partners-inlei-logo-01.png',
   },
 ]
 

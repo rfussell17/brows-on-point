@@ -41,7 +41,7 @@ const TestimonialMakeup: React.FC<TestimonialProps> = ({
           <div className="col-end-1 w-16 lg:row-span-4 lg:w-72">
             <Image
               alt="Carly M."
-              src="/testimonials/carly.png"
+              src="/testimonials/testimonials-carly-portrait-01.png"
               width={1000}
               height={1000}
               className="rounded-xl bg-gray-100"

@@ -74,7 +74,7 @@ export default function LashLiftHome({
             </div>
           </div>
           <Image
-            src="/services/bomb-lift-and-tint_brows-on-point.jpg"
+            src="/services/lashes/lashes-lift-keratin-before-after-01.jpg"
             alt="Lash lift and tint results"
             className="rounded-xl"
             width={800}

@@ -27,7 +27,7 @@ export default function SmileHubPage() {
           description:
             'Professional in-studio teeth whitening, with a 24k gold option for sensitive teeth.',
           href: '/smile/teeth-whitening',
-          image: '/services/teeth-whitening_brows-on-point.jpg',
+          image: '/services/smile/smile-teeth-whitening-basic-before-after-01.jpg',
         },
         {
           title: '24K Gold Whitening for Sensitive Teeth',
@@ -40,7 +40,7 @@ export default function SmileHubPage() {
           description:
             'Genuine Swarovski crystal tooth gems, professionally applied.',
           href: '/smile/tooth-gems',
-          image: '/services/swarovski-crystal-tooth-gem_brows-on-point.jpg',
+          image: '/services/smile/smile-tooth-gem-closeup-01.jpg',
         },
       ]}
     />

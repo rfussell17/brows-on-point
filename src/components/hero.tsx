@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({ bgVariant = 'light' }) => {
               <h1 className="sr-only">Brows on Point</h1>
               {isDark ? (
                 <Image
-                  src="/logo_white.png"
+                  src="/brand/brand-logo-white-transparent-01.png"
                   alt="Brows on Point"
                   width={420}
                   height={180}
@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({ bgVariant = 'light' }) => {
                 />
               ) : (
                 <Image
-                  src="/logo_white_bg.png"
+                  src="/brand/brand-logo-black-transparent-01.png"
                   alt="Brows on Point"
                   width={420}
                   height={180}
@@ -82,7 +82,7 @@ const Hero: React.FC<HeroProps> = ({ bgVariant = 'light' }) => {
           alt=""
           width={1000}
           height={800}
-          src="/jamie_fussell_brows_on_point_3.jpg"
+          src="/about/about-jamie-working-02.jpg"
           className="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
           sizes="(min-width: 1024px) 50vw, 100vw"
         />

@@ -212,7 +212,7 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
         <div className="relative flex gap-6 py-3">
           <Link href="/" title="Home">
             <Image
-              src="/favicon.png"
+              src="/brand/brand-favicon-mark-01.png"
               alt="Brows on Point"
               width={38}
               height={38}

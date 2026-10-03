@@ -59,28 +59,28 @@ export default function PermanentMakeupPage() {
           description:
             'Natural, hair-stroke semi-permanent brows for sparse or over-tweezed eyebrows.',
           href: '/permanent-makeup/microblading',
-          image: '/services/microblade_brows-on-point.jpg',
+          image: '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
         },
         {
           title: 'Powder Brows',
           description:
             'A soft, filled-in powder finish that holds its shape day to day.',
           href: '/permanent-makeup/powder-brows',
-          image: '/services/powder-brow_brows-on-point.png',
+          image: '/services/permanent-makeup/permanent-makeup-powder-brows-before-after-01.jpg',
         },
         {
           title: 'Permanent Eyeliner',
           description:
             'Subtle lash line enhancement or a defined liner look that doesn’t smudge.',
           href: '/permanent-makeup/permanent-eyeliner',
-          image: '/services/permanent-eyeliner_brows-on-point.jpg',
+          image: '/services/permanent-makeup/permanent-makeup-eyeliner-closeup-01.jpg',
         },
         {
           title: 'Saline Tattoo & PMU Removal',
           description:
             'A gentler, saline-based alternative to laser removal for PMU or small tattoos.',
           href: '/permanent-makeup/saline-tattoo-removal',
-          image: '/services/saline-removal_brows-on-point.jpg',
+          image: '/services/permanent-makeup/permanent-makeup-removal-saline-before-after-01.jpg',
         },
       ]}
       faqs={faqs}

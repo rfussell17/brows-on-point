@@ -48,14 +48,14 @@ export default function BrowsHubPage() {
           description:
             'Natural, hair-stroke semi-permanent brows for sparse or over-tweezed eyebrows.',
           href: '/permanent-makeup/microblading',
-          image: '/services/microblade_brows-on-point.jpg',
+          image: '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
         },
         {
           title: 'Powder Brows',
           description:
             'A soft, filled-in powder finish that holds its shape day to day.',
           href: '/permanent-makeup/powder-brows',
-          image: '/services/powder-brow_brows-on-point.png',
+          image: '/services/permanent-makeup/permanent-makeup-powder-brows-before-after-01.jpg',
         },
       ]}
       faqs={faqs}

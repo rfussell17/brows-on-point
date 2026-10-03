@@ -34,7 +34,7 @@ const categories = [
       'From a quick tint and shape to semi-permanent results, my brow services are built around finding the shape that actually suits your face — not a one-size-fits-all template.',
     href: '/brows',
     highlights: ['Eyebrow Tint & Shape', 'Microblading', 'Powder Brows'],
-    image: '/services/microblade_brows-on-point.jpg',
+    image: '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
   },
   {
     title: 'Lashes',
@@ -46,7 +46,7 @@ const categories = [
       'Lash & Brow Tinting',
       'Lash Growth Serum',
     ],
-    image: '/services/lash-lift_brows-on-point.png',
+    image: '/services/lashes/lashes-lift-bomb-before-after-03.jpg',
   },
   {
     title: 'Permanent Makeup',
@@ -59,7 +59,7 @@ const categories = [
       'Permanent Eyeliner',
       'Saline PMU Removal',
     ],
-    image: '/services/permanent-eyeliner_brows-on-point.jpg',
+    image: '/services/permanent-makeup/permanent-makeup-eyeliner-closeup-01.jpg',
   },
   {
     title: 'Smile Services',
@@ -71,7 +71,7 @@ const categories = [
       'Sensitive-Teeth Whitening',
       'Swarovski Tooth Gems',
     ],
-    image: '/services/teeth-whitening_brows-on-point.jpg',
+    image: '/services/smile/smile-teeth-whitening-basic-before-after-01.jpg',
   },
   {
     title: 'Skin Tightening',

@@ -85,7 +85,7 @@ export function Footer() {
               <div className="lg:col-span-2">
                 <Link href="/" title="Home">
                   <Image
-                    src="/logo_white.png"
+                    src="/brand/brand-logo-white-transparent-01.png"
                     alt="Brows on Point"
                     width={160}
                     height={64}

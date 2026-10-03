@@ -78,28 +78,28 @@ const testimonials: Testimonial[] = [
     body: 'Jamie takes pride in her work and is an absolute perfectionist. If you are thinking of getting any services done by Jamie, think no more! This is the place to go!! She’s done my Keratin Lash Lift & Tint many times and I would not let anyone else touch my lashes - Jamie is AMAZING and I wish I could give more than a 5 star review!',
     author: {
       name: 'Karina B',
-      imageUrl: '/testimonials/karina.png',
+      imageUrl: '/testimonials/testimonials-karina-portrait-01.png',
     },
   },
   {
     body: 'Just got my keratin lash lift & tint from Jaimie for the 3rd time, she is AMAZING! I have also got teeth gems thru her, and i’m looking forward to getting microblading this fall! Thanks girl, HAPPY!',
     author: {
       name: 'Stephanie K',
-      imageUrl: '/testimonials/stephanie.png',
+      imageUrl: '/testimonials/testimonials-stephanie-portrait-01.png',
     },
   },
   {
     body: 'Jamie is my go-to for teeth whitening. She’s so sweet and it’s always a fun, relaxing visit. I love how white she can get my teeth! 5 stars all the way!',
     author: {
       name: 'Rain P',
-      imageUrl: '/testimonials/rain.png',
+      imageUrl: '/testimonials/testimonials-rain-portrait-01.png',
     },
   },
   {
     body: 'Jamie does amazing work, and is absolutely wonderful. She is definitely a perfectionist who takes great pride in all of her services. Her studio is very welcoming, clean and comfortable. She has very reasonable prices, and the great quality. I would totally recommend her to anyone!',
     author: {
       name: 'Carly M',
-      imageUrl: '/testimonials/carly.png',
+      imageUrl: '/testimonials/testimonials-carly-portrait-01.png',
     },
   },
   // Add more testimonials here...

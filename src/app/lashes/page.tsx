@@ -42,7 +42,7 @@ export default function LashesHubPage() {
           description:
             'Keratin, BOMB, or Korean lash lift and tint: lifted, darker lashes with no extensions.',
           href: '/lashes/lash-lift-and-tint',
-          image: '/services/lash-lift_brows-on-point.png',
+          image: '/services/lashes/lashes-lift-bomb-before-after-03.jpg',
         },
         {
           title: 'Lash & Brow Tinting',

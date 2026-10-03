@@ -186,7 +186,7 @@ export function LocalBusinessJsonLd() {
     '@type': ['BeautySalon', 'HealthAndBeautyBusiness'],
     name: 'Brows on Point',
     url: SITE_URL,
-    image: `${SITE_URL}/jamie_brows_on_point.png`,
+    image: `${SITE_URL}/about/about-jamie-working-03.png`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: '3344 Sundance Drive',

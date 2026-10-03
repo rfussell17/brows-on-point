@@ -42,7 +42,7 @@ const TestimonialOne: React.FC<TestimonialProps> = ({
           <div className="col-end-1 w-16 lg:row-span-4 lg:w-72">
             <Image
               alt="Karina"
-              src="/testimonials/karina.png"
+              src="/testimonials/testimonials-karina-portrait-01.png"
               width={576}
               height={576}
               className="rounded-xl bg-gray-100"
