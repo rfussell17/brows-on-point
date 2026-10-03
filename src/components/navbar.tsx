@@ -17,6 +17,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/solid'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import { Link } from './link'
 
 /**
@@ -76,42 +77,58 @@ const links = [
   { href: ACUITY_URL, label: 'Reserve Appointment' },
 ]
 
+const servicesButtonClass =
+  'flex items-center px-4 py-3 text-base font-medium text-light data-[hover]:bg-black/[2.5%]'
+
 function DesktopNav() {
+  // The Services dropdown is a client-only Popover, so its button does nothing
+  // until the page hydrates. Until then, render a plain link to /services with
+  // identical styling so an early click still works, then swap in the Popover.
+  const [hydrated, setHydrated] = useState(false)
+  useEffect(() => setHydrated(true), [])
+
   return (
     <nav className="relative hidden text-light lg:flex">
       <div className="relative flex">
-        <Popover className="relative">
-          <PopoverButton className="flex items-center px-4 py-3 text-base font-medium text-light data-[hover]:bg-black/[2.5%]">
+        {!hydrated ? (
+          <Link href="/services" className={servicesButtonClass}>
             Services
             <ChevronDownIcon className="ml-1 h-4 w-4" />
-          </PopoverButton>
-          <PopoverPanel
-            transition
-            anchor="bottom start"
-            className="z-50 mt-2 w-72 rounded-xl bg-primary-800 p-2 shadow-lg ring-1 ring-secondary-700 transition duration-150 ease-out data-[closed]:translate-y-1 data-[closed]:opacity-0"
-          >
-            {serviceCategories.map((category) => (
-              <NavLink
-                key={category.href}
-                href={category.href}
-                className="block rounded-lg px-3 py-2 hover:bg-primary-700"
-              >
-                <div className="text-base font-semibold text-light">
-                  {category.label}
-                </div>
-                <div className="text-xs text-light/60">
-                  {category.description}
-                </div>
-              </NavLink>
-            ))}
-            <NavLink
-              href="/services"
-              className="mt-1 block rounded-lg border-t border-secondary-700 px-3 pt-3 text-base font-semibold text-secondary-300 hover:bg-primary-700"
+          </Link>
+        ) : (
+          <Popover className="relative">
+            <PopoverButton className={servicesButtonClass}>
+              Services
+              <ChevronDownIcon className="ml-1 h-4 w-4" />
+            </PopoverButton>
+            <PopoverPanel
+              transition
+              anchor="bottom start"
+              className="z-50 mt-2 w-72 rounded-xl bg-primary-800 p-2 shadow-lg ring-1 ring-secondary-700 transition duration-150 ease-out data-[closed]:translate-y-1 data-[closed]:opacity-0"
             >
-              All Services
-            </NavLink>
-          </PopoverPanel>
-        </Popover>
+              {serviceCategories.map((category) => (
+                <NavLink
+                  key={category.href}
+                  href={category.href}
+                  className="block rounded-lg px-3 py-2 hover:bg-primary-700"
+                >
+                  <div className="text-base font-semibold text-light">
+                    {category.label}
+                  </div>
+                  <div className="text-xs text-light/60">
+                    {category.description}
+                  </div>
+                </NavLink>
+              ))}
+              <NavLink
+                href="/services"
+                className="mt-1 block rounded-lg border-t border-secondary-700 px-3 pt-3 text-base font-semibold text-secondary-300 hover:bg-primary-700"
+              >
+                All Services
+              </NavLink>
+            </PopoverPanel>
+          </Popover>
+        )}
       </div>
       <div className="relative flex">
         <Link
