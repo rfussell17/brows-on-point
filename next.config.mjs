@@ -23,6 +23,10 @@ const nextConfig = {
       // indexed-pages export).
       { source: '/about-4', destination: '/about', permanent: true },
       { source: '/testimonials', destination: '/', permanent: true },
+      { source: '/about-1', destination: '/about', permanent: true },
+      { source: '/about-2', destination: '/about', permanent: true },
+      { source: '/about-3', destination: '/about', permanent: true },
+      { source: '/gallery', destination: '/services', permanent: true },
       // /services is left alone pending traffic data — see BUILD-BRIEF.md §4.1.
     ]
   },
