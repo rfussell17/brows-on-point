@@ -83,6 +83,18 @@ Source: organic keywords, content gap (561 keywords, 9 domains), competing domai
 
 **Skip:** lip blushing (400), brow threading (700+), lash extensions (1,000+): she doesn't offer them. Cover extensions and threading only as comparison posts.
 
+## What Search Console shows (old site, May 2025 to Oct 2026)
+
+- 1,592 clicks and about 69k impressions from Canada. Roughly 130 to 150 clicks a month in 2026, about three times Ahrefs' estimate. 81% of clicks come from mobile (1,282 mobile vs 285 desktop).
+- Almost all clicks go to the homepage (1,580). Others: /services 21, /testimonials 10, /about-4 and /about about 1 to 2 each despite about 1,100 impressions each.
+- Of the clicks attributed to queries, 213 are brand and 538 non-brand.
+- Biggest non-brand topic by clicks is **eyebrow threading**: 94 clicks, 6,018 impressions (e.g. "eyebrow threading west kelowna" 36 clicks at position 4.5, "eyebrow threading near me" 24 clicks). The new site never mentions threading. Confirm with Jamie whether she offers it before launch.
+- Brow tint and wax queries: 192 clicks, 19,375 impressions. Lash lift and tint: 117 clicks, 8,204 impressions. Microblading: 59 clicks, 7,103 impressions. Permanent makeup: 34 clicks, 6,983 impressions.
+- Impressions without clicks (page 1 but wrong page or snippet): "brow tinting kelowna" 1,077 impressions at 6.2, "eyebrow shaping kelowna" 862 at 5.1, "eyebrow tinting kelowna" 842 at 3.6, "eyebrow services kelowna" 586 at 4.7. These need dedicated pages with the exact phrasing in the title and H1.
+- Cost queries ("microblading cost", "permanent eyebrows cost") total 441 impressions and 0 clicks. A pricing section or cost post would win them.
+- West Kelowna phrases convert well (95 clicks on 1,678 impressions).
+- Impressions fell from 5,906 in August to 3,338 in September 2026 while clicks held at 131.
+
 ## Links
 
 Of 766 referring domains, 727 are spam. About seven are real: Birdeye (DR 86, the only quality dofollow), Fresha (DR 91, nofollow), ProfileCanada, PlaceProfile, OkanaganGo, Okanagan INK, TattooReg. Both the www and non-www hosts of the old domain have links, so both must 301 to the new canonical host.
