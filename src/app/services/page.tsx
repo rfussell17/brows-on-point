@@ -17,9 +17,9 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'All Services',
+  title: 'All Services in Kelowna',
   description:
-    'Explore all beauty services at Brows on Point: lash lifts, brow enhancements, permanent makeup, and teeth whitening in West Kelowna.',
+    'Explore all services at Brows on Point in West Kelowna: lash lifts, brow tinting, permanent makeup, teeth whitening and more for Kelowna clients. Book online.',
   robots: {
     index: false,
     follow: false,
@@ -33,7 +33,7 @@ const categories = [
     description:
       'From a quick tint and shape to semi-permanent results, my brow services are built around finding the shape that actually suits your face — not a one-size-fits-all template.',
     href: '/brows',
-    highlights: ['Eyebrow Tint & Shape', 'Microblading', 'Powder Brows'],
+    highlights: ['Eyebrow Tinting & Shaping', 'Microblading', 'Powder Brows'],
     image:
       '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
   },

@@ -4,12 +4,12 @@ import { ogMeta } from '@/lib/site'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Eyebrow Tint & Shape in West Kelowna',
+  title: 'Eyebrow Tinting & Shaping in Kelowna',
   description:
-    'Eyebrow tint and shape in West Kelowna, $25. Tinting and hot-wax shaping together in one appointment with Brows on Point. Book online today.',
+    'Eyebrow tinting and shaping in Kelowna for $25. Brow tint and hot-wax shaping in one appointment at Brows on Point in West Kelowna. Book online today.',
   openGraph: ogMeta(
     '/og/eyebrow-tint-and-shape-og_brows-on-point.jpg',
-    'Eyebrow Tint & Shape',
+    'Eyebrow Tinting & Shaping',
   ),
 }
 

@@ -19,7 +19,7 @@ import {
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
   description:
-    "West Kelowna's lash and brow bar for lash lifts, brow tinting, permanent makeup, teeth whitening, and tooth gems. Book your appointment online today.",
+    'Brows on Point is a West Kelowna studio serving Kelowna for brow tinting, lash lifts, microblading, powder brows, permanent makeup and teeth whitening.',
   robots: {
     index: false,
     follow: false,

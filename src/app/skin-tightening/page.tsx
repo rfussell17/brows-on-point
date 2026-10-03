@@ -4,9 +4,9 @@ import { ogMeta } from '@/lib/site'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Skin Tightening Treatment in West Kelowna',
+  title: 'Skin Tightening in Kelowna',
   description:
-    'RF skin tightening in West Kelowna at Brows on Point. A non-invasive treatment that firms skin and boosts collagen. Book your appointment online today.',
+    'RF skin tightening in Kelowna at Brows on Point in West Kelowna. A non-invasive treatment that firms skin and boosts collagen. Book your appointment today.',
   openGraph: ogMeta(
     '/og/skin-tightening-og_brows-on-point.jpg',
     'Skin Tightening Treatment',

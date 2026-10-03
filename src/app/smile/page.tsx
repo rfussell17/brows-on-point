@@ -3,9 +3,9 @@ import { ogMeta } from '@/lib/site'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Smile Services',
+  title: 'Smile Services in Kelowna',
   description:
-    'Teeth whitening and Swarovski tooth gems from Brows on Point in West Kelowna. Explore my smile services and book your appointment online.',
+    'Teeth whitening and Swarovski tooth gems in Kelowna at Brows on Point in West Kelowna. Explore my smile services and book your appointment online today.',
   openGraph: ogMeta('/og/smile-services-og_brows-on-point.jpg', 'Smile Services'),
 }
 

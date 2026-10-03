@@ -4,9 +4,9 @@ import { ogMeta } from '@/lib/site'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Eyebrow Tattoo & PMU Removal in West Kelowna',
+  title: 'Saline Tattoo & PMU Removal in Kelowna',
   description:
-    'Saline eyebrow tattoo and PMU removal in West Kelowna. Brows on Point offers a gentle saline alternative to laser removal. Book a consult today.',
+    'Saline tattoo and eyebrow PMU removal in Kelowna at Brows on Point, a gentle alternative to laser removal. Sessions from $125. Book your consult today.',
   openGraph: ogMeta(
     '/og/saline-tattoo-and-pmu-removal-og_brows-on-point.jpg',
     'Saline Tattoo & PMU Removal',

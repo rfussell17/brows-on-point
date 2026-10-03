@@ -29,6 +29,8 @@ interface HubPageProps {
   spokes: HubSpoke[]
   secondaryCta?: { text: string; href: string }
   faqs?: Array<{ question: string; answer: string }>
+  /** Optional H2 content blocks rendered after the spoke grid, for pages that need exact-phrase headings. */
+  sections?: Array<{ heading: string; content: ReactNode }>
 }
 
 export default function HubPage({
@@ -38,11 +40,16 @@ export default function HubPage({
   spokes,
   secondaryCta,
   faqs,
+  sections,
 }: HubPageProps) {
-  // The reviews/CTA/map banner needs to differ from whatever landed right
-  // before it — the spoke grid (always bg-primary-950) when there's no FAQ
-  // section, or the FAQ section (bg-primary) when there is one.
-  const reviewsBgVariant = faqs ? 'primary-950' : 'primary'
+  // Section backgrounds alternate down the page: spoke grid (primary-950),
+  // then optional text sections (primary), then optional FAQ (primary-950 after
+  // sections, primary otherwise), then the reviews/CTA/map banner, which must
+  // differ from whatever lands right before it.
+  const hasSections = Boolean(sections && sections.length > 0)
+  const faqBgVariant = hasSections ? 'primary-950' : 'primary'
+  const reviewsBgVariant =
+    Boolean(faqs) !== hasSections ? 'primary-950' : 'primary'
 
   return (
     <div>
@@ -93,7 +100,24 @@ export default function HubPage({
         </Container>
       </div>
 
-      {faqs && <FAQSection faqs={faqs} bgVariant="primary" />}
+      {hasSections && sections && (
+        <div className="bg-primary py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
+          <Container>
+            <div className="mx-auto max-w-3xl space-y-16">
+              {sections.map((section) => (
+                <div key={section.heading}>
+                  <h2 className="text-heading text-light">{section.heading}</h2>
+                  <div className="mt-6 space-y-4 text-body text-gray-100">
+                    {section.content}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </div>
+      )}
+
+      {faqs && <FAQSection faqs={faqs} bgVariant={faqBgVariant} />}
 
       <GoogleReviewsBanner
         rating={GOOGLE_RATING}

@@ -4,9 +4,9 @@ import { ogMeta } from '@/lib/site'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Eyelash Tinting in West Kelowna',
+  title: 'Lash & Brow Tinting in Kelowna',
   description:
-    'Eyelash and brow tinting in West Kelowna. Darker lashes and brows without daily mascara. Book your lash and brow tint with Brows on Point today.',
+    'Eyelash and brow tinting in Kelowna from $25 at Brows on Point in West Kelowna. Darker lashes and brows without daily mascara. Book your tint online today.',
   openGraph: ogMeta(
     '/og/lash-and-brow-tinting-og_brows-on-point.jpg',
     'Lash & Brow Tinting',

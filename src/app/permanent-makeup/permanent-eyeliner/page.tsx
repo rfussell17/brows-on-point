@@ -4,9 +4,9 @@ import { ogMeta } from '@/lib/site'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Permanent Eyeliner Near Me in West Kelowna',
+  title: 'Permanent Eyeliner in Kelowna',
   description:
-    'Permanent eyeliner in West Kelowna at Brows on Point: subtle lash line enhancement or a fully defined eyeliner tattoo. Book online today.',
+    'Permanent eyeliner in Kelowna at Brows on Point: subtle lash line enhancement or fully defined top and bottom liner. Prices from $120. Book online today.',
   openGraph: ogMeta(
     '/og/permanent-eyeliner-og_brows-on-point.jpg',
     'Permanent Eyeliner',

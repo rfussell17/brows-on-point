@@ -14,16 +14,16 @@ export const metadata: Metadata = {
   title: {
     template: '%s | Brows on Point',
     default:
-      'Brows on Point | Lash, Brow & Permanent Makeup Studio in West Kelowna',
+      'Brows on Point | Brows, Lashes & Permanent Makeup in Kelowna',
   },
   description:
-    "West Kelowna's lash and brow bar for lash lifts, brow tinting, permanent makeup, teeth whitening, and tooth gems. Book online today.",
+    'Brows on Point is a West Kelowna studio serving Kelowna for brow tinting, lash lifts, microblading, powder brows, permanent makeup and teeth whitening.',
   openGraph: {
     ...ogMeta('/og/brows-on-point-og.jpg', 'Brows on Point'),
     title:
-      'Brows on Point | Lash, Brow & Permanent Makeup Studio in West Kelowna',
+      'Brows on Point | Brows, Lashes & Permanent Makeup in Kelowna',
     description:
-      "West Kelowna's lash and brow bar for lash lifts, brow tinting, permanent makeup, teeth whitening, and tooth gems. Book online today.",
+      'Brows on Point is a West Kelowna studio serving Kelowna for brow tinting, lash lifts, microblading, powder brows, permanent makeup and teeth whitening.',
   },
   twitter: {
     card: 'summary_large_image',

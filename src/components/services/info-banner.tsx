@@ -35,9 +35,9 @@ const InfoBanner: React.FC<InfoBannerProps> = ({
               key={section.heading}
               className="rounded-lg bg-primary-800 p-6 ring-1 ring-secondary-700"
             >
-              <h3 className="text-lead font-semibold text-light">
+              <h2 className="text-lead font-semibold text-light [font-family:var(--font-roboto)]">
                 {section.heading}
-              </h3>
+              </h2>
               <div className="prose prose-invert mt-3 max-w-none text-light/80">
                 {section.content}
               </div>

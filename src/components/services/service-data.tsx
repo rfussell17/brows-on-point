@@ -261,7 +261,7 @@ export const lashServiceData: ServiceData = {
   ),
   faqs: [
     {
-      question: 'How much does a lash lift cost?',
+      question: 'How much does a lash lift cost in Kelowna?',
       answer:
         'It depends which lash lift you choose. My BOMB Lash Lift and Tint is $70, and my Keratin Lash Lift and Tint is $80. Ask about Korean Lash Lift and Tint pricing at your consultation.',
     },
@@ -469,7 +469,7 @@ export const lashAndBrowTintingServiceData: ServiceData = {
   ),
   faqs: [
     {
-      question: 'How much does an eyelash tint cost?',
+      question: 'How much does an eyelash tint cost in Kelowna?',
       answer:
         'Lash Tint Only is $25. Adding a lash tint onto a Brow Tint & Shape appointment is $40 total for both.',
     },
@@ -594,7 +594,7 @@ export const microbladingServiceData: ServiceData = {
   },
   faqs: [
     {
-      question: 'How much does microblading cost?',
+      question: 'How much does microblading cost in Kelowna?',
       answer:
         'Microblading is $275 for your first appointment, which includes brow mapping and the full procedure. A touch-up is $100, bringing your total first year to $375.',
     },
@@ -631,7 +631,7 @@ export const browTintWaxShapeData: ServiceData = {
   hubLink: { text: 'All Brow Services', href: '/brows' },
   shortDescription:
     'Eyebrow tint and shape: tinting and hot-wax shaping together in one appointment.',
-  title: 'Eyebrow Tint & Shape',
+  title: 'Eyebrow Tinting & Shaping',
   description:
     'An eyebrow tint darkens and defines your natural brow hair with a semi-permanent dye, and hot-wax shaping cleans up the line at the same time, so your brows look fuller and more defined in one $25 appointment.',
   galleryImages: ['/services/brows/brows-tint-and-shape-closeup-01.jpg'],
@@ -642,6 +642,30 @@ export const browTintWaxShapeData: ServiceData = {
     component: TestimonialMakeup,
   },
   thumbnail: '/services/brows/brows-tint-and-shape-closeup-01.jpg',
+  extraSections: [
+    {
+      heading: 'Brow Tinting in Kelowna',
+      content: (
+        <>
+          Brow tinting colours your natural brow hair with a semi-permanent dye,
+          so sparse or light brows look fuller and more defined. It is painless,
+          and a tint typically holds for 3-6 weeks. If this is your first tint
+          with me, I&apos;ll do a patch test first.
+        </>
+      ),
+    },
+    {
+      heading: 'Eyebrow Shaping in Kelowna',
+      content: (
+        <>
+          Eyebrow shaping uses precise hot-wax hair removal to clean up stray
+          hairs and define the line. Your shape is mapped to your face rather
+          than a generic arch, and most clients rebook every 3-4 weeks to keep
+          it clean. Tinting and shaping are booked together for $25.
+        </>
+      ),
+    },
+  ],
   about: (
     <>
       Not every brow needs permanent makeup. If you&apos;re after something
@@ -695,7 +719,7 @@ export const browTintWaxShapeData: ServiceData = {
   ),
   faqs: [
     {
-      question: 'How much does eyebrow tint and shape cost?',
+      question: 'How much does eyebrow tinting and shaping cost in Kelowna?',
       answer:
         'Brow Tint & Shape is $25, and includes both the tint and the hot-wax shaping in one appointment.',
     },
@@ -807,7 +831,7 @@ export const powderBrowsServiceData: ServiceData = {
   },
   faqs: [
     {
-      question: 'How much do powder brows cost?',
+      question: 'How much do powder brows cost in Kelowna?',
       answer:
         'Powder brows are $300 for your first appointment. A touch-up is $125, bringing your total first year to $425.',
     },
@@ -960,7 +984,7 @@ export const salineRemovalServiceData: ServiceData = {
   ],
   faqs: [
     {
-      question: 'How much does saline removal cost?',
+      question: 'How much does saline tattoo removal cost in Kelowna?',
       answer:
         'Saline tattoo and PMU removal is $125. Most clients need more than one session, so ask about your specific case at a free consultation.',
     },
@@ -1088,7 +1112,7 @@ export const permanentEyelinerServiceData: ServiceData = {
   policyNotice: pmuBookingFeeNotice,
   faqs: [
     {
-      question: 'How much does an eyeliner tattoo cost?',
+      question: 'How much does permanent eyeliner cost in Kelowna?',
       answer:
         'Upper lash line enhancement is $199, with a $135 touch-up. Lower eyeliner on its own is $120. Top and bottom together is $319, with a $180 touch-up.',
     },
@@ -1226,7 +1250,7 @@ export const toothGemsServiceData: ServiceData = {
   ),
   faqs: [
     {
-      question: 'How much are tooth gems?',
+      question: 'How much are tooth gems in Kelowna?',
       answer:
         'A single Swarovski tooth gem is $40. Ask about multi-gem pricing at your appointment.',
     },
@@ -1358,7 +1382,7 @@ export const teethWhiteningServiceData: ServiceData = {
   contraindications: teethWhiteningContraindications,
   faqs: [
     {
-      question: 'How much does teeth whitening cost?',
+      question: 'How much does teeth whitening cost in Kelowna?',
       answer:
         'Basic whitening is $99 for two 20-minute sessions. Ultra is $145 for three sessions. 24k gold whitening, recommended for sensitive teeth, is also $99.',
     },
@@ -1568,7 +1592,7 @@ export const rfSkinTighteningData: ServiceData = {
   ),
   faqs: [
     {
-      question: 'How much does skin tightening cost?',
+      question: 'How much does skin tightening cost in Kelowna?',
       answer:
         'A single RF neck/facial skin tightening session is $75. A 3-session package is $175.',
     },

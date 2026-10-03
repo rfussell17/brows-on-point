@@ -4,9 +4,9 @@ import { ogMeta } from '@/lib/site'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Powder Brows in West Kelowna',
+  title: 'Powder Brows in Kelowna',
   description:
-    'Powder brows in West Kelowna at Brows on Point. Soft, filled-in brows that hold their shape. Book your powder brow appointment online today.',
+    'Powder brows in Kelowna from $300 at Brows on Point in West Kelowna. Soft, filled-in brows that hold their shape. Book your powder brow appointment online.',
   openGraph: ogMeta('/og/powder-brows-og_brows-on-point.jpg', 'Powder Brows'),
 }
 
