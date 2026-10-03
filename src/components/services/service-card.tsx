@@ -27,14 +27,12 @@ export function ServiceCard({
       className="group flex flex-col overflow-hidden rounded-2xl bg-primary-800 ring-1 ring-secondary-700 transition-colors hover:bg-primary-700 hover:ring-secondary-500"
     >
       {image ? (
-        <div
-          className={`relative aspect-[4/3] w-full overflow-hidden ${image.startsWith('/partners/') ? 'bg-primary-900' : ''}`}
-        >
+        <div className="relative aspect-[4/3] w-full overflow-hidden">
           <Image
             fill
             src={image}
             alt={title}
-            className={`transition duration-300 group-hover:scale-[1.02] ${image.startsWith('/partners/') ? 'object-contain p-12' : 'object-cover'}`}
+            className="object-cover transition duration-300 group-hover:scale-[1.02]"
           />
         </div>
       ) : (

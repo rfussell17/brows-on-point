@@ -55,7 +55,6 @@ export default function LashesHubPage() {
           description:
             'A keratin lash growth serum and tinted mascara to support your natural lashes at home.',
           href: '/lashes/lash-growth-serum',
-          image: '/partners/partners-derol-logo-01.png',
         },
       ]}
       faqs={faqs}

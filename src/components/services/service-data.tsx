@@ -318,8 +318,6 @@ export const lashGrowthSerumServiceData: ServiceData = {
   title: 'Lash Growth Serum',
   description:
     "Brows on Point carries a keratin lash growth serum and a tinted lash serum/mascara to help condition your natural lashes between lash lift or tint appointments. It's a retail product, available in-studio: ask about it at your next appointment.",
-  galleryImages: ['/partners/partners-derol-logo-01.png'],
-  thumbnail: '/partners/partners-derol-logo-01.png',
   duration: 'Available at your appointment',
   results: 'With consistent daily use',
   price: 'Ask in-studio',
