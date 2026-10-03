@@ -40,14 +40,23 @@ module.exports = {
           css: {
             fontSize: '1.125rem',
             lineHeight: '1.6',
+            // Headings follow the site's type scale (script h2, sans h3) with
+            // fixed rem spacing: prose's default em margins explode at these sizes.
             h2: {
               fontSize: 'clamp(3rem, 2.793rem + 0.884vw, 3.5rem)',
+              fontWeight: '400',
               lineHeight: '1.05',
+              marginTop: '2.5rem',
+              marginBottom: '1rem',
             },
             h3: {
               fontSize: 'clamp(1.25rem, 1.198rem + 0.221vw, 1.375rem)',
+              fontWeight: '600',
               lineHeight: '1.4',
+              marginTop: '2rem',
+              marginBottom: '0.5rem',
             },
+            strong: { fontWeight: '600' },
           },
         },
       },

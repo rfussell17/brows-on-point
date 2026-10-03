@@ -75,7 +75,7 @@ export default function WhatIsMicrobladingPage() {
         what to expect at each stage, and who it suits.
       </p>
 
-      <h2 id="in-this-guide">In this guide</h2>
+      <h3 id="in-this-guide">In this guide</h3>
       <ul>
         <li>
           <a href="#what-is-microblading">What microblading is</a>
