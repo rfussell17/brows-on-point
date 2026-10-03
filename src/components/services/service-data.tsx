@@ -1,4 +1,3 @@
-import { ACUITY_URL } from '@/lib/site'
 import Link from 'next/link'
 import type { ComponentType, ReactNode } from 'react'
 import TestimonialMakeup from '../media/testimonial-makeup'
@@ -512,7 +511,8 @@ export const microbladingServiceData: ServiceData = {
   testimonial: {
     component: TestimonialTwo,
   },
-  thumbnail: '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
+  thumbnail:
+    '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
   about: (
     <>
       Here&apos;s what makes microblading different from other brow treatments:
@@ -634,9 +634,7 @@ export const browTintWaxShapeData: ServiceData = {
   title: 'Eyebrow Tint & Shape',
   description:
     'An eyebrow tint darkens and defines your natural brow hair with a semi-permanent dye, and hot-wax shaping cleans up the line at the same time, so your brows look fuller and more defined in one $25 appointment.',
-  galleryImages: [
-    '/services/brows/brows-tint-and-shape-closeup-01.jpg',
-  ],
+  galleryImages: ['/services/brows/brows-tint-and-shape-closeup-01.jpg'],
   duration: '30 minutes',
   results: '3-6 weeks for tint, ongoing for shape',
   price: '$25',
@@ -649,9 +647,9 @@ export const browTintWaxShapeData: ServiceData = {
       Not every brow needs permanent makeup. If you&apos;re after something
       lower-commitment, Brow Tint &amp; Shape in West Kelowna covers eyebrow
       tinting, eyebrow waxing, and brow shaping, all in one $25 appointment.
-      Tint adds colour with a semi-permanent dye, and shape uses precise
-      hot-wax hair removal to clean up stray hairs and define the line, mapped
-      to your face rather than a generic arch.
+      Tint adds colour with a semi-permanent dye, and shape uses precise hot-wax
+      hair removal to clean up stray hairs and define the line, mapped to your
+      face rather than a generic arch.
     </>
   ),
   benefits: (
@@ -744,7 +742,8 @@ export const powderBrowsServiceData: ServiceData = {
   testimonial: {
     component: TestimonialMakeup,
   },
-  thumbnail: '/services/permanent-makeup/permanent-makeup-powder-brows-before-after-01.jpg',
+  thumbnail:
+    '/services/permanent-makeup/permanent-makeup-powder-brows-before-after-01.jpg',
   about: (
     <>
       Where microblading draws individual hair strokes, powder brows (also
@@ -836,7 +835,8 @@ export const salineRemovalServiceData: ServiceData = {
   galleryImages: [
     '/services/permanent-makeup/permanent-makeup-removal-saline-before-after-02.jpg',
   ],
-  thumbnail: '/services/permanent-makeup/permanent-makeup-removal-saline-before-after-01.jpg',
+  thumbnail:
+    '/services/permanent-makeup/permanent-makeup-removal-saline-before-after-01.jpg',
   duration: '90 minutes',
   results: 'Often requires more than one session',
   price: '$125',
@@ -993,7 +993,8 @@ export const permanentEyelinerServiceData: ServiceData = {
   galleryImages: [
     '/services/permanent-makeup/permanent-makeup-eyeliner-before-after-01.jpg',
   ],
-  thumbnail: '/services/permanent-makeup/permanent-makeup-eyeliner-closeup-01.jpg',
+  thumbnail:
+    '/services/permanent-makeup/permanent-makeup-eyeliner-closeup-01.jpg',
   duration: '1.5-2 hours',
   results: '2-3 years',
   price: '$199',
@@ -1117,7 +1118,7 @@ export const toothGemsServiceData: ServiceData = {
     '/services/smile/smile-tooth-gem-closeup-01.jpg',
     '/services/smile/smile-tooth-gem-closeup-02.jpg',
     '/services/smile/smile-tooth-gem-closeup-03.jpg',
-    '/services/smile/smile-tooth-gem-closeup-04.png',
+    '/services/smile/smile-tooth-gem-closeup-04.jpg',
   ],
   duration: '15-20 minutes',
   results: '6-24 months',
