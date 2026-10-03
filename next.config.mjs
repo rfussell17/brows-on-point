@@ -19,6 +19,10 @@ const nextConfig = {
         destination: '/skin-tightening',
         permanent: true,
       },
+      // Old-site pages Google still knows about (from the Search Console
+      // indexed-pages export).
+      { source: '/about-4', destination: '/about', permanent: true },
+      { source: '/testimonials', destination: '/', permanent: true },
       // /services is left alone pending traffic data — see BUILD-BRIEF.md §4.1.
     ]
   },

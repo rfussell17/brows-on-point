@@ -1,6 +1,6 @@
-// TODO: replace with the real production domain before launch. Not in the
-// questionnaire or repo anywhere — flagged in the Phase 0/1 report.
-export const SITE_URL = 'https://www.browsonpoint.com'
+// Production domain: the same one the pre-migration site used, so existing
+// rankings and backlinks carry over. Google indexed the www host.
+export const SITE_URL = 'https://www.browsonpointkelowna.com'
 
 export const ACUITY_URL = 'https://app.acuityscheduling.com/schedule/80157a74'
 
