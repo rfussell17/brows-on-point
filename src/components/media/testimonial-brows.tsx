@@ -24,7 +24,7 @@ const TestimonialBrows: React.FC<TestimonialProps> = ({
         <figure className="grid grid-cols-1 items-center gap-x-6 gap-y-8 lg:gap-x-10">
           {/* Testimonial Quote */}
           <div className="relative col-span-2 px-4 sm:px-6 lg:col-start-1 lg:row-start-2 lg:px-0">
-            <blockquote className="text-xl leading-8 text-light sm:text-2xl">
+            <blockquote className="text-quote text-light">
               <p>
                 “Since starting with powder brows (after having microblading
                 somewhere else) I can only give praise to Jamie for being an
@@ -44,8 +44,8 @@ const TestimonialBrows: React.FC<TestimonialProps> = ({
           {/* Profile Image */}
 
           {/* Figcaption */}
-          <figcaption className="text-lg lg:col-start-1 lg:row-start-3">
-            <div className="font-fancy text-3xl text-light">Y. Tobar</div>
+          <figcaption className="text-body lg:col-start-1 lg:row-start-3">
+            <div className="font-fancy text-accent text-light">Y. Tobar</div>
           </figcaption>
         </figure>
       </div>

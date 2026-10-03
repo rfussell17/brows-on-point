@@ -1,8 +1,8 @@
 import { Container } from '@/components/container'
 import FAQSection from '@/components/faq-section'
 import { Footer } from '@/components/footer'
-import { Link } from '@/components/link'
 import { BreadcrumbJsonLd } from '@/components/json-ld/breadcrumb'
+import { Link } from '@/components/link'
 import {
   ACUITY_URL,
   BOOKING_CTA,
@@ -55,19 +55,19 @@ export default function HubPage({
       <div className="bg-primary px-6 py-24 sm:py-32 lg:px-8">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-5xl text-light sm:text-7xl">{title}</h1>
-            <div className="mt-6 text-lg leading-8 text-gray-100">{intro}</div>
+            <h1 className="text-display text-light">{title}</h1>
+            <div className="mt-6 text-lead text-gray-100">{intro}</div>
             <div className="mt-8 flex items-center justify-center gap-x-4">
               <Link
                 href={ACUITY_URL}
-                className="inline-flex rounded-md bg-light px-4 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50"
+                className="inline-flex rounded-md bg-light px-4 py-2.5 text-body font-semibold text-primary shadow-sm hover:bg-primary-50"
               >
                 Book Now
               </Link>
               {secondaryCta && (
                 <Link
                   href={secondaryCta.href}
-                  className="inline-flex rounded-md border border-light px-4 py-2.5 text-base font-semibold text-light hover:bg-light/10"
+                  className="inline-flex rounded-md border border-light px-4 py-2.5 text-body font-semibold text-light hover:bg-light/10"
                 >
                   {secondaryCta.text}
                 </Link>

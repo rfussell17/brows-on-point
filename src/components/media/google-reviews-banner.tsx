@@ -1,5 +1,5 @@
-import { StarIcon } from '@heroicons/react/24/solid'
 import { BUSINESS_ADDRESS } from '@/lib/site'
+import { StarIcon } from '@heroicons/react/24/solid'
 import { Container } from '../container'
 import { Link } from '../link'
 
@@ -74,7 +74,7 @@ const GoogleReviewsBanner: React.FC<GoogleReviewsBannerProps> = ({
           >
             <div className="flex items-center gap-3">
               <GoogleLogo />
-              <h2 className={`text-5xl ${headingColor}`}>
+              <h2 className={`text-heading ${headingColor}`}>
                 {rating.toFixed(1)} out of 5
               </h2>
             </div>
@@ -89,14 +89,14 @@ const GoogleReviewsBanner: React.FC<GoogleReviewsBannerProps> = ({
                 />
               ))}
             </div>
-            <p className={`mt-4 text-base ${subColor}`}>
+            <p className={`mt-4 text-body ${subColor}`}>
               Based on {reviewCount} Google reviews
             </p>
             <Link
               href={reviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex rounded-md bg-light px-3.5 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50"
+              className="mt-6 inline-flex rounded-md bg-light px-3.5 py-2.5 text-body font-semibold text-primary shadow-sm hover:bg-primary-50"
             >
               Read Our Google Reviews
             </Link>
@@ -104,15 +104,13 @@ const GoogleReviewsBanner: React.FC<GoogleReviewsBannerProps> = ({
 
           {cta && (
             <div className="flex flex-col items-center text-center lg:col-span-3">
-              <h2 className={`text-5xl ${headingColor}`}>
-                {cta.title}
-              </h2>
-              <p className={`mx-auto mt-4 max-w-md text-base ${subColor}`}>
+              <h2 className={`text-heading ${headingColor}`}>{cta.title}</h2>
+              <p className={`mx-auto mt-4 max-w-md text-body ${subColor}`}>
                 {cta.subtitle}
               </p>
               <Link
                 href={cta.buttonHref}
-                className="mt-6 inline-block rounded-md bg-light px-5 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50"
+                className="mt-6 inline-block rounded-md bg-light px-5 py-2.5 text-body font-semibold text-primary shadow-sm hover:bg-primary-50"
               >
                 {cta.buttonText}
               </Link>

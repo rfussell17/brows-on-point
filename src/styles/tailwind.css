@@ -9,6 +9,13 @@ body {
   padding: 0;
 }
 
+/* Body step of the type scale (see tailwind.config.js). Anything without its
+   own text-* class inherits this. */
+body {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 h1,
 h2 {
   font-family: var(--font-hurricane), monospace;

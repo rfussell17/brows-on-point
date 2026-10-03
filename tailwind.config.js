@@ -6,7 +6,51 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    // The site's type scale: seven named steps, used everywhere instead of
+    // Tailwind's default text-xs..text-9xl. Sized up for a mature audience
+    // (nothing below 16px, body at 18px). The larger steps are fluid, so they
+    // scale smoothly between ~375px phones and ~1280px desktops.
+    fontSize: {
+      small: ['1rem', { lineHeight: '1.5rem' }], // labels, badges, footer, meta
+      body: ['1.125rem', { lineHeight: '1.75rem' }], // paragraphs, lists, nav, buttons
+      lead: [
+        'clamp(1.25rem, 1.198rem + 0.221vw, 1.375rem)',
+        { lineHeight: '1.7' },
+      ], // intro paragraphs, card & panel titles
+      quote: [
+        'clamp(1.5rem, 1.344rem + 0.663vw, 1.875rem)',
+        { lineHeight: '1.45' },
+      ], // testimonial quotes, blog subheads
+      accent: [
+        'clamp(2.25rem, 2.044rem + 0.884vw, 2.75rem)',
+        { lineHeight: '1.15' },
+      ], // reviewer names, stats, blog titles
+      heading: [
+        'clamp(3rem, 2.793rem + 0.884vw, 3.5rem)',
+        { lineHeight: '1' },
+      ], // section headings (script font)
+      display: [
+        'clamp(3.5rem, 2.878rem + 2.652vw, 5rem)',
+        { lineHeight: '1' },
+      ], // page titles (script font)
+    },
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            fontSize: '1.125rem',
+            lineHeight: '1.75',
+            h2: {
+              fontSize: 'clamp(1.5rem, 1.344rem + 0.663vw, 1.875rem)',
+              lineHeight: '1.3',
+            },
+            h3: {
+              fontSize: 'clamp(1.25rem, 1.198rem + 0.221vw, 1.375rem)',
+              lineHeight: '1.4',
+            },
+          },
+        },
+      },
       fontFamily: {
         fancy: ['var(--font-hurricane)', 'sans-serif'],
         sans: 'system-ui, sans-serif',

@@ -12,15 +12,15 @@ export function PagePending({ title, note }: { title: string; note?: string }) {
   return (
     <div className="bg-primary-light py-24 sm:py-32">
       <Container>
-        <h1 className="text-5xl text-primary sm:text-7xl">{title}</h1>
-        <p className="mt-6 max-w-2xl text-base leading-7 text-gray-600">
+        <h1 className="text-display text-primary">{title}</h1>
+        <p className="mt-6 max-w-2xl text-body text-gray-600">
           {note ??
             "This page's content is scheduled in the Phase 2 build order and hasn't been written yet."}
         </p>
         <div className="mt-8">
           <Link
             href={ACUITY_URL}
-            className="inline-flex rounded-md bg-primary px-3.5 py-2.5 text-base font-semibold text-light shadow-sm hover:opacity-90"
+            className="inline-flex rounded-md bg-primary px-3.5 py-2.5 text-body font-semibold text-light shadow-sm hover:opacity-90"
           >
             Book Now
           </Link>

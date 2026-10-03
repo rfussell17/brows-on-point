@@ -1,6 +1,6 @@
+import { BlogFilter } from '@/components/blog/blog-filter'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
-import { BlogFilter } from '@/components/blog/blog-filter'
 import { BreadcrumbJsonLd } from '@/components/json-ld/breadcrumb'
 import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
 import { getPosts } from '@/lib/blog'
@@ -37,10 +37,10 @@ export default function BlogPage() {
       <div className="bg-primary py-24 sm:py-32">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-5xl text-light sm:text-7xl">Blog</h1>
-            <p className="mt-8 text-lg leading-8 text-gray-100">
-              Aftercare tips, treatment comparisons, and answers to what
-              clients ask most, from the studio at Brows on Point.
+            <h1 className="text-display text-light">Blog</h1>
+            <p className="mt-8 text-lead text-gray-100">
+              Aftercare tips, treatment comparisons, and answers to what clients
+              ask most, from the studio at Brows on Point.
             </p>
           </div>
         </Container>
@@ -51,7 +51,7 @@ export default function BlogPage() {
           {posts.length > 0 ? (
             <BlogFilter posts={posts} categories={categories} />
           ) : (
-            <p className="text-center text-lg text-light/70">
+            <p className="text-center text-body text-light/70">
               No posts yet — check back soon.
             </p>
           )}

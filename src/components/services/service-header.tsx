@@ -1,9 +1,9 @@
+import { ACUITY_URL } from '@/lib/site'
 import {
   ClockIcon,
   CurrencyDollarIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline'
-import { ACUITY_URL } from '@/lib/site'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
@@ -62,28 +62,24 @@ export default function ServiceHome({
           <div className="lg:pr-4 lg:pt-4">
             <div className="lg:max-w-lg">
               {eyebrow && (
-                <span className="inline-block rounded-full bg-secondary-900 px-3 py-1 text-xs font-semibold tracking-wider text-secondary-200">
+                <span className="inline-block rounded-full bg-secondary-900 px-3 py-1 text-small font-semibold tracking-wider text-secondary-200">
                   {eyebrow}
                 </span>
               )}
-              <h1 className="mb-8 mt-2 text-5xl text-light sm:text-7xl">
-                {title}
-              </h1>
-              <p className="mt-6 text-base leading-7 text-gray-100">
-                {descriptionText}
-              </p>
+              <h1 className="mb-8 mt-2 text-display text-light">{title}</h1>
+              <p className="mt-6 text-body text-gray-100">{descriptionText}</p>
 
               <dl className="mt-8 grid grid-cols-3 gap-2 rounded-2xl bg-light p-6 shadow-sm">
                 {stats.map(({ key, label, icon: Icon }) => (
                   <div key={key}>
-                    <dt className="flex items-center gap-1.5 text-base font-semibold text-gray-500">
+                    <dt className="flex items-center gap-1.5 text-small font-semibold text-gray-500">
                       <Icon
                         className="h-4 w-4 text-secondary"
                         aria-hidden="true"
                       />
                       {label}
                     </dt>
-                    <dd className="mt-1 text-base font-semibold text-primary">
+                    <dd className="mt-1 text-body font-semibold text-primary">
                       {values[key]}
                     </dd>
                   </div>
@@ -93,14 +89,14 @@ export default function ServiceHome({
               <div className="mt-8 flex flex-wrap items-center gap-x-3.5 gap-y-3">
                 <Link
                   href={bookingUrl}
-                  className="inline-flex rounded-md bg-light px-3.5 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light"
+                  className="inline-flex rounded-md bg-light px-3.5 py-2.5 text-body font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light"
                 >
                   Reserve Appointment
                 </Link>
 
                 <Link
                   href={learnMoreUrl}
-                  className="text-base font-semibold text-light"
+                  className="text-body font-semibold text-light"
                 >
                   {learnMoreLabel} <span aria-hidden="true">→</span>
                 </Link>
@@ -108,10 +104,10 @@ export default function ServiceHome({
 
               {testimonial && (
                 <figure className="mt-16 border-l border-light/30 pl-8 text-gray-100">
-                  <blockquote className="text-lg leading-7">
+                  <blockquote className="text-lead">
                     <p>{testimonial.quote}</p>
                   </blockquote>
-                  <figcaption className="mt-6 flex gap-x-4 text-base">
+                  <figcaption className="mt-6 flex gap-x-4 text-body">
                     <div>
                       <span className="font-fancy text-light">
                         {testimonial.author}
@@ -126,7 +122,10 @@ export default function ServiceHome({
             <div className="grid grid-cols-2 gap-1 overflow-hidden rounded-2xl bg-light shadow-xl">
               {Array.from({ length: 4 }).map((_, i) =>
                 images[i] ? (
-                  <div key={i} className="relative aspect-square w-full overflow-hidden">
+                  <div
+                    key={i}
+                    className="relative aspect-square w-full overflow-hidden"
+                  >
                     <Image
                       fill
                       src={images[i]}
@@ -141,7 +140,7 @@ export default function ServiceHome({
             </div>
 
             {galleryCaption && (
-              <p className="mt-3 text-center text-base text-light/50">
+              <p className="mt-3 text-center text-body text-light/50">
                 {galleryCaption}
               </p>
             )}

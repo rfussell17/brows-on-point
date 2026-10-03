@@ -78,7 +78,7 @@ const links = [
 ]
 
 const servicesButtonClass =
-  'flex items-center px-4 py-3 text-base font-medium text-light data-[hover]:bg-black/[2.5%]'
+  'flex items-center px-4 py-3 text-body font-medium text-light data-[hover]:bg-black/[2.5%]'
 
 function DesktopNav() {
   // The Services dropdown is a client-only Popover, so its button does nothing
@@ -112,17 +112,17 @@ function DesktopNav() {
                   href={category.href}
                   className="block rounded-lg px-3 py-2 hover:bg-primary-700"
                 >
-                  <div className="text-base font-semibold text-light">
+                  <div className="text-body font-semibold text-light">
                     {category.label}
                   </div>
-                  <div className="text-xs text-light/60">
+                  <div className="text-small text-light/60">
                     {category.description}
                   </div>
                 </NavLink>
               ))}
               <NavLink
                 href="/services"
-                className="mt-1 block rounded-lg border-t border-secondary-700 px-3 pt-3 text-base font-semibold text-secondary-300 hover:bg-primary-700"
+                className="mt-1 block rounded-lg border-t border-secondary-700 px-3 pt-3 text-body font-semibold text-secondary-300 hover:bg-primary-700"
               >
                 All Services
               </NavLink>
@@ -133,7 +133,7 @@ function DesktopNav() {
       <div className="relative flex">
         <Link
           href="/about"
-          className="flex items-center px-4 py-3 text-base font-medium text-light data-[hover]:bg-black/[2.5%]"
+          className="flex items-center px-4 py-3 text-body font-medium text-light data-[hover]:bg-black/[2.5%]"
         >
           About
         </Link>
@@ -142,7 +142,7 @@ function DesktopNav() {
         <div key={href} className="relative flex">
           <Link
             href={href}
-            className="flex items-center px-4 py-3 text-base font-medium text-light data-[hover]:bg-black/[2.5%]"
+            className="flex items-center px-4 py-3 text-body font-medium text-light data-[hover]:bg-black/[2.5%]"
           >
             {label}
           </Link>
@@ -174,7 +174,7 @@ function MobileNav() {
     <DisclosurePanel className="bg-primary-950 lg:hidden">
       <div className="flex flex-col gap-6 py-4">
         <div className="px-6">
-          <div className="text-base font-semibold uppercase tracking-wider text-light/60">
+          <div className="text-body font-semibold uppercase tracking-wider text-light/60">
             Services
           </div>
           <div className="mt-2 flex flex-col gap-3">
@@ -182,14 +182,14 @@ function MobileNav() {
               <NavLink
                 key={category.href}
                 href={category.href}
-                className="text-base font-medium text-light"
+                className="text-body font-medium text-light"
               >
                 {category.label}
               </NavLink>
             ))}
             <NavLink
               href="/services"
-              className="text-base font-medium text-secondary-300"
+              className="text-body font-medium text-secondary-300"
             >
               All Services
             </NavLink>
@@ -198,7 +198,7 @@ function MobileNav() {
         <div className="transition-opacity duration-200">
           <NavLink
             href="/about"
-            className="px-6 text-base font-medium text-light"
+            className="px-6 text-body font-medium text-light"
           >
             About
           </NavLink>
@@ -207,7 +207,7 @@ function MobileNav() {
           <div key={href} className="transition-opacity duration-200">
             <NavLink
               href={href}
-              className="px-6 text-base font-medium text-light"
+              className="px-6 text-body font-medium text-light"
             >
               {label}
             </NavLink>

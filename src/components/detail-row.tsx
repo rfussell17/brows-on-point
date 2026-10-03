@@ -41,10 +41,10 @@ const DetailRow: React.FC<DetailRowProps> = ({ bgVariant = 'primary' }) => {
     <div className={`${bgClass} py-24 sm:py-32`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl lg:mx-0">
-          <h2 className="text-5xl text-light">
+          <h2 className="text-heading text-light">
             Feel Wonderful Inside and Out
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-100">
+          <p className="mt-6 text-lead text-gray-100">
             I offer a variety of beauty and self-care services at Brows on Point
             to help you look and feel your best. From enhancing your lashes and
             brows to expert permanent makeup techniques, there’s something for
@@ -55,16 +55,13 @@ const DetailRow: React.FC<DetailRowProps> = ({ bgVariant = 'primary' }) => {
           <dl className="grid max-w-xl grid-cols-1 gap-x-12 gap-y-16 lg:max-w-none lg:grid-cols-2">
             {services.map((service) => (
               <div key={service.name} className="flex flex-col">
-                <dt className="rounded-xl bg-primary-800 px-2 py-2 text-center text-base font-semibold leading-7 text-light ring-1 ring-secondary-700">
+                <dt className="rounded-xl bg-primary-800 px-2 py-2 text-center text-body font-semibold text-light ring-1 ring-secondary-700">
                   {service.name}
                 </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-100">
+                <dd className="mt-4 flex flex-auto flex-col text-body text-gray-100">
                   <p className="flex-auto">{service.description}</p>
                   <p className="mt-4">
-                    <Link
-                      href={service.href}
-                      className="text-base leading-6 text-light"
-                    >
+                    <Link href={service.href} className="text-body text-light">
                       <strong>View {service.name}</strong>
                       <span aria-hidden="true"> →</span>
                     </Link>

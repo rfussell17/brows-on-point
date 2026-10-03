@@ -58,9 +58,7 @@ const LogoGrid: React.FC<LogoGridProps> = ({
   return (
     <div className={`${bgClass} py-8 md:py-12 lg:py-20`}>
       <Container>
-        <h2 className={`text-center text-5xl ${headingColor}`}>
-          {title}
-        </h2>
+        <h2 className={`text-center text-heading ${headingColor}`}>{title}</h2>
         <div className="mt-8 grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-5">
           {logos.map((logo, index) => (
             <div

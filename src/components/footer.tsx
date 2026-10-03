@@ -5,14 +5,14 @@ import Image from 'next/image'
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="text-sm font-semibold uppercase tracking-wider text-light/70">
+    <h3 className="text-small font-semibold uppercase tracking-wider text-light/70">
       {children}
     </h3>
   )
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
-  return <ul className="mt-4 space-y-3 text-sm">{children}</ul>
+  return <ul className="mt-4 space-y-3 text-small">{children}</ul>
 }
 
 function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
@@ -52,9 +52,7 @@ function Sitemap() {
       <div>
         <SitemapHeading>Help</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href={ACUITY_URL}>
-            Book Appointment
-          </SitemapLink>
+          <SitemapLink href={ACUITY_URL}>Book Appointment</SitemapLink>
         </SitemapLinks>
       </div>
     </>
@@ -111,7 +109,7 @@ export function Footer() {
 
             {/* Copyright */}
             <div className="mt-10 border-t border-light/10 pt-8 text-center">
-              <p className="text-sm text-light/50">
+              <p className="text-small text-light/50">
                 &copy; {new Date().getFullYear()} Brows on Point. All rights
                 reserved.
               </p>

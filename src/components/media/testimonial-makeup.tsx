@@ -26,7 +26,7 @@ const TestimonialMakeup: React.FC<TestimonialProps> = ({
         <figure className="grid grid-cols-1 items-center gap-x-6 gap-y-8 lg:gap-x-10">
           {/* Testimonial Quote */}
           <div className="relative col-span-2 px-4 sm:px-6 lg:col-start-1 lg:row-start-2 lg:px-0">
-            <blockquote className="text-xl leading-8 text-light sm:text-2xl">
+            <blockquote className="text-quote text-light">
               <p>
                 “Jamie does amazing work, and is absolutely wonderful. She is
                 definitely a perfectionist who takes great pride in all of her
@@ -50,8 +50,8 @@ const TestimonialMakeup: React.FC<TestimonialProps> = ({
           </div>
 
           {/* Figcaption */}
-          <figcaption className="text-lg lg:col-start-1 lg:row-start-3">
-            <div className="font-fancy text-3xl text-light">Carly M.</div>
+          <figcaption className="text-body lg:col-start-1 lg:row-start-3">
+            <div className="font-fancy text-accent text-light">Carly M.</div>
           </figcaption>
         </figure>
       </div>

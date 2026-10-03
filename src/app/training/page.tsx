@@ -1,8 +1,8 @@
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
-import { Link } from '@/components/link'
 import { BreadcrumbJsonLd } from '@/components/json-ld/breadcrumb'
 import { CourseJsonLd } from '@/components/json-ld/course'
+import { Link } from '@/components/link'
 import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
 import {
   ACUITY_URL,
@@ -52,10 +52,10 @@ export default function TrainingPage() {
       <div className="bg-primary px-6 py-24 sm:py-32 lg:px-8">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-5xl text-light sm:text-7xl">
+            <h1 className="text-display text-light">
               Lash Lift & Teeth Whitening Training
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-100">
+            <p className="mt-6 text-lead text-gray-100">
               Brows on Point offers hands-on training in two techniques: lash
               lift, and teeth whitening. I don&apos;t offer permanent makeup
               training.
@@ -72,13 +72,13 @@ export default function TrainingPage() {
                 key={course.name}
                 className="rounded-2xl bg-primary-800 p-8 ring-1 ring-secondary-700"
               >
-                <h2 className="text-lg font-semibold text-light">
+                <h2 className="text-lead font-semibold text-light">
                   {course.name}
                 </h2>
-                <div className="mt-2 text-lg font-semibold text-light">
+                <div className="mt-2 text-lead font-semibold text-light">
                   {course.price}
                 </div>
-                <p className="mt-4 text-base leading-6 text-light/70">
+                <p className="mt-4 text-body text-light/70">
                   {course.description}
                 </p>
               </div>
@@ -86,8 +86,8 @@ export default function TrainingPage() {
           </div>
 
           <div className="mx-auto mt-16 max-w-2xl">
-            <h2 className="text-lg font-semibold text-light">Your Trainer</h2>
-            <div className="mt-4 text-base leading-7 text-gray-100">
+            <h2 className="text-lead font-semibold text-light">Your Trainer</h2>
+            <div className="mt-4 text-body text-gray-100">
               <ul className="list-disc space-y-2 pl-6">
                 <li>Microblading Training Program</li>
                 <li>Advanced Microblading Training Program</li>
@@ -106,7 +106,7 @@ export default function TrainingPage() {
           <div className="mx-auto mt-12 max-w-2xl text-center">
             <Link
               href={ACUITY_URL}
-              className="inline-flex rounded-md bg-light px-4 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50"
+              className="inline-flex rounded-md bg-light px-4 py-2.5 text-body font-semibold text-primary shadow-sm hover:bg-primary-50"
             >
               Book a Training Course
             </Link>

@@ -15,7 +15,12 @@ export interface ServiceCardItem {
  * one visual system. Falls back to <ImagePlaceholder/> for services without a
  * real photo yet.
  */
-export function ServiceCard({ title, description, href, image }: ServiceCardItem) {
+export function ServiceCard({
+  title,
+  description,
+  href,
+  image,
+}: ServiceCardItem) {
   return (
     <Link
       href={href}
@@ -34,9 +39,9 @@ export function ServiceCard({ title, description, href, image }: ServiceCardItem
         <ImagePlaceholder className="aspect-[4/3] w-full" />
       )}
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="text-lg font-semibold text-light">{title}</h3>
-        <p className="mt-2 text-base leading-6 text-light/70">{description}</p>
-        <span className="mt-4 inline-flex items-center gap-1 text-base font-semibold text-secondary-300">
+        <h3 className="text-lead font-semibold text-light">{title}</h3>
+        <p className="mt-2 text-body text-light/70">{description}</p>
+        <span className="mt-4 inline-flex items-center gap-1 text-body font-semibold text-secondary-300">
           Explore
           <span
             aria-hidden="true"

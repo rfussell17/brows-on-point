@@ -1,9 +1,9 @@
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
+import { BreadcrumbJsonLd } from '@/components/json-ld/breadcrumb'
 import { Link } from '@/components/link'
 import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
 import TestimonialMakeup from '@/components/media/testimonial-makeup'
-import { BreadcrumbJsonLd } from '@/components/json-ld/breadcrumb'
 import { ImagePlaceholder } from '@/components/services/image-placeholder'
 import {
   BOOKING_CTA,
@@ -34,7 +34,8 @@ const categories = [
       'From a quick tint and shape to semi-permanent results, my brow services are built around finding the shape that actually suits your face — not a one-size-fits-all template.',
     href: '/brows',
     highlights: ['Eyebrow Tint & Shape', 'Microblading', 'Powder Brows'],
-    image: '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
+    image:
+      '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
   },
   {
     title: 'Lashes',
@@ -59,7 +60,8 @@ const categories = [
       'Permanent Eyeliner',
       'Saline PMU Removal',
     ],
-    image: '/services/permanent-makeup/permanent-makeup-eyeliner-closeup-01.jpg',
+    image:
+      '/services/permanent-makeup/permanent-makeup-eyeliner-closeup-01.jpg',
   },
   {
     title: 'Smile Services',
@@ -99,8 +101,8 @@ const ServicesPage = () => {
       <div className="bg-primary py-24 sm:py-32">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-5xl text-light sm:text-7xl">My Services</h1>
-            <p className="mt-8 text-lg leading-8 text-gray-100">
+            <h1 className="text-display text-light">My Services</h1>
+            <p className="mt-8 text-lead text-gray-100">
               Welcome to Brows on Point, where beauty meets affordability and
               expertise. Since 2016, I&apos;ve been helping clients discover
               their most confident selves through personalized aesthetic
@@ -120,17 +122,15 @@ const ServicesPage = () => {
                 className="grid grid-cols-1 items-center gap-x-12 gap-y-8 lg:grid-cols-2"
               >
                 <div>
-                  <h2 className="text-5xl text-light">
-                    {category.title}
-                  </h2>
-                  <p className="mt-4 text-base leading-7 text-gray-100">
+                  <h2 className="text-heading text-light">{category.title}</h2>
+                  <p className="mt-4 text-body text-gray-100">
                     {category.description}
                   </p>
                   <ul className="mt-6 space-y-2">
                     {category.highlights.map((highlight) => (
                       <li
                         key={highlight}
-                        className="flex items-center gap-2 text-base text-gray-100"
+                        className="flex items-center gap-2 text-body text-gray-100"
                       >
                         <CheckIcon
                           className="h-4 w-4 flex-none text-secondary-300"
@@ -142,7 +142,7 @@ const ServicesPage = () => {
                   </ul>
                   <Link
                     href={category.href}
-                    className="mt-6 inline-flex rounded-md bg-primary px-4 py-2.5 text-base font-semibold text-light shadow-sm hover:opacity-90"
+                    className="mt-6 inline-flex rounded-md bg-primary px-4 py-2.5 text-body font-semibold text-light shadow-sm hover:opacity-90"
                   >
                     Explore {category.title}
                   </Link>

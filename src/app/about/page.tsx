@@ -58,10 +58,8 @@ export default function AboutPage() {
         <div className="bg-primary py-24 sm:py-32">
           <Container>
             <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-5xl text-light sm:text-7xl">
-                About Brows on Point
-              </h1>
-              <p className="mt-8 text-lg leading-8 text-gray-100">
+              <h1 className="text-display text-light">About Brows on Point</h1>
+              <p className="mt-8 text-lead text-gray-100">
                 Welcome to Brows on Point, where beauty meets affordability and
                 expertise. Since 2016, I&apos;ve been helping clients discover
                 their most confident selves through personalized aesthetic
@@ -76,8 +74,8 @@ export default function AboutPage() {
           <Container>
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
               <div>
-                <h2 className="text-5xl text-light">My Story</h2>
-                <div className="mt-6 space-y-6 text-base leading-7 text-gray-100">
+                <h2 className="text-heading text-light">My Story</h2>
+                <div className="mt-6 space-y-6 text-body text-gray-100">
                   <p>
                     <strong>
                       I started Brows on Point with a simple goal: to make
@@ -117,10 +115,10 @@ export default function AboutPage() {
                   key={index}
                   className="rounded-lg bg-primary-800 p-6 text-center ring-1 ring-secondary-700 transition-colors hover:bg-primary-700 hover:ring-secondary-500"
                 >
-                  <dd className="text-4xl font-semibold text-light">
+                  <dd className="text-accent font-semibold text-light">
                     {stat.value}
                   </dd>
-                  <dt className="mt-1 text-base text-light/70">{stat.label}</dt>
+                  <dt className="mt-1 text-body text-light/70">{stat.label}</dt>
                 </div>
               ))}
             </div>
@@ -140,9 +138,9 @@ export default function AboutPage() {
                 sizes="(min-width: 1024px) 384px, 100vw"
               />
               <div className="w-full flex-auto">
-                <h2 className="text-5xl text-light">Certifications</h2>
+                <h2 className="text-heading text-light">Certifications</h2>
                 <div className="mt-6 rounded-lg bg-primary-800 p-6 ring-1 ring-secondary-700">
-                  <ul className="grid grid-cols-1 gap-x-8 gap-y-2 text-base leading-7 text-gray-100 sm:grid-cols-2">
+                  <ul className="grid grid-cols-1 gap-x-8 gap-y-2 text-body text-gray-100 sm:grid-cols-2">
                     {certifications.map((cert) => (
                       <li key={cert} className="ml-6 list-disc">
                         {cert}

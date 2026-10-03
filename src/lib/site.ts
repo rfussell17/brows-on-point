@@ -16,7 +16,7 @@ export const BUSINESS_PHONE = '(250) 801-6864'
 export const BUSINESS_EMAIL = 'Browsonpointkelowna@gmail.com'
 
 export const GOOGLE_RATING = 4.9
-export const GOOGLE_REVIEW_COUNT = 138
+export const GOOGLE_REVIEW_COUNT = 140
 export const GOOGLE_REVIEWS_URL = 'https://share.google/I3DmUVnWFhe0tZRgt'
 
 // Shared copy for the "book now" CTA that appears standalone (in the combined

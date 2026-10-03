@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({ bgVariant = 'light' }) => {
           <div className="relative px-6 py-16 sm:py-20 lg:px-8 lg:py-0 lg:pr-0">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
               <div className="hidden sm:mb-10 sm:flex">
-                <div className="relative inline-block rounded-full bg-secondary-900 px-3 py-1 text-xs font-semibold tracking-wider text-secondary-200">
+                <div className="relative inline-block rounded-full bg-secondary-900 px-3 py-1 text-small font-semibold tracking-wider text-secondary-200">
                   High-Quality Esthetic Treatments in West Kelowna
                 </div>
               </div>
@@ -47,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({ bgVariant = 'light' }) => {
                 />
               )}
               <p
-                className={`mt-6 text-base leading-8 ${isDark ? 'text-gray-100' : 'text-gray-600'}`}
+                className={`mt-6 text-body ${isDark ? 'text-gray-100' : 'text-gray-600'}`}
               >
                 Whether you need precision brow shaping, lash lifts, or teeth
                 treatments, Brows on Point ensures a comfortable experience.
@@ -60,15 +60,15 @@ const Hero: React.FC<HeroProps> = ({ bgVariant = 'light' }) => {
                   href={ACUITY_URL}
                   className={
                     isDark
-                      ? 'rounded-md bg-light px-3.5 py-2.5 text-base font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light'
-                      : 'rounded-md bg-primary px-3.5 py-2.5 text-base font-semibold text-light shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary'
+                      ? 'rounded-md bg-light px-3.5 py-2.5 text-body font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light'
+                      : 'rounded-md bg-primary px-3.5 py-2.5 text-body font-semibold text-light shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary'
                   }
                 >
                   Book Now
                 </Link>
                 <Link
                   href="/services"
-                  className={`text-base font-semibold leading-6 ${isDark ? 'text-light' : 'text-primary'}`}
+                  className={`text-body font-semibold ${isDark ? 'text-light' : 'text-primary'}`}
                 >
                   All Services <span aria-hidden="true">→</span>
                 </Link>

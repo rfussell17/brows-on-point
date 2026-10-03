@@ -121,8 +121,8 @@ const TestimonialGroup: React.FC<TestimonialGroupProps> = ({
     <div className={`${bgClass} py-24 sm:py-32`}>
       <Container>
         <div className="mx-auto max-w-xl text-center">
-          <h2 className="text-5xl text-light">Testimonials</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-100">
+          <h2 className="text-heading text-light">Testimonials</h2>
+          <p className="mt-6 text-lead text-gray-100">
             I&apos;ve had the privilege of taking care of hundreds of clients in
             the Okanagan since 2016.
           </p>
@@ -134,7 +134,7 @@ const TestimonialGroup: React.FC<TestimonialGroupProps> = ({
                 key={testimonial.author.name}
                 className="pt-8 sm:inline-block sm:w-full sm:px-4"
               >
-                <figure className="rounded-2xl bg-primary-800 p-8 text-lg leading-7 ring-1 ring-secondary-700">
+                <figure className="rounded-2xl bg-primary-800 p-8 text-body ring-1 ring-secondary-700">
                   <blockquote className="text-light/90">
                     <p>{`“${testimonial.body}”`}</p>
                   </blockquote>
