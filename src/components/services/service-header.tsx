@@ -53,6 +53,9 @@ export default function ServiceHome({
     price,
   }
 
+  // Brand logos (white artwork) get a dark tile and are never cropped.
+  const isLogo = images[0]?.startsWith('/partners/') ?? false
+
   return (
     <div className="overflow-hidden bg-primary py-24 sm:py-32">
       <Container>
@@ -120,14 +123,16 @@ export default function ServiceHome({
             {images.length > 0 && images.length < 4 ? (
               // Fewer than four usable photos: show one large image instead of
               // a grid padded out with placeholders.
-              <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-light shadow-xl">
+              <div
+                className={`relative aspect-square w-full overflow-hidden rounded-2xl shadow-xl ${isLogo ? 'bg-primary-800 ring-1 ring-secondary-700' : 'bg-light'}`}
+              >
                 <Image
                   fill
                   priority
                   src={images[0]}
                   alt={title}
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
+                  className={isLogo ? 'object-contain p-12' : 'object-cover'}
                 />
               </div>
             ) : (
