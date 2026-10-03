@@ -46,9 +46,9 @@ Total: 10 pillars, about 55 supporting posts. Older-audience angle (mature skin,
 
 | Phase | Ship | Why |
 |---|---|---|
-| 1 | Pillars 1, 3, 2 (microblading, lash lift, permanent makeup) + their 2 highest-value comparisons each | Highest existing local rankings and revenue |
+| 1 | Pillars 1, 3, 2 (microblading, lash lift, permanent makeup), powder brows vs microblading, lash lift aftercare refresh, pillar 7 (saline removal) | Highest existing local rankings and the highest-volume informational keywords |
 | 2 | Pillars 4, 5, 6 + the lost-ranking topics (permanent eyebrows, brow tinting, powder brows) | Wins back keywords she previously ranked for |
-| 3 | Pillars 7, 8, 9, 10 | Smaller volume, supports newer services |
+| 3 | Pillars 8, 9, 10 | Smaller volume, supports newer services (see data section: teeth gems and skin tightening move up if the services are priorities) |
 
 ## Post spec
 
@@ -57,6 +57,37 @@ Total: 10 pillars, about 55 supporting posts. Older-audience angle (mature skin,
 - FAQ block on every post (JSON-LD FAQ schema).
 - One CTA block at the end ("Ready to book?") linking to the service page and Acuity.
 - Real photos from `public/overflow/` where possible.
+
+## What the Ahrefs data changes (Oct 2026)
+
+Source: organic keywords, content gap (561 keywords, 9 domains), competing domains, matching terms, backlinks.
+
+**Local competition is weak.** Kelowna competitors get very little organic traffic: Ink & Arch 157/mo, Brinkeye Artistry 27, Bos Ink Studio 18. Brows on Point is already at 44 with one page. The informational lane in Kelowna is nearly empty.
+
+**Informational targets with real volume** (Canada volume / global volume):
+
+| Keyword | CA | Global | KD | Post |
+|---|---|---|---|---|
+| powder brows vs microblading | 350 | 6,700 | 1 | Supporting post under pillar 1 or 5. Phase 1. |
+| lash lift aftercare | 350 | 5,100 | 0 | Exists. Expand and strengthen. |
+| saline tattoo removal | 200 | 3,400 | 0 | Pillar 7 moves to Phase 1. |
+| teeth whitening for sensitive teeth | 50 | 1,000 | 0 | Pillar 8 and the 24K page. |
+| microblading healing (process) | 30 | 800 | n/a | Supporting post under pillar 1. |
+
+**Gaps where no Brows on Point page ranks yet** (Canada volume, KD 0 unless noted):
+- Brow waxing: eyebrow waxing near me 2,000, eyebrow waxing 600, brow wax 500, brow waxing near me 500, brow wax near me 350. Winnipeg and Vancouver sites hold these. The Brow Tint & Shape page should target them. Pillar 4 gets a waxing post set: waxing vs threading, how often to wax, first brow wax.
+- Lash tint: lash tint 800, eyelash lift 450, lash tint near me 100, how much is a lash lift 70. Needs a strong Lash & Brow Tinting page plus a "lash lift cost" post.
+- Teeth gems 250: pillar 9 moves to Phase 2.
+- Skin tightening treatment 1,700 (KD 24): pillar 10 moves to Phase 2.
+- Microblading course 200 and microblading training near me 100: only relevant if the Training page is a live offer.
+
+**Skip:** lip blushing (400), brow threading (700+), lash extensions (1,000+): she doesn't offer them. Cover extensions and threading only as comparison posts.
+
+## Links
+
+Of 766 referring domains, 727 are spam. About seven are real: Birdeye (DR 86, the only quality dofollow), Fresha (DR 91, nofollow), ProfileCanada, PlaceProfile, OkanaganGo, Okanagan INK, TattooReg. Both the www and non-www hosts of the old domain have links, so both must 301 to the new canonical host.
+
+Link opportunities: "find an artist" pages from her suppliers (InLei, Kwadron, Vertix, Li Pigments, Swarovski, Brow Daddy), Okanagan directories, the West Kelowna chamber of commerce, and local features. Fix the ProfileCanada address (3139 Sandstone Dr should be 3344 Sundance Dr).
 
 ## Needed before writing
 
