@@ -54,7 +54,7 @@ export function BlogPostLayout({
         ]}
       />
 
-      <article className="bg-light py-16 sm:py-24">
+      <article className="blog-article bg-light py-16 sm:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
             <Link
@@ -68,7 +68,9 @@ export function BlogPostLayout({
               <span className="inline-block rounded bg-secondary-100 px-3 py-1.5 text-small font-semibold uppercase tracking-wide text-secondary-700">
                 {category}
               </span>
-              <h1 className="mt-6 text-heading text-primary">{title}</h1>
+              <h1 className="mt-6 text-accent font-medium text-primary">
+                {title}
+              </h1>
               <p className="mt-4 text-lead text-gray-600">{description}</p>
               <div className="mt-6 flex items-center gap-3 border-t border-primary-100 pt-6 text-small text-gray-500">
                 <span className="font-medium text-primary">Jamie Fussell</span>

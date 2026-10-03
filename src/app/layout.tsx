@@ -7,21 +7,19 @@ import { ogMeta, SITE_URL } from '@/lib/site'
 
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
-import { Hurricane, Roboto } from 'next/font/google'
+import { Hurricane, Playfair_Display, Roboto } from 'next/font/google'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     template: '%s | Brows on Point',
-    default:
-      'Brows on Point | Brows, Lashes & Permanent Makeup in Kelowna',
+    default: 'Brows on Point | Brows, Lashes & Permanent Makeup in Kelowna',
   },
   description:
     'Brows on Point is a West Kelowna studio serving Kelowna for brow tinting, lash lifts, microblading, powder brows, permanent makeup and teeth whitening.',
   openGraph: {
     ...ogMeta('/og/brows-on-point-og.jpg', 'Brows on Point'),
-    title:
-      'Brows on Point | Brows, Lashes & Permanent Makeup in Kelowna',
+    title: 'Brows on Point | Brows, Lashes & Permanent Makeup in Kelowna',
     description:
       'Brows on Point is a West Kelowna studio serving Kelowna for brow tinting, lash lifts, microblading, powder brows, permanent makeup and teeth whitening.',
   },
@@ -43,13 +41,25 @@ const roboto = Roboto({
   display: 'swap',
   variable: '--font-roboto',
 })
+// Readable serif for blog post titles and subheadings only; the script font
+// stays everywhere else on the site.
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  display: 'swap',
+  variable: '--font-blog-heading',
+})
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${hurricane.variable} ${roboto.variable}`}>
+    <html
+      lang="en"
+      className={`${hurricane.variable} ${roboto.variable} ${playfair.variable}`}
+    >
       <head>
         {/* LAUNCH GATE: remove this line only when told the site is going live. See BLOCKERS.md. */}
         <meta name="robots" content="noindex, nofollow, noarchive" />

@@ -29,3 +29,12 @@ h5,
 h6 {
   font-family: var(--font-roboto), sans-serif;
 }
+
+/* Blog post content (title and subheadings) uses a readable serif instead of
+   the script font. Scoped to the article so the nav, FAQ, reviews banner and
+   footer keep the site's script headings. */
+.blog-article h1,
+.blog-article h2 {
+  font-family: var(--font-blog-heading), Georgia, serif;
+  letter-spacing: normal;
+}
