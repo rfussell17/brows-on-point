@@ -18,11 +18,26 @@ export const blogPosts: Record<string, BlogPostMeta> = {
       'The first 48 hours after a lash lift and tint matter most. Here are the aftercare habits that help your lift and tint last the full 6-12 weeks.',
     date: '2026-09-05',
     category: 'Lashes',
-    ogImage: '/og/make-your-lash-lift-and-tint-last-longer-og_brows-on-point.jpg',
+    ogImage:
+      '/og/make-your-lash-lift-and-tint-last-longer-og_brows-on-point.jpg',
     keywords: [
       'lash lift aftercare',
       'lash lift and tint',
       'how long does a lash lift last',
+    ],
+  },
+  'what-is-microblading': {
+    title: 'What Is Microblading? A Complete Guide',
+    description:
+      'What microblading is, how an appointment works, what healing looks like, how long it lasts and what it costs. A clear guide from Brows on Point in Kelowna.',
+    date: '2026-10-03',
+    category: 'Permanent Makeup',
+    keywords: [
+      'what is microblading',
+      'microblading healing',
+      'how long does microblading last',
+      'does microblading hurt',
+      'microblading cost',
     ],
   },
 }
