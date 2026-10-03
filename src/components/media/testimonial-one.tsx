@@ -26,7 +26,7 @@ const TestimonialOne: React.FC<TestimonialProps> = ({
         <figure className="grid grid-cols-1 items-center gap-x-6 gap-y-8 lg:gap-x-10">
           {/* Testimonial Quote */}
           <div className="relative col-span-2 px-4 sm:px-6 lg:col-start-1 lg:row-start-2 lg:px-0">
-            <blockquote className="text-quote text-light">
+            <blockquote className="text-lead text-light">
               <p>
                 &ldquo;Jamie takes pride in her work and is an absolute
                 perfectionist. If you are thinking of getting any services done
