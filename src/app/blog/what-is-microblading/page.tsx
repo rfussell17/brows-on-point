@@ -27,7 +27,7 @@ const faqs = [
       'A topical anesthetic is applied before the procedure begins, so most clients describe the sensation as pressure rather than pain.',
   },
   {
-    question: 'How long does microblading take to heal?',
+    question: 'What does the microblading healing process look like?',
     answer:
       'Initial healing takes about 7-10 days, and the colour settles into its final shade over the following few weeks.',
   },
