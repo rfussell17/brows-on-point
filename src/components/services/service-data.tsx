@@ -1397,6 +1397,13 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
   title: '24K Gold Whitening for Sensitive Teeth',
   description:
     "If regular whitening leaves your teeth feeling sensitive, Brows on Point's 24k gold whitening option is designed with sensitive teeth in mind: the same in-office professional whitening, in a gentler formula.",
+  galleryImages: [
+    '/services/smile/smile-teeth-whitening-before-after-01.jpg',
+    '/services/smile/smile-teeth-whitening-basic-before-after-04.jpg',
+    '/services/smile/smile-teeth-whitening-basic-before-after-03.jpg',
+    '/services/smile/smile-teeth-whitening-ultra-before-after-03.jpg',
+  ],
+  thumbnail: '/services/smile/smile-teeth-whitening-before-after-01.jpg',
   duration: '40-60 minutes',
   results: 'Up to 6 months',
   price: '$99',

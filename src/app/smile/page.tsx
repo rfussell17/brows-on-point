@@ -34,6 +34,7 @@ export default function SmileHubPage() {
           description:
             'A gentler whitening option built for clients with sensitive teeth.',
           href: '/smile/sensitive-teeth-whitening',
+          image: '/services/smile/smile-teeth-whitening-before-after-01.jpg',
         },
         {
           title: 'Swarovski Tooth Gems',
