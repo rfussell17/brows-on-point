@@ -45,7 +45,7 @@ const categories = [
     highlights: [
       'Lash Lift and Tint',
       'Lash & Brow Tinting',
-      'Lash Growth Serum',
+      // 'Lash Growth Serum', // hidden for now
     ],
     image: '/services/lashes/lashes-lift-bomb-before-after-03.jpg',
   },

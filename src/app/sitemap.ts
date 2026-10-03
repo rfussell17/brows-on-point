@@ -13,7 +13,7 @@ const routes = [
   '/lashes',
   '/lashes/lash-lift-and-tint',
   '/lashes/lash-and-brow-tinting',
-  '/lashes/lash-growth-serum',
+  // '/lashes/lash-growth-serum', // hidden for now
   '/permanent-makeup',
   '/permanent-makeup/microblading',
   '/permanent-makeup/powder-brows',

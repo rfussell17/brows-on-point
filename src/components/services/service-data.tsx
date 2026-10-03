@@ -310,6 +310,7 @@ export const lashServiceData: ServiceData = {
   ],
 }
 
+/* Lash Growth Serum is hidden for now (no photo/brand yet); restore by uncommenting.
 export const lashGrowthSerumServiceData: ServiceData = {
   slug: 'lashes/lash-growth-serum',
   hubLink: { text: 'All Lash Services', href: '/lashes' },
@@ -380,6 +381,7 @@ export const lashGrowthSerumServiceData: ServiceData = {
     },
   ],
 }
+*/
 
 export const lashAndBrowTintingServiceData: ServiceData = {
   slug: 'lashes/lash-and-brow-tinting',

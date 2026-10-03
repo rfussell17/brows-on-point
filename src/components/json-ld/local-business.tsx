@@ -1,7 +1,7 @@
 import {
   browTintWaxShapeData,
   lashAndBrowTintingServiceData,
-  lashGrowthSerumServiceData,
+  // lashGrowthSerumServiceData, // hidden for now
   lashServiceData,
   microbladingServiceData,
   permanentEyelinerServiceData,
@@ -63,7 +63,7 @@ const SAME_AS = ['https://www.facebook.com/Browsonpointkelowna']
  */
 const ALL_SERVICES: ServiceData[] = [
   lashServiceData,
-  lashGrowthSerumServiceData,
+  // lashGrowthSerumServiceData, // hidden for now
   lashAndBrowTintingServiceData,
   microbladingServiceData,
   browTintWaxShapeData,

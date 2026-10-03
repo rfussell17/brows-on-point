@@ -1,3 +1,7 @@
+// Hidden for now: the leading underscore makes this a private folder, so Next.js does not route it.
+// Rename back to `lash-growth-serum` (and restore lashGrowthSerumServiceData) to bring the page back.
+
+/*
 import { lashGrowthSerumServiceData } from '@/components/services/service-data'
 import ServicePage from '@/components/services/service-page'
 import { ProductJsonLd } from '@/components/json-ld/product'
@@ -31,3 +35,6 @@ export default function LashGrowthSerumPage() {
     </>
   )
 }
+*/
+
+export {}
