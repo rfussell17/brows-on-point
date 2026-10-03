@@ -100,7 +100,7 @@ export default function AboutPage() {
               </div>
               <Image
                 alt="Jamie at Brows on Point"
-                src="/about/about-jamie-portrait-01.jpg"
+                src="/about/about-jamie-working-02.jpg"
                 width={1000}
                 height={1000}
                 className="aspect-square w-full rounded-2xl object-cover shadow-xl"
