@@ -49,7 +49,7 @@ const TestimonialTeeth: React.FC<TestimonialProps> = ({
 
           {/* Figcaption */}
           <figcaption className="text-body lg:col-start-1 lg:row-start-3">
-            <div className="font-fancy text-heading text-light">Rain P.</div>
+            <div className="font-fancy text-quote text-light">Rain P.</div>
           </figcaption>
         </figure>
       </div>

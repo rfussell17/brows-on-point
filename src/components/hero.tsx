@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({ bgVariant = 'light' }) => {
           <div className="relative px-6 py-16 sm:py-20 lg:px-8 lg:py-0 lg:pr-0">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
               <div className="hidden sm:mb-10 sm:flex">
-                <div className="relative inline-block rounded-full bg-secondary-900 px-3 py-1 text-small font-semibold tracking-wider text-secondary-200">
+                <div className="relative inline-block rounded-full bg-secondary-900 px-3 py-1 text-small tracking-wider text-secondary-200">
                   High-Quality Esthetic Treatments in West Kelowna
                 </div>
               </div>

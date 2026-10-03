@@ -147,7 +147,7 @@ const TestimonialGroup: React.FC<TestimonialGroupProps> = ({
                       className="h-10 w-10 rounded-full bg-primary-50"
                     /> */}
                     <div>
-                      <div className="font-fancy text-accent text-light">
+                      <div className="font-fancy text-lead text-light">
                         {testimonial.author.name}
                       </div>
                     </div>
