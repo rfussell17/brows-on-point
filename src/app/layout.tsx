@@ -1,5 +1,6 @@
 // app/layout.tsx
 
+import { GoogleAnalytics } from '@/components/analytics'
 import { LocalBusinessJsonLd } from '@/components/json-ld/local-business'
 import { Navbar } from '@/components/navbar'
 import { ogMeta, SITE_URL } from '@/lib/site'
@@ -53,6 +54,7 @@ export default function RootLayout({
         {/* LAUNCH GATE: remove this line only when told the site is going live. See BLOCKERS.md. */}
         <meta name="robots" content="noindex, nofollow, noarchive" />
         <LocalBusinessJsonLd />
+        <GoogleAnalytics />
       </head>
       <body className="text-gray-600 antialiased">
         <Navbar />
