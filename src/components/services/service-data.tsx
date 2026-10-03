@@ -96,7 +96,7 @@ export const teethWhiteningContraindications = (
     <h4 className="mt-6 font-semibold text-primary">Medical</h4>
     <ul className="list-disc space-y-2 pl-6">
       <li>Pregnancy or breastfeeding</li>
-      <li>Under 16 years old</li>
+      <li>Under 18 years old</li>
       <li>Known allergy to peroxide</li>
     </ul>
     <h4 className="mt-6 font-semibold text-primary">Other Limitations</h4>
@@ -307,6 +307,27 @@ export const lashServiceData: ServiceData = {
       answer:
         "Yes, once the 48-hour aftercare window has passed, though many clients find they don't need it, since the lift and tint already do the work.",
     },
+    {
+      question: "Who isn't a good candidate for a lash lift and tint?",
+      answer:
+        'I recommend waiting, or checking with your doctor first, if you have had recent eye surgery or procedures, have an active eye infection or condition, have severe allergies affecting the eye area, are in your first trimester of pregnancy, or are going through chemotherapy.',
+    },
+    {
+      question: 'How do I prepare for my lash lift and tint appointment?',
+      answer:
+        'Arrive with completely clean lashes and no makeup, and remove your contact lenses before treatment. Avoid caffeine beforehand, stop using lash serums 48 hours before, and tell me about any eye conditions or sensitivities.',
+    },
+    {
+      question: 'What happens during a lash lift and tint appointment?',
+      answer:
+        'We start with a consultation to choose your lash lift and confirm the result you want. I then cleanse the eye area, protect your lower lashes with silicone shields, lift your lashes over the shield, and apply the lifting solution, setting solution and tint.',
+    },
+    {
+      question:
+        'What should I avoid in the first 48 hours after a lash lift and tint?',
+      answer:
+        'Avoid water, steam and heat, skip mascara and eye makeup, and avoid touching or rubbing your eyes. If you can, sleep on your back the first night. This is what lets the curl and colour set properly.',
+    },
   ],
 }
 
@@ -490,7 +511,23 @@ export const lashAndBrowTintingServiceData: ServiceData = {
       question:
         'Is lash or brow tinting safe if I have sensitive eyes or skin?',
       answer:
-        'I do a patch test for first-time clients to check for any reaction before your full appointment.',
+        "Tinting is suitable for most clients. For first-time clients I do a patch test, applying a small amount of tint to check for any reaction before your full appointment. Tell me about any eye conditions, allergies or skin sensitivities before we start, and I'll let you know if it's better to wait.",
+    },
+    {
+      question: 'How do I prepare for a lash tint or brow tint?',
+      answer:
+        'Arrive with clean lashes and brows and no makeup, and remove your contact lenses before a lash tint. Tell me about any eye conditions or sensitivities before we start.',
+    },
+    {
+      question:
+        'What should I do after a lash or brow tint, and what makes it fade faster?',
+      answer:
+        'Avoid water, steam and heat for 24 hours and avoid rubbing your eyes. Oil-based makeup removers fade tint faster, so avoid them.',
+    },
+    {
+      question: "Who shouldn't get a lash or brow tint?",
+      answer:
+        'I recommend waiting if you have an active eye infection or condition, severe allergies affecting the eye area, or have had recent eye surgery or procedures.',
     },
   ],
 }
@@ -627,6 +664,32 @@ export const microbladingServiceData: ServiceData = {
       answer:
         'Initial healing takes about 7-10 days, with the colour settling into its final shade over the following few weeks.',
     },
+    {
+      question: "Who isn't a good candidate for microblading?",
+      answer:
+        "You should wait or check with your doctor first if you are pregnant or breastfeeding, have an active skin condition or an uncontrolled autoimmune condition, have lupus or rheumatoid arthritis that is not controlled and cleared with a doctor's note, have had recent chemotherapy, take blood-thinning medications, or have a history of keloid scarring.",
+    },
+    {
+      question: 'How do I prepare for my microblading appointment?',
+      answer:
+        "Avoid blood thinners for 2 weeks beforehand unless they are prescribed, and stop retinol products 2 weeks before. Skip alcohol for 48 hours and caffeine on the day. Avoid tanning or sunburn on the area, and don't book if you have had a chemical peel or Botox in the brow area recently.",
+    },
+    {
+      question: 'How do I take care of my brows after microblading?',
+      answer:
+        'Keep the area clean and dry for 7 days, apply the aftercare product I give you as directed, and avoid makeup on the brows for 2 weeks. Skip swimming, saunas and heavy sweating while they heal, avoid direct sunlight on the area, and attend your touch-up within 2 months.',
+    },
+    {
+      question:
+        'How long is a microblading appointment, and what happens during it?',
+      answer:
+        'Plan for 2-2.5 hours. It starts with a consultation and brow mapping, which you approve before anything is applied. I then numb the area, draw the hair-stroke pigment, check the colour and make adjustments, and go over your aftercare before you leave.',
+    },
+    {
+      question: 'Is there a booking fee for microblading?',
+      answer:
+        "A $50 booking fee secures your appointment. It can be transferred to a new date once, with 24 hours' notice, and no-shows forfeit it. If you arrive more than 10 minutes late, the appointment is cancelled.",
+    },
   ],
 }
 
@@ -748,6 +811,26 @@ export const browTintWaxShapeData: ServiceData = {
       answer:
         'Most clients rebook every 3-4 weeks to keep their shape clean, though this varies with how quickly your hair grows back.',
     },
+    {
+      question: 'Do I need a patch test before my first eyebrow tint?',
+      answer:
+        'Yes, if this is your first tint with me, I do a patch test first to check for any reaction before the full tint is applied.',
+    },
+    {
+      question: 'How do I prepare for eyebrow tinting and shaping?',
+      answer:
+        'Arrive with clean skin and no brow makeup, and avoid retinol products for 48 hours beforehand. If you want a full reshape, let your brows grow out a little first, and tell me about any skin sensitivities before I start.',
+    },
+    {
+      question: 'What should I do after eyebrow tinting and hot-wax shaping?',
+      answer:
+        "Avoid water and sweat on the brows for a few hours and don't wear makeup on the freshly waxed skin for the rest of the day. Avoid direct sun, tanning beds and exfoliating products on the area for a few days while any redness settles.",
+    },
+    {
+      question: 'How long does an eyebrow tint and shape appointment take?',
+      answer:
+        'About 30 minutes. We start with a quick consultation on shape and tint colour, then I apply the tint and finish with precise hot-wax shaping and a shape check.',
+    },
   ],
 }
 
@@ -849,6 +932,31 @@ export const powderBrowsServiceData: ServiceData = {
       question: 'How long do powder brows last before they need a refresh?',
       answer:
         'Powder brows typically last 1-2 years, depending on your skin type and how well you follow the aftercare. Ask me at your consultation for a more specific estimate.',
+    },
+    {
+      question: "Who isn't a good candidate for powder brows?",
+      answer:
+        "You should wait or check with your doctor first if you are pregnant or breastfeeding, have an active skin condition or an uncontrolled autoimmune condition, have lupus or rheumatoid arthritis that is not controlled and cleared with a doctor's note, have had recent chemotherapy, take blood-thinning medications, or have a history of keloid scarring.",
+    },
+    {
+      question: 'How do I prepare for my powder brows appointment?',
+      answer:
+        "Avoid blood thinners for 2 weeks beforehand unless they are prescribed, stop retinol products 2 weeks before, and skip alcohol for 48 hours. Avoid tanning or sunburn on the area, and don't book if you have had a chemical peel or Botox in the brow area recently.",
+    },
+    {
+      question: 'How do I take care of my powder brows while they heal?',
+      answer:
+        'Keep the area clean and dry for 7 days, apply the aftercare product I provide as directed, and avoid makeup on the brows for 2 weeks. Skip swimming, saunas and excessive sweating while they heal, and attend your touch-up within 2 months.',
+    },
+    {
+      question: 'How long is a powder brows appointment?',
+      answer:
+        'Plan for 2-2.5 hours. We map your brow shape, I numb the area, and then the powder shading is built up in layers before I go through aftercare with you.',
+    },
+    {
+      question: 'Is there a booking fee for powder brows?',
+      answer:
+        "A $50 booking fee secures your appointment. It can be transferred to a new date once, with 24 hours' notice, and no-shows forfeit it. If you arrive more than 10 minutes late, the appointment is cancelled.",
     },
   ],
 }
@@ -1008,6 +1116,27 @@ export const salineRemovalServiceData: ServiceData = {
       answer:
         'Yes. Saline removal is a common choice for removing or lightening microblading, since it works gently on the fine strokes typical of that technique.',
     },
+    {
+      question: "Who shouldn't get saline tattoo removal?",
+      answer:
+        "I recommend waiting, or checking with your doctor first, if you are pregnant or breastfeeding, have an active skin condition or an uncontrolled autoimmune condition, have lupus or rheumatoid arthritis that is not controlled and cleared with a doctor's note, have had recent chemotherapy, take blood-thinning medications, have a history of keloid scarring, or have an allergy to aloe.",
+    },
+    {
+      question: 'How do I prepare for saline tattoo removal?',
+      answer:
+        'Avoid blood thinners for 2 weeks beforehand unless they are prescribed, and skip alcohol for 48 hours. Tell me about any skin conditions in the treatment area.',
+    },
+    {
+      question: 'How do I care for my skin after saline tattoo removal?',
+      answer:
+        "Keep the area strictly dry and let a thin scab form, blotting it every 30-60 minutes for the first few hours. Don't pick the scab; it usually falls off on its own within 7-14 days. Full healing takes 6-8 weeks, and you should wait until then before another saline session or new permanent makeup in the same area.",
+    },
+    {
+      question:
+        'How long is a saline tattoo removal session, and does it hurt?',
+      answer:
+        'A session takes about 90 minutes. I apply a topical anesthetic before starting and then work the saline solution into the treatment area.',
+    },
   ],
 }
 
@@ -1131,6 +1260,27 @@ export const permanentEyelinerServiceData: ServiceData = {
       question: 'How long does permanent eyeliner last?',
       answer:
         'Typically 2-3 years, depending on your skin and how well you follow the aftercare instructions.',
+    },
+    {
+      question: "Who isn't a good candidate for permanent eyeliner?",
+      answer:
+        "You should wait or check with your doctor first if you are pregnant or breastfeeding, have an active skin condition or an uncontrolled autoimmune condition, have lupus or rheumatoid arthritis that is not controlled and cleared with a doctor's note, have had recent chemotherapy, take blood-thinning medications, or have a history of keloid scarring.",
+    },
+    {
+      question: 'How do I prepare for my permanent eyeliner appointment?',
+      answer:
+        'Avoid blood thinners for 2 weeks beforehand unless they are prescribed, skip alcohol for 48 hours, and remove your contact lenses before treatment. Tell me about any eye conditions or sensitivities.',
+    },
+    {
+      question: 'How do I take care of permanent eyeliner while it heals?',
+      answer:
+        'Keep the area clean and dry for 7 days, avoid eye makeup for 2 weeks, and skip swimming and saunas while it heals. Attend your touch-up appointment within 2 months.',
+    },
+    {
+      question:
+        'How long is a permanent eyeliner appointment, and does it hurt?',
+      answer:
+        'Plan for 1.5-2 hours. I apply a topical anesthetic before the pigment is placed along the lash line, and we start with a consultation about the look you want.',
     },
   ],
 }
@@ -1274,6 +1424,26 @@ export const toothGemsServiceData: ServiceData = {
       answer:
         'Yes. Many clients choose two or more. Ask about multi-gem pricing at your appointment.',
     },
+    {
+      question: 'How do I prepare for my tooth gem appointment?',
+      answer:
+        'Brush your teeth thoroughly beforehand and tell me about any recent dental work. The appointment takes about 15-20 minutes.',
+    },
+    {
+      question: 'What should I do after getting a tooth gem?',
+      answer:
+        "Don't eat or drink for at least 60 minutes so the adhesive fully cures, and avoid touching or picking at the gem. Stick to soft foods, skip brushing that tooth for the first 24 hours, and avoid acidic and carbonated drinks while it sets.",
+    },
+    {
+      question: 'What if my tooth gem comes loose?',
+      answer:
+        "Don't try to reattach it yourself. Book in and I can replace it.",
+    },
+    {
+      question: 'How do I get a tooth gem removed?',
+      answer:
+        'Have a dentist take it off, so any remaining adhesive is polished away without damaging your enamel.',
+    },
   ],
 }
 
@@ -1407,6 +1577,32 @@ export const teethWhiteningServiceData: ServiceData = {
       answer:
         'In-office whitening uses a stronger professional gel with an LED light, so results are visible after one appointment rather than weeks of at-home use.',
     },
+    {
+      question: "Who shouldn't get professional teeth whitening?",
+      answer:
+        "I don't recommend it with active cavities or decay, periodontal disease or gum recession, exposed dentin or significant enamel erosion, or cracked teeth. It is also not suitable if you are pregnant or breastfeeding, under 18, or allergic to peroxide.",
+    },
+    {
+      question: 'How do I prepare for my teeth whitening appointment?',
+      answer:
+        'Brush your teeth thoroughly beforehand and avoid coffee or dark drinks for 2 hours before. A recent dental cleaning is recommended but not required, and tell me about any sensitivity or existing dental work.',
+    },
+    {
+      question: 'Will teeth whitening work on crowns, veneers or bonding?',
+      answer:
+        "No. Crowns, veneers, bonding and other restorations on front teeth won't whiten, and can end up a mismatched colour next to your natural teeth.",
+    },
+    {
+      question: 'What should I avoid after teeth whitening?',
+      answer:
+        'Avoid staining foods and drinks for 48 hours, and use a whitening-safe toothpaste to maintain your results.',
+    },
+    {
+      question:
+        "What's the difference between Basic, Ultra and 24k gold teeth whitening?",
+      answer:
+        'Basic and Ultra use the same whitening gel and differ in how many 20-minute sessions you get, so Ultra goes further for a brighter result. The 24k gold option uses a gentler formula and is what I recommend if your teeth or gums are sensitive.',
+    },
   ],
 }
 
@@ -1485,6 +1681,27 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
       question:
         'How much does 24k gold teeth whitening for sensitive teeth cost?',
       answer: '24k gold whitening is $99, the same price as Basic whitening.',
+    },
+    {
+      question: "Who shouldn't get 24k gold teeth whitening?",
+      answer:
+        'The same limits apply as for my other whitening: active cavities or decay, periodontal disease or gum recession, exposed dentin or significant enamel erosion, cracked teeth, pregnancy or breastfeeding, being under 18, or an allergy to peroxide.',
+    },
+    {
+      question:
+        'How do I prepare for 24k gold teeth whitening if my teeth are sensitive?',
+      answer:
+        'Brush your teeth thoroughly beforehand, and tell me about your sensitivity and any existing dental work so I can plan the session around it.',
+    },
+    {
+      question: 'How do I look after sensitive teeth after 24k gold whitening?',
+      answer:
+        'Avoid staining foods and drinks for 48 hours and use a sensitivity-friendly toothpaste to maintain your results.',
+    },
+    {
+      question: 'What happens during a 24k gold teeth whitening session?',
+      answer:
+        'After a consultation and shade check, I apply the 24k gold whitening formula and do an LED light treatment. We finish with a final shade check and aftercare instructions, and the visit takes 40-60 minutes.',
     },
   ],
 }
@@ -1629,6 +1846,26 @@ export const rfSkinTighteningData: ServiceData = {
       question: 'Does RF skin tightening reduce fat or change body shape?',
       answer:
         'No. This is a skin-tightening and texture treatment, not a fat-reduction or body-contouring service.',
+    },
+    {
+      question: "Who shouldn't have RF skin tightening?",
+      answer:
+        "I don't recommend it with a pacemaker, defibrillator or other implanted electronic device, or metal plates, screws or pins in the treatment area. It's also not suitable if you are pregnant or breastfeeding, have active cancer or an undiagnosed lesion in the area, have active skin infections or flare-ups there, have a history of keloid scarring, or have recent tanning or a sunburn in the area.",
+    },
+    {
+      question: 'How do I prepare for my RF skin tightening appointment?',
+      answer:
+        'Arrive with clean, makeup-free skin, avoid sun exposure or sunburn in the days before, and stop retinol products 48 hours beforehand. Tell me about any metal implants, pacemakers or skin conditions.',
+    },
+    {
+      question: 'What happens during an RF skin tightening treatment?',
+      answer:
+        'We start with a skin assessment and cleansing, then I use ultrasonic exfoliation to remove dead skin cells. I then do the RF tightening passes with the 40k ultrasonic machine and finish with a soothing, hydrating serum. A session takes about 45 minutes.',
+    },
+    {
+      question: 'What should I do after RF skin tightening?',
+      answer:
+        'Apply SPF daily, stay well hydrated, and avoid harsh exfoliants for 48 hours. Book follow-up sessions as recommended for the best results.',
     },
   ],
 }
