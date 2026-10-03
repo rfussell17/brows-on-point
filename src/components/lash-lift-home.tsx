@@ -67,7 +67,7 @@ export default function LashLiftHome({
                 </blockquote>
                 <figcaption className="mt-6 flex gap-x-4 text-body">
                   <div>
-                    <span className="font-fancy text-light">Kyla S.</span>{' '}
+                    <span className="font-fancy text-accent text-light">Kyla S.</span>{' '}
                   </div>
                 </figcaption>
               </figure>

@@ -12,10 +12,10 @@ module.exports = {
     // scale smoothly between ~375px phones and ~1280px desktops.
     fontSize: {
       small: ['1rem', { lineHeight: '1.5rem' }], // labels, badges, footer, meta
-      body: ['1.125rem', { lineHeight: '1.75rem' }], // paragraphs, lists, nav, buttons
+      body: ['1.125rem', { lineHeight: '1.55' }], // paragraphs, lists, nav, buttons
       lead: [
         'clamp(1.25rem, 1.198rem + 0.221vw, 1.375rem)',
-        { lineHeight: '1.7' },
+        { lineHeight: '1.5' },
       ], // intro paragraphs, card & panel titles
       quote: [
         'clamp(1.5rem, 1.344rem + 0.663vw, 1.875rem)',
@@ -39,10 +39,10 @@ module.exports = {
         DEFAULT: {
           css: {
             fontSize: '1.125rem',
-            lineHeight: '1.75',
+            lineHeight: '1.6',
             h2: {
-              fontSize: 'clamp(1.5rem, 1.344rem + 0.663vw, 1.875rem)',
-              lineHeight: '1.3',
+              fontSize: 'clamp(3rem, 2.793rem + 0.884vw, 3.5rem)',
+              lineHeight: '1.05',
             },
             h3: {
               fontSize: 'clamp(1.25rem, 1.198rem + 0.221vw, 1.375rem)',

@@ -52,7 +52,7 @@ const TestimonialOne: React.FC<TestimonialProps> = ({
 
           {/* Figcaption */}
           <figcaption className="text-body lg:col-start-1 lg:row-start-3">
-            <div className="font-fancy text-accent text-light">Karina B.</div>
+            <div className="font-fancy text-heading text-light">Karina B.</div>
           </figcaption>
         </figure>
       </div>

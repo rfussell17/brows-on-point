@@ -51,7 +51,7 @@ const TestimonialMakeup: React.FC<TestimonialProps> = ({
 
           {/* Figcaption */}
           <figcaption className="text-body lg:col-start-1 lg:row-start-3">
-            <div className="font-fancy text-accent text-light">Carly M.</div>
+            <div className="font-fancy text-heading text-light">Carly M.</div>
           </figcaption>
         </figure>
       </div>

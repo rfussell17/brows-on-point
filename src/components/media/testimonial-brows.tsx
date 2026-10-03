@@ -45,7 +45,7 @@ const TestimonialBrows: React.FC<TestimonialProps> = ({
 
           {/* Figcaption */}
           <figcaption className="text-body lg:col-start-1 lg:row-start-3">
-            <div className="font-fancy text-accent text-light">Y. Tobar</div>
+            <div className="font-fancy text-heading text-light">Y. Tobar</div>
           </figcaption>
         </figure>
       </div>
