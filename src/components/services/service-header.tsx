@@ -17,7 +17,6 @@ interface ServiceHomeProps {
   duration: string
   results: string | ReactNode
   price: string | ReactNode
-  galleryCaption?: string
   /** Real photos for the header gallery grid, up to 4. Empty slots fall back to <ImagePlaceholder/>. */
   images?: string[]
   testimonial?: {
@@ -42,7 +41,6 @@ export default function ServiceHome({
   duration,
   results,
   price,
-  galleryCaption,
   images = [],
   testimonial,
   bookingUrl = ACUITY_URL,
@@ -155,12 +153,6 @@ export default function ServiceHome({
                   ),
                 )}
               </div>
-            )}
-
-            {galleryCaption && (
-              <p className="mt-3 text-center text-body text-light/50">
-                {galleryCaption}
-              </p>
             )}
           </div>
         </div>

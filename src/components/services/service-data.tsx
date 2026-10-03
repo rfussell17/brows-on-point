@@ -22,7 +22,6 @@ export interface ServiceData {
   aftercare: ReactNode
   contraindications?: ReactNode
   /** Caption under the header's before/after photo grid, e.g. "Lash lift before & after photos coming soon". */
-  galleryCaption?: string
   /** Extra named H2 sections (e.g. a dedicated "brow mapping" section) rendered before the two-column detail grid. */
   extraSections?: Array<{ heading: string; content: ReactNode }>
   /**
@@ -261,7 +260,6 @@ export const lashServiceData: ServiceData = {
       </ul>
     </div>
   ),
-  galleryCaption: 'Lash lift before & after',
   faqs: [
     {
       question: 'How much does a lash lift cost?',
@@ -468,7 +466,6 @@ export const lashAndBrowTintingServiceData: ServiceData = {
       </ul>
     </div>
   ),
-  galleryCaption: 'Lash & brow tint before & after',
   faqs: [
     {
       question: 'How much does an eyelash tint cost?',
@@ -593,7 +590,6 @@ export const microbladingServiceData: ServiceData = {
     touchUp: '$100',
     yearOne: '$375',
   },
-  galleryCaption: 'Microblading before & after',
   faqs: [
     {
       question: 'How much does microblading cost?',
@@ -697,7 +693,6 @@ export const browTintWaxShapeData: ServiceData = {
       </ul>
     </div>
   ),
-  galleryCaption: 'Brow tint & shape before & after',
   faqs: [
     {
       question: 'How much does eyebrow tint and shape cost?',
@@ -809,7 +804,6 @@ export const powderBrowsServiceData: ServiceData = {
     touchUp: '$125',
     yearOne: '$425',
   },
-  galleryCaption: 'Powder brows before & after',
   faqs: [
     {
       question: 'How much do powder brows cost?',
@@ -962,7 +956,6 @@ export const salineRemovalServiceData: ServiceData = {
       ),
     },
   ],
-  galleryCaption: 'Saline removal before & after',
   faqs: [
     {
       question: 'How much does saline removal cost?',
@@ -1090,7 +1083,6 @@ export const permanentEyelinerServiceData: ServiceData = {
   ),
   contraindications: pmuContraindications,
   policyNotice: pmuBookingFeeNotice,
-  galleryCaption: 'Permanent eyeliner before & after',
   faqs: [
     {
       question: 'How much does an eyeliner tattoo cost?',
@@ -1229,7 +1221,6 @@ export const toothGemsServiceData: ServiceData = {
       </ul>
     </div>
   ),
-  galleryCaption: 'Tooth gem',
   faqs: [
     {
       question: 'How much are tooth gems?',
@@ -1362,7 +1353,6 @@ export const teethWhiteningServiceData: ServiceData = {
     </div>
   ),
   contraindications: teethWhiteningContraindications,
-  galleryCaption: 'Teeth whitening before & after',
   faqs: [
     {
       question: 'How much does teeth whitening cost?',
@@ -1573,7 +1563,6 @@ export const rfSkinTighteningData: ServiceData = {
       </ul>
     </div>
   ),
-  galleryCaption: 'Skin tightening before & after',
   faqs: [
     {
       question: 'How much does skin tightening cost?',

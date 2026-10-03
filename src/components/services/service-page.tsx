@@ -57,7 +57,6 @@ const ServicePage: React.FC<ServicePageProps> = ({ data }) => {
         duration={data.duration}
         results={data.results}
         price={data.price}
-        galleryCaption={data.galleryCaption}
         images={data.galleryImages}
         bookingUrl={ACUITY_URL}
         learnMoreUrl={data.hubLink?.href ?? '/services'}
