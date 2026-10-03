@@ -158,9 +158,18 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
             >
               {data.contraindications &&
                 renderSection(
-                  'Who Should Avoid This',
+                  data.avoidHeading ?? 'Who Should Avoid This',
                   ShieldExclamationIcon,
-                  data.contraindications,
+                  <>
+                    {data.avoidService && (
+                      <p>
+                        Please don&apos;t book {data.avoidService} if any of
+                        these apply to you. If you&apos;re not sure, ask me
+                        before booking.
+                      </p>
+                    )}
+                    {data.contraindications}
+                  </>,
                   'darker',
                 )}
               {data.policyNotice &&

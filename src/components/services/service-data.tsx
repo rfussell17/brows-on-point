@@ -20,6 +20,10 @@ export interface ServiceData {
   preparation: ReactNode
   aftercare: ReactNode
   contraindications?: ReactNode
+  /** Heading for the contraindications card, naming the service, e.g. "Who Should Avoid Microblading". */
+  avoidHeading?: string
+  /** The service in plain words for the card's intro line, e.g. "microblading" or "a lash lift and tint". */
+  avoidService?: string
   /** Caption under the header's before/after photo grid, e.g. "Lash lift before & after photos coming soon". */
   /** Extra named H2 sections (e.g. a dedicated "brow mapping" section) rendered before the two-column detail grid. */
   extraSections?: Array<{ heading: string; content: ReactNode }>
@@ -73,8 +77,8 @@ export const pmuContraindications = (
         doctor&apos;s note
       </li>
       <li>
-        Recent chemotherapy, Blood-thinning medications, or Keloid scarring
-        history
+        Recent chemotherapy, blood-thinning medications, or a history of keloid
+        scarring
       </li>
     </ul>
   </div>
@@ -133,6 +137,8 @@ export const pmuBookingFeeNotice = (
 // Add slug and shortDescription to each service
 export const lashServiceData: ServiceData = {
   slug: 'lashes/lash-lift-and-tint',
+  avoidHeading: 'Who Should Avoid a Lash Lift and Tint',
+  avoidService: 'a lash lift and tint',
   hubLink: { text: 'All Lash Services', href: '/lashes' },
   shortDescription:
     'Three lash lift options — Keratin, BOMB, and Korean Lash Lift and Tint — for lifted, darker lashes with no extensions.',
@@ -406,6 +412,8 @@ export const lashGrowthSerumServiceData: ServiceData = {
 
 export const lashAndBrowTintingServiceData: ServiceData = {
   slug: 'lashes/lash-and-brow-tinting',
+  avoidHeading: 'Who Should Avoid Lash and Brow Tinting',
+  avoidService: 'lash or brow tinting',
   hubLink: { text: 'All Lash Services', href: '/lashes' },
   shortDescription:
     'Eyelash tinting: darker lashes and brows without daily mascara.',
@@ -534,6 +542,8 @@ export const lashAndBrowTintingServiceData: ServiceData = {
 
 export const microbladingServiceData: ServiceData = {
   slug: 'permanent-makeup/microblading',
+  avoidHeading: 'Who Should Avoid Microblading',
+  avoidService: 'microblading',
   hubLink: { text: 'All Permanent Makeup', href: '/permanent-makeup' },
   shortDescription:
     'Microblading: natural-looking hair-stroke brows for sparse or over-tweezed eyebrows.',
@@ -836,6 +846,8 @@ export const browTintWaxShapeData: ServiceData = {
 
 export const powderBrowsServiceData: ServiceData = {
   slug: 'permanent-makeup/powder-brows',
+  avoidHeading: 'Who Should Avoid Powder Brows',
+  avoidService: 'powder brows',
   hubLink: { text: 'All Permanent Makeup', href: '/permanent-makeup' },
   shortDescription:
     'Powder brows: a soft, filled-in brow that holds its shape day to day.',
@@ -963,6 +975,8 @@ export const powderBrowsServiceData: ServiceData = {
 
 export const salineRemovalServiceData: ServiceData = {
   slug: 'permanent-makeup/saline-tattoo-removal',
+  avoidHeading: 'Who Should Avoid Saline Tattoo Removal',
+  avoidService: 'saline tattoo removal',
   hubLink: { text: 'All Permanent Makeup', href: '/permanent-makeup' },
   shortDescription:
     'Saline tattoo and PMU removal: a gentler alternative to laser removal.',
@@ -1075,8 +1089,8 @@ export const salineRemovalServiceData: ServiceData = {
           doctor&apos;s note
         </li>
         <li>
-          Recent chemotherapy, Blood-thinning medications, or Keloid scarring
-          history
+          Recent chemotherapy, blood-thinning medications, or a history of
+          keloid scarring
         </li>
 
         <li>Allergy to aloe</li>
@@ -1142,6 +1156,8 @@ export const salineRemovalServiceData: ServiceData = {
 
 export const permanentEyelinerServiceData: ServiceData = {
   slug: 'permanent-makeup/permanent-eyeliner',
+  avoidHeading: 'Who Should Avoid Permanent Eyeliner',
+  avoidService: 'permanent eyeliner',
   hubLink: { text: 'All Permanent Makeup', href: '/permanent-makeup' },
   shortDescription:
     'Permanent eyeliner: upper lash line enhancement, lower eyeliner, or top and bottom together.',
@@ -1449,6 +1465,8 @@ export const toothGemsServiceData: ServiceData = {
 
 export const teethWhiteningServiceData: ServiceData = {
   slug: 'smile/teeth-whitening',
+  avoidHeading: 'Who Should Avoid Professional Teeth Whitening',
+  avoidService: 'professional teeth whitening',
   hubLink: { text: 'All Smile Services', href: '/smile' },
   shortDescription:
     'Professional teeth whitening: Basic and Ultra sessions, plus a 24k gold option.',
@@ -1608,6 +1626,8 @@ export const teethWhiteningServiceData: ServiceData = {
 
 export const sensitiveTeethWhiteningServiceData: ServiceData = {
   slug: 'smile/sensitive-teeth-whitening',
+  avoidHeading: 'Who Should Avoid 24K Gold Teeth Whitening',
+  avoidService: '24k gold teeth whitening',
   hubLink: { text: 'All Smile Services', href: '/smile' },
   shortDescription:
     '24k gold teeth whitening, built for clients with sensitive teeth.',
@@ -1708,6 +1728,8 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
 
 export const rfSkinTighteningData: ServiceData = {
   slug: 'skin-tightening',
+  avoidHeading: 'Who Should Avoid RF Skin Tightening',
+  avoidService: 'RF skin tightening',
   shortDescription:
     'RF skin tightening: a non-invasive treatment for face, neck, and body using a 40k ultrasonic machine.',
   title: 'Skin Tightening Treatment',

@@ -25,14 +25,8 @@ module.exports = {
         'clamp(2.25rem, 2.044rem + 0.884vw, 2.75rem)',
         { lineHeight: '1.15' },
       ], // reviewer names, stats, blog titles
-      heading: [
-        'clamp(3rem, 2.793rem + 0.884vw, 3.5rem)',
-        { lineHeight: '1' },
-      ], // section headings (script font)
-      display: [
-        'clamp(3.5rem, 2.878rem + 2.652vw, 5rem)',
-        { lineHeight: '1' },
-      ], // page titles (script font)
+      heading: ['clamp(3rem, 2.793rem + 0.884vw, 3.5rem)', { lineHeight: '1' }], // section headings (script font)
+      display: ['clamp(3.5rem, 2.878rem + 2.652vw, 5rem)', { lineHeight: '1' }], // page titles (script font)
     },
     extend: {
       typography: {
@@ -40,8 +34,13 @@ module.exports = {
           css: {
             fontSize: '1.125rem',
             lineHeight: '1.6',
-            // Headings follow the site's type scale (serif h2, sans h3) with
-            // fixed rem spacing: prose's default em margins explode at large sizes.
+          },
+        },
+        // Used only on blog posts via `prose prose-blog`: heading sizes and
+        // fixed rem spacing (prose's default em margins explode at large
+        // sizes). Kept out of DEFAULT so other `prose` blocks are unaffected.
+        blog: {
+          css: {
             h2: {
               fontSize: 'clamp(1.5rem, 1.344rem + 0.663vw, 1.875rem)',
               fontWeight: '500',

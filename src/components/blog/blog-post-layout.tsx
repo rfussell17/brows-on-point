@@ -95,7 +95,7 @@ export function BlogPostLayout({
               </aside>
             )}
 
-            <div className="prose mt-12 max-w-none prose-headings:text-primary prose-p:my-4 prose-a:font-semibold prose-a:text-secondary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-primary prose-ol:my-4 prose-ul:my-4 prose-li:my-1">
+            <div className="prose prose-blog mt-12 max-w-none prose-headings:text-primary prose-p:my-4 prose-a:font-semibold prose-a:text-secondary-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-primary prose-ol:my-4 prose-ul:my-4 prose-li:my-1">
               {children}
             </div>
 
