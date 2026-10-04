@@ -25,6 +25,14 @@ const faqs = [
 export default function LashesHubPage() {
   return (
     <HubPage
+      testimonials={[
+        'Kassandra D',
+        'Kristyn G',
+        'Karina B',
+        'Janine D',
+        'Mel',
+        'Crystal Z',
+      ]}
       title="Lashes"
       path="/lashes"
       intro={

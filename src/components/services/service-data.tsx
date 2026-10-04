@@ -1,9 +1,5 @@
 import Link from 'next/link'
 import type { ComponentType, ReactNode } from 'react'
-import TestimonialMakeup from '../media/testimonial-makeup'
-import TestimonialOne from '../media/testimonial-one'
-import TestimonialTeeth from '../media/testimonial-teeth'
-import TestimonialTwo from '../media/testimonial-two'
 export interface ServiceData {
   /** Hub/services-grid card thumbnail. Omit for services without a real photo yet. */
   thumbnail?: string
@@ -154,9 +150,6 @@ export const lashServiceData: ServiceData = {
   duration: '45-60 minutes',
   results: '6-12 weeks',
   price: 'From $70',
-  testimonial: {
-    component: TestimonialOne,
-  },
   thumbnail: '/services/lashes/lashes-lift-bomb-before-after-03.jpg',
   about: (
     <>
@@ -559,9 +552,6 @@ export const microbladingServiceData: ServiceData = {
   duration: '2-2.5 hours',
   results: '1-2 years',
   price: '$275',
-  testimonial: {
-    component: TestimonialTwo,
-  },
   thumbnail:
     '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
   about: (
@@ -715,9 +705,6 @@ export const browTintWaxShapeData: ServiceData = {
   duration: '30 minutes',
   results: '3-6 weeks for tint, ongoing for shape',
   price: '$25',
-  testimonial: {
-    component: TestimonialMakeup,
-  },
   thumbnail: '/services/brows/brows-tint-and-shape-closeup-01.jpg',
   extraSections: [
     {
@@ -863,9 +850,6 @@ export const powderBrowsServiceData: ServiceData = {
   duration: '2-2.5 hours',
   results: 'Varies by skin type — ask at your consultation',
   price: '$300',
-  testimonial: {
-    component: TestimonialMakeup,
-  },
   thumbnail:
     '/services/permanent-makeup/permanent-makeup-powder-brows-before-after-01.jpg',
   about: (
@@ -1173,9 +1157,6 @@ export const permanentEyelinerServiceData: ServiceData = {
   results: '2-3 years',
   price: '$199',
   serviceOptionsHeading: 'Choose Your Eyeliner',
-  testimonial: {
-    component: TestimonialMakeup,
-  },
   about: (
     <>
       Permanent eyeliner (also called an eyeliner tattoo) implants pigment along
@@ -1484,9 +1465,6 @@ export const teethWhiteningServiceData: ServiceData = {
   results: 'Up to 6 months',
   price: '$99',
   serviceOptionsHeading: 'Choose Your Whitening',
-  testimonial: {
-    component: TestimonialTeeth,
-  },
   about: (
     <>
       Professional, cosmetic teeth whitening uses a stronger whitening gel and
@@ -1582,7 +1560,7 @@ export const teethWhiteningServiceData: ServiceData = {
     {
       question: 'Where does Brows on Point offer teeth whitening?',
       answer:
-        'Yes. Brows on Point is based in West Kelowna and offers professional, in-office teeth whitening by appointment.',
+        'Brows on Point is based in West Kelowna and offers professional, in-office teeth whitening by appointment.',
     },
     {
       question: 'How long do professional teeth whitening results last?',

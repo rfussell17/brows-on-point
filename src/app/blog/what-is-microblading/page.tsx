@@ -89,11 +89,6 @@ export default function WhatIsMicrobladingPage() {
           </a>
         </li>
         <li>
-          <a href="#vs-other-options">
-            Microblading vs brow makeup, tinting and a regular tattoo
-          </a>
-        </li>
-        <li>
           <a href="#does-it-hurt">Does microblading hurt?</a>
         </li>
         <li>

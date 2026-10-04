@@ -22,7 +22,6 @@ const nextConfig = {
       // Old-site pages Google still knows about (from the Search Console
       // indexed-pages export).
       { source: '/about-4', destination: '/about', permanent: true },
-      { source: '/testimonials', destination: '/', permanent: true },
       { source: '/about-1', destination: '/about', permanent: true },
       { source: '/about-2', destination: '/about', permanent: true },
       { source: '/about-3', destination: '/about', permanent: true },

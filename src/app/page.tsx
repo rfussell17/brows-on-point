@@ -6,7 +6,6 @@ import Hero from '@/components/hero'
 import LashLiftHome from '@/components/lash-lift-home'
 import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
 import LogoGrid, { logos } from '@/components/media/logo-grid'
-import TestimonialGroup from '@/components/media/testimonial-group'
 import TestimonialTwo from '@/components/media/testimonial-two'
 import {
   ACUITY_URL,
@@ -60,18 +59,16 @@ const opposite = (variant: BgVariant): BgVariant =>
   variant === 'primary' ? 'primary-950' : 'primary'
 
 export default function Home() {
-  // Every section from LogoGrid down alternates against whatever landed
-  // right before it, so no two identically-coloured sections ever touch —
-  // same pattern used on the service pages. The Hero is white and sits
-  // outside that chain, so LogoGrid's tone is just the chain's starting seed.
-  const logoGridVariant: BgVariant = 'primary'
-  const detailRowVariant = opposite(logoGridVariant)
+  // Sections alternate against whatever landed right before them, so no two
+  // identically-coloured sections ever touch (same pattern as the service
+  // pages). The Hero is white and sits outside the chain, so DetailRow's tone
+  // is the chain's starting seed.
+  const detailRowVariant: BgVariant = 'primary-950'
   const cta1Variant = opposite(detailRowVariant)
   const lashLiftVariant = opposite(cta1Variant)
   const testimonialTwoVariant = opposite(lashLiftVariant)
-  const testimonialGroupVariant = opposite(testimonialTwoVariant)
-  const cta2Variant = opposite(testimonialGroupVariant)
-  const faqVariant = opposite(cta2Variant)
+  const logoGridVariant = opposite(testimonialTwoVariant)
+  const faqVariant = opposite(logoGridVariant)
   const reviewsVariant = opposite(faqVariant)
 
   return (
@@ -94,7 +91,6 @@ export default function Home() {
         <LashLiftHome bgVariant={lashLiftVariant} />
         <TestimonialTwo bgVariant={testimonialTwoVariant} />
       </main>
-      <TestimonialGroup bgVariant={testimonialGroupVariant} />
 
       <LogoGrid
         title="I only use the best products"

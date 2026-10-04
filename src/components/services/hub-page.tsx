@@ -12,6 +12,7 @@ import {
 } from '@/lib/site'
 import type { ReactNode } from 'react'
 import GoogleReviewsBanner from '../media/google-reviews-banner'
+import TestimonialQuotes from '../media/testimonial-quotes'
 import { ServiceCard } from './service-card'
 
 export interface HubSpoke {
@@ -31,6 +32,8 @@ interface HubPageProps {
   faqs?: Array<{ question: string; answer: string }>
   /** Optional H2 content blocks rendered after the spoke grid, for pages that need exact-phrase headings. */
   sections?: Array<{ heading: string; content: ReactNode }>
+  /** Author names (from src/lib/testimonials.ts) of client quotes to show on this hub. */
+  testimonials?: string[]
 }
 
 export default function HubPage({
@@ -41,15 +44,22 @@ export default function HubPage({
   secondaryCta,
   faqs,
   sections,
+  testimonials,
 }: HubPageProps) {
-  // Section backgrounds alternate down the page: spoke grid (primary-950),
-  // then optional text sections (primary), then optional FAQ (primary-950 after
-  // sections, primary otherwise), then the reviews/CTA/map banner, which must
-  // differ from whatever lands right before it.
+  // Section backgrounds alternate down the page, so no two identically
+  // coloured sections touch: spoke grid (primary-950), then optional text
+  // sections, optional testimonials, optional FAQ, then the reviews banner.
+  type Bg = 'primary' | 'primary-950'
+  const flip = (v: Bg): Bg => (v === 'primary' ? 'primary-950' : 'primary')
   const hasSections = Boolean(sections && sections.length > 0)
-  const faqBgVariant = hasSections ? 'primary-950' : 'primary'
-  const reviewsBgVariant =
-    Boolean(faqs) !== hasSections ? 'primary-950' : 'primary'
+  const hasTestimonials = Boolean(testimonials && testimonials.length > 0)
+  let last: Bg = 'primary-950'
+  if (hasSections) last = flip(last)
+  const testimonialsBgVariant = flip(last)
+  if (hasTestimonials) last = testimonialsBgVariant
+  const faqBgVariant = flip(last)
+  if (faqs) last = faqBgVariant
+  const reviewsBgVariant = flip(last)
 
   return (
     <div>
@@ -115,6 +125,13 @@ export default function HubPage({
             </div>
           </Container>
         </div>
+      )}
+
+      {hasTestimonials && testimonials && (
+        <TestimonialQuotes
+          names={testimonials}
+          bgVariant={testimonialsBgVariant}
+        />
       )}
 
       {faqs && <FAQSection faqs={faqs} bgVariant={faqBgVariant} />}

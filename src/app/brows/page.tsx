@@ -27,6 +27,14 @@ const faqs = [
 export default function BrowsHubPage() {
   return (
     <HubPage
+      testimonials={[
+        'Elyse L',
+        'Janine D',
+        'Delanie C',
+        'Danielle C',
+        'Y. Tobar',
+        'Melissa M',
+      ]}
       title="Eyebrow Services in Kelowna"
       path="/brows"
       intro={

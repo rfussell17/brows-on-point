@@ -13,14 +13,8 @@ import {
   toothGemsServiceData,
   type ServiceData,
 } from '@/components/services/service-data'
-import {
-  BUSINESS_EMAIL,
-  BUSINESS_PHONE,
-  GOOGLE_RATING,
-  GOOGLE_REVIEW_COUNT,
-  SITE_URL,
-} from '@/lib/site'
 import { parsePrice } from '@/lib/schema'
+import { BUSINESS_EMAIL, BUSINESS_PHONE, SITE_URL } from '@/lib/site'
 
 // Q40 — Monday–Saturday 9am–9pm, closed Sunday.
 const OPENING_HOURS = [
@@ -104,72 +98,6 @@ const OFFER_CATALOG = {
 }
 
 /**
- * Reviews genuinely displayed on the site (the testimonial components and
- * TestimonialGroup), not the full Google review list — marking up
- * third-party platform content (Google reviews) as this site's own Review
- * schema isn't something we have standing to do, and Google's own
- * guidelines are explicit that review markup must reflect what the page
- * itself actually shows. Deduplicated where the same quote appears in more
- * than one component (e.g. Karina B. appears both standalone and in the
- * group).
- */
-const REVIEWS = [
-  {
-    author: 'Karina B',
-    text: "Jamie takes pride in her work and is an absolute perfectionist. If you are thinking of getting any services done by Jamie, think no more! This is the place to go!! She's done my Keratin Lash Lift & Tint many times and I would not let anyone else touch my lashes - Jamie is AMAZING and I wish I could give more than a 5 star review!",
-  },
-  {
-    author: 'Stephanie K',
-    text: "Just got my keratin lash lift & tint from Jamie for the 3rd time, she is AMAZING! I have also got teeth gems thru her, and i'm looking forward to getting microblading this fall! Thanks girl, HAPPY!",
-  },
-  {
-    author: 'Carly M',
-    text: 'Jamie does amazing work, and is absolutely wonderful. She is definitely a perfectionist who takes great pride in all of her services. Her studio is very welcoming, clean and comfortable. She has very reasonable prices, and the great quality. I would totally recommend her to anyone!',
-  },
-  {
-    author: 'Rain P',
-    text: "Jamie is my go-to for teeth whitening. She's so sweet and it's always a fun, relaxing visit. I love how white she can get my teeth! 5 stars all the way!",
-  },
-  {
-    author: 'Kyla S',
-    text: 'Recently had my keratin lash lift and tint done by Jamie and I am in love! This is definitely a service I will continue receiving.',
-  },
-  {
-    author: 'Julia H',
-    text: 'Jamie is always very friendly, professional and detail oriented. She does a great job and makes sure you are happy with the results before you leave. I love going to her for eyelashes and eyebrows!',
-  },
-  {
-    author: 'Y. Tobar',
-    text: 'Since starting with powder brows (after having microblading somewhere else) I can only give praise to Jamie for being an expert on the technique! My only regret is not having found Jamie earlier...with my skin type this should have been the way to go from the start.',
-  },
-  {
-    author: "Alias 'Northern Girl'",
-    text: 'Truly a 5 star experience! Jamie is fantastic and her pricing is super reasonable! Love that she offers evening appts too!',
-  },
-  {
-    author: 'C. Pilz',
-    text: 'Jamie was very reassuring and thoroughly explained the process and what to expect. I was so happy with the results and the shape of my brows. The Lash Lift was amazing as well and I loved getting up in the morning knowing I could leave the house and I was ready for the day. I have since had the brow touch up and look forward to another Keratin Lash Lift!',
-  },
-  {
-    author: 'Trennan O',
-    text: "I had my teeth whitened by Jamie and I'm extremely satisfied with the results. She is very professional and knowledgable and I would definitely recommend this service.",
-  },
-  {
-    author: 'Ally F',
-    text: "Can't say enough about the services I have received from Jamie at Brows on Point! She offers attention to detail from the consultation to working with your requests, right through to the after care instruction and take home kit. She made me feel at ease, stopping along the way to ensure I was going to be pleased with the outcome and I am! A very professional, caring artist!",
-  },
-  {
-    author: 'Jenny K',
-    text: "Jamie is lovely and informative and very professional. I highly recommend Jamie's services at Brows on Point! I had my eye liner done and it looks great! 5 stars from me!",
-  },
-].map(({ author, text }) => ({
-  '@type': 'Review',
-  author: { '@type': 'Person', name: author },
-  reviewBody: text,
-  reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-}))
-
-/**
  * Sitewide LocalBusiness structured data. Rendered once, in the root layout.
  *
  * address: sourced from live Acuity service descriptions (Jamie's own text,
@@ -202,13 +130,6 @@ export function LocalBusinessJsonLd() {
     paymentAccepted: ['Cash', 'Debit Card', 'Credit Card', 'E-transfer'],
     openingHoursSpecification: OPENING_HOURS,
     sameAs: SAME_AS,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: GOOGLE_RATING,
-      reviewCount: GOOGLE_REVIEW_COUNT,
-      bestRating: 5,
-    },
-    review: REVIEWS,
     hasOfferCatalog: OFFER_CATALOG,
   }
 

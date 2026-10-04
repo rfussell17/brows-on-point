@@ -1,116 +1,15 @@
+import { testimonials } from '@/lib/testimonials'
 import { Container } from '../container'
-
-interface Testimonial {
-  body: string
-  author: {
-    name: string
-    imageUrl: string
-  }
-}
-
-const testimonials: Testimonial[] = [
-  {
-    body: 'Recently had my keratin lash lift and tint done by Jamie and I am in love! This is definitely a service I will continue receiving.',
-    author: {
-      name: 'Kyla S',
-      imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-  },
-  {
-    body: 'Jamie is always very friendly, professional and detail oriented. She does a great job and makes sure you are happy with the results before you leave. I love going to her for eyelashes and eyebrows!',
-    author: {
-      name: 'Julia H',
-      imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-  },
-  {
-    body: 'Since starting with powder brows (after having microblading somewhere else) I can only give praise to Jamie for being an expert on the technique! My only regret is not having found Jamie earlier...with my skin type this should have been the way to go from the start.',
-    author: {
-      name: 'Y. Tobar',
-      imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-  },
-
-  {
-    body: 'Truly a 5 star experience! Jamie is fantastic and her pricing is super reasonable! Love that she offers evening appts too!',
-    author: {
-      name: "Alias 'Northern Girl'",
-      imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-  },
-  {
-    body: 'Jamie was very reassuring and thoroughly explained the process and what to expect. I was so happy with the results and the shape of my brows. The Lash Lift was amazing as well and I loved getting up in the morning knowing I could leave the house and I was ready for the day. I have since had the brow touch up and look forward to another Keratin Lash Lift!',
-    author: {
-      name: 'C. Pilz',
-      imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-  },
-  {
-    body: "I had my teeth whitened by Jamie and I'm extremely satisfied with the results. She is very professional and knowledgable and I would definitely recommend this service.",
-    author: {
-      name: 'Trennan O',
-      imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-  },
-  {
-    body: 'Can’t say enough about the services I have received from Jamie at Brows on Point! She offers attention to detail from the consultation to working with your requests, right through to the after care instruction and take home kit. She made me feel at ease, stopping along the way to ensure I was going to be pleased with the outcome and I am! A very professional, caring artist!',
-    author: {
-      name: 'Ally F',
-      imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-  },
-  {
-    body: "Jamie is lovely and informative and very professional. I highly recommend Jamie's services at Brows on Point! I had my eye liner done and it looks great! 5 stars from me!",
-    author: {
-      name: 'Jenny K',
-      imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-  },
-  {
-    body: 'Jamie takes pride in her work and is an absolute perfectionist. If you are thinking of getting any services done by Jamie, think no more! This is the place to go!! She’s done my Keratin Lash Lift & Tint many times and I would not let anyone else touch my lashes - Jamie is AMAZING and I wish I could give more than a 5 star review!',
-    author: {
-      name: 'Karina B',
-      imageUrl: '/testimonials/testimonials-karina-portrait-01.png',
-    },
-  },
-  {
-    body: 'Just got my keratin lash lift & tint from Jaimie for the 3rd time, she is AMAZING! I have also got teeth gems thru her, and i’m looking forward to getting microblading this fall! Thanks girl, HAPPY!',
-    author: {
-      name: 'Stephanie K',
-      imageUrl: '/testimonials/testimonials-stephanie-portrait-01.png',
-    },
-  },
-  {
-    body: 'Jamie is my go-to for teeth whitening. She’s so sweet and it’s always a fun, relaxing visit. I love how white she can get my teeth! 5 stars all the way!',
-    author: {
-      name: 'Rain P',
-      imageUrl: '/testimonials/testimonials-rain-portrait-01.png',
-    },
-  },
-  {
-    body: 'Jamie does amazing work, and is absolutely wonderful. She is definitely a perfectionist who takes great pride in all of her services. Her studio is very welcoming, clean and comfortable. She has very reasonable prices, and the great quality. I would totally recommend her to anyone!',
-    author: {
-      name: 'Carly M',
-      imageUrl: '/testimonials/testimonials-carly-portrait-01.png',
-    },
-  },
-  // Add more testimonials here...
-]
 
 interface TestimonialGroupProps {
   bgVariant?: 'primary' | 'primary-950'
+  /** Set false when the page already has its own heading and intro. */
+  showHeading?: boolean
 }
 
 const TestimonialGroup: React.FC<TestimonialGroupProps> = ({
   bgVariant = 'primary-950',
+  showHeading = true,
 }) => {
   const bgClass =
     bgVariant === 'primary-950'
@@ -120,23 +19,27 @@ const TestimonialGroup: React.FC<TestimonialGroupProps> = ({
   return (
     <div className={`${bgClass} py-24 sm:py-32`}>
       <Container>
-        <div className="mx-auto max-w-xl text-center">
-          <h2 className="text-heading text-light">Testimonials</h2>
-          <p className="mt-6 text-lead text-gray-100">
-            I&apos;ve had the privilege of taking care of hundreds of clients in
-            the Okanagan since 2016.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
+        {showHeading && (
+          <div className="mx-auto max-w-xl text-center">
+            <h2 className="text-heading text-light">Testimonials</h2>
+            <p className="mt-6 text-lead text-gray-100">
+              I&apos;ve had the privilege of taking care of hundreds of clients
+              in the Okanagan since 2016.
+            </p>
+          </div>
+        )}
+        <div
+          className={`mx-auto flow-root max-w-2xl lg:mx-0 lg:max-w-none ${showHeading ? 'mt-16 sm:mt-20' : ''}`}
+        >
           <div className="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3">
-            {testimonials.map((testimonial) => (
+            {testimonials.map((testimonial, index) => (
               <div
-                key={testimonial.author.name}
+                key={`${testimonial.author.name}-${index}`}
                 className="pt-8 sm:inline-block sm:w-full sm:px-4"
               >
                 <figure className="rounded-2xl bg-primary-800 p-8 text-body ring-1 ring-secondary-700">
                   <blockquote className="text-light/90">
-                    <p>{`“${testimonial.body}”`}</p>
+                    <p className="whitespace-pre-line">{`“${testimonial.body}”`}</p>
                   </blockquote>
                   <figcaption className="mt-6 flex items-center gap-x-4">
                     {/* <Image
@@ -150,6 +53,11 @@ const TestimonialGroup: React.FC<TestimonialGroupProps> = ({
                       <div className="font-fancy text-lead text-light">
                         {testimonial.author.name}
                       </div>
+                      {testimonial.source && (
+                        <div className="text-small text-light/60">
+                          {testimonial.source} review
+                        </div>
+                      )}
                     </div>
                   </figcaption>
                 </figure>

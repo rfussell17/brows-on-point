@@ -39,6 +39,14 @@ const faqs = [
 export default function PermanentMakeupPage() {
   return (
     <HubPage
+      testimonials={[
+        'Danielle C',
+        'Delanie C',
+        'Melissa M',
+        'Y. Tobar',
+        'Jenny K',
+        'Janessa K',
+      ]}
       title="Permanent Makeup in Kelowna"
       path="/permanent-makeup"
       intro={

@@ -43,6 +43,7 @@ function Sitemap() {
         <SitemapHeading>Company</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/about">About</SitemapLink>
+          <SitemapLink href="/testimonials">Testimonials</SitemapLink>
           <SitemapLink href="/training">Training</SitemapLink>
           <SitemapLink href="/contact">Contact</SitemapLink>
           <SitemapLink href="/services">All Services</SitemapLink>
