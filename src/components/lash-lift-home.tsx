@@ -32,6 +32,11 @@ export default function LashLiftHome({
               </p>
 
               <p className="mt-6 text-body text-gray-100">
+                Brows on Point is essentially the &ldquo;OG&rdquo; for lash
+                lifts in the Okanagan area!
+              </p>
+
+              <p className="mt-6 text-body text-gray-100">
                 I offer three options: my exclusive <strong>BOMB Lift</strong>{' '}
                 for a dramatic effect, the <strong>Keratin Lift</strong> for a
                 natural look, or the <strong>Korean Lash Lift</strong> for a

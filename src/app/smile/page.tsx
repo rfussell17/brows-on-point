@@ -29,7 +29,7 @@ export default function SmileHubPage() {
         {
           title: 'Teeth Whitening',
           description:
-            'Professional in-studio teeth whitening, with a 24k gold option for sensitive teeth.',
+            'Professional in-studio teeth whitening, plus hybrid options for those slightly sensitive.',
           href: '/smile/teeth-whitening',
           image:
             '/services/smile/smile-teeth-whitening-basic-before-after-01.jpg',
@@ -37,14 +37,14 @@ export default function SmileHubPage() {
         {
           title: '24K Gold Whitening for Sensitive Teeth',
           description:
-            'A gentler whitening option built for clients with sensitive teeth.',
+            'A gentler whitening option built for clients with the most sensitive teeth.',
           href: '/smile/sensitive-teeth-whitening',
           image: '/services/smile/smile-teeth-whitening-before-after-01.jpg',
         },
         {
           title: 'Swarovski Tooth Gems',
           description:
-            'Genuine Swarovski crystal tooth gems, professionally applied.',
+            'Genuine Swarovski crystal tooth gems, professionally applied. Lasting up to 6 months with proper care.',
           href: '/smile/tooth-gems',
           image: '/services/smile/smile-tooth-gem-closeup-01.jpg',
         },

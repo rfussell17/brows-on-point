@@ -4,19 +4,19 @@ const services = [
   {
     name: 'Lashes',
     description:
-      'Achieve a flawless, lifted lash look with my lash lift and tint services, or a fast lash and brow tint. Perfect for clients looking to boost their natural lashes without extensions.',
+      'Achieve a flawless, lifted lash look with my lash lift and tint services! By lifting and curling the lashes from the bottom up, giving the lashes a longer appearance without the need of damaging lash curlers or daily mascara! Perfect for clients looking to boost their natural lashes without extensions.',
     href: '/lashes',
   },
   {
     name: 'Brows',
     description:
-      'Get perfectly shaped and tinted brows, or go semi-permanent with microblading and powder brows. Whether it’s a subtle enhancement or a bold statement, I ensure your brows look natural.',
+      'Get beautifully shaped and tinted brows, or go semi-permanent with microblading and powder brows. Whether it’s a subtle enhancement or a bold statement, I ensure your brows look natural….and one less thing to worry about in your morning routine. Get up and go!',
     href: '/brows',
   },
   {
     name: 'Permanent Makeup',
     description:
-      'Enhance your features with permanent makeup, including microblading, powder brows, permanent eyeliner, and more. Achieve a natural, subtle look that saves you time every day.',
+      'Enhance your features with permanent makeup, including microblading, powder brows, permanent eyeliner. Achieve a natural, subtle look that saves you time every day.',
     href: '/permanent-makeup',
   },
   {

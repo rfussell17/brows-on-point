@@ -33,7 +33,7 @@ const categories = [
     description:
       'From a quick tint and shape to semi-permanent results, my brow services are built around finding the shape that actually suits your face — not a one-size-fits-all template.',
     href: '/brows',
-    highlights: ['Eyebrow Tinting & Shaping', 'Microblading', 'Powder Brows'],
+    highlights: ['Brow Tinting & Shaping', 'Microblading', 'Powder Brows'],
     image:
       '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
   },

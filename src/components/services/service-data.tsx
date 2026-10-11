@@ -153,15 +153,9 @@ export const lashServiceData: ServiceData = {
   thumbnail: '/services/lashes/lashes-lift-bomb-before-after-03.jpg',
   about: (
     <>
-      A lash lift and tint (also called a lash perm or lash lamination) reshapes
-      your natural lashes around a small silicone rod, then tints them a darker
-      shade, so you wake up in the morning with definition and no mascara
-      required. Brows on Point, in West Kelowna, offers three distinct versions
-      of this: the Keratin Lash Lift and Tint, my signature BOMB Lash Lift and
-      Tint, and the Korean Lash Lift and Tint. They&apos;re genuinely different
-      treatments, not just different names for the same thing, so the sections
-      below cover each one on its own: what it is, what it costs, and who it
-      tends to suit.
+      A lash lift and tint (also called a lash perm) reshapes your natural
+      lashes around a small silicone rod, then tint is applied. It&apos;ll
+      make you say &ldquo;I woke up like this!&rdquo;
     </>
   ),
   serviceOptionsHeading: 'Choose Your Lash Lift',
@@ -526,13 +520,11 @@ export const microbladingServiceData: ServiceData = {
     '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
   about: (
     <>
-      Here&apos;s what makes microblading different from other brow treatments:
-      instead of filling brows in with powder or product, it uses a fine hand
-      tool to deposit pigment in thin, hair-like strokes that follow your
-      natural growth pattern. The result is microbladed eyebrows that look like
-      real hair, not makeup. At Brows on Point in West Kelowna, it&apos;s a good
-      fit if your brows are sparse, uneven, or were over-tweezed at some point
-      and never quite grew back.
+      Using a fine hand tool to deposit pigment in thin, hair-like strokes
+      that follow your natural growth pattern. The result is microbladed
+      eyebrows that look like real hair, not makeup. It&apos;s a good fit if
+      your brows are sparse, uneven, or were over-tweezed at some point and
+      never quite grew back.
     </>
   ),
   extraSections: [
@@ -658,7 +650,7 @@ export const browTintWaxShapeData: ServiceData = {
   hubLink: { text: 'All Brow Services', href: '/brows' },
   shortDescription:
     'Eyebrow tint and shape: tinting and hot-wax shaping together in one appointment.',
-  title: 'Eyebrow Tinting & Shaping',
+  title: 'Brow Tinting & Shaping',
   description:
     'An eyebrow tint darkens and defines your natural brow hair with a semi-permanent dye, and hot-wax shaping cleans up the line at the same time, so your brows look fuller and more defined in one $25 appointment.',
   galleryImages: ['/services/brows/brows-tint-and-shape-closeup-01.jpg'],
@@ -668,7 +660,7 @@ export const browTintWaxShapeData: ServiceData = {
   thumbnail: '/services/brows/brows-tint-and-shape-closeup-01.jpg',
   extraSections: [
     {
-      heading: 'Brow Tinting in Kelowna',
+      heading: 'Brow Tinting',
       content: (
         <>
           Brow tinting colours your natural brow hair with a semi-permanent dye,
@@ -679,7 +671,7 @@ export const browTintWaxShapeData: ServiceData = {
       ),
     },
     {
-      heading: 'Eyebrow Shaping in Kelowna',
+      heading: 'Brow Shaping',
       content: (
         <>
           Eyebrow shaping uses precise hot-wax hair removal to clean up stray
@@ -706,7 +698,6 @@ export const browTintWaxShapeData: ServiceData = {
         <li>No needles, no downtime</li>
         <li>Tint and shape together in one appointment</li>
         <li>Tint holds for 3-6 weeks</li>
-        <li>Shape mapped to your face, not a generic arch</li>
         <li>A low-commitment way to try a fuller brow look</li>
       </ul>
     </div>
@@ -934,12 +925,10 @@ export const salineRemovalServiceData: ServiceData = {
   about: (
     <>
       If you&apos;re comparing laser eyebrow tattoo removal to other options,
-      here&apos;s the upfront answer: Brows on Point in West Kelowna offers
-      saline removal, not laser. Saline removal draws pigment out of the skin
-      using a saline solution and works well for microblading removal and small
-      tattoos. It&apos;s a different mechanism than laser, which breaks pigment
-      down with light energy, and it&apos;s worth knowing the difference before
-      you book either.
+      here&apos;s the upfront answer: Saline removal lifts deep, stubborn
+      pigment out of the skin using a saline solution, and works well for all
+      PMU and small tattoos. It&apos;s a different process than laser, which
+      breaks pigment down with light energy.
     </>
   ),
   benefits: (
@@ -1095,13 +1084,10 @@ export const permanentEyelinerServiceData: ServiceData = {
   serviceOptionsHeading: 'Choose Your Eyeliner',
   about: (
     <>
-      Permanent eyeliner (also called an eyeliner tattoo) implants pigment along
-      the lash line, so definition stays put through swimming, workouts, and
-      every day in between. The subtle version, often called lash line
-      enhancement or lash enhancement tattoo, fills in the gaps between your
-      lashes for a fuller-looking lash line without a visible liner. A more
-      defined top-and-bottom eyeliner tattoo is also available for clients who
-      want more visible definition.
+      Permanent eyeliner implants pigment along the lash line. Liner stays put
+      through swimming, workouts, and every day in between. By tattooing a
+      thin line in where the lashes are growing, creates a soft and subtle
+      liner for everyday wear.
     </>
   ),
   serviceOptions: [
@@ -1617,9 +1603,8 @@ export const rfSkinTighteningData: ServiceData = {
   about: (
     <>
       Radio frequency skin tightening, also called an RF facial, is a
-      non-invasive way to firm and refresh the skin&apos;s texture without any
-      downtime. It&apos;s a skin-quality treatment: it works on tone, texture,
-      and firmness, not on reducing fat or changing body shape.
+      non-invasive way to firm and lift the skin&apos;s texture without any
+      downtime.
     </>
   ),
   extraSections: [

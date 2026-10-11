@@ -33,7 +33,7 @@ const generalFAQs = [
   {
     question: 'What services does Brows on Point offer?',
     answer:
-      'Lash lifts and tinting, brow tinting, shaping and permanent makeup, teeth whitening and tooth gems, and RF skin tightening — all from one studio in West Kelowna. Each treatment is customized to you.',
+      'Lash lifts and tinting, brow tinting and shaping, permanent makeup, teeth whitening, tooth gems, and RF skin tightening — all from one studio in West Kelowna. Each treatment is customized to you.',
   },
   {
     question: 'Is permanent makeup safe at Brows on Point?',

@@ -51,12 +51,12 @@ export default function PermanentMakeupPage() {
       path="/permanent-makeup"
       intro={
         <>
-          Permanent makeup at Brows on Point in West Kelowna covers permanent
-          eyebrows, permanent eyeliner, and saline removal for PMU or small
-          tattoos you no longer want, for clients across Kelowna. Every
-          technique below is its own service with its own process and pricing.
-          Browse the options, or book a free consultation if you&apos;re not
-          sure which is right for you.
+          Permanent makeup at Brows on Point in West Kelowna offers
+          Microblading, Powder Brow, Permanent Eyeliner, and saline removal
+          for PMU or small tattoos you no longer want. Every technique below
+          is its own service with its own process and pricing. Browse the
+          options, or book a free consultation if you&apos;re not sure which
+          is right for you.
         </>
       }
       sections={[
@@ -79,7 +79,7 @@ export default function PermanentMakeupPage() {
                 powder brows
               </Link>
               , a soft, filled-in finish. Both are cosmetic tattoo techniques
-              that typically last 1-2 years, and both start with a brow mapping
+              that typically last 1-3 years, and both start with a brow mapping
               consultation so you approve the shape before any pigment is
               applied.
             </p>

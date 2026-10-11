@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Lash Services in Kelowna',
   description:
-    'Lash lift and tint plus lash and brow tinting in Kelowna. Brows on Point is a lash studio in West Kelowna covering every option. Book online with Jamie today.',
+    'Lash lift and tint plus lash and brow tinting in Kelowna. Brows on Point is a lash studio in West Kelowna covering every option.',
   openGraph: ogMeta('/og/lash-services-og_brows-on-point.jpg', 'Lashes'),
 }
 
@@ -13,7 +13,7 @@ const faqs = [
   {
     question: 'What lash services does Brows on Point offer?',
     answer:
-      'Lash Lift and Tint for lifted, darker lashes without extensions, and Lash & Brow Tinting for a fast colour boost.',
+      'Lash Lift and Tint for lifted, darker lashes without extensions, and Lash & Brow Tinting for a fast colour boost. Brows on Point also offers Cluster lashes. A great alternative to lash extensions. Without the damage or commitment (lasts up to 2 weeks). Perfect for holidays or special events.',
   },
   {
     question: "What's the difference between a lash lift and a lash tint?",
@@ -37,10 +37,9 @@ export default function LashesHubPage() {
       path="/lashes"
       intro={
         <>
-          Jamie is the lash tech behind every appointment at Brows on Point, a
-          lash studio in West Kelowna offering lash lifts and lash and brow
-          tinting. She&apos;s completed a Lash Lift and Tint Training Program
-          and a Korean Lash Lift Technician Course.
+          Jamie is the lash tech behind every appointment at Brows on Point.
+          She provides BOMB lash lift, Keratin lash lift, and Korean lash
+          lift.
         </>
       }
       spokes={[

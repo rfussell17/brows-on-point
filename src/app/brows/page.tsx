@@ -82,7 +82,7 @@ export default function BrowsHubPage() {
       ]}
       spokes={[
         {
-          title: 'Eyebrow Tinting & Shaping',
+          title: 'Brow Tinting & Shaping',
           description:
             'Semi-permanent tint and precise hot-wax shaping together, $25.',
           href: '/brows/brow-tint-and-shape',
@@ -91,7 +91,7 @@ export default function BrowsHubPage() {
         {
           title: 'Microblading',
           description:
-            'Natural, hair-stroke semi-permanent brows for sparse or over-tweezed eyebrows.',
+            "Natural, hair-stroke semi-permanent brows for sparse or over-tweezed eyebrows. If you're looking for a natural fuller looking brow, this is the option for you!",
           href: '/permanent-makeup/microblading',
           image:
             '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
@@ -99,7 +99,7 @@ export default function BrowsHubPage() {
         {
           title: 'Powder Brows',
           description:
-            'A soft, filled-in powder finish that holds its shape day to day.',
+            'A soft, shaded and airy tattooed brow. Typically you can get an average 2 to 3 years with this low maintenance service.',
           href: '/permanent-makeup/powder-brows',
           image:
             '/services/permanent-makeup/permanent-makeup-powder-brows-before-after-01.jpg',

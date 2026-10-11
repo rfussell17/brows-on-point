@@ -40,7 +40,7 @@ export default function ContactPage() {
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-display text-light">Contact Brows on Point</h1>
             <p className="mt-6 text-lead text-gray-100">
-              Serving West Kelowna. The fastest way to reach me is to book
+              Serving West Kelowna. The fastest way to book with me is to book
               directly online. For anything else, see below.
             </p>
           </div>
