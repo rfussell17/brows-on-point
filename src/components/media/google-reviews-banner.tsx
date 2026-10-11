@@ -64,7 +64,7 @@ const GoogleReviewsBanner: React.FC<GoogleReviewsBannerProps> = ({
   )}&t=&z=16&ie=UTF8&iwloc=&output=embed`
 
   return (
-    <div className={`${bgClass} py-8 md:py-12 lg:py-20`}>
+    <div className={`${bgClass} py-10 md:py-16 lg:py-24`}>
       <Container>
         <div
           className={`grid grid-cols-1 items-center gap-12 ${cta ? 'lg:grid-cols-7' : 'lg:grid-cols-2'} lg:gap-8`}

@@ -15,7 +15,7 @@ export default function LashLiftHome({
       : 'bg-primary'
 
   return (
-    <div className={`${bgClass} overflow-hidden py-24 sm:py-32`}>
+    <div className={`${bgClass} overflow-hidden py-28 sm:py-36`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pr-4 lg:pt-4">
@@ -55,7 +55,7 @@ export default function LashLiftHome({
                 </Link>
               </div>
               <figure className="mt-16 rounded-r-lg border-l border-secondary-700 bg-primary-800 py-6 pl-8 pr-6 text-gray-100">
-                <blockquote className="text-lead">
+                <blockquote className="text-body">
                   <p>
                     “Recently had my Keratin Lash Lift and Tint done by Jamie
                     and I am in love! This is definitely a service I will

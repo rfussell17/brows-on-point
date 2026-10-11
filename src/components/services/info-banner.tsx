@@ -27,7 +27,7 @@ const InfoBanner: React.FC<InfoBannerProps> = ({
       : 'bg-primary'
 
   return (
-    <div className={`relative ${bgClass} py-24 sm:py-32`}>
+    <div className={`relative ${bgClass} py-28 sm:py-36`}>
       <Container>
         <div className="flex flex-col space-y-6">
           {sections.map((section) => (
@@ -35,7 +35,7 @@ const InfoBanner: React.FC<InfoBannerProps> = ({
               key={section.heading}
               className="rounded-lg bg-primary-800 p-6 ring-1 ring-secondary-700"
             >
-              <h2 className="text-lead font-semibold tracking-normal text-light [font-family:var(--font-roboto)]">
+              <h2 className="text-lead tracking-normal text-light [font-family:var(--font-roboto)]">
                 {section.heading}
               </h2>
               <div className="prose prose-invert mt-3 max-w-none text-light/80">

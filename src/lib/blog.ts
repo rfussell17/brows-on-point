@@ -23,18 +23,11 @@ export function calcReadTime(slug: string): string {
   }
 }
 
-export function coverImagePath(slug: string): string | null {
-  const conventionImage = `/blog/${slug}.jpg`
-  const exists = fs.existsSync(
-    path.join(process.cwd(), 'public', conventionImage),
-  )
-  return exists ? conventionImage : null
-}
-
 /**
  * Reads the post registry (src/lib/blog-posts.ts) and returns every post
- * sorted newest-first, with its read time and cover image resolved. Backs
- * the blog index, its JSON-LD, and the sitemap.
+ * sorted newest-first, with its read time resolved. Backs the blog index,
+ * its JSON-LD, and the sitemap. The card thumbnail reuses each post's own
+ * `ogImage` rather than needing a separate cover photo.
  */
 export function getPosts(): BlogPost[] {
   return Object.entries(blogPosts)
@@ -42,7 +35,7 @@ export function getPosts(): BlogPost[] {
       ([slug, postMeta]): BlogPost => ({
         ...postMeta,
         slug,
-        imageUrl: coverImagePath(slug),
+        imageUrl: postMeta.ogImage ?? null,
         readTime: calcReadTime(slug),
       }),
     )

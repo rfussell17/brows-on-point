@@ -56,6 +56,7 @@ export default function LashesHubPage() {
           description:
             'Semi-permanent tint for lashes, brows, or both: a fast way to skip the daily mascara.',
           href: '/lashes/lash-and-brow-tinting',
+          image: '/services/lashes/lashes-tinting-closeup-01.jpg',
         },
         // Lash Growth Serum hidden for now:
         // {

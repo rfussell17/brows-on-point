@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Eyebrow Services in Kelowna',
   description:
-    'Eyebrow services in Kelowna: brow tinting, hot-wax shaping, microblading and powder brows. Brows on Point is a brow bar in West Kelowna. Book online today.',
+    'Eyebrow services in Kelowna: brow tinting, brow shaping, microblading and powder brows. Brows on Point is a brow bar in West Kelowna. Book online today.',
   openGraph: ogMeta('/og/eyebrows-og_brows-on-point.jpg', 'Eyebrows'),
 }
 
@@ -67,38 +67,14 @@ export default function BrowsHubPage() {
           ),
         },
         {
-          heading: 'Semi-Permanent Eyebrows in Kelowna',
-          content: (
-            <>
-              <p>
-                If you want your shape to last longer,{' '}
-                <Link
-                  href="/permanent-makeup/microblading"
-                  className="font-semibold underline"
-                >
-                  microblading
-                </Link>{' '}
-                ($275) draws natural hair-like strokes, and{' '}
-                <Link
-                  href="/permanent-makeup/powder-brows"
-                  className="font-semibold underline"
-                >
-                  powder brows
-                </Link>{' '}
-                ($300) give a soft, filled-in finish. Both typically last 1-2
-                years.
-              </p>
-            </>
-          ),
-        },
-        {
           heading: 'A Brow Bar in West Kelowna',
           content: (
             <>
               <p>
-                Brows on Point is at {BUSINESS_ADDRESS}, serving clients from
-                Kelowna and West Kelowna. Every appointment is with Jamie, so
-                you never have to explain your preferences to someone new.
+                Brows on Point is at {BUSINESS_ADDRESS}, serving clients
+                within the Okanagan, and beyond! Every appointment is with
+                Jamie, so you never have to explain your preferences to
+                someone new.
               </p>
             </>
           ),

@@ -35,7 +35,7 @@ export default function ContactPage() {
           { name: 'Contact', path: '/contact' },
         ]}
       />
-      <div className="bg-primary px-6 py-24 sm:py-32 lg:px-8">
+      <div className="bg-primary px-6 py-28 sm:py-36 lg:px-8">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-display text-light">Contact Brows on Point</h1>
@@ -51,7 +51,7 @@ export default function ContactPage() {
         <Container>
           <div className="mx-auto grid max-w-3xl grid-cols-1 gap-10 sm:grid-cols-2">
             <div>
-              <h2 className="text-lead font-semibold text-light">Hours</h2>
+              <h2 className="text-lead text-light">Hours</h2>
               <div className="mt-2 text-body text-gray-100">
                 <p>Monday–Saturday: 9am–9pm</p>
                 <p>Sunday: Closed</p>
@@ -59,7 +59,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <h2 className="text-lead font-semibold text-light">
+              <h2 className="text-lead text-light">
                 Parking & Directions
               </h2>
               <div className="mt-2 text-body text-gray-100">
@@ -68,22 +68,22 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <h2 className="text-lead font-semibold text-light">Address</h2>
+              <h2 className="text-lead text-light">Address</h2>
               <p className="mt-2 text-body text-gray-100">{BUSINESS_ADDRESS}</p>
             </div>
 
             <div>
-              <h2 className="text-lead font-semibold text-light">Phone</h2>
+              <h2 className="text-lead text-light">Phone</h2>
               <p className="mt-2 text-body text-gray-100">{BUSINESS_PHONE}</p>
             </div>
 
             <div>
-              <h2 className="text-lead font-semibold text-light">Email</h2>
+              <h2 className="text-lead text-light">Email</h2>
               <p className="mt-2 text-body text-gray-100">{BUSINESS_EMAIL}</p>
             </div>
 
             <div>
-              <h2 className="text-lead font-semibold text-light">
+              <h2 className="text-lead text-light">
                 Payment Methods
               </h2>
               <p className="mt-2 text-body text-gray-100">

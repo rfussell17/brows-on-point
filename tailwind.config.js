@@ -15,7 +15,7 @@ module.exports = {
       body: ['1.125rem', { lineHeight: '1.55' }], // paragraphs, lists, nav, buttons
       lead: [
         'clamp(1.25rem, 1.198rem + 0.221vw, 1.375rem)',
-        { lineHeight: '1.5' },
+        { lineHeight: '1.4' },
       ], // intro paragraphs, card & panel titles
       quote: [
         'clamp(1.5rem, 1.344rem + 0.663vw, 1.875rem)',
@@ -25,7 +25,7 @@ module.exports = {
         'clamp(2.25rem, 2.044rem + 0.884vw, 2.75rem)',
         { lineHeight: '1.15' },
       ], // reviewer names, stats, blog titles
-      heading: ['clamp(3rem, 2.793rem + 0.884vw, 3.5rem)', { lineHeight: '1' }], // section headings (script font)
+      heading: ['clamp(3.25rem, 3.043rem + 0.884vw, 3.75rem)', { lineHeight: '1' }], // section headings (script font)
       display: ['clamp(3.5rem, 2.878rem + 2.652vw, 5rem)', { lineHeight: '1' }], // page titles (script font)
     },
     extend: {

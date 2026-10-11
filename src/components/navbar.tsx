@@ -75,7 +75,7 @@ const serviceCategories = [
 const links = [
   { href: '/testimonials', label: 'Testimonials' },
   { href: '/blog', label: 'Blog' },
-  { href: ACUITY_URL, label: 'Reserve Appointment' },
+  { href: ACUITY_URL, label: 'Book an Appointment' },
 ]
 
 const servicesButtonClass =

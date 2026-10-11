@@ -54,7 +54,7 @@ export function BlogPostLayout({
         ]}
       />
 
-      <article className="blog-article bg-light py-16 sm:py-24">
+      <article className="blog-article bg-light py-20 sm:py-28">
         <Container>
           <div className="mx-auto max-w-3xl">
             <Link

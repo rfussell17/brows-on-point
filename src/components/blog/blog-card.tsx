@@ -14,7 +14,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
       className="group flex flex-col overflow-hidden rounded-2xl bg-primary-800 ring-1 ring-secondary-700 transition-colors hover:bg-primary-700 hover:ring-secondary-500"
     >
       {post.imageUrl ? (
-        <div className="relative aspect-[4/3] w-full overflow-hidden">
+        <div className="relative aspect-[1200/630] w-full overflow-hidden">
           <Image
             fill
             src={post.imageUrl}
@@ -23,7 +23,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
           />
         </div>
       ) : (
-        <ImagePlaceholder className="aspect-[4/3] w-full" />
+        <ImagePlaceholder className="aspect-[1200/630] w-full" />
       )}
       <div className="flex flex-1 flex-col p-6">
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-small text-secondary-300">
@@ -35,7 +35,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
           <span aria-hidden="true">·</span>
           <span>{post.readTime}</span>
         </div>
-        <h3 className="mt-3 text-lead font-semibold text-light">
+        <h3 className="mt-3 text-lead text-light">
           {post.title}
         </h3>
         <p className="mt-2 line-clamp-3 text-body text-light/70">

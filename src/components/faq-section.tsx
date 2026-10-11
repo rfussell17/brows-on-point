@@ -55,7 +55,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
   const contentClass = isDark ? 'text-light/80' : ''
 
   return (
-    <section className={`${bgClass} py-24 sm:py-32 ${className}`}>
+    <section className={`${bgClass} py-28 sm:py-36 ${className}`}>
       <FaqPageJsonLd faqs={faqs} />
       <Container>
         <h2 className={`text-heading ${headingClass}`}>{title}</h2>

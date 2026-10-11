@@ -32,7 +32,7 @@ function Sitemap() {
       <div>
         <SitemapHeading>Services</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/lashes">Lashes</SitemapLink>
+          <SitemapLink href="/lashes">Lash Lift + Lash Clusters</SitemapLink>
           <SitemapLink href="/brows">Brows</SitemapLink>
           <SitemapLink href="/permanent-makeup">Permanent Makeup</SitemapLink>
           <SitemapLink href="/smile">Smile Services</SitemapLink>

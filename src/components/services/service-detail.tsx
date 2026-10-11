@@ -73,7 +73,7 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
     if (variant === 'light') {
       return (
         <div className="rounded-2xl bg-gray-200 p-6 ring-1 ring-primary-100">
-          <h3 className="flex items-center gap-2 text-lead font-semibold text-primary">
+          <h3 className="flex items-center gap-2 text-lead text-primary">
             <Icon className="h-5 w-5 text-secondary" aria-hidden="true" />
             {title}
           </h3>
@@ -87,7 +87,7 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
       <div
         className={`rounded-lg ${cardBgClass} p-6 ring-1 ring-secondary-700`}
       >
-        <h3 className="flex items-center gap-2 text-lead font-semibold text-light">
+        <h3 className="flex items-center gap-2 text-lead text-light">
           <Icon className="h-5 w-5 text-secondary-300" aria-hidden="true" />
           {title}
         </h3>
@@ -108,21 +108,21 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
       )}
 
       {data.serviceOptions && (
-        <div className={`${serviceOptionsBgClass} py-24 sm:py-32`}>
+        <div className={`${serviceOptionsBgClass} py-28 sm:py-36`}>
           <Container>
-            <h3 className="text-lead font-semibold text-light">
+            <h3 className="text-lead text-light">
               {data.serviceOptionsHeading ?? 'Choose Your Service'}
             </h3>
-            <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <div className="mt-6 grid grid-cols-1 items-start gap-6 sm:grid-cols-3">
               {data.serviceOptions.map((option) => (
                 <div
                   key={option.name}
                   className="rounded-lg bg-primary-800 p-6 ring-1 ring-secondary-700 transition-colors hover:bg-primary-700 hover:ring-secondary-500"
                 >
-                  <h4 className="text-lead font-semibold text-light">
+                  <h4 className="text-lead text-light">
                     {option.name}
                   </h4>
-                  <div className="mt-1 text-lead font-semibold text-light">
+                  <div className="mt-1 text-lead text-light">
                     {option.price}
                   </div>
                   <div className="prose prose-invert mt-2 text-light/70">
@@ -135,9 +135,9 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
         </div>
       )}
 
-      <div className={`relative ${detailBgClass} py-24 sm:py-32`}>
+      <div className={`relative ${detailBgClass} py-28 sm:py-36`}>
         <Container>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="grid grid-cols-1 items-start gap-8 sm:grid-cols-2">
             {renderSection(
               'How to Prepare',
               ClipboardDocumentCheckIcon,
@@ -152,8 +152,8 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
             <div
               className={
                 data.contraindications && data.policyNotice
-                  ? 'mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2'
-                  : 'mt-10'
+                  ? 'mt-14 grid grid-cols-1 items-start gap-8 sm:grid-cols-2'
+                  : 'mt-14'
               }
             >
               {data.contraindications &&
@@ -182,35 +182,6 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
             </div>
           )}
 
-          {data.touchUpPricing && (
-            <div className="mt-10">
-              <h3 className="text-lead font-semibold text-light">
-                Touch-Up Pricing
-              </h3>
-              <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-3">
-                <div className="rounded-lg bg-primary-50 p-6 text-center ring-1 ring-primary-100">
-                  <div className="text-body text-gray-600">
-                    First Appointment
-                  </div>
-                  <div className="mt-1 text-lead font-semibold text-primary">
-                    {data.touchUpPricing.firstAppointment}
-                  </div>
-                </div>
-                <div className="rounded-lg bg-primary-50 p-6 text-center ring-1 ring-primary-100">
-                  <div className="text-body text-gray-600">Touch-Up</div>
-                  <div className="mt-1 text-lead font-semibold text-primary">
-                    {data.touchUpPricing.touchUp}
-                  </div>
-                </div>
-                <div className="rounded-lg bg-primary-50 p-6 text-center ring-1 ring-primary-100">
-                  <div className="text-body text-gray-600">Year One Total</div>
-                  <div className="mt-1 text-lead font-semibold text-primary">
-                    {data.touchUpPricing.yearOne}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
         </Container>
       </div>
     </div>

@@ -35,12 +35,6 @@ export interface ServiceData {
   }>
   /** Heading above the serviceOptions grid. Defaults to "Choose Your Service". */
   serviceOptionsHeading?: string
-  /** Touch-up pricing table (Q50) — first appointment / touch-up / year-one total. */
-  touchUpPricing?: {
-    firstAppointment: string
-    touchUp: string
-    yearOne: string
-  }
   /** Policy notices (e.g. the booking-fee block) rendered between the header and detail sections. */
   policyNotice?: ReactNode
   /** Link back up to this spoke's hub — e.g. { text: 'All Lash Services', href: '/lashes' }. Defaults to the /services index. */
@@ -85,32 +79,38 @@ export const pmuContraindications = (
  * /smile/teeth-whitening/ and /smile/sensitive-teeth-whitening/.
  */
 export const teethWhiteningContraindications = (
-  <div className="mx-auto max-w-2xl px-6">
-    <h4 className="font-semibold text-primary">Dental Health</h4>
-    <ul className="list-disc space-y-2 pl-6">
-      <li>Active cavities or tooth decay</li>
-      <li>Periodontal disease or gum recession</li>
-      <li>Exposed dentin or significant enamel erosion</li>
-      <li>Cracked or fractured teeth</li>
-    </ul>
-    <h4 className="mt-6 font-semibold text-primary">Medical</h4>
-    <ul className="list-disc space-y-2 pl-6">
-      <li>Pregnancy or breastfeeding</li>
-      <li>Under 18 years old</li>
-      <li>Known allergy to peroxide</li>
-    </ul>
-    <h4 className="mt-6 font-semibold text-primary">Other Limitations</h4>
-    <ul className="list-disc space-y-2 pl-6">
-      <li>
-        Crowns, veneers, bonding, or other restorations on front teeth
-        won&apos;t whiten and can end up a mismatched colour next to your
-        natural teeth
-      </li>
-      <li>
-        Deep intrinsic staining, such as from tetracycline or severe fluorosis,
-        may not respond to in-office whitening
-      </li>
-    </ul>
+  <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+    <div>
+      <h4 className="font-semibold text-light">Dental Health</h4>
+      <ul className="mt-2 list-disc space-y-2 pl-6">
+        <li>Active cavities or tooth decay</li>
+        <li>Periodontal disease or gum recession</li>
+        <li>Exposed dentin or significant enamel erosion</li>
+        <li>Cracked or fractured teeth</li>
+      </ul>
+    </div>
+    <div>
+      <h4 className="font-semibold text-light">Medical</h4>
+      <ul className="mt-2 list-disc space-y-2 pl-6">
+        <li>Pregnancy or breastfeeding</li>
+        <li>Under 18 years old</li>
+        <li>Known allergy to peroxide</li>
+      </ul>
+    </div>
+    <div>
+      <h4 className="font-semibold text-light">Other Limitations</h4>
+      <ul className="mt-2 list-disc space-y-2 pl-6">
+        <li>
+          Crowns, veneers, bonding, or other restorations on front teeth
+          won&apos;t whiten more than their original shade (surface staining
+          only can be removed on these)
+        </li>
+        <li>
+          Deep intrinsic staining, such as from tetracycline or severe
+          fluorosis, may not respond to in-office whitening
+        </li>
+      </ul>
+    </div>
   </div>
 )
 
@@ -126,7 +126,7 @@ export const pmuBookingFeeNotice = (
     <li>A $50 booking fee secures your appointment</li>
     <li>Transferable to a new date, with 24 hours&apos; notice, once only</li>
     <li>No-shows forfeit the $50</li>
-    <li>More than 10 minutes late and the appointment is cancelled</li>
+    <li>More than 15 minutes late and the appointment is cancelled</li>
   </ul>
 )
 
@@ -190,7 +190,7 @@ export const lashServiceData: ServiceData = {
     },
     {
       name: 'Korean Lash Lift and Tint',
-      price: 'Ask at your consultation',
+      price: '$75',
       description: (
         <>
           A gentler, more relaxed curl pattern than the BOMB Lift, using a
@@ -248,8 +248,8 @@ export const lashServiceData: ServiceData = {
     </div>
   ),
   contraindications: (
-    <div className="mx-auto max-w-2xl px-6">
-      <ul className="list-disc space-y-2 pl-6">
+    <div>
+      <ul className="list-disc space-y-2 pl-6 sm:columns-2">
         <li>Recent eye surgery or procedures</li>
         <li>Active eye infections or conditions</li>
         <li>Severe allergies affecting the eye area</li>
@@ -262,7 +262,7 @@ export const lashServiceData: ServiceData = {
     {
       question: 'How much does a lash lift and tint cost in Kelowna?',
       answer:
-        'It depends which lash lift you choose. My BOMB Lash Lift and Tint is $70, and my Keratin Lash Lift and Tint is $80. Ask about Korean Lash Lift and Tint pricing at your consultation.',
+        'It depends which lash lift you choose. My BOMB Lash Lift and Tint is $70, my Keratin Lash Lift and Tint is $80, and my Korean Lash Lift and Tint is $75.',
     },
     {
       question:
@@ -277,11 +277,6 @@ export const lashServiceData: ServiceData = {
         'The Korean technique uses a gentler, more premium lifting solution than the Keratin or BOMB treatments, along with a technique that takes more time to apply. Ask about pricing at your consultation.',
     },
     {
-      question: 'Is a lash lift the same as a lash perm or lash lamination?',
-      answer:
-        'Yes. Lash lift, lash perm, and lash lamination all describe the same style of treatment: lifting and setting your natural lashes around a small rod, rather than adding extensions. I tint the lashes as part of the treatment too.',
-    },
-    {
       question: 'Can I get a lash lift without the lash tint?',
       answer:
         'Yes, Lash Lift Only is available at $50 if you just want the curl without darkening your lashes. Most clients choose lift and tint together, since the tint is what removes the need for mascara.',
@@ -290,11 +285,6 @@ export const lashServiceData: ServiceData = {
       question: 'How long does a lash lift and tint take?',
       answer:
         'Around 45-60 minutes, depending on which lash lift you choose and how many lashes you have.',
-    },
-    {
-      question: 'Is a lash lift and tint painful?',
-      answer:
-        "No. You'll relax with your eyes closed for the whole appointment, and most clients describe it as comfortable, not painful.",
     },
     {
       question: 'How long do lash lift and tint results last?',
@@ -315,11 +305,6 @@ export const lashServiceData: ServiceData = {
       question: 'How do I prepare for my lash lift and tint appointment?',
       answer:
         'Arrive with completely clean lashes and no makeup, and remove your contact lenses before treatment. Avoid caffeine beforehand, stop using lash serums 48 hours before, and tell me about any eye conditions or sensitivities.',
-    },
-    {
-      question: 'What happens during a lash lift and tint appointment?',
-      answer:
-        'We start with a consultation to choose your lash lift and confirm the result you want. I then cleanse the eye area, protect your lower lashes with silicone shields, lift your lashes over the shield, and apply the lifting solution, setting solution and tint.',
     },
     {
       question:
@@ -410,9 +395,11 @@ export const lashAndBrowTintingServiceData: ServiceData = {
   hubLink: { text: 'All Lash Services', href: '/lashes' },
   shortDescription:
     'Eyelash tinting: darker lashes and brows without daily mascara.',
-  title: 'Lash & Brow Tinting',
+  title: 'Lash Tinting',
   description:
     'An eyelash tint uses a semi-permanent dye to darken your natural lashes, so they show up without mascara. At Brows on Point, you can book an eyelash tint on its own, or pair it with a brow tint in the same appointment.',
+  galleryImages: ['/services/lashes/lashes-tinting-closeup-01.jpg'],
+  thumbnail: '/services/lashes/lashes-tinting-closeup-01.jpg',
   duration: '15-30 minutes, depending on whether you add brow tint',
   results: '3-6 weeks',
   price: '$25',
@@ -482,7 +469,7 @@ export const lashAndBrowTintingServiceData: ServiceData = {
     </div>
   ),
   contraindications: (
-    <div className="mx-auto max-w-2xl px-6">
+    <div>
       <ul className="list-disc space-y-2 pl-6">
         <li>Active eye infections or conditions</li>
         <li>Severe allergies affecting the eye area</li>
@@ -504,12 +491,6 @@ export const lashAndBrowTintingServiceData: ServiceData = {
     },
     {
       question:
-        'Can I get a lash tint and a brow tint at the same appointment?',
-      answer:
-        "Yes. Adding a lash tint onto a Brow Tint & Shape appointment is $40 total, and it's one of my most popular quick appointments.",
-    },
-    {
-      question:
         'Is lash or brow tinting safe if I have sensitive eyes or skin?',
       answer:
         "Tinting is suitable for most clients. For first-time clients I do a patch test, applying a small amount of tint to check for any reaction before your full appointment. Tell me about any eye conditions, allergies or skin sensitivities before we start, and I'll let you know if it's better to wait.",
@@ -518,17 +499,6 @@ export const lashAndBrowTintingServiceData: ServiceData = {
       question: 'How do I prepare for a lash tint or brow tint?',
       answer:
         'Arrive with clean lashes and brows and no makeup, and remove your contact lenses before a lash tint. Tell me about any eye conditions or sensitivities before we start.',
-    },
-    {
-      question:
-        'What should I do after a lash or brow tint, and what makes it fade faster?',
-      answer:
-        'Avoid water, steam and heat for 24 hours and avoid rubbing your eyes. Oil-based makeup removers fade tint faster, so avoid them.',
-    },
-    {
-      question: "Who shouldn't get a lash or brow tint?",
-      answer:
-        'I recommend waiting if you have an active eye infection or condition, severe allergies affecting the eye area, or have had recent eye surgery or procedures.',
     },
   ],
 }
@@ -628,17 +598,7 @@ export const microbladingServiceData: ServiceData = {
   ),
   contraindications: pmuContraindications,
   policyNotice: pmuBookingFeeNotice,
-  touchUpPricing: {
-    firstAppointment: '$275',
-    touchUp: '$100',
-    yearOne: '$375',
-  },
   faqs: [
-    {
-      question: 'How much does microblading cost in Kelowna?',
-      answer:
-        'Microblading is $275 for your first appointment, which includes brow mapping and the full procedure. A touch-up is $100, bringing your total first year to $375.',
-    },
     {
       question: 'How long does microblading last?',
       answer:
@@ -688,7 +648,7 @@ export const microbladingServiceData: ServiceData = {
     {
       question: 'Is there a booking fee for microblading?',
       answer:
-        "A $50 booking fee secures your appointment. It can be transferred to a new date once, with 24 hours' notice, and no-shows forfeit it. If you arrive more than 10 minutes late, the appointment is cancelled.",
+        "A $50 booking fee secures your appointment. It can be transferred to a new date once, with 24 hours' notice, and no-shows forfeit it.",
     },
   ],
 }
@@ -848,7 +808,7 @@ export const powderBrowsServiceData: ServiceData = {
     '/services/permanent-makeup/permanent-makeup-powder-brows-healed-01.jpg',
   ],
   duration: '2-2.5 hours',
-  results: 'Varies by skin type — ask at your consultation',
+  results: '1-3 years',
   price: '$300',
   thumbnail:
     '/services/permanent-makeup/permanent-makeup-powder-brows-before-after-01.jpg',
@@ -908,11 +868,6 @@ export const powderBrowsServiceData: ServiceData = {
   ),
   contraindications: pmuContraindications,
   policyNotice: pmuBookingFeeNotice,
-  touchUpPricing: {
-    firstAppointment: '$300',
-    touchUp: '$125',
-    yearOne: '$425',
-  },
   faqs: [
     {
       question: 'How much do powder brows cost in Kelowna?',
@@ -927,7 +882,7 @@ export const powderBrowsServiceData: ServiceData = {
     {
       question: 'How long do powder brows last before they need a refresh?',
       answer:
-        'Powder brows typically last 1-2 years, depending on your skin type and how well you follow the aftercare. Ask me at your consultation for a more specific estimate.',
+        'Powder brows typically last 1-3 years, depending on your skin type and how well you follow the aftercare. Ask me at your consultation for a more specific estimate.',
     },
     {
       question: "Who isn't a good candidate for powder brows?",
@@ -952,7 +907,7 @@ export const powderBrowsServiceData: ServiceData = {
     {
       question: 'Is there a booking fee for powder brows?',
       answer:
-        "A $50 booking fee secures your appointment. It can be transferred to a new date once, with 24 hours' notice, and no-shows forfeit it. If you arrive more than 10 minutes late, the appointment is cancelled.",
+        "A $50 booking fee secures your appointment. It can be transferred to a new date once, with 24 hours' notice, and no-shows forfeit it.",
     },
   ],
 }
@@ -973,7 +928,8 @@ export const salineRemovalServiceData: ServiceData = {
   thumbnail:
     '/services/permanent-makeup/permanent-makeup-removal-saline-before-after-01.jpg',
   duration: '90 minutes',
-  results: 'Often requires more than one session',
+  results:
+    'Often requires more than one session (unless done as an Emergency Removal within 72 hours of the original application)',
   price: '$125',
   about: (
     <>
@@ -1087,32 +1043,17 @@ export const salineRemovalServiceData: ServiceData = {
       heading: 'Emergency / After-Hours Removal',
       content: (
         <>
-          Emergency saline removal is available within 24 hours of your original
-          appointment, for a $200 after-hours fee.
+          Emergency saline removal is available within 72 hours of your original
+          PMU application, for a $200 after-hours fee.
         </>
       ),
     },
   ],
   faqs: [
     {
-      question: 'How much does saline tattoo removal cost in Kelowna?',
-      answer:
-        'Saline tattoo and PMU removal is $125. Most clients need more than one session, so ask about your specific case at a free consultation.',
-    },
-    {
-      question: 'Does Brows on Point offer laser tattoo removal?',
-      answer:
-        'No. Brows on Point offers saline removal, which uses a saline solution rather than laser energy. If you specifically need laser removal, that would be a different provider.',
-    },
-    {
       question: 'How many sessions of saline tattoo removal will I need?',
       answer:
         'It varies by how much pigment is in the skin. Most clients need more than one session, and I can give you a better estimate at your consultation.',
-    },
-    {
-      question: 'Can saline removal remove or lighten microblading?',
-      answer:
-        'Yes. Saline removal is a common choice for removing or lightening microblading, since it works gently on the fine strokes typical of that technique.',
     },
     {
       question: "Who shouldn't get saline tattoo removal?",
@@ -1123,11 +1064,6 @@ export const salineRemovalServiceData: ServiceData = {
       question: 'How do I prepare for saline tattoo removal?',
       answer:
         'Avoid blood thinners for 2 weeks beforehand unless they are prescribed, and skip alcohol for 48 hours. Tell me about any skin conditions in the treatment area.',
-    },
-    {
-      question: 'How do I care for my skin after saline tattoo removal?',
-      answer:
-        "Keep the area strictly dry and let a thin scab form, blotting it every 30-60 minutes for the first few hours. Don't pick the scab; it usually falls off on its own within 7-14 days. Full healing takes 6-8 weeks, and you should wait until then before another saline session or new permanent makeup in the same area.",
     },
     {
       question:
@@ -1243,35 +1179,14 @@ export const permanentEyelinerServiceData: ServiceData = {
   policyNotice: pmuBookingFeeNotice,
   faqs: [
     {
-      question: 'How much does permanent eyeliner cost in Kelowna?',
-      answer:
-        'Upper lash line enhancement is $199, with a $135 touch-up. Lower eyeliner on its own is $120. Top and bottom together is $319, with a $180 touch-up.',
-    },
-    {
-      question:
-        "What's the difference between permanent lash line enhancement and full top-and-bottom permanent eyeliner?",
-      answer:
-        'Lash enhancement is subtle: pigment fills the gaps between your lashes so the line barely shows on its own. A full top-and-bottom eyeliner tattoo is more visibly defined.',
-    },
-    {
       question: 'How long does permanent eyeliner last?',
       answer:
         'Typically 2-3 years, depending on your skin and how well you follow the aftercare instructions.',
     },
     {
-      question: "Who isn't a good candidate for permanent eyeliner?",
-      answer:
-        "You should wait or check with your doctor first if you are pregnant or breastfeeding, have an active skin condition or an uncontrolled autoimmune condition, have lupus or rheumatoid arthritis that is not controlled and cleared with a doctor's note, have had recent chemotherapy, take blood-thinning medications, or have a history of keloid scarring.",
-    },
-    {
       question: 'How do I prepare for my permanent eyeliner appointment?',
       answer:
         'Avoid blood thinners for 2 weeks beforehand unless they are prescribed, skip alcohol for 48 hours, and remove your contact lenses before treatment. Tell me about any eye conditions or sensitivities.',
-    },
-    {
-      question: 'How do I take care of permanent eyeliner while it heals?',
-      answer:
-        'Keep the area clean and dry for 7 days, avoid eye makeup for 2 weeks, and skip swimming and saunas while it heals. Attend your touch-up appointment within 2 months.',
     },
     {
       question:
@@ -1298,7 +1213,7 @@ export const toothGemsServiceData: ServiceData = {
   ],
   duration: '15-20 minutes',
   results: '6-24 months',
-  price: '$40',
+  price: '$40 for the first, +$20 each additional',
   thumbnail: '/services/smile/smile-tooth-gem-closeup-01.jpg',
   about: (
     <>
@@ -1404,7 +1319,7 @@ export const toothGemsServiceData: ServiceData = {
     {
       question: 'How much does a Swarovski tooth gem cost in Kelowna?',
       answer:
-        'A single Swarovski tooth gem is $40. Ask about multi-gem pricing at your appointment.',
+        'A single Swarovski tooth gem is $40, with $20 for each additional gem.',
     },
     {
       question: 'Do tooth gems damage your teeth or enamel?',
@@ -1419,7 +1334,7 @@ export const toothGemsServiceData: ServiceData = {
     {
       question: 'Can I get more than one tooth gem at the same appointment?',
       answer:
-        'Yes. Many clients choose two or more. Ask about multi-gem pricing at your appointment.',
+        'Yes. Many clients choose two or more. Each additional gem is $20.',
     },
     {
       question: 'How do I prepare for my tooth gem appointment?',
@@ -1558,11 +1473,6 @@ export const teethWhiteningServiceData: ServiceData = {
         'Basic whitening is $99 for two 20-minute sessions. Ultra is $145 for three sessions. 24k gold whitening, recommended for sensitive teeth, is also $99.',
     },
     {
-      question: 'Where does Brows on Point offer teeth whitening?',
-      answer:
-        'Brows on Point is based in West Kelowna and offers professional, in-office teeth whitening by appointment.',
-    },
-    {
       question: 'How long do professional teeth whitening results last?',
       answer:
         'Results typically last up to 6 months, depending on your diet and oral hygiene habits afterward.',
@@ -1586,18 +1496,12 @@ export const teethWhiteningServiceData: ServiceData = {
     {
       question: 'Will teeth whitening work on crowns, veneers or bonding?',
       answer:
-        "No. Crowns, veneers, bonding and other restorations on front teeth won't whiten, and can end up a mismatched colour next to your natural teeth.",
+        "Not fully. Crowns, veneers, bonding and other restorations on front teeth won't whiten past their original shade, though surface staining on them can still be removed.",
     },
     {
       question: 'What should I avoid after teeth whitening?',
       answer:
         'Avoid staining foods and drinks for 48 hours, and use a whitening-safe toothpaste to maintain your results.',
-    },
-    {
-      question:
-        "What's the difference between Basic, Ultra and 24k gold teeth whitening?",
-      answer:
-        'Basic and Ultra use the same whitening gel and differ in how many 20-minute sessions you get, so Ultra goes further for a brighter result. The 24k gold option uses a gentler formula and is what I recommend if your teeth or gums are sensitive.',
     },
   ],
 }
@@ -1676,11 +1580,6 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
         "It's formulated to be gentler than my standard whitening options, which is why I recommend it for clients who know they have sensitive teeth.",
     },
     {
-      question:
-        'How much does 24k gold teeth whitening for sensitive teeth cost?',
-      answer: '24k gold whitening is $99, the same price as Basic whitening.',
-    },
-    {
       question: "Who shouldn't get 24k gold teeth whitening?",
       answer:
         'The same limits apply as for my other whitening: active cavities or decay, periodontal disease or gum recession, exposed dentin or significant enamel erosion, cracked teeth, pregnancy or breastfeeding, being under 18, or an allergy to peroxide.',
@@ -1696,11 +1595,6 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
       answer:
         'Avoid staining foods and drinks for 48 hours and use a sensitivity-friendly toothpaste to maintain your results.',
     },
-    {
-      question: 'What happens during a 24k gold teeth whitening session?',
-      answer:
-        'After a consultation and shade check, I apply the 24k gold whitening formula and do an LED light treatment. We finish with a final shade check and aftercare instructions, and the visit takes 40-60 minutes.',
-    },
   ],
 }
 
@@ -1713,6 +1607,10 @@ export const rfSkinTighteningData: ServiceData = {
   title: 'Skin Tightening Treatment',
   description:
     'RF skin tightening uses radiofrequency energy to gently heat the deeper layers of skin, encouraging your body to produce more collagen so skin looks firmer over time. At Brows on Point in West Kelowna, treatment is done with a 40k ultrasonic RF machine that combines skin tightening with ultrasonic exfoliation in one session.',
+  galleryImages: [
+    '/services/skin-tightening/skin-tightening-treatment-closeup-01.jpg',
+  ],
+  thumbnail: '/services/skin-tightening/skin-tightening-treatment-closeup-01.jpg',
   duration: '45 minutes',
   results: '4-6 weeks, cumulative with a course of treatments',
   price: '$75',
@@ -1726,20 +1624,16 @@ export const rfSkinTighteningData: ServiceData = {
   ),
   extraSections: [
     {
-      heading: 'Face, Neck & Body',
+      heading: 'Face and Neck',
       content: (
         <>
-          RF skin tightening can be used on the face for a radio frequency
-          facial, on the neck for face and neck tightening together, or on the
-          body for general skin firmness, always as a skin-quality treatment,
-          not a fat-loss or body-contouring service. If you&apos;re asking about
-          fat reduction specifically, that&apos;s a different treatment I
-          don&apos;t currently offer.
+          RF skin tightening is typically done in packages of 3-5 for best
+          results, with 48 to 72 hours between sessions.
         </>
       ),
     },
     {
-      heading: '3-Session Package',
+      heading: '3-Session Package - introductory pricing',
       content: (
         <>
           A 3-session package is $175, compared to $225 for three individual
@@ -1791,35 +1685,39 @@ export const rfSkinTighteningData: ServiceData = {
     </div>
   ),
   contraindications: (
-    <div className="mx-auto max-w-2xl px-6">
-      <h4 className="font-semibold text-primary">Medical & Safety</h4>
-      <ul className="list-disc space-y-2 pl-6">
-        <li>
-          Pacemakers, defibrillators, or other implanted electronic devices
-        </li>
-        <li>
-          Metal plates, screws, pins, or other metal implants in the treatment
-          area
-        </li>
-        <li>Pregnancy or breastfeeding</li>
-        <li>Active cancer or an undiagnosed lesion in the treatment area</li>
-      </ul>
-      <h4 className="mt-6 font-semibold text-primary">Skin Conditions</h4>
-      <ul className="list-disc space-y-2 pl-6">
-        <li>
-          Active skin infections, cystic acne breakouts, cold sores, eczema,
-          psoriasis, or rosacea flare-ups in the treatment area
-        </li>
-        <li>History of keloid scarring</li>
-        <li>Recent tanning or a sunburn in the treatment area</li>
-      </ul>
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div>
+        <h4 className="font-semibold text-light">Medical & Safety</h4>
+        <ul className="mt-2 list-disc space-y-2 pl-6">
+          <li>
+            Pacemakers, defibrillators, or other implanted electronic devices
+          </li>
+          <li>
+            Metal plates, screws, pins, or other metal implants in the
+            treatment area
+          </li>
+          <li>Pregnancy or breastfeeding</li>
+          <li>Active cancer or an undiagnosed lesion in the treatment area</li>
+        </ul>
+      </div>
+      <div>
+        <h4 className="font-semibold text-light">Skin Conditions</h4>
+        <ul className="mt-2 list-disc space-y-2 pl-6">
+          <li>
+            Active skin infections, cystic acne breakouts, cold sores, eczema,
+            psoriasis, or rosacea flare-ups in the treatment area
+          </li>
+          <li>History of keloid scarring</li>
+          <li>Recent tanning or a sunburn in the treatment area</li>
+        </ul>
+      </div>
     </div>
   ),
   faqs: [
     {
       question: 'How much does RF skin tightening cost in Kelowna?',
       answer:
-        'A single RF neck/facial skin tightening session is $75. A 3-session package is $175.',
+        'A single RF neck/facial skin tightening session is $75. A 3-session package is $175 (introductory pricing).',
     },
     {
       question:
@@ -1843,11 +1741,6 @@ export const rfSkinTighteningData: ServiceData = {
         'None. You can return to your normal routine immediately after treatment.',
     },
     {
-      question: 'Does RF skin tightening reduce fat or change body shape?',
-      answer:
-        'No. This is a skin-tightening and texture treatment, not a fat-reduction or body-contouring service.',
-    },
-    {
       question: "Who shouldn't have RF skin tightening?",
       answer:
         "I don't recommend it with a pacemaker, defibrillator or other implanted electronic device, or metal plates, screws or pins in the treatment area. It's also not suitable if you are pregnant or breastfeeding, have active cancer or an undiagnosed lesion in the area, have active skin infections or flare-ups there, have a history of keloid scarring, or have recent tanning or a sunburn in the area.",
@@ -1855,12 +1748,7 @@ export const rfSkinTighteningData: ServiceData = {
     {
       question: 'How do I prepare for my RF skin tightening appointment?',
       answer:
-        'Arrive with clean, makeup-free skin, avoid sun exposure or sunburn in the days before, and stop retinol products 48 hours beforehand. Tell me about any metal implants, pacemakers or skin conditions.',
-    },
-    {
-      question: 'What happens during an RF skin tightening treatment?',
-      answer:
-        'We start with a skin assessment and cleansing, then I use ultrasonic exfoliation to remove dead skin cells. I then do the RF tightening passes with the 40k ultrasonic machine and finish with a soothing, hydrating serum. A session takes about 45 minutes.',
+        'Arrive with clean, makeup-free skin, avoid sun exposure or sunburn in the days before, and stop retinol products 48 hours beforehand. Stay well hydrated in the 24 hours before your appointment, and tell me about any metal implants, pacemakers or skin conditions.',
     },
     {
       question: 'What should I do after RF skin tightening?',

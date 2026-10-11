@@ -45,7 +45,7 @@ const categories = [
     highlights: [
       'Lash Lift and Tint',
       'Lash & Brow Tinting',
-      // 'Lash Growth Serum', // hidden for now
+      'Lash clusters',
     ],
     image: '/services/lashes/lashes-lift-bomb-before-after-03.jpg',
   },
@@ -85,6 +85,7 @@ const categories = [
       'Face, neck & jowl area',
       '3-session package available',
     ],
+    image: '/services/skin-tightening/skin-tightening-treatment-closeup-01.jpg',
   },
 ]
 
@@ -98,7 +99,7 @@ const ServicesPage = () => {
         ]}
       />
       {/* Hero */}
-      <div className="bg-primary py-24 sm:py-32">
+      <div className="bg-primary py-28 sm:py-36">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-display text-light">My Services</h1>
@@ -115,7 +116,7 @@ const ServicesPage = () => {
       {/* Category rows */}
       <div className="bg-primary-950 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
         <Container>
-          <div className="flex flex-col gap-20">
+          <div className="flex flex-col gap-24">
             {categories.map((category) => (
               <div
                 key={category.href}

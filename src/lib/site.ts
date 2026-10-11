@@ -24,8 +24,8 @@ export const GOOGLE_REVIEWS_URL = 'https://share.google/I3DmUVnWFhe0tZRgt'
 export const BOOKING_CTA = {
   title: 'Book your appointment today',
   subtitle:
-    "West Kelowna's trusted studio for lash lifts, brow enhancements, and permanent makeup.",
-  buttonText: 'Reserve Appointment',
+    "West Kelowna's trusted studio for lash lifts, teeth whitening, lash/brow tints and permanent makeup.",
+  buttonText: 'Book your Appointment',
   buttonHref: ACUITY_URL,
 }
 

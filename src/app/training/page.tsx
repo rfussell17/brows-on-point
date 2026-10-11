@@ -29,13 +29,13 @@ const courses = [
     name: 'Lash Lift Training',
     price: '$500',
     description:
-      'Hands-on training in lash lift techniques, covering consultation, application, and aftercare.',
+      'Hands-on training in lash lift techniques, covering consultation, application, and aftercare. Course comes with a full kit (30 applications) and certificate.',
   },
   {
     name: 'Teeth Whitening Training',
     price: '$550',
     description:
-      'Hands-on training in professional in-office teeth whitening, covering consultation, application, and aftercare.',
+      'Hands-on training in professional in-office teeth whitening, covering consultation, application, and aftercare. Comes with a full kit, light, and certificate.',
   },
 ]
 
@@ -49,7 +49,7 @@ export default function TrainingPage() {
           { name: 'Training', path: '/training' },
         ]}
       />
-      <div className="bg-primary px-6 py-24 sm:py-32 lg:px-8">
+      <div className="bg-primary px-6 py-28 sm:py-36 lg:px-8">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-display text-light">
@@ -57,8 +57,7 @@ export default function TrainingPage() {
             </h1>
             <p className="mt-6 text-lead text-gray-100">
               Brows on Point offers hands-on training in two techniques: lash
-              lift, and teeth whitening. I don&apos;t offer permanent makeup
-              training.
+              lift, and teeth whitening.
             </p>
           </div>
         </Container>
@@ -66,16 +65,16 @@ export default function TrainingPage() {
 
       <div className="bg-primary-950 px-6 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32 lg:px-8">
         <Container>
-          <div className="mx-auto grid max-w-3xl grid-cols-1 gap-8 sm:grid-cols-2">
+          <div className="mx-auto grid max-w-3xl grid-cols-1 gap-10 sm:grid-cols-2">
             {courses.map((course) => (
               <div
                 key={course.name}
                 className="rounded-2xl bg-primary-800 p-8 ring-1 ring-secondary-700"
               >
-                <h2 className="text-lead font-semibold text-light">
+                <h2 className="text-lead text-light">
                   {course.name}
                 </h2>
-                <div className="mt-2 text-lead font-semibold text-light">
+                <div className="mt-2 text-lead text-light">
                   {course.price}
                 </div>
                 <p className="mt-4 text-body text-light/70">
@@ -86,7 +85,7 @@ export default function TrainingPage() {
           </div>
 
           <div className="mx-auto mt-16 max-w-2xl">
-            <h2 className="text-lead font-semibold text-light">Your Trainer</h2>
+            <h2 className="text-lead text-light">Your Trainer</h2>
             <div className="mt-4 text-body text-gray-100">
               <ul className="list-disc space-y-2 pl-6">
                 <li>Microblading Training Program</li>

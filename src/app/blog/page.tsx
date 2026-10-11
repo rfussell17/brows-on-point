@@ -34,7 +34,7 @@ export default function BlogPage() {
           { name: 'Blog', path: '/blog' },
         ]}
       />
-      <div className="bg-primary py-24 sm:py-32">
+      <div className="bg-primary py-28 sm:py-36">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-display text-light">Blog</h1>

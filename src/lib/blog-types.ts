@@ -11,7 +11,7 @@ export interface BlogPostMeta {
 
 export interface BlogPost extends BlogPostMeta {
   slug: string
-  /** Public path to a conventionally-named cover image, or null if none exists yet. */
+  /** The post's `ogImage`, reused as the card thumbnail, or null if none is set yet. */
   imageUrl: string | null
   readTime: string
 }

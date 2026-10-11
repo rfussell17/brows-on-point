@@ -29,7 +29,7 @@ const CallToAction: FC<CallToActionProps> = ({
       : 'bg-primary'
 
   return (
-    <div className={`${bgClass} py-24 sm:py-32 ${className}`}>
+    <div className={`${bgClass} py-28 sm:py-36 ${className}`}>
       <Container>
         <div className="lg:flex lg:items-center lg:justify-between">
           <h2 className="text-heading text-light">{title}</h2>

@@ -32,10 +32,10 @@ const TestimonialQuotes: React.FC<TestimonialQuotesProps> = ({
         : 'max-w-7xl sm:grid-cols-2 lg:grid-cols-3'
 
   return (
-    <section className={`${bgClass} px-6 py-24 sm:py-32 lg:px-8`}>
+    <section className={`${bgClass} px-6 py-28 sm:py-36 lg:px-8`}>
       <div className="mx-auto max-w-7xl">
         <h2 className="text-center text-heading text-light">{heading}</h2>
-        <div className={`mx-auto mt-12 grid gap-8 ${columns}`}>
+        <div className={`mx-auto mt-12 grid items-start gap-8 ${columns}`}>
           {quotes.map((q) => (
             <figure
               key={q.author.name}

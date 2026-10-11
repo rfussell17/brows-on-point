@@ -10,7 +10,7 @@ import { ACUITY_URL } from '@/lib/site'
  */
 export function PagePending({ title, note }: { title: string; note?: string }) {
   return (
-    <div className="bg-primary-light py-24 sm:py-32">
+    <div className="bg-primary-light py-28 sm:py-36">
       <Container>
         <h1 className="text-display text-primary">{title}</h1>
         <p className="mt-6 max-w-2xl text-body text-gray-600">

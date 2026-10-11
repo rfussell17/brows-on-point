@@ -69,7 +69,7 @@ export default function HubPage({
           { name: title, path },
         ]}
       />
-      <div className="bg-primary px-6 py-24 sm:py-32 lg:px-8">
+      <div className="bg-primary px-6 py-28 sm:py-36 lg:px-8">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-display text-light">{title}</h1>
@@ -96,7 +96,7 @@ export default function HubPage({
 
       <div className="bg-primary-950 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
         <Container>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {spokes.map((spoke) => (
               <ServiceCard
                 key={spoke.href}
@@ -113,7 +113,7 @@ export default function HubPage({
       {hasSections && sections && (
         <div className="bg-primary py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
           <Container>
-            <div className="mx-auto max-w-3xl space-y-16">
+            <div className="mx-auto max-w-3xl space-y-20">
               {sections.map((section) => (
                 <div key={section.heading}>
                   <h2 className="text-heading text-light">{section.heading}</h2>

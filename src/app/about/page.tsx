@@ -25,9 +25,9 @@ export const metadata: Metadata = {
 }
 
 const stats = [
-  { label: 'Serving West Kelowna', value: '8 Years' },
+  { label: 'Serving West Kelowna', value: '10 Years' },
   { label: 'Certified', value: '9x' },
-  { label: 'Happy Clients', value: '1200+' },
+  { label: 'Happy Clients', value: '1500+' },
 ]
 
 const certifications = [
@@ -55,11 +55,11 @@ export default function AboutPage() {
       />
       <main>
         {/* Hero */}
-        <div className="bg-primary py-24 sm:py-32">
+        <div className="bg-primary py-28 sm:py-36">
           <Container>
             <div className="mx-auto max-w-2xl text-center">
               <h1 className="text-display text-light">About Brows on Point</h1>
-              <p className="mt-8 text-lead text-gray-100">
+              <p className="mt-8 text-gray-100">
                 Welcome to Brows on Point, where beauty meets affordability and
                 expertise. Since 2016, I&apos;ve been helping clients discover
                 their most confident selves through personalized aesthetic
@@ -72,7 +72,7 @@ export default function AboutPage() {
         {/* Story + image */}
         <div className="bg-primary-950 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32">
           <Container>
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+            <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:items-center lg:gap-20">
               <div>
                 <h2 className="text-heading text-light">My Story</h2>
                 <div className="mt-6 space-y-6 text-body text-gray-100">
@@ -109,7 +109,7 @@ export default function AboutPage() {
             </div>
 
             {/* Stats */}
-            <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-3">
               {stats.map((stat, index) => (
                 <div
                   key={index}
@@ -126,9 +126,9 @@ export default function AboutPage() {
         </div>
 
         {/* Certifications */}
-        <div className="bg-primary py-24 sm:py-32">
+        <div className="bg-primary py-28 sm:py-36">
           <Container>
-            <div className="mx-auto flex max-w-2xl flex-col gap-12 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:gap-20">
+            <div className="mx-auto flex max-w-2xl flex-col gap-14 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:gap-24">
               <Image
                 alt="Jamie, Brows on Point"
                 width={500}

@@ -16,7 +16,7 @@ const TestimonialMakeup: React.FC<TestimonialProps> = ({
     <section
       className={`relative isolate overflow-hidden ${bgClass} ${sectionRingClass} px-6 lg:px-8`}
     >
-      <div className="relative mx-auto max-w-2xl py-24 sm:py-32 lg:max-w-7xl">
+      <div className="relative mx-auto max-w-2xl py-28 sm:py-36 lg:max-w-7xl">
         {/* Background Elements */}
         <div
           className={`absolute inset-y-0 right-1/2 -z-10 mr-12 w-[150vw] origin-bottom-left skew-x-[-30deg] ${bgClass} shadow-xl shadow-primary-600/10 ring-1 ring-secondary sm:mr-20 md:mr-0 lg:right-full lg:-mr-36 lg:origin-center`}

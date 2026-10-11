@@ -17,7 +17,7 @@ const TestimonialGroup: React.FC<TestimonialGroupProps> = ({
       : 'bg-primary'
 
   return (
-    <div className={`${bgClass} py-24 sm:py-32`}>
+    <div className={`${bgClass} py-28 sm:py-36`}>
       <Container>
         {showHeading && (
           <div className="mx-auto max-w-xl text-center">

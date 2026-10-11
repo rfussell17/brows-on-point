@@ -39,7 +39,7 @@ export function ServiceCard({
         <ImagePlaceholder className="aspect-[4/3] w-full" />
       )}
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="text-lead font-semibold text-light">{title}</h3>
+        <h3 className="text-lead text-light">{title}</h3>
         <p className="mt-2 text-body text-light/70">{description}</p>
         <span className="mt-4 inline-flex items-center gap-1 text-body font-semibold text-secondary-300">
           Explore

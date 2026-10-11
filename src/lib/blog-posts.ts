@@ -32,6 +32,7 @@ export const blogPosts: Record<string, BlogPostMeta> = {
       'What microblading is, how an appointment works, what healing looks like, how long it lasts and what it costs. A clear guide from Brows on Point in Kelowna.',
     date: '2026-10-03',
     category: 'Permanent Makeup',
+    ogImage: '/og/what-is-microblading-og_brows-on-point.jpg',
     keywords: [
       'what is microblading',
       'microblading healing',

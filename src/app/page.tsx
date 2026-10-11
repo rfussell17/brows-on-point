@@ -17,8 +17,11 @@ import {
 } from '@/lib/site'
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
+  title: {
+    absolute: 'Brows on Point | Brows, Lashes & Permanent Makeup in Kelowna',
+  },
   description:
-    'Brows on Point is a West Kelowna studio serving Kelowna for brow tinting, lash lifts, microblading, powder brows, permanent makeup and teeth whitening.',
+    'Brows on Point is a West Kelowna studio serving the Okanagan for brow tinting, lash lifts, microblading, powder brows, permanent makeup, tooth gems, RF facial tightening and teeth whitening.',
   robots: {
     index: false,
     follow: false,
@@ -40,7 +43,7 @@ const generalFAQs = [
   {
     question: 'What is the minimum age for services at Brows on Point?',
     answer:
-      'All clients must be 18 years or older and present valid ID at their appointment.',
+      'All clients must be 16 years or older for non-invasive services (lash lift, brow tint, etc.), and 18 years or older for needle-based services (teeth whitening, permanent makeup), and must present valid ID at their appointment if required.',
   },
   {
     question: 'Do lash, brow, and permanent makeup treatments hurt?',
