@@ -49,10 +49,11 @@ const Hero: React.FC<HeroProps> = ({ bgVariant = 'light' }) => {
               <p
                 className={`mt-6 text-body ${isDark ? 'text-gray-100' : 'text-gray-600'}`}
               >
-                Whether you need precision brow shaping, lash lifts, or teeth
-                treatments, Brows on Point ensures a comfortable experience.
-                Enhance your natural beauty with treatments tailored to{' '}
-                <em>your</em> needs, all in a welcoming and clinical
+                Whether you want brow shaping, lash lifts, permanent makeup or
+                teeth whitening, Brows on Point ensures a comfortable
+                experience. My goal is to not only make you feel more beautiful
+                on the outside, but more importantly to feel more beautiful and
+                confident from the inside! While all in a welcoming and clinical
                 environment.
               </p>
               <div className="mt-10 flex items-center gap-x-6">

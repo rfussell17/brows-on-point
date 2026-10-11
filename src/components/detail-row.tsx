@@ -10,7 +10,7 @@ const services = [
   {
     name: 'Brows',
     description:
-      'Get perfectly shaped and tinted brows, or go semi-permanent with microblading and powder brows. Whether it’s a subtle enhancement or a bold statement, I ensure your brows look natural and polished.',
+      'Get perfectly shaped and tinted brows, or go semi-permanent with microblading and powder brows. Whether it’s a subtle enhancement or a bold statement, I ensure your brows look natural.',
     href: '/brows',
   },
   {

@@ -62,10 +62,6 @@ const opposite = (variant: BgVariant): BgVariant =>
   variant === 'primary' ? 'primary-950' : 'primary'
 
 export default function Home() {
-  // Sections alternate against whatever landed right before them, so no two
-  // identically-coloured sections ever touch (same pattern as the service
-  // pages). The Hero is white and sits outside the chain, so DetailRow's tone
-  // is the chain's starting seed.
   const detailRowVariant: BgVariant = 'primary-950'
   const cta1Variant = opposite(detailRowVariant)
   const lashLiftVariant = opposite(cta1Variant)
