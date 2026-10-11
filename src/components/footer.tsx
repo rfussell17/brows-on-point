@@ -32,11 +32,12 @@ function Sitemap() {
       <div>
         <SitemapHeading>Services</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/lashes">Lash Lift + Lash Clusters</SitemapLink>
+          <SitemapLink href="/lashes">Lashes</SitemapLink>
           <SitemapLink href="/brows">Brows</SitemapLink>
           <SitemapLink href="/permanent-makeup">Permanent Makeup</SitemapLink>
           <SitemapLink href="/smile">Smile Services</SitemapLink>
           <SitemapLink href="/skin-tightening">Skin Tightening</SitemapLink>
+          <SitemapLink href="/services">All Services</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
@@ -46,14 +47,13 @@ function Sitemap() {
           <SitemapLink href="/testimonials">Testimonials</SitemapLink>
           <SitemapLink href="/training">Training</SitemapLink>
           <SitemapLink href="/contact">Contact</SitemapLink>
-          <SitemapLink href="/services">All Services</SitemapLink>
-          <SitemapLink href="/blog">Blog</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>Help</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href={ACUITY_URL}>Book Appointment</SitemapLink>
+          <SitemapLink href="/blog">Blog</SitemapLink>
         </SitemapLinks>
       </div>
     </>
