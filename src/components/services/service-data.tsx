@@ -1,11 +1,9 @@
 import Link from 'next/link'
 import type { ComponentType, ReactNode } from 'react'
 export interface ServiceData {
-  /** Hub/services-grid card thumbnail. Omit for services without a real photo yet. */
   thumbnail?: string
   title: string
   description: string
-  /** Real photos for the page header's gallery grid, up to 4. Omit for services without real photos yet. */
   galleryImages?: string[]
   duration: string
   results: string | ReactNode
@@ -16,28 +14,16 @@ export interface ServiceData {
   preparation: ReactNode
   aftercare: ReactNode
   contraindications?: ReactNode
-  /** Heading for the contraindications card, naming the service, e.g. "Who Should Avoid Microblading". */
   avoidHeading?: string
-  /** The service in plain words for the card's intro line, e.g. "microblading" or "a lash lift and tint". */
   avoidService?: string
-  /** Caption under the header's before/after photo grid, e.g. "Lash lift before & after photos coming soon". */
-  /** Extra named H2 sections (e.g. a dedicated "brow mapping" section) rendered before the two-column detail grid. */
   extraSections?: Array<{ heading: string; content: ReactNode }>
-  /**
-   * For a page covering more than one distinct bookable service (e.g. three
-   * named lash lift techniques) — renders as a named options grid with its
-   * own price per option, above the shared process/preparation/aftercare.
-   */
   serviceOptions?: Array<{
     name: string
     price: ReactNode
     description: ReactNode
   }>
-  /** Heading above the serviceOptions grid. Defaults to "Choose Your Service". */
   serviceOptionsHeading?: string
-  /** Policy notices (e.g. the booking-fee block) rendered between the header and detail sections. */
   policyNotice?: ReactNode
-  /** Link back up to this spoke's hub — e.g. { text: 'All Lash Services', href: '/lashes' }. Defaults to the /services index. */
   hubLink?: { text: string; href: string }
   testimonial?: {
     component: ComponentType<any>
@@ -51,12 +37,6 @@ export interface ServiceData {
   shortDescription: string
 }
 
-/**
- * Standard PMU contraindications, per BUILD-BRIEF.md §6.4 — "one wording,
- * used identically on every PMU page." Q35 corrects lupus/RA to "eligible if
- * controlled, with a doctor's note." Q36 removes celiac/Crohn's from the
- * needs-doctor's-OK list entirely, so it isn't mentioned here at all.
- */
 export const pmuContraindications = (
   <div className="mx-auto max-w-2xl px-6">
     <ul className="list-disc space-y-2 pl-6">
@@ -74,10 +54,6 @@ export const pmuContraindications = (
   </div>
 )
 
-/**
- * Teeth whitening contraindications (Q41), used identically on
- * /smile/teeth-whitening/ and /smile/sensitive-teeth-whitening/.
- */
 export const teethWhiteningContraindications = (
   <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
     <div>
@@ -114,13 +90,6 @@ export const teethWhiteningContraindications = (
   </div>
 )
 
-/**
- * BUILD-BRIEF.md §6.1 — the $50 PMU booking fee, reschedule notice, and
- * transfer/no-show/late policy. Q20 (24hrs) and Q22 (48hrs) directly
- * contradicted each other; the filled-out questionnaire ticks 24 hours for
- * Q20 — the direct answer to "how much notice to move the fee" — so that
- * wins over the 48-hour wording found in Acuity's service descriptions.
- */
 export const pmuBookingFeeNotice = (
   <ul className="list-disc space-y-2 pl-6">
     <li>A $50 booking fee secures your appointment</li>
@@ -153,9 +122,9 @@ export const lashServiceData: ServiceData = {
   thumbnail: '/services/lashes/lashes-lift-bomb-before-after-03.jpg',
   about: (
     <>
-      A lash lift and tint (also called a lash perm) reshapes your natural
-      lashes around a small silicone rod, then tint is applied. It&apos;ll
-      make you say &ldquo;I woke up like this!&rdquo;
+      A lash lift and tint lifts and curls your lashes from the bottom up,
+      giving the appearance of longer fuller lashes. Ditch the lash curler and
+      mascara. It'll make you say “I woke up like this!“
     </>
   ),
   serviceOptionsHeading: 'Choose Your Lash Lift',
@@ -166,7 +135,7 @@ export const lashServiceData: ServiceData = {
       description: (
         <>
           Infused with keratin protein to support healthy new lash growth. A
-          natural curl and a healthy-lash finish, with results lasting up to 12
+          natural curl and a beautiful result, with results lasting up to 12
           weeks.
         </>
       ),
@@ -176,9 +145,9 @@ export const lashServiceData: ServiceData = {
       price: '$70',
       description: (
         <>
-          Brows on Point&apos;s signature treatment, with a biotin-infused
-          formula added to the lift for extra hold and a more dramatic curl than
-          the Keratin option.
+          Brows on Point's signature treatment, with a biotin-infused formula
+          added to the lift for extra hold and a more dramatic curl than the
+          Keratin option.
         </>
       ),
     },
@@ -187,9 +156,9 @@ export const lashServiceData: ServiceData = {
       price: '$75',
       description: (
         <>
-          A gentler, more relaxed curl pattern than the BOMB Lift, using a
-          Korean lash lift technique that follows the natural line of the lash
-          for a softer everyday look.
+          A more gentle, relaxed curl than the BOMB Lift using a Korean lash
+          lift technique, and specialized product, that enhances the lashes like
+          no other.
         </>
       ),
     },
@@ -249,26 +218,22 @@ export const lashServiceData: ServiceData = {
         <li>Severe allergies affecting the eye area</li>
         <li>First trimester pregnancy</li>
         <li>Chemotherapy treatments</li>
+        <li>A previous lash lift within past 4 weeks</li>
       </ul>
     </div>
   ),
   faqs: [
     {
-      question: 'How much does a lash lift and tint cost in Kelowna?',
-      answer:
-        'It depends which lash lift you choose. My BOMB Lash Lift and Tint is $70, my Keratin Lash Lift and Tint is $80, and my Korean Lash Lift and Tint is $75.',
-    },
-    {
       question:
         "What's the difference between the Keratin, BOMB, and Korean lash lift and tint?",
       answer:
-        'The Keratin Lash Lift and Tint is my base treatment, using a keratin protein solution for a natural curl. The BOMB Lash Lift and Tint adds a biotin-infused formula for extra hold and a more dramatic lift. The Korean Lash Lift and Tint uses a gentler technique for a softer, more relaxed curl.',
+        'The Keratin Lash Lift and Tint is my base treatment, using a keratin protein solution for a natural curl. The BOMB Lash Lift and Tint adds a biotin-infused formula for extra hold and a more dramatic lift. The Korean Lash Lift and Tint uses a glueless, more gentle technique for a softer curl.',
     },
     {
       question:
         'Why does the Korean lash lift and tint cost more than Keratin or BOMB?',
       answer:
-        'The Korean technique uses a gentler, more premium lifting solution than the Keratin or BOMB treatments, along with a technique that takes more time to apply. Ask about pricing at your consultation.',
+        'The Korean technique uses a gentler, more premium lifting solution than the Keratin or BOMB treatments, along with a technique that takes more time to apply.',
     },
     {
       question: 'Can I get a lash lift without the lash tint?',
@@ -520,11 +485,11 @@ export const microbladingServiceData: ServiceData = {
     '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
   about: (
     <>
-      Using a fine hand tool to deposit pigment in thin, hair-like strokes
-      that follow your natural growth pattern. The result is microbladed
-      eyebrows that look like real hair, not makeup. It&apos;s a good fit if
-      your brows are sparse, uneven, or were over-tweezed at some point and
-      never quite grew back.
+      Using a fine hand tool to deposit pigment in thin, hair-like strokes that
+      follow your natural growth pattern. The result is microbladed eyebrows
+      that look like real hair, not makeup. It&apos;s a good fit if your brows
+      are sparse, uneven, or were over-tweezed at some point and never quite
+      grew back.
     </>
   ),
   extraSections: [
@@ -1085,9 +1050,9 @@ export const permanentEyelinerServiceData: ServiceData = {
   about: (
     <>
       Permanent eyeliner implants pigment along the lash line. Liner stays put
-      through swimming, workouts, and every day in between. By tattooing a
-      thin line in where the lashes are growing, creates a soft and subtle
-      liner for everyday wear.
+      through swimming, workouts, and every day in between. By tattooing a thin
+      line in where the lashes are growing, creates a soft and subtle liner for
+      everyday wear.
     </>
   ),
   serviceOptions: [
@@ -1596,7 +1561,8 @@ export const rfSkinTighteningData: ServiceData = {
   galleryImages: [
     '/services/skin-tightening/skin-tightening-treatment-closeup-01.jpg',
   ],
-  thumbnail: '/services/skin-tightening/skin-tightening-treatment-closeup-01.jpg',
+  thumbnail:
+    '/services/skin-tightening/skin-tightening-treatment-closeup-01.jpg',
   duration: '45 minutes',
   results: '4-6 weeks, cumulative with a course of treatments',
   price: '$75',
@@ -1678,8 +1644,8 @@ export const rfSkinTighteningData: ServiceData = {
             Pacemakers, defibrillators, or other implanted electronic devices
           </li>
           <li>
-            Metal plates, screws, pins, or other metal implants in the
-            treatment area
+            Metal plates, screws, pins, or other metal implants in the treatment
+            area
           </li>
           <li>Pregnancy or breastfeeding</li>
           <li>Active cancer or an undiagnosed lesion in the treatment area</li>

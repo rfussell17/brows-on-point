@@ -61,9 +61,8 @@ export default function AboutPage() {
               <h1 className="text-display text-light">About Brows on Point</h1>
               <p className="mt-8 text-gray-100">
                 Welcome to Brows on Point, where beauty meets affordability and
-                expertise. Since 2016, I&apos;ve been helping clients discover
-                their most confident selves through personalized aesthetic
-                services.
+                expertise. Since 2016, I've been helping clients discover their
+                most confident selves through personalized aesthetic services.
               </p>
             </div>
           </Container>
@@ -77,24 +76,20 @@ export default function AboutPage() {
                 <h2 className="text-heading text-light">My Story</h2>
                 <div className="mt-6 space-y-6 text-body text-gray-100">
                   <p>
-                    <strong>
-                      I started Brows on Point with a simple goal: to make
-                      premium aesthetic treatments accessible to everyone.
-                    </strong>{' '}
-                    As a mother of two young children and an entrepreneur who
-                    built this business from the ground up, I know how much good
-                    it does to take an hour for yourself and leave feeling like
-                    the best version of you.
+                    I started Brows on Point with a simple goal: to make premium
+                    aesthetic treatments accessible to everyone. As a mother of
+                    two young children, and an entrepreneur who built this
+                    business from the bottom up, I know how much good it does to
+                    take an hour for yourself and leave feeling like the best
+                    version of you.
                   </p>
                   <p>
                     My approach to permanent makeup artistry emphasizes
-                    natural-looking results that enhance <em>your</em> unique
-                    features. Whether it&apos;s creating soft, feathered brows
-                    through microblading or designing subtle permanent eyeliner,{' '}
-                    <strong>
-                      every treatment is tailored to complement your natural
-                      beauty while ensuring lasting results.
-                    </strong>
+                    natural-looking results that enhance your unique features.
+                    Whether it's creating soft, feathered brows through
+                    microblading..or designing subtle permanent eyeliner, every
+                    treatment is tailored to complement your natural beauty
+                    while ensuring lasting results.
                   </p>
                 </div>
               </div>

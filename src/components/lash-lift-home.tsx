@@ -24,11 +24,11 @@ export default function LashLiftHome({
                 What is a Lash Lift?
               </h2>
               <p className="mt-6 text-body text-gray-100">
-                A lash lift is a low-maintenance treatment that curls and lifts
-                your natural lashes from base to tip, giving them a fuller
-                appearance. It&apos;s essentially a &ldquo;perm&rdquo; for your
-                lashes and can last
-                <strong> 6-12 weeks</strong> depending on the type of lift.
+                A lash lift is a low-maintenance treatment that lifts and curls
+                your natural lashes from bottom up, giving them a fuller and
+                longer appearance. It's essentially a “perm” for your lashes,
+                and can last <strong> 6-12 weeks</strong> depending on the type
+                of lift.
               </p>
 
               <p className="mt-6 text-body text-gray-100">
@@ -37,12 +37,11 @@ export default function LashLiftHome({
               </p>
 
               <p className="mt-6 text-body text-gray-100">
-                I offer three options: my exclusive <strong>BOMB Lift</strong>{' '}
-                for a dramatic effect, the <strong>Keratin Lift</strong> for a
-                natural look, or the <strong>Korean Lash Lift</strong> for a
-                softer, more relaxed curl. All three provide long-lasting
-                results. Post-care products are available to nourish and enhance
-                lash health.
+                I offer 3 options: my exclusive BOMB Lift for a dramatic effect,
+                the Keratin Lift for a natural look, or the Korean Lash Lift for
+                a softer, more relaxed curl. All 3 provide long-lasting results.
+                Post-care products are available for purchase, to nourish and
+                enhance lash health and the longevity of your lash lift
               </p>
               <div className="mt-8">
                 <Link
@@ -72,7 +71,9 @@ export default function LashLiftHome({
                 </blockquote>
                 <figcaption className="mt-6 flex gap-x-4 text-body">
                   <div>
-                    <span className="font-fancy text-lead text-light">Kyla S.</span>{' '}
+                    <span className="font-fancy text-lead text-light">
+                      Kyla S.
+                    </span>{' '}
                   </div>
                 </figcaption>
               </figure>
