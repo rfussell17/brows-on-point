@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Teeth Whitening in Kelowna',
   description:
-    'Professional in-studio teeth whitening in Kelowna from $99 at Brows on Point in West Kelowna. Basic, Ultra and 24k gold sessions. Book your whitening today.',
+    'Professional teeth whitening from $99 at Brows on Point. Basic, Ultra and 24k gold options. Book your whitening today.',
   openGraph: ogMeta(
     '/og/teeth-whitening-og_brows-on-point.jpg',
     'Teeth Whitening',

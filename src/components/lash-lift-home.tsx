@@ -26,14 +26,14 @@ export default function LashLiftHome({
               <p className="mt-6 text-body text-gray-100">
                 A lash lift is a low-maintenance treatment that lifts and curls
                 your natural lashes from bottom up, giving them a fuller and
-                longer appearance. It's essentially a “perm” for your lashes,
-                and can last <strong> 6-12 weeks</strong> depending on the type
-                of lift.
+                longer appearance. It&apos;s essentially a “perm” for your
+                lashes, and can last <strong>6-12 weeks</strong> depending on
+                the type of lift.
               </p>
 
               <p className="mt-6 text-body text-gray-100">
-                Brows on Point is essentially the &ldquo;OG&rdquo; for lash
-                lifts in the Okanagan area!
+                Did you know? Brows on Point is essentially the &ldquo;OG&rdquo;
+                for lash lifts in the Okanagan area!
               </p>
 
               <p className="mt-6 text-body text-gray-100">
@@ -48,7 +48,7 @@ export default function LashLiftHome({
                   href={ACUITY_URL}
                   className="inline-flex rounded-md bg-light px-3.5 py-2.5 text-body font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light"
                 >
-                  Reserve Appointment
+                  Book your Appointment
                 </Link>
 
                 <Link

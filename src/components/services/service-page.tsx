@@ -41,7 +41,12 @@ const ServicePage: React.FC<ServicePageProps> = ({ data }) => {
   const breadcrumbItems = [
     { name: 'Home', path: '/' },
     ...(data.hubLink
-      ? [{ name: data.hubLink.text.replace(/^All /, ''), path: data.hubLink.href }]
+      ? [
+          {
+            name: data.hubLink.text.replace(/^All /, ''),
+            path: data.hubLink.href,
+          },
+        ]
       : []),
     { name: data.title, path: `/${data.slug}` },
   ]
@@ -54,13 +59,14 @@ const ServicePage: React.FC<ServicePageProps> = ({ data }) => {
         title={data.title}
         eyebrow={data.hubLink?.text.replace(/^All /, '')}
         descriptionText={data.about}
-        duration={data.duration}
-        results={data.results}
-        price={data.price}
+        duration={data.hideStats ? undefined : data.duration}
+        results={data.hideStats ? undefined : data.results}
+        price={data.hideStats ? undefined : data.price}
         images={data.galleryImages}
         bookingUrl={ACUITY_URL}
         learnMoreUrl={data.hubLink?.href ?? '/services'}
         learnMoreLabel={data.hubLink?.text ?? 'All Services'}
+        bookingLabel={data.bookingLabel}
       />
 
       <ServiceDetail data={data} />

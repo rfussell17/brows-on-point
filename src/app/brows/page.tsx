@@ -14,13 +14,13 @@ const faqs = [
   {
     question: 'What eyebrow services does Brows on Point offer?',
     answer:
-      'Eyebrow Tint & Shape for a same-day refresh, or semi-permanent options like Microblading and Powder Brows if you want your shape to last longer. Browse each below to see what fits.',
+      'Eyebrow Tint & Shape for a same-day refresh, or semi-permanent options like Microblading and Powder Brows if you want something more lasting with lower maintenance. Browse each below to see what fits.',
   },
   {
     question:
-      "What's the difference between eyebrow tinting and shaping and semi-permanent brows like microblading?",
+      "What's the difference between eyebrow tinting and shaping, and semi-permanent brows like microblading/powder brow?",
     answer:
-      'Tint & Shape uses a semi-permanent dye and hot-wax shaping that lasts 3-6 weeks. Microblading and Powder Brows are cosmetic tattoo techniques that last 1-2 years. Which one suits you depends on how much upkeep you want.',
+      'Tint & Shape uses a semi-permanent tint that lasts 3-6 weeks. Microblading and Powder Brows are cosmetic tattoo techniques that last 1-3 years.\n\nWhich one suits you depends on your skin texture, how much upkeep you want.',
   },
 ]
 
@@ -40,7 +40,7 @@ export default function BrowsHubPage() {
       intro={
         <>
           Brows on Point is a brow bar in West Kelowna serving Kelowna, covering
-          the full range of eyebrow services: from a same-day eyebrow tint and
+          the full range of eyebrow services: from a same-day brow tint and
           shape to semi-permanent microblading and powder brows. Browse the brow
           services below, or book straight in if you already know what
           you&apos;re after.
@@ -56,12 +56,11 @@ export default function BrowsHubPage() {
                   href="/brows/brow-tint-and-shape"
                   className="font-semibold underline"
                 >
-                  Eyebrow tinting and shaping
-                </Link>{' '}
-                is $25 and combines a semi-permanent tint with precise hot-wax
-                shaping, mapped to your face rather than a generic arch. The
-                tint typically holds for 3-6 weeks, and most clients rebook
-                every 3-4 weeks to keep the shape clean.
+                  Brow tinting and shape
+                </Link>
+                <br />
+                <br />
+                The tint typically holds for 3-6 weeks.
               </p>
             </>
           ),
@@ -71,10 +70,8 @@ export default function BrowsHubPage() {
           content: (
             <>
               <p>
-                Brows on Point is at {BUSINESS_ADDRESS}, serving clients
-                within the Okanagan, and beyond! Every appointment is with
-                Jamie, so you never have to explain your preferences to
-                someone new.
+                Brows on Point is at {BUSINESS_ADDRESS}, serving clients within
+                the Okanagan, and beyond!
               </p>
             </>
           ),
@@ -82,9 +79,8 @@ export default function BrowsHubPage() {
       ]}
       spokes={[
         {
-          title: 'Brow Tinting & Shaping',
-          description:
-            'Semi-permanent tint and precise hot-wax shaping together, $25.',
+          title: 'Eyebrow Tinting & Shaping',
+          description: 'Semi-permanent tint and shape $25.',
           href: '/brows/brow-tint-and-shape',
           image: '/services/brows/brows-tint-and-shape-closeup-01.jpg',
         },

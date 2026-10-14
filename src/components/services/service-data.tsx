@@ -5,11 +5,17 @@ export interface ServiceData {
   title: string
   description: string
   galleryImages?: string[]
-  duration: string
-  results: string | ReactNode
-  price: string | ReactNode
+  duration?: string
+  results?: string | ReactNode
+  price?: string | ReactNode
   about: string | ReactNode
-  benefits: ReactNode
+  /** Header booking button text; defaults to "Book your Appointment". */
+  bookingLabel?: string
+  /** Overrides the default "Please don't book…" intro above the avoid list. */
+  avoidIntro?: ReactNode
+  /** Hide the Duration / Results / Price row in the header (values still feed schema). */
+  hideStats?: boolean
+  benefits?: ReactNode
   process: ReactNode
   preparation: ReactNode
   aftercare: ReactNode
@@ -24,6 +30,11 @@ export interface ServiceData {
   }>
   serviceOptionsHeading?: string
   policyNotice?: ReactNode
+  touchUpPricing?: {
+    firstAppointment: string
+    touchUp: string
+    yearOne: string
+  }
   hubLink?: { text: string; href: string }
   testimonial?: {
     component: ComponentType<any>
@@ -54,7 +65,7 @@ export const pmuContraindications = (
   </div>
 )
 
-export const teethWhiteningContraindications = (
+const whiteningContraindications = (crownsNote: string) => (
   <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
     <div>
       <h4 className="font-semibold text-light">Dental Health</h4>
@@ -78,24 +89,32 @@ export const teethWhiteningContraindications = (
       <ul className="mt-2 list-disc space-y-2 pl-6">
         <li>
           Crowns, veneers, bonding, or other restorations on front teeth
-          won&apos;t whiten more than their original shade (surface staining
-          only can be removed on these)
+          won&apos;t whiten more than their original shade{crownsNote}
         </li>
         <li>
           Deep intrinsic staining, such as from tetracycline or severe
-          fluorosis, may not respond to in-office whitening
+          fluorosis, may not respond to whitening
         </li>
       </ul>
     </div>
   </div>
 )
 
+export const teethWhiteningContraindications = whiteningContraindications(
+  ' (can remove surface staining only on these)',
+)
+
+export const goldWhiteningContraindications = whiteningContraindications('.')
+
 export const pmuBookingFeeNotice = (
   <ul className="list-disc space-y-2 pl-6">
     <li>A $50 booking fee secures your appointment</li>
     <li>Transferable to a new date, with 24 hours&apos; notice, once only</li>
     <li>No-shows forfeit the $50</li>
-    <li>More than 15 minutes late and the appointment is cancelled</li>
+    <li>
+      More than 15 minutes late (without prior notice) and the appointment is
+      cancelled
+    </li>
   </ul>
 )
 
@@ -118,15 +137,21 @@ export const lashServiceData: ServiceData = {
   ],
   duration: '45-60 minutes',
   results: '6-12 weeks',
-  price: 'From $70',
+  price: 'From $50',
   thumbnail: '/services/lashes/lashes-lift-bomb-before-after-03.jpg',
   about: (
     <>
       A lash lift and tint lifts and curls your lashes from the bottom up,
       giving the appearance of longer fuller lashes. Ditch the lash curler and
-      mascara. It'll make you say “I woke up like this!“
+      mascara. It&apos;ll make you say “I woke up like this!”
+      <br />
+      <br />
+      Brows on Point, in West Kelowna, offers 3 distinct versions of this: the
+      Keratin Lash Lift and Tint, my signature BOMB Lash Lift and Tint, and the
+      Korean Lash Lift and Tint.
     </>
   ),
+  bookingLabel: 'Book Your Appointment',
   serviceOptionsHeading: 'Choose Your Lash Lift',
   serviceOptions: [
     {
@@ -145,9 +170,9 @@ export const lashServiceData: ServiceData = {
       price: '$70',
       description: (
         <>
-          Brows on Point's signature treatment, with a biotin-infused formula
-          added to the lift for extra hold and a more dramatic curl than the
-          Keratin option.
+          Brows on Point&apos;s signature treatment, with a biotin-infused
+          formula added to the lift for extra hold and a more dramatic curl than
+          the Keratin option.
         </>
       ),
     },
@@ -168,8 +193,7 @@ export const lashServiceData: ServiceData = {
       <ul className="list-disc space-y-2 pl-6">
         <li>Dramatically enhanced natural lashes without extensions</li>
         <li>Choice of Keratin, BOMB, or Korean Lash Lift and Tint</li>
-        <li>Korean technique offers a softer, more natural curl pattern</li>
-        <li>Tint included with every lash lift option</li>
+        <li>Tint always included with every lash lift option</li>
         <li>Reduces your daily makeup routine</li>
         <li>Low maintenance, natural-looking results</li>
       </ul>
@@ -194,7 +218,6 @@ export const lashServiceData: ServiceData = {
       <ul className="list-disc space-y-2 pl-6">
         <li>Arrive with completely clean lashes (no makeup)</li>
         <li>Remove contact lenses before treatment</li>
-        <li>Avoid caffeine before your appointment</li>
         <li>Discontinue use of lash serums 48 hours before treatment</li>
         <li>Let me know about any eye conditions or sensitivities</li>
       </ul>
@@ -231,29 +254,28 @@ export const lashServiceData: ServiceData = {
     },
     {
       question:
-        'Why does the Korean lash lift and tint cost more than Keratin or BOMB?',
+        'Why is the Korean lash lift and tint more expensive than the BOMB?',
       answer:
         'The Korean technique uses a gentler, more premium lifting solution than the Keratin or BOMB treatments, along with a technique that takes more time to apply.',
     },
     {
       question: 'Can I get a lash lift without the lash tint?',
       answer:
-        'Yes, Lash Lift Only is available at $50 if you just want the curl without darkening your lashes. Most clients choose lift and tint together, since the tint is what removes the need for mascara.',
+        'Yes, Lash Lift Only is available at $50 if you just want the curl without tinting your lashes.',
     },
     {
       question: 'How long does a lash lift and tint take?',
-      answer:
-        'Around 45-60 minutes, depending on which lash lift you choose and how many lashes you have.',
+      answer: 'Around 45-60 minutes, depending on which lash lift you choose.',
     },
     {
       question: 'How long do lash lift and tint results last?',
       answer:
-        'A lash lift and tint typically lasts 6-12 weeks, depending on which technique you choose and your natural lash growth cycle.',
+        'A lash lift and tint typically lasts 6-12 weeks, depending on which technique you choose and your natural lash shed and growth cycle.',
     },
     {
       question: 'Can I wear mascara after a lash lift and tint?',
       answer:
-        "Yes, once the 48-hour aftercare window has passed, though many clients find they don't need it, since the lift and tint already do the work.",
+        "Yes, once the 48-hour aftercare window has passed, though many clients find they don't need it, since the tint already does the work.",
     },
     {
       question: "Who isn't a good candidate for a lash lift and tint?",
@@ -349,52 +371,37 @@ export const lashGrowthSerumServiceData: ServiceData = {
 
 export const lashAndBrowTintingServiceData: ServiceData = {
   slug: 'lashes/lash-and-brow-tinting',
-  avoidHeading: 'Who Should Avoid Lash and Brow Tinting',
-  avoidService: 'lash or brow tinting',
+  avoidHeading: 'Who Should Avoid Lash Tinting',
+  avoidService: 'lash tinting',
   hubLink: { text: 'All Lash Services', href: '/lashes' },
-  shortDescription:
-    'Eyelash tinting: darker lashes and brows without daily mascara.',
+  shortDescription: 'Eyelash tinting: darker lashes without daily mascara.',
   title: 'Lash Tinting',
   description:
     'An eyelash tint uses a semi-permanent dye to darken your natural lashes, so they show up without mascara. At Brows on Point, you can book an eyelash tint on its own, or pair it with a brow tint in the same appointment.',
   galleryImages: ['/services/lashes/lashes-tinting-closeup-01.jpg'],
   thumbnail: '/services/lashes/lashes-tinting-closeup-01.jpg',
-  duration: '15-30 minutes, depending on whether you add brow tint',
+  duration: '15-30 minutes',
   results: '3-6 weeks',
   price: '$25',
   serviceOptionsHeading: 'Choose Your Tint',
   about: (
     <>
-      Eyelash tinting (sometimes called eyelash dye) is a fast, low-fuss way to
-      darken your natural lash line without a lash lift. It&apos;s a separate
-      service from a lash lift: tinting only changes colour, while a lift also
-      changes the curl. If you&apos;re after lash tinting, you can book lash
-      tint alone, or add a brow tint and shape to the same appointment.
+      Lash tinting is a fast, low-fuss way to darken your natural lashes without
+      the daily fuss of mascara.
     </>
   ),
+  bookingLabel: 'Book Your Appointment',
   serviceOptions: [
     {
       name: 'Lash Tint Only',
       price: '$25',
-      description: <>Darkens your natural lashes. No brow work included.</>,
-    },
-    {
-      name: 'Brow Tint & Shape + Lash Tint',
-      price: '$40',
-      description: (
-        <>
-          Adds a lash tint onto a brow tint and shape appointment, booked
-          together.
-        </>
-      ),
+      description: <>Various shades to choose from</>,
     },
   ],
   benefits: (
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
-        <li>Darker lashes and brows without daily mascara or brow pencil</li>
-        <li>Fast appointment, no downtime</li>
-        <li>Book lash tint, brow tint, or both together</li>
+        <li>Darker lashes without daily mascara</li>
         <li>Results last 3-6 weeks</li>
       </ul>
     </div>
@@ -402,9 +409,8 @@ export const lashAndBrowTintingServiceData: ServiceData = {
   process: (
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
-        <li>Patch test if this is your first tint with me</li>
         <li>Application of silicone shields to protect the skin</li>
-        <li>Tint applied to lashes and/or brows</li>
+        <li>Tint applied to lashes</li>
         <li>Tint removed and area cleaned</li>
       </ul>
     </div>
@@ -412,7 +418,7 @@ export const lashAndBrowTintingServiceData: ServiceData = {
   preparation: (
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
-        <li>Arrive with clean lashes and brows, no makeup</li>
+        <li>Arrive with clean lashes, no makeup</li>
         <li>Remove contact lenses before treatment</li>
         <li>Let me know about any eye conditions or sensitivities</li>
       </ul>
@@ -438,26 +444,19 @@ export const lashAndBrowTintingServiceData: ServiceData = {
   ),
   faqs: [
     {
-      question:
-        'How much does a lash tint or lash and brow tint cost in Kelowna?',
+      question: 'How long does a lash tint last?',
       answer:
-        'Lash Tint Only is $25. Adding a lash tint onto a Brow Tint & Shape appointment is $40 total for both.',
+        'A lash tint typically lasts 3-6 weeks, depending on your skin type and how quickly your hair sheds and regrows.',
     },
     {
-      question: 'How long does a lash or brow tint last?',
-      answer:
-        'A lash or brow tint typically lasts 3-6 weeks, depending on your skin type and how quickly your hair sheds and regrows.',
-    },
-    {
-      question:
-        'Is lash or brow tinting safe if I have sensitive eyes or skin?',
+      question: 'Is lash tinting safe if I have sensitive eyes or skin?',
       answer:
         "Tinting is suitable for most clients. For first-time clients I do a patch test, applying a small amount of tint to check for any reaction before your full appointment. Tell me about any eye conditions, allergies or skin sensitivities before we start, and I'll let you know if it's better to wait.",
     },
     {
-      question: 'How do I prepare for a lash tint or brow tint?',
+      question: 'How do I prepare for a lash tint?',
       answer:
-        'Arrive with clean lashes and brows and no makeup, and remove your contact lenses before a lash tint. Tell me about any eye conditions or sensitivities before we start.',
+        'Arrive with clean lashes and no makeup, and remove your contact lenses before a lash tint. Tell me about any eye conditions or sensitivities before we start.',
     },
   ],
 }
@@ -485,24 +484,25 @@ export const microbladingServiceData: ServiceData = {
     '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
   about: (
     <>
-      Using a fine hand tool to deposit pigment in thin, hair-like strokes that
-      follow your natural growth pattern. The result is microbladed eyebrows
-      that look like real hair, not makeup. It&apos;s a good fit if your brows
+      Using a fine hand tool to deposit pigment with thin, hair-like strokes
+      that follow your natural hair growth pattern. The result is brows that
+      give the look of real hair, not makeup. It&apos;s a good fit if your brows
       are sparse, uneven, or were over-tweezed at some point and never quite
       grew back.
     </>
   ),
+  bookingLabel: 'Book Your Appointment',
   extraSections: [
     {
       heading: 'Brow Mapping: The First Step',
       content: (
         <>
           Before any pigment is applied, every microblading appointment starts
-          with eyebrow mapping: measuring your face and marking out a shape that
-          suits your bone structure, using your natural brow as a starting
-          point. You&apos;ll see and approve the mapped shape before I begin, so
-          there are no surprises partway through. Brow mapping alone typically
-          takes 20-30 minutes of the full appointment.
+          with brow mapping: measuring your face and creating a shape that suits
+          your bone structure, using your natural brow as a starting point.
+          You&apos;ll see and approve the mapped shape before I begin, so there
+          are no surprises partway through. Brow mapping alone typically takes
+          20-30 minutes of the full appointment.
         </>
       ),
     },
@@ -511,10 +511,8 @@ export const microbladingServiceData: ServiceData = {
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
         <li>Natural-looking, hair-stroke results</li>
-        <li>Brow mapping included, so you approve the shape first</li>
         <li>Fills in sparse or over-tweezed brows</li>
-        <li>Reduces your daily makeup routine</li>
-        <li>Water-resistant, smudge-proof results</li>
+        <li>Low maintenance. Get up and go</li>
       </ul>
     </div>
   ),
@@ -523,7 +521,7 @@ export const microbladingServiceData: ServiceData = {
       <ul className="list-disc space-y-2 pl-6">
         <li>Consultation and full brow mapping</li>
         <li>Application of topical anesthetic</li>
-        <li>Hand-drawn, hair-stroke pigment application</li>
+        <li>Hair-stroke pigment application</li>
         <li>Colour saturation check and adjustments</li>
         <li>Aftercare instructions before you leave</li>
       </ul>
@@ -535,7 +533,10 @@ export const microbladingServiceData: ServiceData = {
         <li>Avoid blood thinners for 2 weeks prior (unless prescribed)</li>
         <li>No alcohol 48 hours before your appointment</li>
         <li>Discontinue Retinol products 2 weeks prior</li>
-        <li>No recent chemical peels or Botox in the brow area</li>
+        <li>
+          No recent chemical peels or Botox in the brow area 30 days before and
+          after
+        </li>
         <li>No tanning or sunburn on the treatment area</li>
         <li>No caffeine on the day of your appointment</li>
       </ul>
@@ -554,7 +555,22 @@ export const microbladingServiceData: ServiceData = {
     </div>
   ),
   contraindications: pmuContraindications,
-  policyNotice: pmuBookingFeeNotice,
+  policyNotice: (
+    <ul className="list-disc space-y-2 pl-6">
+      <li>A $50 booking fee secures your appointment</li>
+      <li>Transferable to a new date, with 24 hours notice, once only</li>
+      <li>No-shows forfeit the $50</li>
+      <li>
+        More than 15 minutes late, without prior approval (as my appointments
+        are typically back to back) and the appointment is cancelled
+      </li>
+    </ul>
+  ),
+  touchUpPricing: {
+    firstAppointment: '$275',
+    touchUp: '$100',
+    yearOne: '$375',
+  },
   faqs: [
     {
       question: 'How long does microblading last?',
@@ -569,12 +585,12 @@ export const microbladingServiceData: ServiceData = {
     {
       question: 'What is a microblading colour boost, and when do I need one?',
       answer:
-        'A colour boost refreshes microblading that has started to fade, typically 9-18 months after your last appointment. It costs $170.',
+        'A colour boost is a maintenance service that refreshes microblading that has started to fade, typically 12-18 months after your last appointment. The cost is $170.',
     },
     {
       question: 'Is microblading painful?',
       answer:
-        'I apply a topical anesthetic before starting, so most clients describe the sensation as pressure rather than pain.',
+        'I apply a topical anesthetic before starting, so most clients describe the sensation as pressure, and “kitty scratches” rather than pain.',
     },
     {
       question: 'How long does microblading take to heal?',
@@ -614,54 +630,42 @@ export const browTintWaxShapeData: ServiceData = {
   slug: 'brows/brow-tint-and-shape',
   hubLink: { text: 'All Brow Services', href: '/brows' },
   shortDescription:
-    'Eyebrow tint and shape: tinting and hot-wax shaping together in one appointment.',
+    'Eyebrow tint and shape: tinting and shaping together in one appointment.',
   title: 'Brow Tinting & Shaping',
   description:
-    'An eyebrow tint darkens and defines your natural brow hair with a semi-permanent dye, and hot-wax shaping cleans up the line at the same time, so your brows look fuller and more defined in one $25 appointment.',
+    'An eyebrow tint darkens and defines your natural brow hair with a semi-permanent dye, and shaping cleans up the line at the same time, so your brows look fuller and more defined in one $25 appointment.',
   galleryImages: ['/services/brows/brows-tint-and-shape-closeup-01.jpg'],
-  duration: '30 minutes',
-  results: '3-6 weeks for tint, ongoing for shape',
   price: '$25',
+  hideStats: true,
   thumbnail: '/services/brows/brows-tint-and-shape-closeup-01.jpg',
   extraSections: [
     {
       heading: 'Brow Tinting',
       content: (
         <>
-          Brow tinting colours your natural brow hair with a semi-permanent dye,
-          so sparse or light brows look fuller and more defined. It is painless,
-          and a tint typically holds for 3-6 weeks. If this is your first tint
-          with me, I&apos;ll do a patch test first.
+          Brow tinting is just that..tints your natural brow hair, so sparse or
+          light brows look fuller and more defined. Tint typically holds for 3-6
+          weeks.
         </>
       ),
     },
     {
       heading: 'Brow Shaping',
       content: (
-        <>
-          Eyebrow shaping uses precise hot-wax hair removal to clean up stray
-          hairs and define the line. Your shape is mapped to your face rather
-          than a generic arch, and most clients rebook every 3-4 weeks to keep
-          it clean. Tinting and shaping are booked together for $25.
-        </>
+        <>Brow shaping is cleaning up stray hairs and defining the shape.</>
       ),
     },
   ],
   about: (
     <>
       Not every brow needs permanent makeup. If you&apos;re after something
-      lower-commitment, Brow Tint &amp; Shape in West Kelowna covers eyebrow
-      tinting, eyebrow waxing, and brow shaping, all in one $25 appointment.
-      Tint adds colour with a semi-permanent dye, and shape uses precise hot-wax
-      hair removal to clean up stray hairs and define the line, mapped to your
-      face rather than a generic arch.
+      lower-commitment, brow tint is a great alternative.
     </>
   ),
   benefits: (
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
         <li>No needles, no downtime</li>
-        <li>Tint and shape together in one appointment</li>
         <li>Tint holds for 3-6 weeks</li>
         <li>A low-commitment way to try a fuller brow look</li>
       </ul>
@@ -671,9 +675,8 @@ export const browTintWaxShapeData: ServiceData = {
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
         <li>Quick consultation on shape and tint colour</li>
-        <li>Patch test if this is your first tint with me</li>
         <li>Application of the tint</li>
-        <li>Precise hot-wax removal and shape check</li>
+        <li>Shaping of the Brows</li>
       </ul>
     </div>
   ),
@@ -691,7 +694,7 @@ export const browTintWaxShapeData: ServiceData = {
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
         <li>Avoid water and sweat on the brow area for a few hours</li>
-        <li>No makeup on freshly waxed skin for the rest of the day</li>
+        <li>No makeup on freshly shaped skin for the rest of the day</li>
         <li>Avoid direct sun and tanning beds while any redness settles</li>
         <li>Avoid exfoliating products on the brow area for a few days</li>
       </ul>
@@ -699,50 +702,19 @@ export const browTintWaxShapeData: ServiceData = {
   ),
   faqs: [
     {
-      question: 'How much does eyebrow tinting and shaping cost in Kelowna?',
-      answer:
-        'Brow Tint & Shape is $25, and includes both the tint and the hot-wax shaping in one appointment.',
-    },
-    {
-      question:
-        'Can I get my eyebrows tinted and waxed at the same appointment?',
-      answer:
-        'Yes. Tint and shape are booked together as one appointment, sometimes called a hybrid brow tint and shape.',
-    },
-    {
-      question: 'How long does an eyebrow tint last?',
+      question: 'How long does a brow tint last?',
       answer:
         'A brow tint typically lasts 3-6 weeks, depending on your skin type and how quickly your brow hair sheds and regrows.',
     },
     {
-      question: 'Does eyebrow tinting or hot-wax shaping hurt?',
-      answer:
-        'No. Tinting is painless. The shaping step involves brief, mild discomfort as the wax is removed, similar to any hot-wax hair removal.',
-    },
-    {
-      question: 'How often should I book eyebrow tinting and shaping?',
+      question: 'How often should I book brow tinting and shape?',
       answer:
         'Most clients rebook every 3-4 weeks to keep their shape clean, though this varies with how quickly your hair grows back.',
     },
     {
-      question: 'Do I need a patch test before my first eyebrow tint?',
+      question: 'What should I do after brow tinting and shaping?',
       answer:
-        'Yes, if this is your first tint with me, I do a patch test first to check for any reaction before the full tint is applied.',
-    },
-    {
-      question: 'How do I prepare for eyebrow tinting and shaping?',
-      answer:
-        'Arrive with clean skin and no brow makeup, and avoid retinol products for 48 hours beforehand. If you want a full reshape, let your brows grow out a little first, and tell me about any skin sensitivities before I start.',
-    },
-    {
-      question: 'What should I do after eyebrow tinting and hot-wax shaping?',
-      answer:
-        "Avoid water and sweat on the brows for a few hours and don't wear makeup on the freshly waxed skin for the rest of the day. Avoid direct sun, tanning beds and exfoliating products on the area for a few days while any redness settles.",
-    },
-    {
-      question: 'How long does an eyebrow tint and shape appointment take?',
-      answer:
-        'About 30 minutes. We start with a quick consultation on shape and tint colour, then I apply the tint and finish with precise hot-wax shaping and a shape check.',
+        "Avoid water and sweat on the brows for a few hours and don't wear makeup on the brows for the rest of the day. Avoid direct sun, tanning beds and exfoliating products on the area for a few days.",
     },
   ],
 }
@@ -764,25 +736,25 @@ export const powderBrowsServiceData: ServiceData = {
     '/services/permanent-makeup/permanent-makeup-powder-brows-healed-01.jpg',
   ],
   duration: '2-2.5 hours',
-  results: '1-3 years',
+  results: 'Varies by skin type — ask at your consultation',
   price: '$300',
   thumbnail:
     '/services/permanent-makeup/permanent-makeup-powder-brows-before-after-01.jpg',
   about: (
     <>
-      Where microblading draws individual hair strokes, powder brows (also
-      called eyebrow shading or soft powder brows) build colour with tiny dots
-      of pigment, blended into an even, filled-in finish, similar to the look of
-      powder brow makeup, but semi-permanent. It suits most skin types,
-      including oily skin, where fine hair-stroke work tends to blur over time.
-      Every appointment starts with a consultation on shape and depth of colour
-      before I begin.
+      Powder brow using a tattoo machine that is specifically designed for the
+      delicate features of the face. We build colour with airy layers of
+      pixelated pigment, blended into an even and filled-in finish. Similar to
+      the look of a brow powder or pomade. It suits most all skin types,
+      including the most oily skin. Every appointment starts with a consultation
+      on shape and colour before I begin.
     </>
   ),
+  bookingLabel: 'Book Your Appointment',
   benefits: (
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
-        <li>Soft, filled-in look that holds its shape</li>
+        <li>Soft, natural result</li>
         <li>Works well on oily and combination skin</li>
         <li>Reduces your daily makeup routine</li>
         <li>Customized shape and colour depth</li>
@@ -797,6 +769,12 @@ export const powderBrowsServiceData: ServiceData = {
         <li>Application of topical anesthetic</li>
         <li>Shading application, built up in layers</li>
         <li>Aftercare instructions before you leave</li>
+        <li>
+          Please note that fading and lightening of your new brows between
+          25-50% is absolutely normal after your first session. Once you come
+          back in for your 6-8 week touch up, we go over everything again and
+          you will have your final result 3-4 weeks later.
+        </li>
       </ul>
     </div>
   ),
@@ -806,7 +784,10 @@ export const powderBrowsServiceData: ServiceData = {
         <li>Avoid blood thinners for 2 weeks prior (unless prescribed)</li>
         <li>No alcohol 48 hours before your appointment</li>
         <li>Discontinue Retinol products 2 weeks prior</li>
-        <li>No recent chemical peels or Botox in the brow area</li>
+        <li>
+          No recent chemical peels or Botox in the brow area, 30 days before and
+          30 days after
+        </li>
         <li>No tanning or sunburn on the treatment area</li>
       </ul>
     </div>
@@ -824,21 +805,26 @@ export const powderBrowsServiceData: ServiceData = {
   ),
   contraindications: pmuContraindications,
   policyNotice: pmuBookingFeeNotice,
+  touchUpPricing: {
+    firstAppointment: '$300',
+    touchUp: '$125',
+    yearOne: '$425',
+  },
   faqs: [
     {
       question: 'How much do powder brows cost in Kelowna?',
       answer:
-        'Powder brows are $300 for your first appointment. A touch-up is $125, bringing your total first year to $425.',
+        'Powder brows are $300 for your first appointment. Your touch-up is $125, bringing your total first year to $425.',
     },
     {
       question: 'Are powder brows a good choice for oily skin?',
       answer:
-        'Yes. Powder brows tend to hold up well on oily and combination skin, where fine hair-stroke techniques can blur more quickly.',
+        'Yes. Powder brows tend to hold up well on oily and combination skin.',
     },
     {
       question: 'How long do powder brows last before they need a refresh?',
       answer:
-        'Powder brows typically last 1-3 years, depending on your skin type and how well you follow the aftercare. Ask me at your consultation for a more specific estimate.',
+        'Powder brows typically last 2-3 years, depending on your skin type and how well you follow the aftercare.',
     },
     {
       question: "Who isn't a good candidate for powder brows?",
@@ -860,11 +846,6 @@ export const powderBrowsServiceData: ServiceData = {
       answer:
         'Plan for 2-2.5 hours. We map your brow shape, I numb the area, and then the powder shading is built up in layers before I go through aftercare with you.',
     },
-    {
-      question: 'Is there a booking fee for powder brows?',
-      answer:
-        "A $50 booking fee secures your appointment. It can be transferred to a new date once, with 24 hours' notice, and no-shows forfeit it.",
-    },
   ],
 }
 
@@ -885,7 +866,7 @@ export const salineRemovalServiceData: ServiceData = {
     '/services/permanent-makeup/permanent-makeup-removal-saline-before-after-01.jpg',
   duration: '90 minutes',
   results:
-    'Often requires more than one session (unless done as an Emergency Removal within 72 hours of the original application)',
+    'Often requires more than one session (unless Emergency Removal, done less than 72 hours after fresh PMU, which can have up to 98% removal success rate after one session)',
   price: '$125',
   about: (
     <>
@@ -893,14 +874,15 @@ export const salineRemovalServiceData: ServiceData = {
       here&apos;s the upfront answer: Saline removal lifts deep, stubborn
       pigment out of the skin using a saline solution, and works well for all
       PMU and small tattoos. It&apos;s a different process than laser, which
-      breaks pigment down with light energy.
+      breaks pigment down with light energy. It&apos;s worth knowing the
+      difference before you book either.
     </>
   ),
+  bookingLabel: 'Book Appointment',
   benefits: (
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
         <li>A gentler alternative to laser for PMU and small tattoos</li>
-        <li>Well suited to microblading removal specifically</li>
         <li>No laser equipment involved</li>
       </ul>
     </div>
@@ -910,7 +892,9 @@ export const salineRemovalServiceData: ServiceData = {
       <ul className="list-disc space-y-2 pl-6">
         <li>Consultation to assess the area and expected number of sessions</li>
         <li>Application of topical anesthetic</li>
-        <li>Saline solution worked into the treatment area</li>
+        <li>
+          Saline solution worked into the treatment area with needled machine
+        </li>
         <li>Aftercare instructions before you leave</li>
       </ul>
     </div>
@@ -945,7 +929,7 @@ export const salineRemovalServiceData: ServiceData = {
       <ul className="list-disc space-y-2 pl-6">
         <li>
           Let the scab fall off on its own, usually within 7-14 days — picking
-          it off early strips out lifted pigment and risks scarring
+          can compromise results and risks scarring
         </li>
         <li>
           Avoid heavy workouts, saunas, hot tubs, and long hot showers; sweat
@@ -1045,63 +1029,40 @@ export const permanentEyelinerServiceData: ServiceData = {
     '/services/permanent-makeup/permanent-makeup-eyeliner-closeup-01.jpg',
   duration: '1.5-2 hours',
   results: '2-3 years',
-  price: '$199',
+  price: '$230',
   serviceOptionsHeading: 'Choose Your Eyeliner',
   about: (
     <>
-      Permanent eyeliner implants pigment along the lash line. Liner stays put
+      Permanent eyeliner is a delicate lash line tattooed liner. Liner stays put
       through swimming, workouts, and every day in between. By tattooing a thin
       line in where the lashes are growing, creates a soft and subtle liner for
       everyday wear.
     </>
   ),
+  bookingLabel: 'Book Appointment',
   serviceOptions: [
     {
-      name: 'Upper / Lash Line Enhancement',
-      price: '$199',
-      description: (
-        <>
-          Subtle pigment along the upper lash line for fuller-looking lashes
-          without a visible liner line. Touch-up $135, year-one total $334.
-        </>
-      ),
+      name: 'Upper Lash Line Enhancement',
+      price: '$230',
+      description: <>Subtle tattooed along the upper lash line</>,
     },
     {
       name: 'Lower Eyeliner',
       price: '$120',
-      description: (
-        <>
-          Defined liner along the lower lash line on its own. Touch-up is $100
-          for returning clients.
-        </>
-      ),
+      description: <>Defined liner along the lower lash line on its own.</>,
     },
     {
       name: 'Top + Bottom Eyeliner',
       price: '$319',
-      description: (
-        <>
-          Defined liner along both the top and bottom lash lines. The touch-up
-          is $180 for existing clients.
-        </>
-      ),
+      description: <>Defined liner along both the top and bottom lash lines.</>,
     },
   ],
-  benefits: (
-    <div className="mx-auto max-w-2xl px-6">
-      <ul className="list-disc space-y-2 pl-6">
-        <li>Smudge-proof, swim-proof definition</li>
-        <li>Subtle lash enhancement or a fully defined liner look</li>
-        <li>Saves time on your daily makeup routine</li>
-      </ul>
-    </div>
-  ),
   process: (
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
-        <li>Consultation on the look you want</li>
+        <li>Consultation</li>
         <li>Application of topical anesthetic</li>
-        <li>Precise pigment implantation along the lash line</li>
+        <li>Pigment implantation along the lash line</li>
         <li>Aftercare instructions before you leave</li>
       </ul>
     </div>
@@ -1143,7 +1104,7 @@ export const permanentEyelinerServiceData: ServiceData = {
       question:
         'How long is a permanent eyeliner appointment, and does it hurt?',
       answer:
-        'Plan for 1.5-2 hours. I apply a topical anesthetic before the pigment is placed along the lash line, and we start with a consultation about the look you want.',
+        'Plan for 1.5-2 hours. I apply a topical anesthetic before the pigment is deposited along the lash line. You are kept comfortable throughout the appointment.',
     },
   ],
 }
@@ -1164,31 +1125,23 @@ export const toothGemsServiceData: ServiceData = {
   ],
   duration: '15-20 minutes',
   results: '6-24 months',
-  price: '$40 for the first, +$20 each additional',
+  price: '$40 for the first, +$20 each for 2nd and 3rd. $5 each 4+',
   thumbnail: '/services/smile/smile-tooth-gem-closeup-01.jpg',
   about: (
     <>
-      A tooth gem, sometimes searched as a teeth gem, teeth jewel, or teeth
-      jewelry, is a small piece of genuine Swarovski crystal bonded straight
+      A tooth gem is a small piece of genuine Swarovski crystal bonded straight
       onto your tooth&apos;s surface with a dental-grade adhesive. It&apos;s
       fully reversible and doesn&apos;t require any drilling. Choose a classic
-      round crystal or a shaped design like a butterfly tooth gem, placed
-      wherever you&apos;d like a bit of sparkle when you smile.
+      round crystal (in many various colours and sizes), Iridescent or
+      Opal…placed wherever you&apos;d like a bit of sparkle to your smile.
     </>
   ),
-  extraSections: [
-    {
-      heading: 'Multiple Gems',
-      content: <>Ask about multi-gem pricing at your consultation.</>,
-    },
-  ],
+  bookingLabel: 'Book Appointment',
   benefits: (
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
         <li>Genuine Swarovski crystal</li>
-        <li>Dental-grade adhesive, safe for your enamel</li>
         <li>No drilling, fully reversible</li>
-        <li>Classic or shaped designs, like a butterfly tooth gem</li>
         <li>Quick appointment, immediate results</li>
       </ul>
     </div>
@@ -1197,7 +1150,7 @@ export const toothGemsServiceData: ServiceData = {
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
         <li>Quick consultation on placement and design</li>
-        <li>Professional cleaning of the tooth surface</li>
+        <li>Cleaning of the tooth surface</li>
         <li>Dental-grade adhesive applied to the crystal</li>
         <li>Gem placed and set with a curing light</li>
         <li>Final check and aftercare instructions</li>
@@ -1268,11 +1221,6 @@ export const toothGemsServiceData: ServiceData = {
   ),
   faqs: [
     {
-      question: 'How much does a Swarovski tooth gem cost in Kelowna?',
-      answer:
-        'A single Swarovski tooth gem is $40, with $20 for each additional gem.',
-    },
-    {
       question: 'Do tooth gems damage your teeth or enamel?',
       answer:
         "No. I use a dental-grade adhesive that bonds to the tooth surface without drilling, and gems can be safely removed by a dental professional when you're ready.",
@@ -1284,8 +1232,7 @@ export const toothGemsServiceData: ServiceData = {
     },
     {
       question: 'Can I get more than one tooth gem at the same appointment?',
-      answer:
-        'Yes. Many clients choose two or more. Each additional gem is $20.',
+      answer: 'Yes. Many clients choose two or more.',
     },
     {
       question: 'How do I prepare for my tooth gem appointment?',
@@ -1333,12 +1280,18 @@ export const teethWhiteningServiceData: ServiceData = {
   serviceOptionsHeading: 'Choose Your Whitening',
   about: (
     <>
-      Professional, cosmetic teeth whitening uses a stronger whitening gel and
-      an LED light than at-home strips, so results show up in one in-office
-      session instead of weeks of daily treatments. At Brows on Point in West
-      Kelowna, Basic and Ultra sessions differ in treatment time, and I also
-      offer a 24k gold whitening option built for sensitive teeth.
+      Professional, cosmetic teeth whitening uses a stronger whitening agent
+      than at-home strips, so results show up in one session instead of weeks of
+      daily treatments. Basic and Ultra sessions differ in treatment time, and I
+      also offer a 24k gold whitening option built for the most sensitive teeth.
     </>
+  ),
+  bookingLabel: 'Book Appointment',
+  avoidIntro: (
+    <p>
+      Please don&apos;t book professional teeth whitening if any of these apply
+      to you. If you&apos;re not sure, ask me before booking:
+    </p>
   ),
   serviceOptions: [
     {
@@ -1382,7 +1335,7 @@ export const teethWhiteningServiceData: ServiceData = {
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
         <li>Visible results in a single appointment</li>
-        <li>Professional-grade whitening gel and LED light</li>
+        <li>Professional-grade whitening</li>
         <li>Choice of Basic, Ultra, or 24k gold sessions</li>
       </ul>
     </div>
@@ -1410,7 +1363,7 @@ export const teethWhiteningServiceData: ServiceData = {
   aftercare: (
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
-        <li>Avoid staining foods and drinks for 48 hours</li>
+        <li>Avoid dark coloured staining foods and drinks for 48 hours</li>
         <li>Use a whitening-safe toothpaste to maintain results</li>
         <li>Maintain your regular dental hygiene routine</li>
       </ul>
@@ -1419,20 +1372,20 @@ export const teethWhiteningServiceData: ServiceData = {
   contraindications: teethWhiteningContraindications,
   faqs: [
     {
-      question: 'How much does teeth whitening cost in Kelowna?',
+      question: 'How much does teeth whitening cost?',
       answer:
         'Basic whitening is $99 for two 20-minute sessions. Ultra is $145 for three sessions. 24k gold whitening, recommended for sensitive teeth, is also $99.',
     },
     {
-      question: 'How long do professional teeth whitening results last?',
+      question: 'How long do the teeth whitening results last?',
       answer:
         'Results typically last up to 6 months, depending on your diet and oral hygiene habits afterward.',
     },
     {
       question:
-        'Is in-office teeth whitening better than at-home whitening strips?',
+        'Is Brows on Point teeth whitening better than at-home whitening strips?',
       answer:
-        'In-office whitening uses a stronger professional gel with an LED light, so results are visible after one appointment rather than weeks of at-home use.',
+        'Brows on Point whitening uses a stronger professional gel, so results are visible after one appointment rather than weeks of at-home use.',
     },
     {
       question: "Who shouldn't get professional teeth whitening?",
@@ -1447,7 +1400,7 @@ export const teethWhiteningServiceData: ServiceData = {
     {
       question: 'Will teeth whitening work on crowns, veneers or bonding?',
       answer:
-        "Not fully. Crowns, veneers, bonding and other restorations on front teeth won't whiten past their original shade, though surface staining on them can still be removed.",
+        "No. Crowns, veneers, bonding and other restorations on front teeth won't whiten more than their original shade (on those teeth).",
     },
     {
       question: 'What should I avoid after teeth whitening?',
@@ -1481,17 +1434,15 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
     <>
       My 24k gold whitening option answers the most common question about
       sensitive-teeth whitening: it uses the same professional, in-office
-      process as my Basic and Ultra sessions, formulated to be gentler on
-      sensitive teeth. This page covers my in-studio option. For at-home
-      whitening strips or products, that&apos;s a different category of product
-      I don&apos;t sell here.
+      process as my Basic and Ultra sessions, formulated to be gentler on the
+      most sensitive of teeth.
     </>
   ),
+  bookingLabel: 'Book Appointment',
   benefits: (
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
         <li>Built for clients with sensitive teeth</li>
-        <li>Same professional, in-office whitening process</li>
         <li>Visible results in a single appointment</li>
       </ul>
     </div>
@@ -1501,7 +1452,7 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
       <ul className="list-disc space-y-2 pl-6">
         <li>Consultation and shade check</li>
         <li>Application of the 24k gold whitening formula</li>
-        <li>LED light treatment</li>
+        <li>Two 20 minute sessions</li>
         <li>Final shade check and aftercare instructions</li>
       </ul>
     </div>
@@ -1522,7 +1473,7 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
       </ul>
     </div>
   ),
-  contraindications: teethWhiteningContraindications,
+  contraindications: goldWhiteningContraindications,
   faqs: [
     {
       question:
@@ -1537,12 +1488,12 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
     },
     {
       question:
-        'How do I prepare for 24k gold teeth whitening if my teeth are sensitive?',
+        'How do I prepare for my teeth whitening if my teeth are sensitive?',
       answer:
         'Brush your teeth thoroughly beforehand, and tell me about your sensitivity and any existing dental work so I can plan the session around it.',
     },
     {
-      question: 'How do I look after sensitive teeth after 24k gold whitening?',
+      question: 'How do I look after sensitive teeth after my whitening?',
       answer:
         'Avoid staining foods and drinks for 48 hours and use a sensitivity-friendly toothpaste to maintain your results.',
     },
@@ -1569,17 +1520,18 @@ export const rfSkinTighteningData: ServiceData = {
   about: (
     <>
       Radio frequency skin tightening, also called an RF facial, is a
-      non-invasive way to firm and lift the skin&apos;s texture without any
-      downtime.
+      non-invasive technique to firm and lift the skin&apos;s texture without
+      any downtime.
     </>
   ),
+  bookingLabel: 'Book Appointment',
   extraSections: [
     {
       heading: 'Face and Neck',
       content: (
         <>
           RF skin tightening is typically done in packages of 3-5 for best
-          results, with 48 to 72 hours between sessions.
+          results. 48 to 72 hours in between sessions.
         </>
       ),
     },
@@ -1610,7 +1562,7 @@ export const rfSkinTighteningData: ServiceData = {
         <li>Initial consultation and skin assessment</li>
         <li>Thorough cleansing of the treatment area</li>
         <li>Ultrasonic exfoliation to remove dead skin cells</li>
-        <li>RF skin tightening passes with the 40k ultrasonic machine</li>
+        <li>RF skin tightening</li>
         <li>Application of a soothing, hydrating serum</li>
       </ul>
     </div>
@@ -1666,15 +1618,9 @@ export const rfSkinTighteningData: ServiceData = {
   ),
   faqs: [
     {
-      question: 'How much does RF skin tightening cost in Kelowna?',
+      question: 'How much does RF skin tightening cost?',
       answer:
         'A single RF neck/facial skin tightening session is $75. A 3-session package is $175 (introductory pricing).',
-    },
-    {
-      question:
-        'What is the 40k ultrasonic machine used for RF skin tightening?',
-      answer:
-        "It's a facial device that combines radiofrequency (RF) energy with 40kHz ultrasonic vibration to tighten skin, boost collagen, and deeply exfoliate in a single treatment.",
     },
     {
       question: 'Is RF skin tightening painful?',
@@ -1684,7 +1630,7 @@ export const rfSkinTighteningData: ServiceData = {
     {
       question: 'How many RF skin tightening sessions will I need?',
       answer:
-        "Results build over a course of treatments. I'll recommend a personalized plan during your consultation based on your skin goals.",
+        "Results build over a course of treatments. Typically 3-5. I'll recommend a personalized plan during your consultation based on your skin goals.",
     },
     {
       question: 'Is there any downtime after RF skin tightening?',
@@ -1699,7 +1645,7 @@ export const rfSkinTighteningData: ServiceData = {
     {
       question: 'How do I prepare for my RF skin tightening appointment?',
       answer:
-        'Arrive with clean, makeup-free skin, avoid sun exposure or sunburn in the days before, and stop retinol products 48 hours beforehand. Stay well hydrated in the 24 hours before your appointment, and tell me about any metal implants, pacemakers or skin conditions.',
+        'Arrive with clean, makeup-free skin, avoid sun exposure or sunburn in the days before, and stop retinol products 48 hours beforehand. Lots of hydration 24 hours prior to. Tell me about any metal implants, pacemakers or skin conditions.',
     },
     {
       question: 'What should I do after RF skin tightening?',

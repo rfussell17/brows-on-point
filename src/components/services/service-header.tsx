@@ -14,9 +14,9 @@ interface ServiceHomeProps {
   title: string
   eyebrow?: string
   descriptionText: string | ReactNode
-  duration: string
-  results: string | ReactNode
-  price: string | ReactNode
+  duration?: string
+  results?: string | ReactNode
+  price?: string | ReactNode
   /** Real photos for the header gallery grid, up to 4. Empty slots fall back to <ImagePlaceholder/>. */
   images?: string[]
   testimonial?: {
@@ -26,6 +26,7 @@ interface ServiceHomeProps {
   bookingUrl?: string
   learnMoreUrl?: string
   learnMoreLabel?: string
+  bookingLabel?: string
 }
 
 const stats = [
@@ -46,6 +47,7 @@ export default function ServiceHome({
   bookingUrl = ACUITY_URL,
   learnMoreUrl = '/services',
   learnMoreLabel = 'All Services',
+  bookingLabel = 'Book your Appointment',
 }: ServiceHomeProps) {
   const values: Record<(typeof stats)[number]['key'], string | ReactNode> = {
     duration,
@@ -67,29 +69,31 @@ export default function ServiceHome({
               <h1 className="mb-8 mt-2 text-display text-light">{title}</h1>
               <p className="mt-6 text-body text-gray-100">{descriptionText}</p>
 
-              <dl className="mt-8 grid grid-cols-3 gap-2 rounded-2xl bg-light p-6 shadow-sm">
-                {stats.map(({ key, label, icon: Icon }) => (
-                  <div key={key}>
-                    <dt className="flex items-center gap-1.5 text-small font-semibold text-gray-500">
-                      <Icon
-                        className="h-4 w-4 text-secondary"
-                        aria-hidden="true"
-                      />
-                      {label}
-                    </dt>
-                    <dd className="mt-1 text-body font-semibold text-primary">
-                      {values[key]}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              {(duration || results || price) && (
+                <dl className="mt-8 grid grid-cols-3 gap-2 rounded-2xl bg-light p-6 shadow-sm">
+                  {stats.map(({ key, label, icon: Icon }) => (
+                    <div key={key}>
+                      <dt className="flex items-center gap-1.5 text-small font-semibold text-gray-500">
+                        <Icon
+                          className="h-4 w-4 text-secondary"
+                          aria-hidden="true"
+                        />
+                        {label}
+                      </dt>
+                      <dd className="mt-1 text-body font-semibold text-primary">
+                        {values[key]}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              )}
 
               <div className="mt-8 flex flex-wrap items-center gap-x-3.5 gap-y-3">
                 <Link
                   href={bookingUrl}
                   className="inline-flex rounded-md bg-light px-3.5 py-2.5 text-body font-semibold text-primary shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light"
                 >
-                  Reserve Appointment
+                  {bookingLabel}
                 </Link>
 
                 <Link

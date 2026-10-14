@@ -19,7 +19,7 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: 'All Services in Kelowna',
   description:
-    'Explore all services at Brows on Point in West Kelowna: lash lifts, brow tinting, permanent makeup, teeth whitening and more for Kelowna clients. Book online.',
+    'Explore all services at Brows on Point in West Kelowna: lash lifts, brow tinting, permanent makeup, teeth whitening and more for Okanagan clients and beyond. Book online.',
   robots: {
     index: false,
     follow: false,
@@ -33,26 +33,22 @@ const categories = [
     description:
       'From a quick tint and shape to semi-permanent results, my brow services are built around finding the shape that actually suits your face — not a one-size-fits-all template.',
     href: '/brows',
-    highlights: ['Brow Tinting & Shaping', 'Microblading', 'Powder Brows'],
+    highlights: ['Eyebrow Tinting & Shaping', 'Microblading', 'Powder Brows'],
     image:
       '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
   },
   {
     title: 'Lashes',
     description:
-      "Lifted, darker lashes without extensions, or a fast tint that skips the daily mascara. Every lash appointment is with Jamie, so you're never explaining your preferences to someone new.",
+      'Lifted, curled and tinted lashes without the need for extensions, or just a lash tint that skips the daily mascara.',
     href: '/lashes',
-    highlights: [
-      'Lash Lift and Tint',
-      'Lash & Brow Tinting',
-      'Lash clusters',
-    ],
+    highlights: ['Lash Lift and Tint', 'Lash & Brow Tinting'],
     image: '/services/lashes/lashes-lift-bomb-before-after-03.jpg',
   },
   {
     title: 'Permanent Makeup',
     description:
-      'Semi-permanent and permanent enhancements for brows, eyes, and touch-ups — including saline removal if you need to correct or remove existing work.',
+      'Semi-permanent enhancements for brows, eyeliner, and correction work — including saline removal if you need to correct or remove existing permanent makeup.',
     href: '/permanent-makeup',
     highlights: [
       'Microblading',
@@ -66,7 +62,7 @@ const categories = [
   {
     title: 'Smile Services',
     description:
-      'Brighten your smile with in-studio teeth whitening, or add a bit of sparkle with a genuine Swarovski crystal tooth gem.',
+      'Brighten your smile with in-studio teeth whitening, and walk away 2-4+ shades whiter guaranteed. Or add a bit of sparkle with a genuine Swarovski crystal tooth gem.',
     href: '/smile',
     highlights: [
       'Teeth Whitening',

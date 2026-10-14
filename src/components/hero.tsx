@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({ bgVariant = 'light' }) => {
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
               <div className="hidden sm:mb-10 sm:flex">
                 <div className="relative inline-block rounded-full bg-secondary-900 px-3 py-1 text-small tracking-wider text-secondary-200">
-                  High-Quality Esthetic Treatments in West Kelowna
+                  High-Quality Esthetic Services in West Kelowna
                 </div>
               </div>
               <h1 className="sr-only">Brows on Point</h1>
@@ -50,7 +50,7 @@ const Hero: React.FC<HeroProps> = ({ bgVariant = 'light' }) => {
                 className={`mt-6 text-body ${isDark ? 'text-gray-100' : 'text-gray-600'}`}
               >
                 Whether you want lash lifts, permanent makeup, brow/lash tinting
-                or teeth whitening, Brows on Point ensures a comfortable
+                or teeth whitening..Brows on Point ensures a comfortable
                 experience. My goal is to not only make you feel more beautiful
                 on the outside, but more importantly to feel more beautiful and
                 confident from the inside! While all in a welcoming and clinical

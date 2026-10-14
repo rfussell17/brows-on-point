@@ -40,7 +40,9 @@ export function ServiceCard({
       )}
       <div className="flex flex-1 flex-col p-6">
         <h3 className="text-lead text-light">{title}</h3>
-        <p className="mt-2 text-body text-light/70">{description}</p>
+        <p className="mt-2 whitespace-pre-line text-body text-light/70">
+          {description}
+        </p>
         <span className="mt-4 inline-flex items-center gap-1 text-body font-semibold text-secondary-300">
           Explore
           <span

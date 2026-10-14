@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Smile Services in Kelowna',
   description:
-    'Teeth whitening and Swarovski tooth gems in Kelowna at Brows on Point in West Kelowna. Explore my smile services and book your appointment online today.',
+    'Teeth whitening and Swarovski tooth gems at Brows on Point in West Kelowna. Explore my smile services and book your appointment online today.',
   openGraph: ogMeta(
     '/og/smile-services-og_brows-on-point.jpg',
     'Smile Services',
@@ -35,7 +35,7 @@ export default function SmileHubPage() {
             '/services/smile/smile-teeth-whitening-basic-before-after-01.jpg',
         },
         {
-          title: '24K Gold Whitening for Sensitive Teeth',
+          title: '24K Gold Whitening',
           description:
             'A gentler whitening option built for clients with the most sensitive teeth.',
           href: '/smile/sensitive-teeth-whitening',

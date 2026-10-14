@@ -29,13 +29,13 @@ const courses = [
     name: 'Lash Lift Training',
     price: '$500',
     description:
-      'Hands-on training in lash lift techniques, covering consultation, application, and aftercare. Course comes with a full kit (30 applications) and certificate.',
+      'Hands-on training in lash lift techniques, covering consultation, application (with 2 live models), and aftercare. Course comes with full kit (30 applications) and certificate.',
   },
   {
     name: 'Teeth Whitening Training',
     price: '$550',
     description:
-      'Hands-on training in professional in-office teeth whitening, covering consultation, application, and aftercare. Comes with a full kit, light, and certificate.',
+      'Hands-on training in professional in-office teeth whitening, covering consultation, application (with 2 live models), and aftercare. Comes with full kit + light + certificate.',
   },
 ]
 
@@ -71,13 +71,9 @@ export default function TrainingPage() {
                 key={course.name}
                 className="rounded-2xl bg-primary-800 p-8 ring-1 ring-secondary-700"
               >
-                <h2 className="text-lead text-light">
-                  {course.name}
-                </h2>
-                <div className="mt-2 text-lead text-light">
-                  {course.price}
-                </div>
-                <p className="mt-4 text-body text-light/70">
+                <h2 className="text-lead text-light">{course.name}</h2>
+                <div className="mt-2 text-lead text-light">{course.price}</div>
+                <p className="mt-4 whitespace-pre-line text-body text-light/70">
                   {course.description}
                 </p>
               </div>

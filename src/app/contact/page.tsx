@@ -19,7 +19,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Contact Me',
   description:
-    'Contact Brows on Point in West Kelowna to book an appointment or ask a question about my lash, brow, permanent makeup, and teeth whitening services.',
+    'Contact Brows on Point in West Kelowna to book an appointment or have any questions about the services I offer.',
   openGraph: ogMeta(
     '/og/contact-og_brows-on-point.jpg',
     'Contact Brows on Point',
@@ -59,9 +59,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <h2 className="text-lead text-light">
-                Parking & Directions
-              </h2>
+              <h2 className="text-lead text-light">Parking & Directions</h2>
               <div className="mt-2 text-body text-gray-100">
                 <p>Street parking is available nearby.</p>
               </div>
@@ -79,13 +77,15 @@ export default function ContactPage() {
 
             <div>
               <h2 className="text-lead text-light">Email</h2>
-              <p className="mt-2 text-body text-gray-100">{BUSINESS_EMAIL}</p>
+              <p className="mt-2 text-body text-gray-100">
+                <a href={`mailto:${BUSINESS_EMAIL}`} className="underline">
+                  {BUSINESS_EMAIL}
+                </a>
+              </p>
             </div>
 
             <div>
-              <h2 className="text-lead text-light">
-                Payment Methods
-              </h2>
+              <h2 className="text-lead text-light">Payment Methods</h2>
               <p className="mt-2 text-body text-gray-100">
                 Cash, debit, credit, and e-transfer.
               </p>

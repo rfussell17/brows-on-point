@@ -65,7 +65,9 @@ const FAQSection: React.FC<FAQSectionProps> = ({
               <CardHeader className={headerClass}>
                 <h3 className="m-0 text-inherit">{faq.question}</h3>
               </CardHeader>
-              <CardContent className={contentClass}>{faq.answer}</CardContent>
+              <CardContent className={`whitespace-pre-line ${contentClass}`}>
+                {faq.answer}
+              </CardContent>
             </Card>
           ))}
         </div>

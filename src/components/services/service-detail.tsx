@@ -119,9 +119,7 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
                   key={option.name}
                   className="rounded-lg bg-primary-800 p-6 ring-1 ring-secondary-700 transition-colors hover:bg-primary-700 hover:ring-secondary-500"
                 >
-                  <h4 className="text-lead text-light">
-                    {option.name}
-                  </h4>
+                  <h4 className="text-lead text-light">{option.name}</h4>
                   <div className="mt-1 text-lead text-light">
                     {option.price}
                   </div>
@@ -145,7 +143,8 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
             )}
             {renderSection('Process', ArrowPathIcon, data.process)}
             {renderSection('Aftercare Instructions', HeartIcon, data.aftercare)}
-            {renderSection('Results', CheckBadgeIcon, data.benefits)}
+            {data.benefits &&
+              renderSection('Results', CheckBadgeIcon, data.benefits)}
           </div>
 
           {(data.contraindications || data.policyNotice) && (
@@ -161,13 +160,14 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
                   data.avoidHeading ?? 'Who Should Avoid This',
                   ShieldExclamationIcon,
                   <>
-                    {data.avoidService && (
-                      <p>
-                        Please don&apos;t book {data.avoidService} if any of
-                        these apply to you. If you&apos;re not sure, ask me
-                        before booking.
-                      </p>
-                    )}
+                    {data.avoidIntro ??
+                      (data.avoidService && (
+                        <p>
+                          Please don&apos;t book {data.avoidService} if any of
+                          these apply to you. If you&apos;re not sure, ask me
+                          before booking.
+                        </p>
+                      ))}
                     {data.contraindications}
                   </>,
                   'darker',
@@ -182,6 +182,30 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
             </div>
           )}
 
+          {data.touchUpPricing && (
+            <div className="mt-14">
+              <h3 className="text-lead text-light">Touch-Up Pricing</h3>
+              <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
+                {[
+                  ['First Appointment', data.touchUpPricing.firstAppointment],
+                  ['Touch-Up', data.touchUpPricing.touchUp],
+                  ['Year One Total', data.touchUpPricing.yearOne],
+                ].map(([label, value]) => (
+                  <div
+                    key={label}
+                    className="rounded-lg bg-primary-800 p-6 text-center ring-1 ring-secondary-700"
+                  >
+                    <p className="text-body text-light/70">
+                      {label}:{' '}
+                      <span className="mt-1 block text-lead font-semibold text-light">
+                        {value}
+                      </span>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </Container>
       </div>
     </div>
