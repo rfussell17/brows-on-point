@@ -48,7 +48,24 @@ export default function ContactPage() {
         </Container>
       </div>
 
-      <div className="bg-primary-950 px-6 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32 lg:px-8">
+      <div
+        id="contact-form"
+        className="scroll-mt-24 bg-primary-950 px-6 py-24 ring-1 ring-inset ring-secondary-700 sm:py-32 lg:px-8"
+      >
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-heading text-light">Contact Us</h2>
+            <p className="mt-6 text-lead text-gray-100">
+              I always love to hear from my clients, and potential clients. Feel
+              free to get in touch today to learn more about Brows on Point -
+              Kelowna, and what we have to offer!
+            </p>
+          </div>
+          <ContactForm />
+        </Container>
+      </div>
+
+      <div className="bg-primary px-6 py-24 sm:py-32 lg:px-8">
         <Container>
           <div className="mx-auto grid max-w-3xl grid-cols-1 gap-10 sm:grid-cols-2">
             <div>
@@ -101,23 +118,6 @@ export default function ContactPage() {
               Book an Appointment
             </Link>
           </div>
-        </Container>
-      </div>
-
-      <div
-        id="contact-form"
-        className="scroll-mt-24 bg-primary px-6 py-24 sm:py-32 lg:px-8"
-      >
-        <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-heading text-light">Contact Us</h2>
-            <p className="mt-6 text-lead text-gray-100">
-              I always love to hear from my clients, and potential clients. Feel
-              free to get in touch today to learn more about Brows on Point -
-              Kelowna, and what we have to offer!
-            </p>
-          </div>
-          <ContactForm />
         </Container>
       </div>
 

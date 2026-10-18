@@ -1,6 +1,8 @@
+import { CONTACT_FORM_URL } from '@/lib/site'
 import React from 'react'
 import { Container } from './container'
 import { FaqPageJsonLd } from './json-ld/faq-page'
+import { Link } from './link'
 
 interface FAQ {
   question: string
@@ -71,6 +73,17 @@ const FAQSection: React.FC<FAQSectionProps> = ({
             </Card>
           ))}
         </div>
+        <p
+          className={`mt-10 text-body ${isDark ? 'text-light/80' : 'text-gray-600'}`}
+        >
+          Still have questions?{' '}
+          <Link
+            href={CONTACT_FORM_URL}
+            className={`font-semibold underline underline-offset-4 ${isDark ? 'text-light' : 'text-primary'}`}
+          >
+            Contact Me
+          </Link>
+        </p>
       </Container>
     </section>
   )

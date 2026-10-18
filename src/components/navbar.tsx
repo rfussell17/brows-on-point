@@ -11,7 +11,7 @@ import {
 } from '@headlessui/react'
 
 import { serviceLinks } from '@/lib/service-links'
-import { ACUITY_URL } from '@/lib/site'
+import { ACUITY_URL, CONTACT_FORM_URL } from '@/lib/site'
 import {
   Bars2Icon,
   ChevronDownIcon,
@@ -49,6 +49,7 @@ const links = [
   { href: '/gallery', label: 'Gallery' },
   { href: '/testimonials', label: 'Testimonials' },
   { href: '/blog', label: 'Blog' },
+  { href: CONTACT_FORM_URL, label: 'Contact' },
   { href: ACUITY_URL, label: 'Book an Appointment' },
 ]
 
@@ -125,7 +126,7 @@ function DesktopNav() {
 function MobileNavButton() {
   return (
     <DisclosureButton
-      className="flex size-12 items-center justify-center self-center rounded-lg data-[hover]:bg-black/5 lg:hidden"
+      className="flex size-11 items-center justify-center rounded-full text-light transition-colors data-[hover]:bg-light/10 lg:hidden"
       aria-label="Toggle main menu"
     >
       {({ open }) =>
@@ -195,7 +196,7 @@ function MobileNav() {
 export function Navbar({ banner }: { banner?: React.ReactNode }) {
   return (
     <Disclosure as="header" className="sticky top-0 z-50">
-      <div className="relative flex justify-around bg-primary">
+      <div className="relative flex items-center justify-between bg-primary px-4 sm:px-6 lg:justify-around lg:px-0">
         <div className="relative flex gap-6 py-3">
           <Link href="/" title="Home">
             <Image
@@ -213,10 +214,10 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
         </div>
         <DesktopNav />
         {/* Phones: booking stays one tap away in the sticky bar. */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-1 lg:hidden">
           <Link
             href={ACUITY_URL}
-            className="rounded-md bg-light px-3 py-2 text-small font-semibold text-primary shadow-sm hover:bg-primary-50"
+            className="inline-flex h-10 items-center rounded-full bg-light px-5 text-small font-semibold tracking-wide text-primary shadow-sm ring-1 ring-secondary-300 transition-colors hover:bg-primary-50"
           >
             Book Now
           </Link>

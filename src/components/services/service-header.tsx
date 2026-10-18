@@ -1,4 +1,4 @@
-import { ACUITY_URL } from '@/lib/site'
+import { ACUITY_URL, CONTACT_FORM_URL } from '@/lib/site'
 import {
   ClockIcon,
   CurrencyDollarIcon,
@@ -104,6 +104,12 @@ export default function ServiceHome({
                   {learnMoreLabel} <span aria-hidden="true">→</span>
                 </Link>
               </div>
+              <Link
+                href={CONTACT_FORM_URL}
+                className="mt-6 inline-flex items-center gap-1 text-body font-semibold text-secondary-300 hover:text-light"
+              >
+                Have a question? Contact Me <span aria-hidden="true">→</span>
+              </Link>
 
               {testimonial && (
                 <figure className="mt-16 border-l border-light/30 pl-8 text-gray-100">

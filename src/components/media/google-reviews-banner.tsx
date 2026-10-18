@@ -1,4 +1,4 @@
-import { BUSINESS_ADDRESS } from '@/lib/site'
+import { BUSINESS_ADDRESS, CONTACT_FORM_URL } from '@/lib/site'
 import { StarIcon } from '@heroicons/react/24/solid'
 import { Container } from '../container'
 import { Link } from '../link'
@@ -113,6 +113,12 @@ const GoogleReviewsBanner: React.FC<GoogleReviewsBannerProps> = ({
                 className="mt-6 inline-block rounded-md bg-light px-5 py-2.5 text-body font-semibold text-primary shadow-sm hover:bg-primary-50"
               >
                 {cta.buttonText}
+              </Link>
+              <Link
+                href={CONTACT_FORM_URL}
+                className="mt-4 inline-flex items-center gap-1 text-body font-semibold text-secondary-300 hover:text-light"
+              >
+                Have a question? Contact Me <span aria-hidden="true">→</span>
               </Link>
             </div>
           )}

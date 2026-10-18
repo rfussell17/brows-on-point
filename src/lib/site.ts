@@ -4,6 +4,9 @@ export const SITE_URL = 'https://www.browsonpointkelowna.com'
 
 export const ACUITY_URL = 'https://app.acuityscheduling.com/schedule/80157a74'
 
+/** Where every "Contact Me" link points: the form at the top of the contact page. */
+export const CONTACT_FORM_URL = '/contact#contact-form'
+
 // Sourced directly from live Acuity service descriptions (Jamie's own text,
 // repeated across many appointment types), not the questionnaire. No postal
 // code appears anywhere in that source, so none is invented here.
