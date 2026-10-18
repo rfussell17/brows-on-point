@@ -1,6 +1,6 @@
 import type { ServiceData } from '@/components/services/service-data'
-import { SITE_URL } from '@/lib/site'
 import { parsePrice } from '@/lib/schema'
+import { SITE_URL } from '@/lib/site'
 
 /**
  * Builds this service's `offers`: a single Offer for a flat-priced service,

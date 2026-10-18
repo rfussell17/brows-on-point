@@ -8,7 +8,6 @@ import {
 } from '@heroicons/react/24/outline'
 import { type ComponentType, type FC, type ReactNode } from 'react'
 import { Container } from '../container'
-import InfoBanner from './info-banner'
 import type { ServiceData } from './service-data'
 
 interface ServiceDetailProps {
@@ -21,8 +20,7 @@ const opposite = (variant: BgVariant): BgVariant =>
   variant === 'primary' ? 'primary-950' : 'primary'
 
 /**
- * Walks every full-bleed section ServiceDetail can render — extraSections,
- * then serviceOptions, then the main prep/process/aftercare block — each
+ * Walks every full-bleed section ServiceDetail can render — serviceOptions, then the main prep/process/aftercare block — each
  * taking the opposite tone of whatever precedes it, starting from the
  * (always bg-primary) header. This is what keeps two identically-coloured
  * sections from ever landing back to back, even on pages that render more
@@ -31,20 +29,14 @@ const opposite = (variant: BgVariant): BgVariant =>
  */
 const getSectionVariants = (data: ServiceData) => {
   let last: BgVariant = 'primary'
-  let extraSectionsVariant: BgVariant | undefined
   let serviceOptionsVariant: BgVariant | undefined
 
-  if (data.extraSections) {
-    extraSectionsVariant = opposite(last)
-    last = extraSectionsVariant
-  }
   if (data.serviceOptions) {
     serviceOptionsVariant = opposite(last)
     last = serviceOptionsVariant
   }
 
   return {
-    extraSectionsVariant,
     serviceOptionsVariant,
     detailVariant: opposite(last),
   }
@@ -54,8 +46,7 @@ export const getServiceDetailBgVariant = (data: ServiceData): BgVariant =>
   getSectionVariants(data).detailVariant
 
 const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
-  const { extraSectionsVariant, serviceOptionsVariant, detailVariant } =
-    getSectionVariants(data)
+  const { serviceOptionsVariant, detailVariant } = getSectionVariants(data)
   const detailBgClass =
     detailVariant === 'primary-950'
       ? 'bg-primary-950 ring-1 ring-inset ring-secondary-700'
@@ -100,13 +91,6 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
 
   return (
     <div className={className}>
-      {data.extraSections && (
-        <InfoBanner
-          sections={data.extraSections}
-          bgVariant={extraSectionsVariant}
-        />
-      )}
-
       {data.serviceOptions && (
         <div className={`${serviceOptionsBgClass} py-28 sm:py-36`}>
           <Container>
@@ -181,31 +165,6 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
                   data.policyNotice,
                   'dark',
                 )}
-            </div>
-          )}
-
-          {data.touchUpPricing && (
-            <div className="mt-14">
-              <h3 className="text-lead text-light">Touch-Up Pricing</h3>
-              <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
-                {[
-                  ['First Appointment', data.touchUpPricing.firstAppointment],
-                  ['Touch-Up', data.touchUpPricing.touchUp],
-                  ['Year One Total', data.touchUpPricing.yearOne],
-                ].map(([label, value]) => (
-                  <div
-                    key={label}
-                    className="rounded-lg bg-primary-800 p-6 text-center ring-1 ring-secondary-700"
-                  >
-                    <p className="text-body text-light/70">
-                      {label}:{' '}
-                      <span className="mt-1 block text-lead font-semibold text-light">
-                        {value}
-                      </span>
-                    </p>
-                  </div>
-                ))}
-              </div>
             </div>
           )}
         </Container>

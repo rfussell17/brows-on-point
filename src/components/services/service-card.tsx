@@ -1,6 +1,5 @@
 import { Link } from '@/components/link'
 import Image from 'next/image'
-import { ImagePlaceholder } from './image-placeholder'
 
 export interface ServiceCardItem {
   title: string
@@ -10,10 +9,8 @@ export interface ServiceCardItem {
 }
 
 /**
- * Card used for both the /services hub-of-hubs grid and each category hub's
- * spoke grid — one shared card so the whole site's service listings read as
- * one visual system. Falls back to <ImagePlaceholder/> for services without a
- * real photo yet.
+ * A service card on the All Services page. Services without a photo yet get a
+ * text-only card rather than a placeholder box.
  */
 export function ServiceCard({
   title,
@@ -35,9 +32,7 @@ export function ServiceCard({
             className="object-cover transition duration-300 group-hover:scale-[1.02]"
           />
         </div>
-      ) : (
-        <ImagePlaceholder className="aspect-[4/3] w-full" />
-      )}
+      ) : null}
       <div className="flex flex-1 flex-col p-6">
         <h3 className="text-lead text-light">{title}</h3>
         <p className="mt-2 whitespace-pre-line text-body text-light/70">

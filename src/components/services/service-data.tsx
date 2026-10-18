@@ -30,17 +30,22 @@ export interface ServiceData {
   }>
   serviceOptionsHeading?: string
   policyNotice?: ReactNode
-  touchUpPricing?: {
-    firstAppointment: string
-    touchUp: string
-    yearOne: string
-  }
   hubLink?: { text: string; href: string }
+  /** Group label shown above the page title and used to order the All Services cards. */
+  category?: string
+  /** Card text on All Services and in the menu (the approved hub card copy). */
+  cardDescription?: string
+  /** Card title when it differs from the page title. */
+  cardTitle?: string
+  /** One client quote for this service, by author name in src/lib/testimonials.ts. */
+  testimonialName?: string
+  /** The "What is X" post this page links to once it's published. */
+  blogSlug?: string
   testimonial?: {
     component: ComponentType<any>
     props?: Record<string, any>
   }
-  faqs: Array<{
+  faqs?: Array<{
     question: string
     answer: string
   }>
@@ -120,10 +125,14 @@ export const pmuBookingFeeNotice = (
 
 // Add slug and shortDescription to each service
 export const lashServiceData: ServiceData = {
-  slug: 'lashes/lash-lift-and-tint',
+  category: 'Lash Services',
+  cardDescription:
+    'Keratin, BOMB, or Korean lash lift and tint: lifted, darker lashes with no extensions.',
+  testimonialName: 'Kassandra D',
+  blogSlug: 'what-is-a-lash-lift-and-tint',
+  slug: 'lash-lift-and-tint',
   avoidHeading: 'Who Should Avoid a Lash Lift and Tint',
   avoidService: 'a lash lift and tint',
-  hubLink: { text: 'All Lash Services', href: '/lashes' },
   shortDescription:
     'Three lash lift options — Keratin, BOMB, and Korean Lash Lift and Tint — for lifted, darker lashes with no extensions.',
   title: 'Lash Lift and Tint',
@@ -245,61 +254,12 @@ export const lashServiceData: ServiceData = {
       </ul>
     </div>
   ),
-  faqs: [
-    {
-      question:
-        "What's the difference between the Keratin, BOMB, and Korean lash lift and tint?",
-      answer:
-        'The Keratin Lash Lift and Tint is my base treatment, using a keratin protein solution for a natural curl. The BOMB Lash Lift and Tint adds a biotin-infused formula for extra hold and a more dramatic lift. The Korean Lash Lift and Tint uses a glueless, more gentle technique for a softer curl.',
-    },
-    {
-      question:
-        'Why is the Korean lash lift and tint more expensive than the BOMB?',
-      answer:
-        'The Korean technique uses a gentler, more premium lifting solution than the Keratin or BOMB treatments, along with a technique that takes more time to apply.',
-    },
-    {
-      question: 'Can I get a lash lift without the lash tint?',
-      answer:
-        'Yes, Lash Lift Only is available at $50 if you just want the curl without tinting your lashes.',
-    },
-    {
-      question: 'How long does a lash lift and tint take?',
-      answer: 'Around 45-60 minutes, depending on which lash lift you choose.',
-    },
-    {
-      question: 'How long do lash lift and tint results last?',
-      answer:
-        'A lash lift and tint typically lasts 6-12 weeks, depending on which technique you choose and your natural lash shed and growth cycle.',
-    },
-    {
-      question: 'Can I wear mascara after a lash lift and tint?',
-      answer:
-        "Yes, once the 48-hour aftercare window has passed, though many clients find they don't need it, since the tint already does the work.",
-    },
-    {
-      question: "Who isn't a good candidate for a lash lift and tint?",
-      answer:
-        'I recommend waiting, or checking with your doctor first, if you have had recent eye surgery or procedures, have an active eye infection or condition, have severe allergies affecting the eye area, are in your first trimester of pregnancy, or are going through chemotherapy.',
-    },
-    {
-      question: 'How do I prepare for my lash lift and tint appointment?',
-      answer:
-        'Arrive with completely clean lashes and no makeup, and remove your contact lenses before treatment. Avoid caffeine beforehand, stop using lash serums 48 hours before, and tell me about any eye conditions or sensitivities.',
-    },
-    {
-      question:
-        'What should I avoid in the first 48 hours after a lash lift and tint?',
-      answer:
-        'Avoid water, steam and heat, skip mascara and eye makeup, and avoid touching or rubbing your eyes. If you can, sleep on your back the first night. This is what lets the curl and colour set properly.',
-    },
-  ],
 }
 
 /* Lash Growth Serum is hidden for now (no photo/brand yet); restore by uncommenting.
 export const lashGrowthSerumServiceData: ServiceData = {
   slug: 'lashes/lash-growth-serum',
-  hubLink: { text: 'All Lash Services', href: '/lashes' },
+  hubLink: { text: 'All Lash Services', href: '/services' },
   shortDescription:
     'Keratin lash growth serum and tinted mascara, available in-studio at Brows on Point.',
   title: 'Lash Growth Serum',
@@ -370,10 +330,15 @@ export const lashGrowthSerumServiceData: ServiceData = {
 */
 
 export const lashAndBrowTintingServiceData: ServiceData = {
-  slug: 'lashes/lash-and-brow-tinting',
+  category: 'Lash Services',
+  cardDescription:
+    'Semi-permanent tint for lashes, brows, or both: a fast way to skip the daily mascara.',
+  testimonialName: 'Janine D',
+  blogSlug: 'what-is-lash-tinting',
+  cardTitle: 'Lash & Brow Tinting',
+  slug: 'lash-tinting',
   avoidHeading: 'Who Should Avoid Lash Tinting',
   avoidService: 'lash tinting',
-  hubLink: { text: 'All Lash Services', href: '/lashes' },
   shortDescription: 'Eyelash tinting: darker lashes without daily mascara.',
   title: 'Lash Tinting',
   description:
@@ -441,30 +406,17 @@ export const lashAndBrowTintingServiceData: ServiceData = {
       </ul>
     </div>
   ),
-  faqs: [
-    {
-      question: 'How long does a lash tint last?',
-      answer:
-        'A lash tint typically lasts 3-6 weeks, depending on your skin type and how quickly your hair sheds and regrows.',
-    },
-    {
-      question: 'Is lash tinting safe if I have sensitive eyes or skin?',
-      answer:
-        "Tinting is suitable for most clients. For first-time clients I do a patch test, applying a small amount of tint to check for any reaction before your full appointment. Tell me about any eye conditions, allergies or skin sensitivities before we start, and I'll let you know if it's better to wait.",
-    },
-    {
-      question: 'How do I prepare for a lash tint?',
-      answer:
-        'Arrive with clean lashes and no makeup, and remove your contact lenses before a lash tint. Tell me about any eye conditions or sensitivities before we start.',
-    },
-  ],
 }
 
 export const microbladingServiceData: ServiceData = {
-  slug: 'permanent-makeup/microblading',
+  category: 'Permanent Makeup',
+  cardDescription:
+    'Natural, hair-stroke semi-permanent brows for sparse or over-tweezed eyebrows.',
+  testimonialName: 'Delanie C',
+  blogSlug: 'what-is-microblading',
+  slug: 'microblading',
   avoidHeading: 'Who Should Avoid Microblading',
   avoidService: 'microblading',
-  hubLink: { text: 'All Permanent Makeup', href: '/permanent-makeup' },
   shortDescription:
     'Microblading: natural-looking hair-stroke brows for sparse or over-tweezed eyebrows.',
   title: 'Microblading',
@@ -491,21 +443,6 @@ export const microbladingServiceData: ServiceData = {
     </>
   ),
   bookingLabel: 'Book Your Appointment',
-  extraSections: [
-    {
-      heading: 'Brow Mapping: The First Step',
-      content: (
-        <>
-          Before any pigment is applied, every microblading appointment starts
-          with brow mapping: measuring your face and creating a shape that suits
-          your bone structure, using your natural brow as a starting point.
-          You&apos;ll see and approve the mapped shape before I begin, so there
-          are no surprises partway through. Brow mapping alone typically takes
-          20-30 minutes of the full appointment.
-        </>
-      ),
-    },
-  ],
   benefits: (
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
@@ -565,69 +502,15 @@ export const microbladingServiceData: ServiceData = {
       </li>
     </ul>
   ),
-  touchUpPricing: {
-    firstAppointment: '$275',
-    touchUp: '$100',
-    yearOne: '$375',
-  },
-  faqs: [
-    {
-      question: 'How long does microblading last?',
-      answer:
-        'Microblading typically lasts 1-2 years, depending on your skin type and how well you follow the aftercare instructions.',
-    },
-    {
-      question: 'Do I need a touch-up after my first microblading appointment?',
-      answer:
-        "Yes. Your first touch-up should happen within 2 months of your initial appointment, so I can fill in any spots where pigment didn't fully retain.",
-    },
-    {
-      question: 'What is a microblading colour boost, and when do I need one?',
-      answer:
-        'A colour boost is a maintenance service that refreshes microblading that has started to fade, typically 12-18 months after your last appointment. The cost is $170.',
-    },
-    {
-      question: 'Is microblading painful?',
-      answer:
-        'I apply a topical anesthetic before starting, so most clients describe the sensation as pressure, and “kitty scratches” rather than pain.',
-    },
-    {
-      question: 'How long does microblading take to heal?',
-      answer:
-        'Initial healing takes about 7-10 days, with the colour settling into its final shade over the following few weeks.',
-    },
-    {
-      question: "Who isn't a good candidate for microblading?",
-      answer:
-        "You should wait or check with your doctor first if you are pregnant or breastfeeding, have an active skin condition or an uncontrolled autoimmune condition, have lupus or rheumatoid arthritis that is not controlled and cleared with a doctor's note, have had recent chemotherapy, take blood-thinning medications, or have a history of keloid scarring.",
-    },
-    {
-      question: 'How do I prepare for my microblading appointment?',
-      answer:
-        "Avoid blood thinners for 2 weeks beforehand unless they are prescribed, and stop retinol products 2 weeks before. Skip alcohol for 48 hours and caffeine on the day. Avoid tanning or sunburn on the area, and don't book if you have had a chemical peel or Botox in the brow area recently.",
-    },
-    {
-      question: 'How do I take care of my brows after microblading?',
-      answer:
-        'Keep the area clean and dry for 7 days, apply the aftercare product I give you as directed, and avoid makeup on the brows for 2 weeks. Skip swimming, saunas and heavy sweating while they heal, avoid direct sunlight on the area, and attend your touch-up within 2 months.',
-    },
-    {
-      question:
-        'How long is a microblading appointment, and what happens during it?',
-      answer:
-        'Plan for 2-2.5 hours. It starts with a consultation and brow mapping, which you approve before anything is applied. I then numb the area, draw the hair-stroke pigment, check the colour and make adjustments, and go over your aftercare before you leave.',
-    },
-    {
-      question: 'Is there a booking fee for microblading?',
-      answer:
-        "A $50 booking fee secures your appointment. It can be transferred to a new date once, with 24 hours' notice, and no-shows forfeit it.",
-    },
-  ],
 }
 
 export const browTintWaxShapeData: ServiceData = {
-  slug: 'brows/brow-tint-and-shape',
-  hubLink: { text: 'All Brow Services', href: '/brows' },
+  category: 'Brow Services',
+  cardDescription: 'Semi-permanent tint and shape.',
+  testimonialName: 'Elyse L',
+  blogSlug: 'what-is-brow-tinting-and-shaping',
+  cardTitle: 'Eyebrow Tinting & Shaping',
+  slug: 'brow-tint-and-shape',
   shortDescription:
     'Eyebrow tint and shape: tinting and shaping together in one appointment.',
   title: 'Brow Tinting & Shaping',
@@ -637,24 +520,6 @@ export const browTintWaxShapeData: ServiceData = {
   price: '$25',
   hideStats: true,
   thumbnail: '/services/brows/brows-tint-and-shape-closeup-01.jpg',
-  extraSections: [
-    {
-      heading: 'Brow Tinting',
-      content: (
-        <>
-          Brow tinting is just that..tints your natural brow hair, so sparse or
-          light brows look fuller and more defined. Tint typically holds for 3-6
-          weeks.
-        </>
-      ),
-    },
-    {
-      heading: 'Brow Shaping',
-      content: (
-        <>Brow shaping is cleaning up stray hairs and defining the shape.</>
-      ),
-    },
-  ],
   about: (
     <>
       Not every brow needs permanent makeup. If you&apos;re after something
@@ -699,30 +564,17 @@ export const browTintWaxShapeData: ServiceData = {
       </ul>
     </div>
   ),
-  faqs: [
-    {
-      question: 'How long does a brow tint last?',
-      answer:
-        'A brow tint typically lasts 3-6 weeks, depending on your skin type and how quickly your brow hair sheds and regrows.',
-    },
-    {
-      question: 'How often should I book brow tinting and shape?',
-      answer:
-        'Most clients rebook every 3-4 weeks to keep their shape clean, though this varies with how quickly your hair grows back.',
-    },
-    {
-      question: 'What should I do after brow tinting and shaping?',
-      answer:
-        "Avoid water and sweat on the brows for a few hours and don't wear makeup on the brows for the rest of the day. Avoid direct sun, tanning beds and exfoliating products on the area for a few days.",
-    },
-  ],
 }
 
 export const powderBrowsServiceData: ServiceData = {
-  slug: 'permanent-makeup/powder-brows',
+  category: 'Permanent Makeup',
+  cardDescription:
+    "A soft, pixelated brow…or more defined and fuller result…I've got what you're after! With results lasting for 2-3 years.",
+  testimonialName: 'Y. Tobar',
+  blogSlug: 'what-are-powder-brows',
+  slug: 'powder-brows',
   avoidHeading: 'Who Should Avoid Powder Brows',
   avoidService: 'powder brows',
-  hubLink: { text: 'All Permanent Makeup', href: '/permanent-makeup' },
   shortDescription:
     'Powder brows: a soft, filled-in brow that holds its shape day to day.',
   title: 'Powder Brows',
@@ -804,55 +656,18 @@ export const powderBrowsServiceData: ServiceData = {
   ),
   contraindications: pmuContraindications,
   policyNotice: pmuBookingFeeNotice,
-  touchUpPricing: {
-    firstAppointment: '$300',
-    touchUp: '$125',
-    yearOne: '$425',
-  },
-  faqs: [
-    {
-      question: 'How much do powder brows cost in Kelowna?',
-      answer:
-        'Powder brows are $300 for your first appointment. Your touch-up is $125, bringing your total first year to $425.',
-    },
-    {
-      question: 'Are powder brows a good choice for oily skin?',
-      answer:
-        'Yes. Powder brows tend to hold up well on oily and combination skin.',
-    },
-    {
-      question: 'How long do powder brows last before they need a refresh?',
-      answer:
-        'Powder brows typically last 2-3 years, depending on your skin type and how well you follow the aftercare.',
-    },
-    {
-      question: "Who isn't a good candidate for powder brows?",
-      answer:
-        "You should wait or check with your doctor first if you are pregnant or breastfeeding, have an active skin condition or an uncontrolled autoimmune condition, have lupus or rheumatoid arthritis that is not controlled and cleared with a doctor's note, have had recent chemotherapy, take blood-thinning medications, or have a history of keloid scarring.",
-    },
-    {
-      question: 'How do I prepare for my powder brows appointment?',
-      answer:
-        "Avoid blood thinners for 2 weeks beforehand unless they are prescribed, stop retinol products 2 weeks before, and skip alcohol for 48 hours. Avoid tanning or sunburn on the area, and don't book if you have had a chemical peel or Botox in the brow area recently.",
-    },
-    {
-      question: 'How do I take care of my powder brows while they heal?',
-      answer:
-        'Keep the area clean and dry for 7 days, apply the aftercare product I provide as directed, and avoid makeup on the brows for 2 weeks. Skip swimming, saunas and excessive sweating while they heal, and attend your touch-up within 2 months.',
-    },
-    {
-      question: 'How long is a powder brows appointment?',
-      answer:
-        'Plan for 2-2.5 hours. We map your brow shape, I numb the area, and then the powder shading is built up in layers before I go through aftercare with you.',
-    },
-  ],
 }
 
 export const salineRemovalServiceData: ServiceData = {
-  slug: 'permanent-makeup/saline-tattoo-removal',
+  category: 'Permanent Makeup',
+  cardDescription:
+    'A gentler, saline-based alternative to laser removal for PMU.\n\nI also offer Emergency PMU Removal (for permanent makeup that you want removed asap, that was done less than 72 hours ago) 98-99% success rate of full removal if done within 24 hours.',
+  testimonialName: 'Nicola G',
+  blogSlug: 'what-is-saline-tattoo-removal',
+  cardTitle: 'Saline Tattoo & PMU Removal',
+  slug: 'saline-tattoo-removal',
   avoidHeading: 'Who Should Avoid Saline Tattoo Removal',
   avoidService: 'saline tattoo removal',
-  hubLink: { text: 'All Permanent Makeup', href: '/permanent-makeup' },
   shortDescription:
     'Saline tattoo and PMU removal: a gentler alternative to laser removal.',
   title: 'Saline Tattoo & PMU Removal',
@@ -975,47 +790,17 @@ export const salineRemovalServiceData: ServiceData = {
     </div>
   ),
   policyNotice: pmuBookingFeeNotice,
-  extraSections: [
-    {
-      heading: 'Emergency / After-Hours Removal',
-      content: (
-        <>
-          Emergency saline removal is available within 72 hours of your original
-          PMU application, for a $200 after-hours fee.
-        </>
-      ),
-    },
-  ],
-  faqs: [
-    {
-      question: 'How many sessions of saline tattoo removal will I need?',
-      answer:
-        'It varies by how much pigment is in the skin. Most clients need more than one session, and I can give you a better estimate at your consultation.',
-    },
-    {
-      question: "Who shouldn't get saline tattoo removal?",
-      answer:
-        "I recommend waiting, or checking with your doctor first, if you are pregnant or breastfeeding, have an active skin condition or an uncontrolled autoimmune condition, have lupus or rheumatoid arthritis that is not controlled and cleared with a doctor's note, have had recent chemotherapy, take blood-thinning medications, have a history of keloid scarring, or have an allergy to aloe.",
-    },
-    {
-      question: 'How do I prepare for saline tattoo removal?',
-      answer:
-        'Avoid blood thinners for 2 weeks beforehand unless they are prescribed, and skip alcohol for 48 hours. Tell me about any skin conditions in the treatment area.',
-    },
-    {
-      question:
-        'How long is a saline tattoo removal session, and does it hurt?',
-      answer:
-        'A session takes about 90 minutes. I apply a topical anesthetic before starting and then work the saline solution into the treatment area.',
-    },
-  ],
 }
 
 export const permanentEyelinerServiceData: ServiceData = {
-  slug: 'permanent-makeup/permanent-eyeliner',
+  category: 'Permanent Makeup',
+  cardDescription:
+    'Subtle lash line enhancement tattooed eyeliner. Make those eyes pop!',
+  testimonialName: 'Jenny K',
+  blogSlug: 'what-is-permanent-eyeliner',
+  slug: 'permanent-eyeliner',
   avoidHeading: 'Who Should Avoid Permanent Eyeliner',
   avoidService: 'permanent eyeliner',
-  hubLink: { text: 'All Permanent Makeup', href: '/permanent-makeup' },
   shortDescription:
     'Permanent eyeliner: upper lash line enhancement or lower eyeliner.',
   title: 'Permanent Eyeliner',
@@ -1083,29 +868,15 @@ export const permanentEyelinerServiceData: ServiceData = {
   ),
   contraindications: pmuContraindications,
   policyNotice: pmuBookingFeeNotice,
-  faqs: [
-    {
-      question: 'How long does permanent eyeliner last?',
-      answer:
-        'Typically 2-3 years, depending on your skin and how well you follow the aftercare instructions.',
-    },
-    {
-      question: 'How do I prepare for my permanent eyeliner appointment?',
-      answer:
-        'Avoid blood thinners for 2 weeks beforehand unless they are prescribed, skip alcohol for 48 hours, and remove your contact lenses before treatment. Tell me about any eye conditions or sensitivities.',
-    },
-    {
-      question:
-        'How long is a permanent eyeliner appointment, and does it hurt?',
-      answer:
-        'Plan for 1.5-2 hours. I apply a topical anesthetic before the pigment is deposited along the lash line. You are kept comfortable throughout the appointment.',
-    },
-  ],
 }
 
 export const toothGemsServiceData: ServiceData = {
-  slug: 'smile/tooth-gems',
-  hubLink: { text: 'All Smile Services', href: '/smile' },
+  category: 'Smile Services',
+  cardDescription:
+    'Genuine Swarovski crystal tooth gems, professionally applied. Lasting 6-24 months with proper care.',
+  testimonialName: 'Cheryl T',
+  blogSlug: 'what-are-tooth-gems',
+  slug: 'tooth-gems',
   shortDescription:
     'Swarovski tooth gems: genuine crystal, professionally applied, starting at $40.',
   title: 'Swarovski Tooth Gems',
@@ -1213,49 +984,17 @@ export const toothGemsServiceData: ServiceData = {
       </ul>
     </div>
   ),
-  faqs: [
-    {
-      question: 'Do tooth gems damage your teeth or enamel?',
-      answer:
-        "No. I use a dental-grade adhesive that bonds to the tooth surface without drilling, and gems can be safely removed by a dental professional when you're ready.",
-    },
-    {
-      question: 'How long do tooth gems last?',
-      answer:
-        'With proper care, a tooth gem typically lasts 6-24 months before it needs replacing.',
-    },
-    {
-      question: 'Can I get more than one tooth gem at the same appointment?',
-      answer: 'Yes. Many clients choose two or more.',
-    },
-    {
-      question: 'How do I prepare for my tooth gem appointment?',
-      answer:
-        'Brush your teeth thoroughly beforehand and tell me about any recent dental work. The appointment takes about 15-20 minutes.',
-    },
-    {
-      question: 'What should I do after getting a tooth gem?',
-      answer:
-        "Don't eat or drink for at least 60 minutes so the adhesive fully cures, and avoid touching or picking at the gem. Stick to soft foods, skip brushing that tooth for the first 24 hours, and avoid acidic and carbonated drinks while it sets.",
-    },
-    {
-      question: 'What if my tooth gem comes loose?',
-      answer:
-        "Don't try to reattach it yourself. Book in and I can replace it.",
-    },
-    {
-      question: 'How do I get a tooth gem removed?',
-      answer:
-        'Have a dentist take it off, so any remaining adhesive is polished away without damaging your enamel.',
-    },
-  ],
 }
 
 export const teethWhiteningServiceData: ServiceData = {
-  slug: 'smile/teeth-whitening',
+  category: 'Smile Services',
+  cardDescription:
+    'Professional in-studio teeth whitening, plus hybrid options for those slightly sensitive.',
+  testimonialName: 'Tina H',
+  blogSlug: 'what-is-professional-teeth-whitening',
+  slug: 'teeth-whitening',
   avoidHeading: 'Who Should Avoid Professional Teeth Whitening',
   avoidService: 'professional teeth whitening',
-  hubLink: { text: 'All Smile Services', href: '/smile' },
   shortDescription:
     'Professional teeth whitening: Basic and Ultra sessions, plus a 24k gold option.',
   title: 'Teeth Whitening',
@@ -1304,23 +1043,10 @@ export const teethWhiteningServiceData: ServiceData = {
       description: (
         <>
           A gentler gold-infused option, built for sensitive teeth. See my{' '}
-          <Link href="/smile/sensitive-teeth-whitening" className="underline">
+          <Link href="/sensitive-teeth-whitening" className="underline">
             sensitive teeth whitening page
           </Link>{' '}
           for details.
-        </>
-      ),
-    },
-  ],
-  extraSections: [
-    {
-      heading: 'Basic vs. Ultra vs. 24K Gold',
-      content: (
-        <>
-          Basic and Ultra use the same whitening gel, and differ only in how
-          many 20-minute sessions you get — Ultra simply goes further for a
-          brighter result. The 24k gold option uses a gentler formula, and I
-          recommend it for clients with teeth or gum sensitivity.
         </>
       ),
     },
@@ -1364,51 +1090,18 @@ export const teethWhiteningServiceData: ServiceData = {
     </div>
   ),
   contraindications: teethWhiteningContraindications,
-  faqs: [
-    {
-      question: 'How much does teeth whitening cost?',
-      answer:
-        'Basic whitening is $99 for two 20-minute sessions. Ultra is $145 for three sessions. 24k gold whitening, recommended for sensitive teeth, is also $99.',
-    },
-    {
-      question: 'How long do the teeth whitening results last?',
-      answer:
-        'Results typically last up to 6 months, depending on your diet and oral hygiene habits afterward.',
-    },
-    {
-      question:
-        'Is Brows on Point teeth whitening better than at-home whitening strips?',
-      answer:
-        'Brows on Point whitening uses a stronger professional gel, so results are visible after one appointment rather than weeks of at-home use.',
-    },
-    {
-      question: "Who shouldn't get professional teeth whitening?",
-      answer:
-        "I don't recommend it with active cavities or decay, periodontal disease or gum recession, exposed dentin or significant enamel erosion, or cracked teeth. It is also not suitable if you are pregnant or breastfeeding, under 18, or allergic to peroxide.",
-    },
-    {
-      question: 'How do I prepare for my teeth whitening appointment?',
-      answer:
-        'Brush your teeth thoroughly beforehand and avoid coffee or dark drinks for 2 hours before. A recent dental cleaning is recommended but not required, and tell me about any sensitivity or existing dental work.',
-    },
-    {
-      question: 'Will teeth whitening work on crowns, veneers or bonding?',
-      answer:
-        "No. Crowns, veneers, bonding and other restorations on front teeth won't whiten more than their original shade (on those teeth).",
-    },
-    {
-      question: 'What should I avoid after teeth whitening?',
-      answer:
-        'Avoid staining foods and drinks for 48 hours, and use a whitening-safe toothpaste to maintain your results.',
-    },
-  ],
 }
 
 export const sensitiveTeethWhiteningServiceData: ServiceData = {
-  slug: 'smile/sensitive-teeth-whitening',
+  category: 'Smile Services',
+  cardDescription:
+    'A gentler whitening option built for clients with the most sensitive teeth.',
+  testimonialName: 'Shanise S',
+  blogSlug: 'what-is-24k-gold-teeth-whitening',
+  cardTitle: '24K Gold Whitening',
+  slug: 'sensitive-teeth-whitening',
   avoidHeading: 'Who Should Avoid 24K Gold Teeth Whitening',
   avoidService: '24k gold teeth whitening',
-  hubLink: { text: 'All Smile Services', href: '/smile' },
   shortDescription:
     '24k gold teeth whitening, built for clients with sensitive teeth.',
   title: '24K Gold Whitening for Sensitive Teeth',
@@ -1468,38 +1161,19 @@ export const sensitiveTeethWhiteningServiceData: ServiceData = {
     </div>
   ),
   contraindications: goldWhiteningContraindications,
-  faqs: [
-    {
-      question:
-        'Is 24k gold teeth whitening really better for sensitive teeth?',
-      answer:
-        "It's formulated to be gentler than my standard whitening options, which is why I recommend it for clients who know they have sensitive teeth.",
-    },
-    {
-      question: "Who shouldn't get 24k gold teeth whitening?",
-      answer:
-        'The same limits apply as for my other whitening: active cavities or decay, periodontal disease or gum recession, exposed dentin or significant enamel erosion, cracked teeth, pregnancy or breastfeeding, being under 18, or an allergy to peroxide.',
-    },
-    {
-      question:
-        'How do I prepare for my teeth whitening if my teeth are sensitive?',
-      answer:
-        'Brush your teeth thoroughly beforehand, and tell me about your sensitivity and any existing dental work so I can plan the session around it.',
-    },
-    {
-      question: 'How do I look after sensitive teeth after my whitening?',
-      answer:
-        'Avoid staining foods and drinks for 48 hours and use a sensitivity-friendly toothpaste to maintain your results.',
-    },
-  ],
 }
 
 export const rfSkinTighteningData: ServiceData = {
+  cardDescription:
+    'Non-invasive radiofrequency skin tightening for the face, neck, and jowls — a single session or a 3-session package, depending on your goals.',
+  testimonialName: 'Carly M',
+  blogSlug: 'what-is-rf-skin-tightening',
   slug: 'skin-tightening',
   avoidHeading: 'Who Should Avoid RF Skin Tightening',
   avoidService: 'RF skin tightening',
   shortDescription:
     'RF skin tightening: a non-invasive treatment for face, neck, and body using a 40k ultrasonic machine.',
+  cardTitle: 'Skin Tightening',
   title: 'Skin Tightening Treatment',
   description:
     'RF skin tightening uses radiofrequency energy to gently heat the deeper layers of skin, encouraging your body to produce more collagen so skin looks firmer over time. At Brows on Point in West Kelowna, treatment is done with a 40k ultrasonic RF machine that combines skin tightening with ultrasonic exfoliation in one session.',
@@ -1519,26 +1193,6 @@ export const rfSkinTighteningData: ServiceData = {
     </>
   ),
   bookingLabel: 'Book Appointment',
-  extraSections: [
-    {
-      heading: 'Face and Neck',
-      content: (
-        <>
-          RF skin tightening is typically done in packages of 3-5 for best
-          results. 48 to 72 hours in between sessions.
-        </>
-      ),
-    },
-    {
-      heading: '3-Session Package - introductory pricing',
-      content: (
-        <>
-          A 3-session package is $175, compared to $225 for three individual
-          sessions at $75 each.
-        </>
-      ),
-    },
-  ],
   benefits: (
     <div className="mx-auto max-w-2xl px-6">
       <ul className="list-disc space-y-2 pl-6">
@@ -1610,41 +1264,19 @@ export const rfSkinTighteningData: ServiceData = {
       </div>
     </div>
   ),
-  faqs: [
-    {
-      question: 'How much does RF skin tightening cost?',
-      answer:
-        'A single RF neck/facial skin tightening session is $75. A 3-session package is $175 (introductory pricing).',
-    },
-    {
-      question: 'Is RF skin tightening painful?',
-      answer:
-        'No, most clients describe a warm, relaxing sensation during treatment with no discomfort.',
-    },
-    {
-      question: 'How many RF skin tightening sessions will I need?',
-      answer:
-        "Results build over a course of treatments. Typically 3-5. I'll recommend a personalized plan during your consultation based on your skin goals.",
-    },
-    {
-      question: 'Is there any downtime after RF skin tightening?',
-      answer:
-        'None. You can return to your normal routine immediately after treatment.',
-    },
-    {
-      question: "Who shouldn't have RF skin tightening?",
-      answer:
-        "I don't recommend it with a pacemaker, defibrillator or other implanted electronic device, or metal plates, screws or pins in the treatment area. It's also not suitable if you are pregnant or breastfeeding, have active cancer or an undiagnosed lesion in the area, have active skin infections or flare-ups there, have a history of keloid scarring, or have recent tanning or a sunburn in the area.",
-    },
-    {
-      question: 'How do I prepare for my RF skin tightening appointment?',
-      answer:
-        'Arrive with clean, makeup-free skin, avoid sun exposure or sunburn in the days before, and stop retinol products 48 hours beforehand. Lots of hydration 24 hours prior to. Tell me about any metal implants, pacemakers or skin conditions.',
-    },
-    {
-      question: 'What should I do after RF skin tightening?',
-      answer:
-        'Apply SPF daily, stay well hydrated, and avoid harsh exfoliants for 48 hours. Book follow-up sessions as recommended for the best results.',
-    },
-  ],
 }
+
+/** Every bookable service, in menu and All Services order. */
+export const ALL_SERVICES: ServiceData[] = [
+  browTintWaxShapeData,
+  lashServiceData,
+  lashAndBrowTintingServiceData,
+  microbladingServiceData,
+  powderBrowsServiceData,
+  permanentEyelinerServiceData,
+  salineRemovalServiceData,
+  teethWhiteningServiceData,
+  sensitiveTeethWhiteningServiceData,
+  toothGemsServiceData,
+  rfSkinTighteningData,
+]

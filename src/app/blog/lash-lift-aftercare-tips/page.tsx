@@ -86,7 +86,7 @@ export default function LashLiftAftercareTipsPage() {
       <p>
         Curious which lash lift technique is right for you? See the full
         breakdown on the{' '}
-        <Link href="/lashes/lash-lift-and-tint">Lash Lift and Tint</Link> page,
+        <Link href="/lash-lift-and-tint">Lash Lift and Tint</Link> page,
         including pricing for the Keratin, BOMB, and Korean options.
       </p>
     </BlogPostLayout>

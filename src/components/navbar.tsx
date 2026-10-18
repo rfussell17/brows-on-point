@@ -10,6 +10,7 @@ import {
   useClose,
 } from '@headlessui/react'
 
+import { serviceLinks } from '@/lib/service-links'
 import { ACUITY_URL } from '@/lib/site'
 import {
   Bars2Icon,
@@ -44,35 +45,8 @@ function NavLink({
   )
 }
 
-const serviceCategories = [
-  {
-    href: '/brows',
-    label: 'Brows',
-    description: 'Tint & shape, microblading, powder brows',
-  },
-  {
-    href: '/lashes',
-    label: 'Lashes',
-    description: 'Lash lift and tint, lash & brow tinting',
-  },
-  {
-    href: '/permanent-makeup',
-    label: 'Permanent Makeup',
-    description: 'Microblading, powder brows, eyeliner, removal',
-  },
-  {
-    href: '/smile',
-    label: 'Smile Services',
-    description: 'Teeth whitening, Swarovski tooth gems',
-  },
-  {
-    href: '/skin-tightening',
-    label: 'Skin Tightening',
-    description: 'Non-invasive RF for face, neck, and body',
-  },
-]
-
 const links = [
+  { href: '/gallery', label: 'Gallery' },
   { href: '/testimonials', label: 'Testimonials' },
   { href: '/blog', label: 'Blog' },
   { href: ACUITY_URL, label: 'Book an Appointment' },
@@ -107,18 +81,13 @@ function DesktopNav() {
               anchor="bottom start"
               className="z-50 mt-2 w-72 rounded-xl bg-primary-800 p-2 shadow-lg ring-1 ring-secondary-700 transition duration-150 ease-out data-[closed]:translate-y-1 data-[closed]:opacity-0"
             >
-              {serviceCategories.map((category) => (
+              {serviceLinks.map((service) => (
                 <NavLink
-                  key={category.href}
-                  href={category.href}
-                  className="block rounded-lg px-3 py-2 hover:bg-primary-700"
+                  key={service.href}
+                  href={service.href}
+                  className="block rounded-lg px-3 py-2 text-body font-semibold text-light hover:bg-primary-700"
                 >
-                  <div className="text-body font-semibold text-light">
-                    {category.label}
-                  </div>
-                  <div className="text-small text-light/60">
-                    {category.description}
-                  </div>
+                  {service.label}
                 </NavLink>
               ))}
               <NavLink
@@ -179,13 +148,13 @@ function MobileNav() {
             Services
           </div>
           <div className="mt-2 flex flex-col gap-3">
-            {serviceCategories.map((category) => (
+            {serviceLinks.map((service) => (
               <NavLink
-                key={category.href}
-                href={category.href}
+                key={service.href}
+                href={service.href}
                 className="text-body font-medium text-light"
               >
-                {category.label}
+                {service.label}
               </NavLink>
             ))}
             <NavLink

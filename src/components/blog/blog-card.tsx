@@ -35,9 +35,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
           <span aria-hidden="true">·</span>
           <span>{post.readTime}</span>
         </div>
-        <h3 className="mt-3 text-lead text-light">
-          {post.title}
-        </h3>
+        <h3 className="mt-3 text-lead text-light">{post.title}</h3>
         <p className="mt-2 line-clamp-3 text-body text-light/70">
           {post.description}
         </p>

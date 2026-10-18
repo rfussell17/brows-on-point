@@ -52,7 +52,7 @@ export default function LashLiftHome({
                 </Link>
 
                 <Link
-                  href="/lash-lift"
+                  href="/lash-lift-and-tint"
                   className="px-3.5 text-body font-semibold text-light"
                 >
                   Explore Lash Lifts <span aria-hidden="true">→</span>

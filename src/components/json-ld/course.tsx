@@ -1,5 +1,5 @@
-import { SITE_URL } from '@/lib/site'
 import { parsePrice } from '@/lib/schema'
+import { SITE_URL } from '@/lib/site'
 
 interface CourseInput {
   name: string

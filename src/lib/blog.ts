@@ -3,8 +3,8 @@ import path from 'path'
 import { blogPosts } from './blog-posts'
 import type { BlogPost } from './blog-types'
 
-export type { BlogPost, BlogPostMeta } from './blog-types'
 export { formatPostDate } from './blog-types'
+export type { BlogPost, BlogPostMeta } from './blog-types'
 
 export function calcReadTime(slug: string): string {
   const filePath = path.join(process.cwd(), 'src/app/blog', slug, 'page.tsx')

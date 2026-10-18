@@ -7,13 +7,17 @@ const nextConfig = {
   // this repo's existing no-trailing-slash convention avoids that.
   async redirects() {
     return [
-      { source: '/brow-services', destination: '/brows', permanent: true },
+      { source: '/brow-services', destination: '/services', permanent: true },
       {
         source: '/lash-lift',
-        destination: '/lashes/lash-lift-and-tint',
+        destination: '/lash-lift-and-tint',
         permanent: true,
       },
-      { source: '/teeth-services', destination: '/smile', permanent: true },
+      {
+        source: '/teeth-services',
+        destination: '/teeth-whitening',
+        permanent: true,
+      },
       {
         source: '/rf-skin-tightening',
         destination: '/skin-tightening',
@@ -25,7 +29,6 @@ const nextConfig = {
       { source: '/about-1', destination: '/about', permanent: true },
       { source: '/about-2', destination: '/about', permanent: true },
       { source: '/about-3', destination: '/about', permanent: true },
-      { source: '/gallery', destination: '/services', permanent: true },
       // /services is left alone pending traffic data — see BUILD-BRIEF.md §4.1.
     ]
   },

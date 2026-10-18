@@ -8,7 +8,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { Container } from '../container'
-import { ImagePlaceholder } from './image-placeholder'
 
 interface ServiceHomeProps {
   title: string
@@ -17,8 +16,8 @@ interface ServiceHomeProps {
   duration?: string
   results?: string | ReactNode
   price?: string | ReactNode
-  /** Real photos for the header gallery grid, up to 4. Empty slots fall back to <ImagePlaceholder/>. */
-  images?: string[]
+  /** The one photo shown beside the intro; without one the header is text only. */
+  image?: string
   testimonial?: {
     quote: string
     author: string
@@ -42,7 +41,7 @@ export default function ServiceHome({
   duration,
   results,
   price,
-  images = [],
+  image,
   testimonial,
   bookingUrl = ACUITY_URL,
   learnMoreUrl = '/services',
@@ -59,7 +58,7 @@ export default function ServiceHome({
     <div className="overflow-hidden bg-primary py-28 sm:py-36">
       <Container>
         <div
-          className={`mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:items-start ${images.length > 0 ? 'lg:max-w-none lg:grid-cols-2' : ''}`}
+          className={`mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:items-start ${image ? 'lg:max-w-none lg:grid-cols-2' : ''}`}
         >
           <div className="lg:pr-4 lg:pt-4">
             <div className="lg:max-w-lg">
@@ -122,45 +121,16 @@ export default function ServiceHome({
               )}
             </div>
           </div>
-          {images.length > 0 && (
-            <div className="sm:px-6 lg:px-0">
-              {images.length < 4 ? (
-                // Fewer than four usable photos: show one large image instead of
-                // a grid padded out with placeholders.
-                <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-light shadow-xl">
-                  <Image
-                    fill
-                    priority
-                    src={images[0]}
-                    alt={title}
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-              ) : (
-                <div className="grid grid-cols-2 gap-1 overflow-hidden rounded-2xl bg-light shadow-xl">
-                  {Array.from({ length: 4 }).map((_, i) =>
-                    images[i] ? (
-                      <div
-                        key={i}
-                        className="relative aspect-square w-full overflow-hidden"
-                      >
-                        <Image
-                          fill
-                          src={images[i]}
-                          alt={title}
-                          className="object-cover"
-                        />
-                      </div>
-                    ) : (
-                      <ImagePlaceholder
-                        key={i}
-                        className="aspect-square w-full"
-                      />
-                    ),
-                  )}
-                </div>
-              )}
+          {image && (
+            <div className="relative aspect-square w-full max-w-full overflow-hidden rounded-2xl bg-light shadow-xl">
+              <Image
+                fill
+                priority
+                src={image}
+                alt={title}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
             </div>
           )}
         </div>

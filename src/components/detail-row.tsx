@@ -8,7 +8,7 @@ const services = [
       'By lifting and curling the lashes from the bottom up, giving the lashes a longer appearance without the need of damaging lash curlers or daily mascara!',
       'Perfect for clients looking to boost their natural lashes without damaging extensions.',
     ],
-    href: '/lashes',
+    href: '/services',
   },
   {
     name: 'Brows',
@@ -17,7 +17,7 @@ const services = [
       'Whether it’s a subtle enhancement or a bold statement, I ensure you will have one less thing to worry about in your morning routine.',
       'Get up and go!',
     ],
-    href: '/brows',
+    href: '/services',
   },
   {
     name: 'Permanent Makeup',
@@ -25,14 +25,14 @@ const services = [
       'Make your daily get-ready routine a little easier! Depending on the service, results can last 1-3 years!',
       'Achieve a natural/soft result, or something bold/defined that saves you time every day.',
     ],
-    href: '/permanent-makeup',
+    href: '/services',
   },
   {
     name: 'Smile Services',
     description: [
       'Brighten your smile with teeth whitening, or add a bit of sparkle with genuine Swarovski tooth gems.',
     ],
-    href: '/smile',
+    href: '/services',
   },
 ]
 

@@ -1,8 +1,8 @@
 'use client'
 
+import type { BlogPost } from '@/lib/blog-types'
 import { useState } from 'react'
 import { BlogCard } from './blog-card'
-import type { BlogPost } from '@/lib/blog-types'
 
 export function BlogFilter({
   posts,
@@ -25,7 +25,7 @@ export function BlogFilter({
       <div className="mt-8 flex flex-wrap gap-2">
         <button
           onClick={() => setActive(null)}
-          className={`cursor-pointer rounded-full px-4 py-1.5 text-small font-semibold tracking-wide uppercase transition-colors ${
+          className={`cursor-pointer rounded-full px-4 py-1.5 text-small font-semibold uppercase tracking-wide transition-colors ${
             active === null
               ? 'bg-primary text-light'
               : 'bg-primary-100 text-primary hover:bg-primary-200'
@@ -39,7 +39,7 @@ export function BlogFilter({
             <button
               key={category}
               onClick={() => setActive(isActive ? null : category)}
-              className={`cursor-pointer rounded-full px-4 py-1.5 text-small font-semibold tracking-wide uppercase transition-colors ${
+              className={`cursor-pointer rounded-full px-4 py-1.5 text-small font-semibold uppercase tracking-wide transition-colors ${
                 isActive
                   ? 'bg-primary text-light'
                   : 'bg-primary-100 text-primary hover:bg-primary-200'

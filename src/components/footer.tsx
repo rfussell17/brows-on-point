@@ -1,5 +1,6 @@
 import { Container } from '@/components/container'
 import { Link } from '@/components/link'
+import { serviceLinks } from '@/lib/service-links'
 import { ACUITY_URL } from '@/lib/site'
 import Image from 'next/image'
 
@@ -32,17 +33,18 @@ function Sitemap() {
       <div>
         <SitemapHeading>Services</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/lashes">Lashes</SitemapLink>
-          <SitemapLink href="/brows">Brows</SitemapLink>
-          <SitemapLink href="/permanent-makeup">Permanent Makeup</SitemapLink>
-          <SitemapLink href="/smile">Smile Services</SitemapLink>
-          <SitemapLink href="/skin-tightening">Skin Tightening</SitemapLink>
+          {serviceLinks.map((service) => (
+            <SitemapLink key={service.href} href={service.href}>
+              {service.label}
+            </SitemapLink>
+          ))}
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>Company</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/about">About</SitemapLink>
+          <SitemapLink href="/gallery">Gallery</SitemapLink>
           <SitemapLink href="/testimonials">Testimonials</SitemapLink>
           <SitemapLink href="/training">Training</SitemapLink>
           <SitemapLink href="/contact">Contact</SitemapLink>

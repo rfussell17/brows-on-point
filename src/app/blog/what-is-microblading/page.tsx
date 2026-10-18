@@ -58,13 +58,13 @@ export default function WhatIsMicrobladingPage() {
       relatedPosts={[
         {
           title: 'Microblading in Kelowna',
-          href: '/permanent-makeup/microblading',
+          href: '/microblading',
         },
         {
           title: 'Powder Brows in Kelowna',
-          href: '/permanent-makeup/powder-brows',
+          href: '/powder-brows',
         },
-        { title: 'Permanent Makeup in Kelowna', href: '/permanent-makeup' },
+        { title: 'Permanent Makeup in Kelowna', href: '/services' },
       ]}
     >
       <p>
@@ -130,10 +130,10 @@ export default function WhatIsMicrobladingPage() {
       <p>
         You may hear it called eyebrow microblading, brow embroidery or a
         &ldquo;brow tattoo&rdquo;. It belongs to the wider family of{' '}
-        <Link href="/permanent-makeup">permanent makeup</Link>, also called
-        cosmetic tattooing or micropigmentation. The pigment is placed in the
-        upper layers of the skin rather than deeper, which is why it fades
-        gradually over time instead of staying forever.
+        <Link href="/services">permanent makeup</Link>, also called cosmetic
+        tattooing or micropigmentation. The pigment is placed in the upper
+        layers of the skin rather than deeper, which is why it fades gradually
+        over time instead of staying forever.
       </p>
 
       <h2 id="how-it-works">How a microblading appointment works</h2>
@@ -184,7 +184,7 @@ export default function WhatIsMicrobladingPage() {
           semi-permanent dye and typically holds for 3-6 weeks. It is a good
           low-commitment option if your brows already have enough hair, and it
           is $25 together with{' '}
-          <Link href="/brows/brow-tint-and-shape">eyebrow shaping</Link>.
+          <Link href="/brow-tint-and-shape">eyebrow shaping</Link>.
         </li>
         <li>
           <strong>Microblading</strong> places pigment in the skin, so it can
@@ -259,8 +259,8 @@ export default function WhatIsMicrobladingPage() {
         appointment, which includes brow mapping and the full procedure. The
         touch-up is $100, bringing your total for the first year to $375. A
         colour boost later on is $170. See the{' '}
-        <Link href="/permanent-makeup/microblading">microblading page</Link> for
-        the full details.
+        <Link href="/microblading">microblading page</Link> for the full
+        details.
       </p>
 
       <h2 id="who-its-for">Who microblading is for, and who should wait</h2>
@@ -290,11 +290,10 @@ export default function WhatIsMicrobladingPage() {
       <h2 id="vs-powder-brows">Microblading vs powder brows</h2>
       <p>
         Microblading draws individual hair-like strokes for a natural, textured
-        look. <Link href="/permanent-makeup/powder-brows">Powder brows</Link>{' '}
-        use a shading technique with tiny dots of pigment for a softer, more
-        filled-in finish, similar to brow makeup. Which one suits you depends on
-        your skin and the look you want, and your artist can advise at your
-        consultation.
+        look. <Link href="/powder-brows">Powder brows</Link> use a shading
+        technique with tiny dots of pigment for a softer, more filled-in finish,
+        similar to brow makeup. Which one suits you depends on your skin and the
+        look you want, and your artist can advise at your consultation.
       </p>
 
       <h2 id="questions-to-ask">Questions to ask any microblading artist</h2>
@@ -327,10 +326,8 @@ export default function WhatIsMicrobladingPage() {
       </ul>
       <p>
         Ready to talk through your brows? You can read about{' '}
-        <Link href="/permanent-makeup/microblading">
-          microblading in Kelowna
-        </Link>{' '}
-        at Brows on Point, or book a consultation online.
+        <Link href="/microblading">microblading in Kelowna</Link> at Brows on
+        Point, or book a consultation online.
       </p>
     </BlogPostLayout>
   )
