@@ -14,7 +14,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Gallery',
   description:
-    'Before and after photos of lash lifts, brows, permanent makeup, teeth whitening, tooth gems and skin tightening at Brows on Point in West Kelowna.',
+    'Before and after photos of lash lifts, brows, permanent makeup, teeth whitening and tooth gems at Brows on Point in West Kelowna.',
   robots: {
     index: false,
     follow: false,
@@ -25,7 +25,7 @@ const S = '/services'
 
 // Every service photo in public/services, grouped by the service it shows.
 // lashes-tinting-closeup-01.jpg is left out: it isn't a tint-only photo.
-// Brow Tinting & Shaping has no photo yet.
+// Brow Tinting & Shaping has no photo yet; Skin Tightening is left out.
 const groups: GalleryGroup[] = [
   {
     title: 'Lash Lift and Tint',
@@ -99,11 +99,6 @@ const groups: GalleryGroup[] = [
       `${S}/smile/smile-tooth-gem-closeup-03.jpg`,
       `${S}/smile/smile-tooth-gem-closeup-04.jpg`,
     ],
-  },
-  {
-    title: 'Skin Tightening',
-    href: '/skin-tightening',
-    images: [`${S}/skin-tightening/skin-tightening-treatment-closeup-01.jpg`],
   },
 ]
 
