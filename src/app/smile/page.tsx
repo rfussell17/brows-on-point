@@ -44,7 +44,7 @@ export default function SmileHubPage() {
         {
           title: 'Swarovski Tooth Gems',
           description:
-            'Genuine Swarovski crystal tooth gems, professionally applied. Lasting up to 6 months with proper care.',
+            'Genuine Swarovski crystal tooth gems, professionally applied. Lasting 6-24 months with proper care.',
           href: '/smile/tooth-gems',
           image: '/services/smile/smile-tooth-gem-closeup-01.jpg',
         },

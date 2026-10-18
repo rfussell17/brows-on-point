@@ -137,7 +137,7 @@ export const lashServiceData: ServiceData = {
   ],
   duration: '45-60 minutes',
   results: '6-12 weeks',
-  price: 'From $50',
+  price: 'From $70',
   thumbnail: '/services/lashes/lashes-lift-bomb-before-after-03.jpg',
   about: (
     <>
@@ -378,8 +378,7 @@ export const lashAndBrowTintingServiceData: ServiceData = {
   title: 'Lash Tinting',
   description:
     'An eyelash tint uses a semi-permanent dye to darken your natural lashes, so they show up without mascara. At Brows on Point, you can book an eyelash tint on its own, or pair it with a brow tint in the same appointment.',
-  galleryImages: ['/services/lashes/lashes-tinting-closeup-01.jpg'],
-  thumbnail: '/services/lashes/lashes-tinting-closeup-01.jpg',
+  galleryImages: [],
   duration: '15-30 minutes',
   results: '3-6 weeks',
   price: '$25',
@@ -736,7 +735,7 @@ export const powderBrowsServiceData: ServiceData = {
     '/services/permanent-makeup/permanent-makeup-powder-brows-healed-01.jpg',
   ],
   duration: '2-2.5 hours',
-  results: 'Varies by skin type — ask at your consultation',
+  results: '2-3 years',
   price: '$300',
   thumbnail:
     '/services/permanent-makeup/permanent-makeup-powder-brows-before-after-01.jpg',
@@ -1018,10 +1017,10 @@ export const permanentEyelinerServiceData: ServiceData = {
   avoidService: 'permanent eyeliner',
   hubLink: { text: 'All Permanent Makeup', href: '/permanent-makeup' },
   shortDescription:
-    'Permanent eyeliner: upper lash line enhancement, lower eyeliner, or top and bottom together.',
+    'Permanent eyeliner: upper lash line enhancement or lower eyeliner.',
   title: 'Permanent Eyeliner',
   description:
-    'Brows on Point offers a subtle upper lash line enhancement, a lower eyeliner tattoo, or top and bottom together for a more defined look.',
+    'Brows on Point offers a subtle upper lash line enhancement or a lower eyeliner tattoo.',
   galleryImages: [
     '/services/permanent-makeup/permanent-makeup-eyeliner-before-after-01.jpg',
   ],
@@ -1050,11 +1049,6 @@ export const permanentEyelinerServiceData: ServiceData = {
       name: 'Lower Eyeliner',
       price: '$120',
       description: <>Defined liner along the lower lash line on its own.</>,
-    },
-    {
-      name: 'Top + Bottom Eyeliner',
-      price: '$319',
-      description: <>Defined liner along both the top and bottom lash lines.</>,
     },
   ],
   process: (

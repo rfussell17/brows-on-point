@@ -49,8 +49,9 @@ export default function PermanentMakeupPage() {
               Permanent makeup brows come in 2 techniques here. Microblading:
               which creates natural, wispy hair-like strokes in the skin. Powder
               brows: a soft, fuller brow. Similar look of wearing brow powder or
-              pomade. Both are cosmetic tattoo techniques that typically last
-              1-3 years, and both start with a free consultation.
+              pomade. Both are cosmetic tattoo techniques: microblading
+              typically lasts 1-2 years and powder brows 2-3 years, and both
+              start with a free consultation.
             </p>
           ),
         },
@@ -66,7 +67,7 @@ export default function PermanentMakeupPage() {
                   Powder brows: $300. Touch-up $125, so your first year is $425.
                 </li>
                 <li>
-                  Permanent eyeliner: upper lash line $199, lower liner $120
+                  Permanent eyeliner: upper lash line $230, lower liner $120
                 </li>
                 <li>
                   Saline tattoo and PMU removal: $125. Emergency removal: $200

@@ -113,7 +113,9 @@ const ServiceDetail: FC<ServiceDetailProps> = ({ data, className = '' }) => {
             <h3 className="text-lead text-light">
               {data.serviceOptionsHeading ?? 'Choose Your Service'}
             </h3>
-            <div className="mt-6 grid grid-cols-1 items-start gap-6 sm:grid-cols-3">
+            <div
+              className={`mt-6 grid grid-cols-1 items-start gap-6 ${data.serviceOptions.length === 1 ? 'max-w-md' : data.serviceOptions.length === 2 ? 'sm:grid-cols-2' : 'sm:grid-cols-3'}`}
+            >
               {data.serviceOptions.map((option) => (
                 <div
                   key={option.name}

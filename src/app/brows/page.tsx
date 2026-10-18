@@ -20,7 +20,7 @@ const faqs = [
     question:
       "What's the difference between eyebrow tinting and shaping, and semi-permanent brows like microblading/powder brow?",
     answer:
-      'Tint & Shape uses a semi-permanent tint that lasts 3-6 weeks. Microblading and Powder Brows are cosmetic tattoo techniques that last 1-3 years.\n\nWhich one suits you depends on your skin texture, how much upkeep you want.',
+      'Tint & Shape uses a semi-permanent tint that lasts 3-6 weeks. Microblading and Powder Brows are cosmetic tattoo techniques. Microblading lasts 1-2 years and Powder Brows last 2-3 years.\n\nWhich one suits you depends on your skin texture, how much upkeep you want.',
   },
 ]
 
@@ -57,10 +57,8 @@ export default function BrowsHubPage() {
                   className="font-semibold underline"
                 >
                   Brow tinting and shape
-                </Link>
-                <br />
-                <br />
-                The tint typically holds for 3-6 weeks.
+                </Link>{' '}
+                lasts 3-6 weeks.
               </p>
             </>
           ),

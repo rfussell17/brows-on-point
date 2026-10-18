@@ -58,7 +58,9 @@ export default function ServiceHome({
   return (
     <div className="overflow-hidden bg-primary py-28 sm:py-36">
       <Container>
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
+        <div
+          className={`mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:items-start ${images.length > 0 ? 'lg:max-w-none lg:grid-cols-2' : ''}`}
+        >
           <div className="lg:pr-4 lg:pt-4">
             <div className="lg:max-w-lg">
               {eyebrow && (
@@ -120,45 +122,47 @@ export default function ServiceHome({
               )}
             </div>
           </div>
-          <div className="sm:px-6 lg:px-0">
-            {images.length > 0 && images.length < 4 ? (
-              // Fewer than four usable photos: show one large image instead of
-              // a grid padded out with placeholders.
-              <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-light shadow-xl">
-                <Image
-                  fill
-                  priority
-                  src={images[0]}
-                  alt={title}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            ) : (
-              <div className="grid grid-cols-2 gap-1 overflow-hidden rounded-2xl bg-light shadow-xl">
-                {Array.from({ length: 4 }).map((_, i) =>
-                  images[i] ? (
-                    <div
-                      key={i}
-                      className="relative aspect-square w-full overflow-hidden"
-                    >
-                      <Image
-                        fill
-                        src={images[i]}
-                        alt={title}
-                        className="object-cover"
+          {images.length > 0 && (
+            <div className="sm:px-6 lg:px-0">
+              {images.length < 4 ? (
+                // Fewer than four usable photos: show one large image instead of
+                // a grid padded out with placeholders.
+                <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-light shadow-xl">
+                  <Image
+                    fill
+                    priority
+                    src={images[0]}
+                    alt={title}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+              ) : (
+                <div className="grid grid-cols-2 gap-1 overflow-hidden rounded-2xl bg-light shadow-xl">
+                  {Array.from({ length: 4 }).map((_, i) =>
+                    images[i] ? (
+                      <div
+                        key={i}
+                        className="relative aspect-square w-full overflow-hidden"
+                      >
+                        <Image
+                          fill
+                          src={images[i]}
+                          alt={title}
+                          className="object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <ImagePlaceholder
+                        key={i}
+                        className="aspect-square w-full"
                       />
-                    </div>
-                  ) : (
-                    <ImagePlaceholder
-                      key={i}
-                      className="aspect-square w-full"
-                    />
-                  ),
-                )}
-              </div>
-            )}
-          </div>
+                    ),
+                  )}
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </Container>
     </div>
