@@ -25,12 +25,8 @@ const S = '/services'
 
 // Every service photo in public/services, grouped by the service it shows.
 // lashes-tinting-closeup-01.jpg is left out: it isn't a tint-only photo.
+// Brow Tinting & Shaping has no photo yet.
 const groups: GalleryGroup[] = [
-  {
-    title: 'Eyebrow Tinting & Shaping',
-    href: '/brow-tint-and-shape',
-    images: [`${S}/brows/brows-tint-and-shape-closeup-01.jpg`],
-  },
   {
     title: 'Lash Lift and Tint',
     href: '/lash-lift-and-tint',
@@ -46,6 +42,7 @@ const groups: GalleryGroup[] = [
     title: 'Microblading',
     href: '/microblading',
     images: [
+      `${S}/permanent-makeup/permanent-makeup-microblading-closeup-01.jpg`,
       `${S}/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg`,
       `${S}/permanent-makeup/permanent-makeup-microblading-before-after-02.jpg`,
       `${S}/permanent-makeup/permanent-makeup-microblading-before-after-03.jpg`,
@@ -76,6 +73,7 @@ const groups: GalleryGroup[] = [
     images: [
       `${S}/permanent-makeup/permanent-makeup-removal-saline-before-after-01.jpg`,
       `${S}/permanent-makeup/permanent-makeup-removal-saline-before-after-02.jpg`,
+      `${S}/permanent-makeup/permanent-makeup-removal-saline-emergency-healing-01.jpg`,
     ],
   },
   {

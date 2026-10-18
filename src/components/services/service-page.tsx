@@ -13,7 +13,7 @@ import { Footer } from '../footer'
 import { BreadcrumbJsonLd } from '../json-ld/breadcrumb'
 import { ServiceJsonLd } from '../json-ld/service'
 import GoogleReviewsBanner from '../media/google-reviews-banner'
-import TestimonialQuotes from '../media/testimonial-quotes'
+import TestimonialSingle from '../media/testimonial-single'
 import type { ServiceData } from './service-data'
 import ServiceDetail, { getServiceDetailBgVariant } from './service-detail'
 import ServiceHeader from './service-header'
@@ -64,8 +64,8 @@ const ServicePage: React.FC<ServicePageProps> = ({ data }) => {
       <ServiceDetail data={data} />
 
       {data.testimonialName && (
-        <TestimonialQuotes
-          names={[data.testimonialName]}
+        <TestimonialSingle
+          name={data.testimonialName}
           bgVariant={testimonialBgVariant}
         />
       )}

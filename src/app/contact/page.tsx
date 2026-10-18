@@ -1,3 +1,4 @@
+import ContactForm from '@/components/contact-form'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { BreadcrumbJsonLd } from '@/components/json-ld/breadcrumb'
@@ -103,11 +104,28 @@ export default function ContactPage() {
         </Container>
       </div>
 
+      <div
+        id="contact-form"
+        className="scroll-mt-24 bg-primary px-6 py-24 sm:py-32 lg:px-8"
+      >
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-heading text-light">Contact Us</h2>
+            <p className="mt-6 text-lead text-gray-100">
+              I always love to hear from my clients, and potential clients. Feel
+              free to get in touch today to learn more about Brows on Point -
+              Kelowna, and what we have to offer!
+            </p>
+          </div>
+          <ContactForm />
+        </Container>
+      </div>
+
       <GoogleReviewsBanner
         rating={GOOGLE_RATING}
         reviewCount={GOOGLE_REVIEW_COUNT}
         reviewsUrl={GOOGLE_REVIEWS_URL}
-        bgVariant="primary"
+        bgVariant="primary-950"
         cta={BOOKING_CTA}
       />
 

@@ -3,7 +3,7 @@ import FAQSection from '@/components/faq-section'
 import { Footer } from '@/components/footer'
 import { BreadcrumbJsonLd } from '@/components/json-ld/breadcrumb'
 import GoogleReviewsBanner from '@/components/media/google-reviews-banner'
-import TestimonialQuotes from '@/components/media/testimonial-quotes'
+import TestimonialSingle from '@/components/media/testimonial-single'
 import { ServiceCard } from '@/components/services/service-card'
 import { ALL_SERVICES } from '@/components/services/service-data'
 import { generalFAQs } from '@/lib/general-faqs'
@@ -66,7 +66,7 @@ const ServicesPage = () => {
         </Container>
       </div>
 
-      <TestimonialQuotes names={['Ally F']} bgVariant="primary" />
+      <TestimonialSingle name="Ally F" bgVariant="primary" />
 
       <FAQSection
         faqs={generalFAQs}

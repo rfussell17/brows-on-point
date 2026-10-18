@@ -423,6 +423,7 @@ export const microbladingServiceData: ServiceData = {
   description:
     'Microblading is a semi-permanent tattoo technique that draws individual, hair-like strokes into your brows, filling in sparse patches or reshaping a brow that over-tweezing left behind. Every microblading appointment starts with a full brow mapping session, so the shape is agreed before any pigment goes in.',
   galleryImages: [
+    '/services/permanent-makeup/permanent-makeup-microblading-closeup-01.jpg',
     '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
     '/services/permanent-makeup/permanent-makeup-microblading-healed-01.jpg',
     '/services/permanent-makeup/permanent-makeup-microblading-before-after-02.jpg',
@@ -432,7 +433,7 @@ export const microbladingServiceData: ServiceData = {
   results: '1-2 years',
   price: '$275',
   thumbnail:
-    '/services/permanent-makeup/permanent-makeup-microblading-before-after-01.jpg',
+    '/services/permanent-makeup/permanent-makeup-microblading-closeup-01.jpg',
   about: (
     <>
       Using a fine hand tool to deposit pigment with thin, hair-like strokes
@@ -516,10 +517,8 @@ export const browTintWaxShapeData: ServiceData = {
   title: 'Brow Tinting & Shaping',
   description:
     'An eyebrow tint darkens and defines your natural brow hair with a semi-permanent dye, and shaping cleans up the line at the same time, so your brows look fuller and more defined in one $25 appointment.',
-  galleryImages: ['/services/brows/brows-tint-and-shape-closeup-01.jpg'],
   price: '$25',
   hideStats: true,
-  thumbnail: '/services/brows/brows-tint-and-shape-closeup-01.jpg',
   about: (
     <>
       Not every brow needs permanent makeup. If you&apos;re after something

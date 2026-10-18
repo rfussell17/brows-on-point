@@ -85,7 +85,7 @@ function DesktopNav() {
                 <NavLink
                   key={service.href}
                   href={service.href}
-                  className="block rounded-lg px-3 py-2 text-body font-semibold text-light hover:bg-primary-700"
+                  className="block rounded-lg px-3 py-2 text-body font-normal text-light hover:bg-primary-700"
                 >
                   {service.label}
                 </NavLink>
@@ -212,7 +212,16 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
           )}
         </div>
         <DesktopNav />
-        <MobileNavButton />
+        {/* Phones: booking stays one tap away in the sticky bar. */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <Link
+            href={ACUITY_URL}
+            className="rounded-md bg-light px-3 py-2 text-small font-semibold text-primary shadow-sm hover:bg-primary-50"
+          >
+            Book Now
+          </Link>
+          <MobileNavButton />
+        </div>
       </div>
       <MobileNav />
     </Disclosure>
