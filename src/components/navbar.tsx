@@ -12,6 +12,7 @@ import {
 
 import { serviceLinks } from '@/lib/service-links'
 import { ACUITY_URL, CONTACT_FORM_URL } from '@/lib/site'
+import { EnvelopeIcon } from '@heroicons/react/24/outline'
 import {
   Bars2Icon,
   ChevronDownIcon,
@@ -141,88 +142,102 @@ function MobileNavButton() {
 }
 
 function MobileNav() {
+  const pageLinks = [
+    { href: '/about', label: 'About' },
+    ...links.filter((link) => link.href !== ACUITY_URL),
+  ]
   return (
-    <DisclosurePanel className="bg-primary-950 lg:hidden">
-      <div className="flex flex-col gap-6 py-4">
-        <div className="px-6">
-          <div className="text-body font-semibold uppercase tracking-wider text-light/60">
+    <DisclosurePanel className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-light/10 bg-primary-950 lg:hidden">
+      <div className="flex flex-col gap-8 px-6 py-6">
+        <div className="flex flex-col divide-y divide-light/10">
+          {pageLinks.map(({ href, label }) => (
+            <NavLink
+              key={href}
+              href={href}
+              className="py-3 text-lead font-medium text-light"
+            >
+              {label}
+            </NavLink>
+          ))}
+        </div>
+        <div>
+          <div className="text-small font-semibold uppercase tracking-wider text-light/60">
             Services
           </div>
-          <div className="mt-2 flex flex-col gap-3">
+          <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-3">
             {serviceLinks.map((service) => (
               <NavLink
                 key={service.href}
                 href={service.href}
-                className="text-body font-medium text-light"
+                className="text-body text-light/90"
               >
                 {service.label}
               </NavLink>
             ))}
             <NavLink
               href="/services"
-              className="text-body font-medium text-secondary-300"
+              className="text-body font-semibold text-secondary-300"
             >
-              All Services
+              All Services →
             </NavLink>
           </div>
         </div>
-        <div className="transition-opacity duration-200">
-          <NavLink
-            href="/about"
-            className="px-6 text-body font-medium text-light"
-          >
-            About
-          </NavLink>
-        </div>
-        {links.map(({ href, label }) => (
-          <div key={href} className="transition-opacity duration-200">
-            <NavLink
-              href={href}
-              className="px-6 text-body font-medium text-light"
-            >
-              {label}
-            </NavLink>
-          </div>
-        ))}
-      </div>
-      <div className="absolute left-1/2 w-screen -translate-x-1/2">
-        <div className="absolute inset-x-0 top-0 border-t border-light/10" />
-        <div className="absolute inset-x-0 top-2 border-t border-light/10" />
+        <NavLink
+          href={ACUITY_URL}
+          className="block rounded-full bg-light py-3 text-center text-body font-semibold text-primary shadow-sm"
+        >
+          Book an Appointment
+        </NavLink>
       </div>
     </DisclosurePanel>
   )
 }
 
 export function Navbar({ banner }: { banner?: React.ReactNode }) {
+  const logo = (
+    <Link href="/" title="Home">
+      <Image
+        src="/brand/brand-favicon-mark-01.png"
+        alt="Brows on Point"
+        width={38}
+        height={38}
+      />
+    </Link>
+  )
+
   return (
     <Disclosure as="header" className="sticky top-0 z-50">
-      <div className="relative flex items-center justify-between bg-primary px-4 sm:px-6 lg:justify-around lg:px-0">
+      {/* Desktop: logo, then the full menu. */}
+      <div className="relative hidden justify-around bg-primary lg:flex">
         <div className="relative flex gap-6 py-3">
-          <Link href="/" title="Home">
-            <Image
-              src="/brand/brand-favicon-mark-01.png"
-              alt="Brows on Point"
-              width={38}
-              height={38}
-            />
-          </Link>
+          {logo}
           {banner && (
-            <div className="relative hidden items-center p-3 lg:flex">
-              {banner}
-            </div>
+            <div className="relative flex items-center p-3">{banner}</div>
           )}
         </div>
         <DesktopNav />
-        {/* Phones: booking stays one tap away in the sticky bar. */}
-        <div className="flex items-center gap-1 lg:hidden">
-          <Link
-            href={ACUITY_URL}
-            className="inline-flex h-10 items-center rounded-full bg-light px-5 text-small font-semibold tracking-wide text-primary shadow-sm ring-1 ring-secondary-300 transition-colors hover:bg-primary-50"
-          >
-            Book Now
-          </Link>
+      </div>
+
+      {/* Phones: menu and contact left, logo centred, booking right, so
+          contacting and booking both stay one tap away in the sticky bar. */}
+      <div className="grid h-16 grid-cols-[1fr_auto_1fr] items-center gap-3 border-b border-light/10 bg-primary px-3 lg:hidden">
+        <div className="flex items-center gap-1 justify-self-start">
           <MobileNavButton />
+          <Link
+            href={CONTACT_FORM_URL}
+            aria-label="Contact Me"
+            className="flex size-11 shrink-0 items-center justify-center rounded-full text-light transition-colors hover:bg-light/10"
+          >
+            <EnvelopeIcon className="size-6" aria-hidden="true" />
+          </Link>
         </div>
+        {logo}
+        <Link
+          href={ACUITY_URL}
+          className="inline-flex h-10 shrink-0 items-center justify-self-end whitespace-nowrap rounded-full bg-light px-4 text-small font-semibold tracking-wide text-primary shadow-sm transition-colors hover:bg-primary-50"
+        >
+          Book Now
+        </Link>
       </div>
       <MobileNav />
     </Disclosure>
