@@ -61,8 +61,6 @@ export default function RootLayout({
       className={`${hurricane.variable} ${roboto.variable} ${playfair.variable}`}
     >
       <head>
-        {/* LAUNCH GATE: remove this line only when told the site is going live. See BLOCKERS.md. */}
-        <meta name="robots" content="noindex, nofollow, noarchive" />
         <LocalBusinessJsonLd />
         <GoogleAnalytics />
       </head>

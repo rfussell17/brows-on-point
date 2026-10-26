@@ -23,10 +23,6 @@ export const metadata: Metadata = {
   },
   description:
     'Brows on Point is a West Kelowna studio serving the Okanagan and beyond for brow tinting, lash lifts, microblading, powder brow, permanent eyeliner, tooth gems, RF facial tightening, and teeth whitening.',
-  robots: {
-    index: false,
-    follow: false,
-  },
   openGraph: ogMeta('/og/brows-on-point-og.jpg', 'Brows on Point'),
 }
 

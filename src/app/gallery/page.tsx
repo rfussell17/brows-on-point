@@ -15,10 +15,6 @@ export const metadata: Metadata = {
   title: 'Gallery',
   description:
     'Before and after photos of lash lifts, brows, permanent makeup, teeth whitening and tooth gems at Brows on Point in West Kelowna.',
-  robots: {
-    index: false,
-    follow: false,
-  },
 }
 
 const S = '/services'

@@ -20,10 +20,6 @@ export const metadata: Metadata = {
   title: 'All Services in Kelowna',
   description:
     'Explore all services at Brows on Point in West Kelowna: lash lifts, brow tinting, permanent makeup, teeth whitening and more for Okanagan clients and beyond. Book online.',
-  robots: {
-    index: false,
-    follow: false,
-  },
   openGraph: ogMeta('/og/all-services-og_brows-on-point.jpg', 'My Services'),
 }
 
