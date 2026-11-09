@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: 'Blog',
   description:
     'Lash, brow, and skin care tips from Brows on Point in West Kelowna — aftercare advice, treatment comparisons, and answers to what clients ask most.',
-  openGraph: ogMeta('/og/blog-og_brows-on-point.jpg', 'Blog'),
+  openGraph: ogMeta('/og/blog-og_brows-on-point.jpg', 'Blog', '/blog'),
 }
 
 export default function BlogPage() {

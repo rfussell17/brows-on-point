@@ -6,8 +6,12 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Powder Brows in West Kelowna',
   description:
-    'Powder brows from $300 at Brows on Point in West Kelowna. Book your powder brow appointment online.',
-  openGraph: ogMeta('/og/powder-brows-og_brows-on-point.jpg', 'Powder Brows'),
+    'Powder brows from $300 at Brows on Point in West Kelowna: soft, filled-in colour like brow makeup that never comes off. Book your appointment online.',
+  openGraph: ogMeta(
+    '/og/powder-brows-og_brows-on-point.jpg',
+    'Powder Brows',
+    '/powder-brows',
+  ),
 }
 
 export default function PowderBrowsPage() {

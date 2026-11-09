@@ -7,7 +7,11 @@ export const metadata: Metadata = {
   title: 'Microblading in Kelowna',
   description:
     'Microblading from $275 at Brows on Point in West Kelowna. Natural hair-like stroke brows for sparse or over-tweezed eyebrows. Book your appointment.',
-  openGraph: ogMeta('/og/microblading-og_brows-on-point.jpg', 'Microblading'),
+  openGraph: ogMeta(
+    '/og/microblading-og_brows-on-point.jpg',
+    'Microblading',
+    '/microblading',
+  ),
 }
 
 export default function MicrobladingPage() {

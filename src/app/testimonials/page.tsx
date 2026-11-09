@@ -16,7 +16,11 @@ export const metadata: Metadata = {
   title: 'Client Testimonials in Kelowna',
   description:
     'Read what Brows on Point clients in Kelowna and West Kelowna say about their lash lifts, brows, permanent makeup, teeth whitening and tooth gems.',
-  openGraph: ogMeta('/og/brows-on-point-og.jpg', 'Brows on Point Testimonials'),
+  openGraph: ogMeta(
+    '/og/brows-on-point-og.jpg',
+    'Brows on Point Testimonials',
+    '/testimonials',
+  ),
 }
 
 export default function TestimonialsPage() {

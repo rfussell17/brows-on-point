@@ -14,7 +14,12 @@ import {
   type ServiceData,
 } from '@/components/services/service-data'
 import { parsePrice } from '@/lib/schema'
-import { BUSINESS_EMAIL, BUSINESS_PHONE, SITE_URL } from '@/lib/site'
+import {
+  BUSINESS_EMAIL,
+  BUSINESS_ID,
+  BUSINESS_PHONE,
+  SITE_URL,
+} from '@/lib/site'
 
 // Q40 — Monday–Saturday 9am–9pm, closed Sunday.
 const OPENING_HOURS = [
@@ -112,8 +117,10 @@ export function LocalBusinessJsonLd() {
   const data: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': ['BeautySalon', 'HealthAndBeautyBusiness'],
+    '@id': BUSINESS_ID,
     name: 'Brows on Point',
     url: SITE_URL,
+    logo: `${SITE_URL}/brand/brand-logo-black-transparent-01.png`,
     image: `${SITE_URL}/about/about-jamie-working-03.png`,
     address: {
       '@type': 'PostalAddress',

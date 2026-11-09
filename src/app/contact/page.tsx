@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   openGraph: ogMeta(
     '/og/contact-og_brows-on-point.jpg',
     'Contact Brows on Point',
+    '/contact',
   ),
 }
 

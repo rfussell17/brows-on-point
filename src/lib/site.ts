@@ -36,12 +36,26 @@ export const BOOKING_CTA = {
  * A page's own `openGraph` object replaces the layout's entirely (Next.js
  * doesn't deep-merge it — title/description alone still fall back to the
  * page's top-level metadata, but siteName/type do not), so every page needs
- * to repeat them here rather than just supplying `images`.
+ * to repeat them here rather than just supplying `images`. `url` is the
+ * page's own path (og:url); the layout's fallback leaves it out so pages
+ * without their own openGraph don't all claim the homepage URL.
  */
-export function ogMeta(path: string, alt: string) {
+export function ogMeta(path: string, alt: string, url?: string) {
   return {
     type: 'website' as const,
     siteName: 'Brows on Point',
+    ...(url && { url }),
     images: [{ url: path, width: 1200, height: 630, alt }],
   }
+}
+
+/** The sitewide LocalBusiness's @id, so other schema can point at it instead of describing a second, address-less business. */
+export const BUSINESS_ID = `${SITE_URL}/#business`
+
+/** Reference to the sitewide LocalBusiness for `provider`/`worksFor` fields. */
+export const BUSINESS_REF = {
+  '@type': 'Organization',
+  '@id': BUSINESS_ID,
+  name: 'Brows on Point',
+  url: SITE_URL,
 }

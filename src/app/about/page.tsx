@@ -17,7 +17,11 @@ export const metadata: Metadata = {
   title: 'About Jamie & Brows on Point',
   description:
     'Learn about Brows on Point, a West Kelowna beauty studio specializing in lash lifts, teeth whitening, permanent makeup, and more since 2016.',
-  openGraph: ogMeta('/og/about-og_brows-on-point.jpg', 'About Brows on Point'),
+  openGraph: ogMeta(
+    '/og/about-og_brows-on-point.jpg',
+    'About Brows on Point',
+    '/about',
+  ),
 }
 
 const stats = [

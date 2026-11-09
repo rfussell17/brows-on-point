@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   openGraph: ogMeta(
     '/og/swarovski-tooth-gems-og_brows-on-point.jpg',
     'Swarovski Tooth Gems',
+    '/tooth-gems',
   ),
 }
 

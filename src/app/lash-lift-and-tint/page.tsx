@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   openGraph: ogMeta(
     '/og/lash-lift-and-tint-og_brows-on-point.jpg',
     'Lash Lift and Tint',
+    '/lash-lift-and-tint',
   ),
 }
 

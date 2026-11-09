@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   openGraph: ogMeta(
     '/og/saline-tattoo-and-pmu-removal-og_brows-on-point.jpg',
     'Saline Tattoo & PMU Removal',
+    '/saline-tattoo-removal',
   ),
 }
 

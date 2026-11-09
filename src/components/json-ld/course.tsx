@@ -1,5 +1,5 @@
 import { parsePrice } from '@/lib/schema'
-import { SITE_URL } from '@/lib/site'
+import { BUSINESS_REF } from '@/lib/site'
 
 interface CourseInput {
   name: string
@@ -18,11 +18,7 @@ export function CourseJsonLd({ courses }: { courses: CourseInput[] }) {
           '@type': 'Course',
           name: course.name,
           description: course.description,
-          provider: {
-            '@type': 'LocalBusiness',
-            name: 'Brows on Point',
-            sameAs: SITE_URL,
-          },
+          provider: BUSINESS_REF,
           ...(value !== null && {
             offers: { '@type': 'Offer', price: value, priceCurrency: 'CAD' },
           }),

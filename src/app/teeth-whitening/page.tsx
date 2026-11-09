@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   openGraph: ogMeta(
     '/og/teeth-whitening-og_brows-on-point.jpg',
     'Teeth Whitening',
+    '/teeth-whitening',
   ),
 }
 

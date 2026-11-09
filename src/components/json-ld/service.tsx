@@ -1,6 +1,6 @@
 import type { ServiceData } from '@/components/services/service-data'
 import { parsePrice } from '@/lib/schema'
-import { SITE_URL } from '@/lib/site'
+import { BUSINESS_REF, SITE_URL } from '@/lib/site'
 
 /**
  * Builds this service's `offers`: a single Offer for a flat-priced service,
@@ -46,7 +46,7 @@ export function ServiceJsonLd({ data }: { data: ServiceData }) {
     name: data.title,
     description: data.description,
     url: `${SITE_URL}/${data.slug}`,
-    provider: { '@type': 'LocalBusiness', name: 'Brows on Point' },
+    provider: BUSINESS_REF,
     areaServed: 'West Kelowna, BC',
     ...(offers && { offers }),
   }

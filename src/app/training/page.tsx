@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   openGraph: ogMeta(
     '/og/training-og_brows-on-point.jpg',
     'Lash Lift & Teeth Whitening Training',
+    '/training',
   ),
 }
 

@@ -1,4 +1,4 @@
-import { SITE_URL } from '@/lib/site'
+import { BUSINESS_REF } from '@/lib/site'
 
 export function PersonJsonLd({ credentials }: { credentials: string[] }) {
   const data = {
@@ -6,11 +6,7 @@ export function PersonJsonLd({ credentials }: { credentials: string[] }) {
     '@type': 'Person',
     name: 'Jamie Fussell',
     jobTitle: 'Owner, Lash & Brow Artist',
-    worksFor: {
-      '@type': 'LocalBusiness',
-      name: 'Brows on Point',
-      url: SITE_URL,
-    },
+    worksFor: BUSINESS_REF,
     hasCredential: credentials.map((name) => ({
       '@type': 'EducationalOccupationalCredential',
       credentialCategory: name,

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   openGraph: ogMeta(
     '/og/sensitive-teeth-whitening-og_brows-on-point.jpg',
     '24K Gold Whitening for Sensitive Teeth',
+    '/sensitive-teeth-whitening',
   ),
 }
 
